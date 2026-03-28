@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+            /* Shared styles */
+            body {
+                font-family: Helvetica, sans-serif;
+                font-size: 16px;
+                color: #34302e;
+                margin: 0,25in;
+            }
+            @page {
+                size: letter portrait;
+                margin: 0,25in;
+            }
+            .name {
+                font-size: 18px;
+                font-family: Helvetica, sans-serif;
+                font-weight: normal;
+                margin: 0 0 10px 0;
+            }
+            .categories {
+                color: #605D5D;
+                font-size: 14px;
+                font-family: Helvetica, sans-serif;
+                font-style: italic;
+            }
+            .rating {
+                color: #d10505;
+                font-size: 14px;
+            }
+            .metadata {
+                font-size: 14px;
+            }
+            .infobox p {
+                margin: 0;
+                line-height: 150%;
+            }
+            .subhead {
+                color: #d10505;
+                font-weight: bold;
+                font-size: 14px;
+                text-transform: uppercase;
+                margin: 10px 0;
+            }
+            
+            .ingredients p {
+                margin: 4px 0;
+            }
+            /* To prevent nutrition/directions from getting too close
+               to ingredients */
+            .ingredients {
+                padding-bottom: 10px;
+            }
+            .clear {
+                clear:both;
+            }
+            a {
+                color: #4990E2;
+                text-decoration: none;
+            }
+            /* Full page specific styles */
+            .text {
+                line-height: 130%;
+            }
+            .photobox {
+                float: left;
+                margin-right: 14px;
+                            }
+            .photo {
+                max-width: 140px;
+                max-height: 140px;
+                width: auto;
+                height: auto;
+            }
+            .inline-image {
+                max-width: 25%;
+                max-height: 25%;
+                width: auto;
+                height: auto;
+            }
+            .photoswipe {
+                border: 1px #dddddd solid;
+                cursor: pointer;
+            }
+            .pswp__caption__center {
+                text-align: center !important;
+            }
+            .recipe {
+                page-break-after: always;
+                            }
+            .recipe:first-child {
+                border-top: 0 none;
+                margin-top: 0;
+                padding-top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Recipe -->
+<div class="recipe" itemscope itemtype="http://schema.org/Recipe" >
+    
+    <div class="infobox">
+
+        <!-- Image -->
+
+        <!-- Name -->
+        <h1 itemprop="name" class="name">Pan de trigo sarraceno</h1>
+        
+        <!-- Info -->
+        
+        <!-- Rating, categories -->
+        <p itemprop="aggregateRating" class="rating" value="0"></p>
+            <p itemprop="recipeCategory" class="categories">Panes</p>
+        
+        <p class="metadata">
+        
+            <!-- Cook time, prep time, servings, difficulty -->
+            <b>Porciones: </b><span itemprop="">1 pan</span>
+
+            <!-- Source -->
+
+        </p>
+        
+        <div class="clear"></div>
+
+    </div>
+    
+    <div class="left-column">
+
+        <!-- Ingredients -->
+        <div class="ingredientsbox">
+            <h3 class="subhead">Ingredientes</h3>
+            <div class="ingredients text">
+                <p class="line" itemprop="recipeIngredient">- 500 g trigo sarraceno en grano (no harina)</p><p class="line" itemprop="recipeIngredient">- 20 g psyllium en polvo (o chía molida)</p><p class="line" itemprop="recipeIngredient">- 150-180 ml agua</p><p class="line" itemprop="recipeIngredient">- 10 g sal</p><p class="line" itemprop="recipeIngredient">- (Opcional) 240 g trigo sarraceno + 160 g lentejas en grano</p><p class="line" itemprop="recipeIngredient">- (Opcional) harina de trigo sarraceno extra para espolvorear</p><p></p>
+            </div>
+        </div>
+        
+        <!-- Nutrition (in two-column mode it goes below the ingredients) -->
+
+    </div>
+    
+    <div class="right-column">
+    
+    <!-- Description -->
+
+    <!-- Directions -->
+    <div class="directionsbox">
+        <h3 class="subhead">Instrucciones</h3>
+        <div itemprop="recipeInstructions" class="directions text">
+            <p class="line">1. Lava el trigo sarraceno con agua.<br/>2. Colócalo en un bol grande de cristal, cúbrelo con agua y deja en remojo toda la noche.<br/>3. Al día siguiente escurre MUY BIEN el trigo, pero no lo enjuagues (la sustancia pegajosa ayuda a ligar la masa).<br/>4. Pon el trigo escurrido en una batidora y añade 100-150 ml de agua y la sal. Empieza con menos agua y ajusta hasta que la masa sea densa (no líquida).<br/>5. Tritura hasta obtener una mezcla homogénea (pueden quedar algunos granos enteros).<br/>6. Pasa la masa a un bol de cristal y añade el psyllium en polvo o chía molida. Mezcla con una cuchara.<br/>7. Cubre el bol con un paño limpio y deja fermentar 24 h a temperatura ambiente.<br/>8. Pasado el tiempo, precalienta el horno a 175°C. Forra una bandeja con papel de horno y coloca la masa encima, sin molde. Espolvorea harina por encima y haz 2 cortes para facilitar la cocción.<br/>9. Hornea durante 1 h 20 min a 175°C.<br/>10. Retira del horno y deja enfriar sobre una rejilla para que no se humedezca por debajo.<br/></p>
+        </div>
+    </div>
+
+    <!-- Notes -->
+    
+    <div class="notesbox">
+        <h3 class="subhead">Notas</h3>
+        <div itemprop="comment" class="notes text">
+            <p>- SUSTITUTOS: Puedes usar espelta en grano o combinar con quinoa.<br/>- CONSERVACIÓN: Mejor cortar en rebanadas y congelar, luego tostar directamente.<br/>- El trigo sarraceno de herbolario es apto para celíacos.<br/></p>
+        </div>
+    </div>
+    
+
+    <!-- Nutrition (in regular mode it goes below the notes) -->
+        <!-- Used in two different places depending on the recipe layout -->
+
+    
+    </div>
+    
+    <div class="clear"></div>
+
+</div>
+
+
+
+    </body>
+</html>

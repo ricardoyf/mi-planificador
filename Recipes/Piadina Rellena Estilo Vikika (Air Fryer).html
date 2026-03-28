@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+            /* Shared styles */
+            body {
+                font-family: Helvetica, sans-serif;
+                font-size: 16px;
+                color: #34302e;
+                margin: 0,25in;
+            }
+            @page {
+                size: letter portrait;
+                margin: 0,25in;
+            }
+            .name {
+                font-size: 18px;
+                font-family: Helvetica, sans-serif;
+                font-weight: normal;
+                margin: 0 0 10px 0;
+            }
+            .categories {
+                color: #605D5D;
+                font-size: 14px;
+                font-family: Helvetica, sans-serif;
+                font-style: italic;
+            }
+            .rating {
+                color: #d10505;
+                font-size: 14px;
+            }
+            .metadata {
+                font-size: 14px;
+            }
+            .infobox p {
+                margin: 0;
+                line-height: 150%;
+            }
+            .subhead {
+                color: #d10505;
+                font-weight: bold;
+                font-size: 14px;
+                text-transform: uppercase;
+                margin: 10px 0;
+            }
+            
+            .ingredients p {
+                margin: 4px 0;
+            }
+            /* To prevent nutrition/directions from getting too close
+               to ingredients */
+            .ingredients {
+                padding-bottom: 10px;
+            }
+            .clear {
+                clear:both;
+            }
+            a {
+                color: #4990E2;
+                text-decoration: none;
+            }
+            /* Full page specific styles */
+            .text {
+                line-height: 130%;
+            }
+            .photobox {
+                float: left;
+                margin-right: 14px;
+                            }
+            .photo {
+                max-width: 140px;
+                max-height: 140px;
+                width: auto;
+                height: auto;
+            }
+            .inline-image {
+                max-width: 25%;
+                max-height: 25%;
+                width: auto;
+                height: auto;
+            }
+            .photoswipe {
+                border: 1px #dddddd solid;
+                cursor: pointer;
+            }
+            .pswp__caption__center {
+                text-align: center !important;
+            }
+            .recipe {
+                page-break-after: always;
+                            }
+            .recipe:first-child {
+                border-top: 0 none;
+                margin-top: 0;
+                padding-top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Recipe -->
+<div class="recipe" itemscope itemtype="http://schema.org/Recipe" >
+    
+    <div class="infobox">
+
+        <!-- Image -->
+
+        <!-- Name -->
+        <h1 itemprop="name" class="name">Piadina Rellena Estilo Vikika (Air Fryer)</h1>
+        
+        <!-- Info -->
+        
+        <!-- Rating, categories -->
+        <p itemprop="aggregateRating" class="rating" value="0"></p>
+            <p itemprop="recipeCategory" class="categories">CENAS</p>
+        
+        <p class="metadata">
+        
+            <!-- Cook time, prep time, servings, difficulty -->
+            <b>Porciones: </b><span itemprop="">2</span>
+
+            <!-- Source -->
+
+        </p>
+        
+        <div class="clear"></div>
+
+    </div>
+    
+    <div class="left-column">
+
+        <!-- Ingredients -->
+        <div class="ingredientsbox">
+            <h3 class="subhead">Ingredientes</h3>
+            <div class="ingredients text">
+                <p class="line" itemprop="recipeIngredient">- 1 piadina (masa fina tipo wrap italiano)</p><p class="line" itemprop="recipeIngredient">- 4 huevos grandes</p><p class="line" itemprop="recipeIngredient">- 1 yogur griego natural (sin azúcar)</p><p class="line" itemprop="recipeIngredient">- 1 puñado de tomates cherry</p><p class="line" itemprop="recipeIngredient">- Espinacas frescas (hojas sueltas)</p><p class="line" itemprop="recipeIngredient">- Queso rallado (al gusto, para gratinar)</p><p class="line" itemprop="recipeIngredient">- Pavo en taquitos (opcional)</p><p class="line" itemprop="recipeIngredient">- Sal, pimienta negra y perejil</p><p></p>
+            </div>
+        </div>
+        
+        <!-- Nutrition (in two-column mode it goes below the ingredients) -->
+
+    </div>
+    
+    <div class="right-column">
+    
+    <!-- Description -->
+
+    <!-- Directions -->
+    <div class="directionsbox">
+        <h3 class="subhead">Instrucciones</h3>
+        <div itemprop="recipeInstructions" class="directions text">
+            <p class="line">1. Coloque un papel protector en la cesta de la Air Fryer y acomode la piadina dentro, formando una especie de &quot;cuenco&quot; o cesta.<br/>2. En un bol aparte, bata los 4 huevos junto con el yogur griego. Añada sal, pimienta y perejil al gusto hasta integrar.<br/>3. Vuelque la mezcla de huevo y yogur con cuidado dentro de la piadina en la Air Fryer.<br/>4. Corte los tomates cherry en trocitos y agréguelos. Trocee las hojas de espinaca y añádalas. (Truco: con un tenedor, empuje las hojas para sumergirlas en el huevo y evitar que se quemen).<br/>5. Añada el pavo (si lo usa) y cubra todo con una capa generosa de queso rallado.<br/>6. Cocine en la Air Fryer a 180 °C durante 18 a 20 minutos.<br/>7. Saque con cuidado, corte y sirva.<br/></p>
+        </div>
+    </div>
+
+    <!-- Notes -->
+    
+    <div class="notesbox">
+        <h3 class="subhead">Notas</h3>
+        <div itemprop="comment" class="notes text">
+            <p>Vigile la cocción alrededor del minuto 18 para asegurar que el huevo esté cuajado a su gusto.<br/>Receta alta en proteínas.<br/></p>
+        </div>
+    </div>
+    
+
+    <!-- Nutrition (in regular mode it goes below the notes) -->
+        <!-- Used in two different places depending on the recipe layout -->
+
+    
+    </div>
+    
+    <div class="clear"></div>
+
+</div>
+
+
+
+    </body>
+</html>

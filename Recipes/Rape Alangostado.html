@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+            /* Shared styles */
+            body {
+                font-family: Helvetica, sans-serif;
+                font-size: 16px;
+                color: #34302e;
+                margin: 0,25in;
+            }
+            @page {
+                size: letter portrait;
+                margin: 0,25in;
+            }
+            .name {
+                font-size: 18px;
+                font-family: Helvetica, sans-serif;
+                font-weight: normal;
+                margin: 0 0 10px 0;
+            }
+            .categories {
+                color: #605D5D;
+                font-size: 14px;
+                font-family: Helvetica, sans-serif;
+                font-style: italic;
+            }
+            .rating {
+                color: #d10505;
+                font-size: 14px;
+            }
+            .metadata {
+                font-size: 14px;
+            }
+            .infobox p {
+                margin: 0;
+                line-height: 150%;
+            }
+            .subhead {
+                color: #d10505;
+                font-weight: bold;
+                font-size: 14px;
+                text-transform: uppercase;
+                margin: 10px 0;
+            }
+            
+            .ingredients p {
+                margin: 4px 0;
+            }
+            /* To prevent nutrition/directions from getting too close
+               to ingredients */
+            .ingredients {
+                padding-bottom: 10px;
+            }
+            .clear {
+                clear:both;
+            }
+            a {
+                color: #4990E2;
+                text-decoration: none;
+            }
+            /* Full page specific styles */
+            .text {
+                line-height: 130%;
+            }
+            .photobox {
+                float: left;
+                margin-right: 14px;
+                            }
+            .photo {
+                max-width: 140px;
+                max-height: 140px;
+                width: auto;
+                height: auto;
+            }
+            .inline-image {
+                max-width: 25%;
+                max-height: 25%;
+                width: auto;
+                height: auto;
+            }
+            .photoswipe {
+                border: 1px #dddddd solid;
+                cursor: pointer;
+            }
+            .pswp__caption__center {
+                text-align: center !important;
+            }
+            .recipe {
+                page-break-after: always;
+                            }
+            .recipe:first-child {
+                border-top: 0 none;
+                margin-top: 0;
+                padding-top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Recipe -->
+<div class="recipe" itemscope itemtype="http://schema.org/Recipe" >
+    
+    <div class="infobox">
+
+        <!-- Image -->
+
+        <!-- Name -->
+        <h1 itemprop="name" class="name">Rape Alangostado</h1>
+        
+        <!-- Info -->
+        
+        <!-- Rating, categories -->
+        <p itemprop="aggregateRating" class="rating" value="0"></p>
+            <p itemprop="recipeCategory" class="categories">Pescados y mariscos</p>
+        
+        <p class="metadata">
+        
+            <!-- Cook time, prep time, servings, difficulty -->
+            <b>Porciones: </b><span itemprop="">4</span>
+
+            <!-- Source -->
+
+        </p>
+        
+        <div class="clear"></div>
+
+    </div>
+    
+    <div class="left-column">
+
+        <!-- Ingredients -->
+        <div class="ingredientsbox">
+            <h3 class="subhead">Ingredientes</h3>
+            <div class="ingredients text">
+                <p class="line" itemprop="recipeIngredient">- 1 1/4 kg rape crudo (parte ancha, en lomos)</p><p class="line" itemprop="recipeIngredient">- 100 g pimentón</p><p class="line" itemprop="recipeIngredient">- 3 cdas aceite fino</p><p class="line" itemprop="recipeIngredient">- Sal</p><p class="line" itemprop="recipeIngredient">- Unas hojas de lechuga (para adornar)</p><p class="line" itemprop="recipeIngredient">- 1 huevo duro en rodajas o gambas (para adornar)</p><p class="line" itemprop="recipeIngredient">- Salsa: mayonesa simple, mayonesa con tomate y coñac, o vinagreta</p><p></p>
+            </div>
+        </div>
+        
+        <!-- Nutrition (in two-column mode it goes below the ingredients) -->
+
+    </div>
+    
+    <div class="right-column">
+    
+    <!-- Description -->
+
+    <!-- Directions -->
+    <div class="directionsbox">
+        <h3 class="subhead">Instrucciones</h3>
+        <div itemprop="recipeInstructions" class="directions text">
+            <p class="line">1. En la pescadería, pedir que quiten piel y hueso del rape. Usar la parte ancha para obtener 2 lomos. Guardar el hueso.<br/>2. En casa, lavar y secar bien el rape. Atar los lomos con cuerda fina como si fuera un asado.<br/>3. Salar y untar con un poco de aceite y pimentón hasta cubrir bien todo el trozo.<br/>4. Poner en una cacerola los lomos de rape y el hueso. Tapar y cocer a fuego medio unos 20 minutos, girando de vez en cuando para que se cuezan en su propio jugo.<br/>5. Retirar, dejar enfriar sobre tabla y al momento de servir cortar en rodajas de un dedo de grosor, como si fuese cola de langosta.<br/>6. Adornar la fuente con lechuga, huevo duro en rodajas o gambas. Servir acompañado de la salsa en salsera.<br/></p>
+        </div>
+    </div>
+
+    <!-- Notes -->
+    
+    <div class="notesbox">
+        <h3 class="subhead">Notas</h3>
+        <div itemprop="comment" class="notes text">
+            <p>El caldo que suelta el rape al cocerse es excelente para aprovechar en una sopa de pescado.<br/></p>
+        </div>
+    </div>
+    
+
+    <!-- Nutrition (in regular mode it goes below the notes) -->
+        <!-- Used in two different places depending on the recipe layout -->
+
+    
+    </div>
+    
+    <div class="clear"></div>
+
+</div>
+
+
+
+    </body>
+</html>

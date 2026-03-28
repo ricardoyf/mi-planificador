@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+            /* Shared styles */
+            body {
+                font-family: Helvetica, sans-serif;
+                font-size: 16px;
+                color: #34302e;
+                margin: 0,25in;
+            }
+            @page {
+                size: letter portrait;
+                margin: 0,25in;
+            }
+            .name {
+                font-size: 18px;
+                font-family: Helvetica, sans-serif;
+                font-weight: normal;
+                margin: 0 0 10px 0;
+            }
+            .categories {
+                color: #605D5D;
+                font-size: 14px;
+                font-family: Helvetica, sans-serif;
+                font-style: italic;
+            }
+            .rating {
+                color: #d10505;
+                font-size: 14px;
+            }
+            .metadata {
+                font-size: 14px;
+            }
+            .infobox p {
+                margin: 0;
+                line-height: 150%;
+            }
+            .subhead {
+                color: #d10505;
+                font-weight: bold;
+                font-size: 14px;
+                text-transform: uppercase;
+                margin: 10px 0;
+            }
+            
+            .ingredients p {
+                margin: 4px 0;
+            }
+            /* To prevent nutrition/directions from getting too close
+               to ingredients */
+            .ingredients {
+                padding-bottom: 10px;
+            }
+            .clear {
+                clear:both;
+            }
+            a {
+                color: #4990E2;
+                text-decoration: none;
+            }
+            /* Full page specific styles */
+            .text {
+                line-height: 130%;
+            }
+            .photobox {
+                float: left;
+                margin-right: 14px;
+                            }
+            .photo {
+                max-width: 140px;
+                max-height: 140px;
+                width: auto;
+                height: auto;
+            }
+            .inline-image {
+                max-width: 25%;
+                max-height: 25%;
+                width: auto;
+                height: auto;
+            }
+            .photoswipe {
+                border: 1px #dddddd solid;
+                cursor: pointer;
+            }
+            .pswp__caption__center {
+                text-align: center !important;
+            }
+            .recipe {
+                page-break-after: always;
+                            }
+            .recipe:first-child {
+                border-top: 0 none;
+                margin-top: 0;
+                padding-top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Recipe -->
+<div class="recipe" itemscope itemtype="http://schema.org/Recipe" >
+    
+    <div class="infobox">
+
+        <!-- Image -->
+
+        <!-- Name -->
+        <h1 itemprop="name" class="name">Paella de fideos con mejillones en escabeche al curry con pur&#233; de lim&#243;n</h1>
+        
+        <!-- Info -->
+        
+        <!-- Rating, categories -->
+        <p itemprop="aggregateRating" class="rating" value="0"></p>
+            <p itemprop="recipeCategory" class="categories">MACU</p>
+        
+        <p class="metadata">
+        
+            <!-- Cook time, prep time, servings, difficulty -->
+            <b>Porciones: </b><span itemprop="">4</span>
+
+            <!-- Source -->
+
+        </p>
+        
+        <div class="clear"></div>
+
+    </div>
+    
+    <div class="left-column">
+
+        <!-- Ingredients -->
+        <div class="ingredientsbox">
+            <h3 class="subhead">Ingredientes</h3>
+            <div class="ingredients text">
+                <p class="line" itemprop="recipeIngredient">- Fideos</p><p class="line" itemprop="recipeIngredient">- Mejillones en lata</p><p class="line" itemprop="recipeIngredient">- Limones (una cesta)</p><p class="line" itemprop="recipeIngredient">- Sofrito de tomate</p><p class="line" itemprop="recipeIngredient">- Pulpa de pimiento choricero</p><p class="line" itemprop="recipeIngredient">- Azafrán</p><p class="line" itemprop="recipeIngredient">- Curry</p><p class="line" itemprop="recipeIngredient">- Caldo de pescado</p><p class="line" itemprop="recipeIngredient">- Arroz inflado</p><p class="line" itemprop="recipeIngredient">- Aceite</p><p></p>
+            </div>
+        </div>
+        
+        <!-- Nutrition (in two-column mode it goes below the ingredients) -->
+
+    </div>
+    
+    <div class="right-column">
+    
+    <!-- Description -->
+
+    <!-- Directions -->
+    <div class="directionsbox">
+        <h3 class="subhead">Instrucciones</h3>
+        <div itemprop="recipeInstructions" class="directions text">
+            <p class="line">1. Puré de limón: Pelar todos los limones y escaldar las pieles de los limones 3 veces con 3 aguas distintas. Sacar zumo a los limones y colarlo.<br/>2. Triturar las pieles en el robot de cocina y añadir poco a poco el aceite y zumo de limón hasta que emulsione.<br/>3. Paella: En una olla, calentar el caldo de pescado junto al jugo del escabeche de los mejillones.<br/>4. Tostar los fideos en la paellera con un poquito de aceite con cuidado de que no se queme. Luego mezclarlos con el sofrito, el pimiento choricero y remover.<br/>5. Cubrir con el caldo y espolvorear un poco de curry en polvo y azafrán.<br/>6. Dejar que hierva y se vaya evaporando. Al final se puede meter al horno para que se evapore toda el agua y se gratine.<br/>7. Se acaba poniendo los mejillones encima, y el puré de limón encima de estos. Añadir arroz inflado.<br/></p>
+        </div>
+    </div>
+
+    <!-- Notes -->
+    
+    <div class="notesbox">
+        <h3 class="subhead">Notas</h3>
+        <div itemprop="comment" class="notes text">
+            <p>El puré de limón aporta un toque cítrico y cremoso que equilibra el sabor del curry y el escabeche de los mejillones.</p>
+        </div>
+    </div>
+    
+
+    <!-- Nutrition (in regular mode it goes below the notes) -->
+        <!-- Used in two different places depending on the recipe layout -->
+
+    
+    </div>
+    
+    <div class="clear"></div>
+
+</div>
+
+
+
+    </body>
+</html>
