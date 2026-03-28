@@ -1,0 +1,72 @@
+{
+  "lunes": {
+    "comida": {
+      "primero": "par",
+      "segundo": ""
+    },
+    "cena": {
+      "primero": "",
+      "segundo": "Berenjenas rellenas"
+    }
+  },
+  "martes": {
+    "comida": {
+      "primero": "Rapantes",
+      "segundo": "Rapantes"
+    },
+    "cena": {
+      "primero": "",
+      "segundo": ""
+    }
+  },
+  "miercoles": {
+    "comida": {
+      "primero": "",
+      "segundo": ""
+    },
+    "cena": {
+      "primero": "",
+      "segundo": ""
+    }
+  },
+  "jueves": {
+    "comida": {
+      "primero": "Lentejas",
+      "segundo": ""
+    },
+    "cena": {
+      "primero": "E. Cuscús",
+      "segundo": ""
+    }
+  },
+  "viernes": {
+    "comida": {
+      "primero": "Lasaña",
+      "segundo": "Albóndigas"
+    },
+    "cena": {
+      "primero": "",
+      "segundo": ""
+    }
+  },
+  "sabado": {
+    "comida": {
+      "primero": "",
+      "segundo": ""
+    },
+    "cena": {
+      "primero": "",
+      "segundo": ""
+    }
+  },
+  "domingo": {
+    "comida": {
+      "primero": "",
+      "segundo": ""
+    },
+    "cena": {
+      "primero": "",
+      "segundo": ""
+    }
+  }
+}

@@ -9,6 +9,15 @@ LEGACY_EXCEL_PATH = BASE / 'platos_ingredientes.xlsx'
 RECIPES_DIR = BASE / 'Recipes'
 DATA_JS = BASE / 'js' / 'data.js'
 
+def fix_viewport_in_html(file_path):
+    try:
+        content = file_path.read_text(encoding='utf-8')
+        if '<meta name="viewport"' not in content and '<head>' in content:
+            content = content.replace('<head>', '<head>\n        <meta name="viewport" content="width=device-width, initial-scale=1">')
+            file_path.write_text(content, encoding='utf-8')
+    except Exception as e:
+        pass
+
 def main():
     print("Iniciando actualización de datos para la Web App...")
     
@@ -41,6 +50,8 @@ def main():
     if RECIPES_DIR.exists():
         for f in os.listdir(RECIPES_DIR):
             if f.endswith('.html'):
+                file_path = RECIPES_DIR / f
+                fix_viewport_in_html(file_path)
                 nombre_receta = f[:-5]
                 recetas.append({
                     'nombre': nombre_receta,

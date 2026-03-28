@@ -1,0 +1,72 @@
+{
+  "lunes": {
+    "comida": {
+      "primero": "Pavo relleno",
+      "segundo": ""
+    },
+    "cena": {
+      "primero": "Piadina Vikika",
+      "segundo": ""
+    }
+  },
+  "martes": {
+    "comida": {
+      "primero": "Judías verdes",
+      "segundo": "Rapantes"
+    },
+    "cena": {
+      "primero": "Pisto",
+      "segundo": "Filetes"
+    }
+  },
+  "miercoles": {
+    "comida": {
+      "primero": "Pescado Horno",
+      "segundo": "Brécol al vapor"
+    },
+    "cena": {
+      "primero": "Salmón AirFryer",
+      "segundo": "Verduras horno"
+    }
+  },
+  "jueves": {
+    "comida": {
+      "primero": "Lentejas",
+      "segundo": ""
+    },
+    "cena": {
+      "primero": "Albóndigas",
+      "segundo": ""
+    }
+  },
+  "viernes": {
+    "comida": {
+      "primero": "Chocos  arroz",
+      "segundo": ""
+    },
+    "cena": {
+      "primero": "E. Cuscús judías",
+      "segundo": ""
+    }
+  },
+  "sabado": {
+    "comida": {
+      "primero": "",
+      "segundo": ""
+    },
+    "cena": {
+      "primero": "Hamburguesas",
+      "segundo": ""
+    }
+  },
+  "domingo": {
+    "comida": {
+      "primero": "",
+      "segundo": ""
+    },
+    "cena": {
+      "primero": "Sandwinch",
+      "segundo": ""
+    }
+  }
+}
