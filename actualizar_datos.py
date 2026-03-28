@@ -46,6 +46,8 @@ def main():
                     'nombre': nombre_receta,
                     'url': f'Recipes/{f}'
                 })
+        # Ordenar alfabéticamente
+        recetas.sort(key=lambda x: x['nombre'].lower())
         print(f"Se han encontrado {len(recetas)} recetas en la carpeta Recipes.")
     
     # Match plates to recipes
@@ -61,7 +63,7 @@ def main():
     js_content += f"const recetasData = {json.dumps(recetas, ensure_ascii=False, indent=2)};\n"
     
     DATA_JS.write_text(js_content, encoding='utf-8')
-    print(f"✅ Se han exportado {len(platos)} platos.")
+    print(f"✅ Se han exportado {len(platos)} platos extraídos de tu Excel.")
     print(f"✅ Datos guardados correctamente en {DATA_JS}")
     print("--------------------------------------------------")
     print("Sube los cambios a GitHub para actualizar la web.")
