@@ -1,8 +1,7 @@
 const platosData = [
   {
-    "plato": "Acelgas",
-    "categoria": "Básicos",
-    "url_receta": "Recipes/Acelgas.html"
+    "plato": "Acelgasgithub",
+    "categoria": "Básicos"
   },
   {
     "plato": "Alcachofas",
