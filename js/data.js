@@ -881,6 +881,17 @@ const platosData = [
       "Perejil"
     ],
     "url_receta": "Recipes/Sopa de pescado (TM31).html"
+  },
+  {
+    "plato": "Empanada de hojaldre de jamón y queso",
+    "categoria": "MACU",
+    "ingredientes": [
+      "2 láminas de hojaldre",
+      "Jamón cocido",
+      "Queso",
+      "1 huevo batido"
+    ],
+    "url_receta": "Recipes/Empanada de hojaldre de jamón y queso.html"
   }
 ];
 const recetasData = [
@@ -1111,6 +1122,10 @@ const recetasData = [
   {
     "nombre": "E. Salmón aguacate feta tomate canónigos nueces",
     "url": "Recipes/E. Salmón aguacate feta tomate canónigos nueces.html"
+  },
+  {
+    "nombre": "Empanada de hojaldre de jamón y queso",
+    "url": "Recipes/Empanada de hojaldre de jamón y queso.html"
   },
   {
     "nombre": "Empanada Hojaldre Esto Salmón",

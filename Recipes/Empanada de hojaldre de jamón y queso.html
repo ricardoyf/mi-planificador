@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <style type="text/css">
+            body {
+                font-family: Helvetica, sans-serif;
+                font-size: 16px;
+                color: #34302e;
+                margin: 0,25in;
+            }
+            @page {
+                size: letter portrait;
+                margin: 0,25in;
+            }
+            .name { font-size: 18px; font-family: Helvetica, sans-serif; font-weight: normal; margin: 0 0 10px 0; }
+            .categories { color: #605D5D; font-size: 14px; font-family: Helvetica, sans-serif; font-style: italic; }
+            .rating { color: #d10505; font-size: 14px; }
+            .metadata { font-size: 14px; }
+            .infobox p { margin: 0; line-height: 150%; }
+            .subhead { color: #d10505; font-weight: bold; font-size: 14px; text-transform: uppercase; margin: 10px 0; }
+            .ingredients p { margin: 4px 0; }
+            .ingredients { padding-bottom: 10px; }
+            .clear { clear: both; }
+            a { color: #4990E2; text-decoration: none; }
+            .text { line-height: 130%; }
+            .recipe { page-break-after: always; }
+            .recipe:first-child { border-top: 0 none; margin-top: 0; padding-top: 0; }
+        </style>
+    </head>
+    <body>
+<div class="recipe" itemscope itemtype="http://schema.org/Recipe" >
+    <div class="infobox">
+        <h1 itemprop="name" class="name">Empanada de hojaldre de jamón y queso</h1>
+        <p itemprop="aggregateRating" class="rating" value="0"></p>
+        <p itemprop="recipeCategory" class="categories">MACU</p>
+        <p class="metadata"><b>Porciones: </b><span itemprop="">4</span></p>
+        <div class="clear"></div>
+    </div>
+    <div class="left-column">
+        <div class="ingredientsbox">
+            <h3 class="subhead">Ingredientes</h3>
+            <div class="ingredients text">
+                <p class="line" itemprop="recipeIngredient">- 2 láminas de hojaldre</p><p class="line" itemprop="recipeIngredient">- Jamón cocido</p><p class="line" itemprop="recipeIngredient">- Queso</p><p class="line" itemprop="recipeIngredient">- 1 huevo batido</p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div class="right-column">
+        <div class="directionsbox">
+            <h3 class="subhead">Instrucciones</h3>
+            <div itemprop="recipeInstructions" class="directions text">
+                <p class="line">1. Precalentar el horno a 180 °C con calor arriba y abajo. Si se usa ventilador, ajustar a 170 °C.<br/>2. Introducir la empanada de hojaldre rellena de jamón y queso ya montada sobre bandeja con papel de horno.<br/>3. Hornear durante 25–30 minutos, vigilando que el hojaldre quede bien laminado y dorado de forma uniforme.<br/>4. Confirmar que la base quede seca y crujiente, no blanquecina, y que el queso esté fundido sin exceso de fuga lateral.<br/>5. Si el relleno está muy frío o es abundante, prolongar hasta 35 minutos si hiciera falta.<br/>6. Si a los 20 minutos la parte superior dora demasiado, cubrir ligeramente con papel de aluminio y continuar.<br/>7. Si la base suele quedar pálida, dejar 5 minutos más colocando la bandeja en una guía inferior del horno.<br/>8. Sacar del horno y dejar reposar 5 minutos antes de cortar para estabilizar el relleno y evitar fugas de queso.<br/></p>
+            </div>
+        </div>
+        <div class="notesbox">
+            <h3 class="subhead">Notas</h3>
+            <div itemprop="comment" class="notes text">
+                <p>Parámetros recomendados: 180 °C, calor arriba y abajo, sin ventilador. Tiempo total estándar: 25–30 minutos. Punto óptimo: superficie dorada uniforme, base crujiente y queso fundido internamente.</p>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+    </body>
+</html>
