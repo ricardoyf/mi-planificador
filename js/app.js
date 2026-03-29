@@ -259,6 +259,50 @@ const app = {
         container.appendChild(ul);
     },
 
+    copyCompra() {
+        let conteo = {};
+        
+        DIAS.forEach(dia => {
+            TIPOS.forEach(tipo => {
+                SLOTS.forEach(slot => {
+                    const pname = this.plan[dia] && this.plan[dia][tipo] && this.plan[dia][tipo][slot];
+                    if (pname) {
+                        const matchedData = platosData.find(p => p.plato === pname);
+                        if (matchedData && matchedData.ingredientes) {
+                            matchedData.ingredientes.forEach(ing => {
+                                if(ing) {
+                                    conteo[ing] = (conteo[ing] || 0) + 1;
+                                }
+                            });
+                        }
+                    }
+                });
+            });
+        });
+        
+        const keys = Object.keys(conteo).sort();
+        if (keys.length === 0) {
+            alert("No hay ingredientes en el planificador para copiar.");
+            return;
+        }
+        
+        let texto = "LISTA DE LA COMPRA\n==================\n\n";
+        keys.forEach(ing => {
+            texto += '- ' + ing + (conteo[ing] > 1 ? ' (x' + conteo[ing] + ')' : '') + '\n';
+        });
+        
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(texto).then(() => {
+                alert("🛒 ¡Lista de la compra copiada a tu portapapeles!");
+            }).catch(err => {
+                alert("Error al copiar: " + err);
+            });
+        } else {
+            // Fallback for older browsers
+            alert("Tu navegador no soporta la copia automática. Por favor selecciona el texto y cópialo a mano.");
+        }
+    },
+
     switchTab(tabId) {
         document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
         document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));

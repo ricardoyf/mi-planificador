@@ -50,7 +50,10 @@
 
         <!-- View: Compra -->
         <section id="view-compra" class="view" style="padding-bottom: 2rem;">
-            <div class="day-header" style="margin-bottom: 1rem;">Cálculo de la Compra</div>
+            <div class="day-header" style="margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">
+                <span>Cálculo de la Compra</span>
+                <button onclick="app.copyCompra()" class="icon-btn" style="font-size: 14px; padding: 4px 8px; border-radius: 4px; border: 1px solid #ccc; background: white; color: #111;">Copiar Lista</button>
+            </div>
             <div class="platos-container" id="compra-container">
                 <!-- Se llena dinamica con js -->
             </div>
