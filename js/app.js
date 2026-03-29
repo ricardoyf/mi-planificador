@@ -31,10 +31,17 @@ const app = {
     },
 
     loadPlan(name) {
-        const data = localStorage.getItem(`plan_${name}`);
-        if(data) {
-            this.plan = JSON.parse(data);
-        } else {
+        try {
+            const data = localStorage.getItem(`plan_${name}`);
+            if(data) {
+                this.plan = JSON.parse(data);
+                // Validar estructura básica
+                if (!this.plan['lunes'] || !this.plan['lunes']['comida']) throw new Error("Estructura corrupta");
+            } else {
+                this.plan = this.getEmptyPlan();
+            }
+        } catch(e) {
+            console.error("Plan corrupto, reseteando", e);
             this.plan = this.getEmptyPlan();
         }
         this.renderPlanificador();
@@ -82,7 +89,7 @@ const app = {
                     slotDiv.className = 'slot';
                     const s = slot === 'primero' ? '1º Plato' : '2º Plato';
                     
-                    const pName = this.plan[dia][tipo][slot] || '-';
+                    const pName = (this.plan[dia] && this.plan[dia][tipo] && this.plan[dia][tipo][slot]) || '-';
                     
                     slotDiv.innerHTML = `
                         <div class="slot-label">${s}</div>
@@ -181,7 +188,7 @@ const app = {
     assignSlot(dia, tipo, slot) {
         if (!this.selectedPlato) {
             // Emulate removal when clicking with no selection
-            if(this.plan[dia][tipo][slot]) {
+            if(this.plan[dia] && this.plan[dia][tipo] && this.plan[dia][tipo][slot]) {
                 if(confirm('¿Eliminar plato actual?')) {
                     this.plan[dia][tipo][slot] = '';
                     this.renderPlanificador();
@@ -193,6 +200,8 @@ const app = {
             return;
         }
         
+        if (!this.plan[dia]) this.plan[dia] = {};
+        if (!this.plan[dia][tipo]) this.plan[dia][tipo] = {};
         this.plan[dia][tipo][slot] = this.selectedPlato;
         this.renderPlanificador();
         this.renderCompra();
@@ -208,7 +217,7 @@ const app = {
         DIAS.forEach(dia => {
             TIPOS.forEach(tipo => {
                 SLOTS.forEach(slot => {
-                    const pname = this.plan[dia][tipo][slot];
+                    const pname = this.plan[dia] && this.plan[dia][tipo] && this.plan[dia][tipo][slot];
                     if (pname) {
                         const matchedData = platosData.find(p => p.plato === pname);
                         if (matchedData && matchedData.ingredientes) {
