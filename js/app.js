@@ -10,6 +10,7 @@ const app = {
         this.loadPlan('base');
         this.renderPlatos();
         this.renderRecetario();
+        this.renderCompra();
         this.setupEventListeners();
         
         // Build desktop navigation if screen is large
@@ -37,6 +38,7 @@ const app = {
             this.plan = this.getEmptyPlan();
         }
         this.renderPlanificador();
+        this.renderCompra();
     },
 
     savePlan(name) {
@@ -183,6 +185,7 @@ const app = {
                 if(confirm('¿Eliminar plato actual?')) {
                     this.plan[dia][tipo][slot] = '';
                     this.renderPlanificador();
+                    this.renderCompra();
                 }
             } else {
                 alert('Primero selecciona un plato de la pestaña Platos.');
@@ -192,6 +195,58 @@ const app = {
         
         this.plan[dia][tipo][slot] = this.selectedPlato;
         this.renderPlanificador();
+        this.renderCompra();
+    },
+
+    renderCompra() {
+        const container = document.getElementById('compra-container');
+        if(!container) return;
+        container.innerHTML = '';
+        
+        let conteo = {};
+        
+        DIAS.forEach(dia => {
+            TIPOS.forEach(tipo => {
+                SLOTS.forEach(slot => {
+                    const pname = this.plan[dia][tipo][slot];
+                    if (pname) {
+                        const matchedData = platosData.find(p => p.plato === pname);
+                        if (matchedData && matchedData.ingredientes) {
+                            matchedData.ingredientes.forEach(ing => {
+                                if(ing) {
+                                    conteo[ing] = (conteo[ing] || 0) + 1;
+                                }
+                            });
+                        }
+                    }
+                });
+            });
+        });
+        
+        const keys = Object.keys(conteo).sort();
+        if (keys.length === 0) {
+            container.innerHTML = '<div style="color:#555; text-align:center; padding:20px;">Aún no hay ingredientes cargados o seleccionados en tu planificador.</div>';
+            return;
+        }
+        
+        const ul = document.createElement('ul');
+        ul.style.listStyleType = 'none';
+        ul.style.padding = '0';
+        ul.style.background = 'var(--card-bg)';
+        ul.style.borderRadius = '12px';
+        ul.style.boxShadow = 'var(--shadow)';
+        
+        keys.forEach(ing => {
+            const li = document.createElement('li');
+            li.style.padding = '12px 16px';
+            li.style.borderBottom = '1px solid var(--border)';
+            li.style.fontSize = '14px';
+            li.innerHTML = `<strong>- ${ing}</strong> ${conteo[ing] > 1 ? \`<span style="color:var(--primary); font-weight:600; float:right;">x${conteo[ing]}</span>\` : ''}`;
+            ul.appendChild(li);
+        });
+        
+        if (ul.lastChild) ul.lastChild.style.borderBottom = 'none';
+        container.appendChild(ul);
     },
 
     switchTab(tabId) {

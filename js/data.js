@@ -1,348 +1,885 @@
 const platosData = [
   {
     "plato": "Acelgasgithub",
-    "categoria": "Básicos"
+    "categoria": "Básicos",
+    "ingredientes": [
+      "Acelgas"
+    ]
   },
   {
     "plato": "Alcachofas",
     "categoria": "Básicos",
+    "ingredientes": [
+      "Alcachofas",
+      "Avecrem"
+    ],
     "url_receta": "Recipes/Alcachofas.html"
   },
   {
     "plato": "Brécol",
-    "categoria": "Básicos"
+    "categoria": "Básicos",
+    "ingredientes": [
+      "Brécol"
+    ]
   },
   {
     "plato": "Calabacín en espaguetis",
     "categoria": "Básicos",
+    "ingredientes": [
+      "Calabacin"
+    ],
     "url_receta": "Recipes/Calabacín en espaguetis.html"
   },
   {
     "plato": "Coliflor",
-    "categoria": "Básicos"
+    "categoria": "Básicos",
+    "ingredientes": [
+      "Coliflor"
+    ]
   },
   {
     "plato": "Espinacas garbanzos",
-    "categoria": "Básicos"
+    "categoria": "Básicos",
+    "ingredientes": [
+      "Espinacas",
+      "Garbanzos cocidos",
+      "Salsa de tomate",
+      "Huevo"
+    ]
   },
   {
     "plato": "Grelos",
-    "categoria": "Básicos"
+    "categoria": "Básicos",
+    "ingredientes": [
+      "Grelos"
+    ]
   },
   {
     "plato": "Judías verdes",
     "categoria": "Básicos",
+    "ingredientes": [
+      "Judías verdes"
+    ],
     "url_receta": "Recipes/Judías verdes.html"
   },
   {
     "plato": "Lentejas",
     "categoria": "Básicos",
+    "ingredientes": [
+      "Lentejas",
+      "Calabacín",
+      "Zanahorias",
+      "Puerro",
+      "Pimentón"
+    ],
     "url_receta": "Recipes/Lentejas.html"
   },
   {
     "plato": "Patatas asadas ostras",
-    "categoria": "Básicos"
+    "categoria": "Básicos",
+    "ingredientes": [
+      "Patatas",
+      "Salsa de ostras",
+      "Romero",
+      "Pimentón"
+    ]
   },
   {
     "plato": "Puré Patata TM31",
     "categoria": "Básicos",
+    "ingredientes": [
+      "Patatas",
+      "Leche SIN LACTOSA",
+      "Mantequilla",
+      "Pimienta",
+      "Nuez moscada"
+    ],
     "url_receta": "Recipes/Puré Patata TM31.html"
   },
   {
     "plato": "Verduras horno",
     "categoria": "Básicos",
+    "ingredientes": [
+      "Boniato",
+      "Calabacín",
+      "Berenjena"
+    ],
     "url_receta": "Recipes/Verduras horno.html"
   },
   {
     "plato": "Berenjenas rellenas",
     "categoria": "CENAS",
+    "ingredientes": [
+      "Berenjenas",
+      "Carne picada o verduras",
+      "Queso rallado",
+      "Pimiento rojo",
+      "Champiñones"
+    ],
     "url_receta": "Recipes/Berenjenas rellenas.html"
   },
   {
     "plato": "Cuscús champiñones judías",
-    "categoria": "CENAS"
+    "categoria": "CENAS",
+    "ingredientes": [
+      "Cuscús",
+      "Agua o caldo caliente",
+      "Judías verdes",
+      "Champiñones",
+      "Pimentón",
+      "Salsa de soja",
+      "Huevo",
+      "Levadura"
+    ]
   },
   {
     "plato": "Empanadillas",
     "categoria": "CENAS",
+    "ingredientes": [
+      "Harina",
+      "Levadura",
+      "Poquito de aceite",
+      "Atun NATURAL"
+    ],
     "url_receta": "Recipes/Empanadillas.html"
   },
   {
     "plato": "Espinacas a la crema",
     "categoria": "CENAS",
+    "ingredientes": [
+      "Espinacas congeladas",
+      "Mantequilla",
+      "Nuez moscada",
+      "Huevo",
+      "Queso rallado"
+    ],
     "url_receta": "Recipes/Espinacas a la crema.html"
   },
   {
     "plato": "Fajitas",
-    "categoria": "CENAS"
+    "categoria": "CENAS",
+    "ingredientes": [
+      "Pimiento rojo",
+      "Aguacate",
+      "Filetes P.",
+      "Tomate",
+      "Lechuga",
+      "Yogur griego",
+      "Fajitas integrales"
+    ]
   },
   {
     "plato": "Flautín de calabacín ¿?",
-    "categoria": "CENAS"
+    "categoria": "CENAS",
+    "ingredientes": [
+      "Calabacin",
+      "Huevo",
+      "Lacón ibérico",
+      "Mozzarella",
+      "Otras opciones: tomate, aguacate, lentejas, quinoa, pollo, atún"
+    ]
   },
   {
     "plato": "Piadina Vikika",
     "categoria": "CENAS",
+    "ingredientes": [
+      "Piadina",
+      "Huevos grandes",
+      "Yogur griego",
+      "cherrys",
+      "Espinacas",
+      "Queso rallado",
+      "Pavo en taquitos"
+    ],
     "url_receta": "Recipes/Piadina Vikika.html"
   },
   {
     "plato": "Pisto",
     "categoria": "CENAS",
+    "ingredientes": [
+      "Puerro",
+      "Pimiento rojo",
+      "Pimiento verde",
+      "Calabacín",
+      "Tomate triturado"
+    ],
     "url_receta": "Recipes/Pisto.html"
   },
   {
     "plato": "Wrap Cottage",
     "categoria": "CENAS",
+    "ingredientes": [
+      "Queso cottage",
+      "Huevo",
+      "Perejil picado"
+    ],
     "url_receta": "Recipes/Wrap Cottage.html"
   },
   {
     "plato": "Wrap de aguacate",
-    "categoria": "CENAS"
+    "categoria": "CENAS",
+    "ingredientes": [
+      "Aguacate",
+      "Huevo",
+      "Zumo de limón",
+      "Semillas de sésamo",
+      "cottage",
+      "Rúcula",
+      "Tomate",
+      "Pavo",
+      "Queso de cabra"
+    ]
   },
   {
     "plato": "Zoodles langostinos",
     "categoria": "CENAS",
+    "ingredientes": [
+      "Calabacin",
+      "Langostinos",
+      "cayena"
+    ],
     "url_receta": "Recipes/Zoodles langostinos.html"
   },
   {
     "plato": "Sandwinch",
-    "categoria": "CENAS"
+    "categoria": "CENAS",
+    "ingredientes": [
+      "Pan molde"
+    ]
   },
   {
     "plato": "Filetes",
-    "categoria": "Carnes"
+    "categoria": "Carnes",
+    "ingredientes": [
+      "ternera, pollo, pavo, solomillo o castaña"
+    ]
   },
   {
     "plato": "Jarrete arroz",
-    "categoria": "Carnes"
+    "categoria": "Carnes",
+    "ingredientes": [
+      "Jarrete",
+      "Pimiento rojo",
+      "Tomates",
+      "Arroz"
+    ]
   },
   {
     "plato": "Llana",
-    "categoria": "Carnes"
+    "categoria": "Carnes",
+    "ingredientes": [
+      "Llana de ternera",
+      "Pimiento rojo",
+      "Vino blanco",
+      "Caldo de carne o agua",
+      "Perejil fresco"
+    ]
   },
   {
     "plato": "Muslos AirFryer",
-    "categoria": "Carnes"
+    "categoria": "Carnes",
+    "ingredientes": [
+      "Muslos"
+    ]
   },
   {
     "plato": "Pavo relleno",
     "categoria": "Carnes",
+    "ingredientes": [
+      "Pechuga de pavo",
+      "Jamón york",
+      "Queso",
+      "Zanahoria",
+      "Champiñones",
+      "Pimiento rojo",
+      "Caldo de carne",
+      "Vino blanco"
+    ],
     "url_receta": "Recipes/Pavo relleno.html"
   },
   {
     "plato": "Salsa boloñesa",
     "categoria": "Carnes",
+    "ingredientes": [
+      "Apio",
+      "Zanahoria",
+      "Albahaca",
+      "Carne picada",
+      "Vino tinto",
+      "Tomate concentrado",
+      "Tomate triturado",
+      "Laurel",
+      "Nuez moscada"
+    ],
     "url_receta": "Recipes/Salsa boloñesa.html"
   },
   {
     "plato": "Albóndigas",
     "categoria": "Carnes",
+    "ingredientes": [
+      "Carne picada",
+      "Huevo",
+      "Pan rallado",
+      "Puerro",
+      "Pimiento",
+      "Zanahorias",
+      "Vino blanco",
+      "Caldo de carne"
+    ],
     "url_receta": "Recipes/Albóndigas.html"
   },
   {
     "plato": "Pechugas de Pollo",
     "categoria": "Carnes",
+    "ingredientes": [
+      "Filetes P.",
+      "Caldo de carne",
+      "Vino blanco",
+      "Pimiento rojo"
+    ],
     "url_receta": "Recipes/Pechugas de Pollo.html"
   },
   {
     "plato": "Hamburguesas",
-    "categoria": "Carnes"
+    "categoria": "Carnes",
+    "ingredientes": [
+      "Hamburguesas",
+      "Lechuga",
+      "Tomate",
+      "Queso"
+    ]
   },
   {
     "plato": "E. Bonito feta",
-    "categoria": "Ensaladas"
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "Lechuga",
+      "Tomates",
+      "Bonito",
+      "Queso feta",
+      "Zanahorias",
+      "Semillas variadas"
+    ]
   },
   {
     "plato": "E. Caprese",
     "categoria": "Ensaladas",
+    "ingredientes": [
+      "Tomates maduros",
+      "Mozzarella",
+      "Albahaca fresca"
+    ],
     "url_receta": "Recipes/E. Caprese.html"
   },
   {
     "plato": "E. Cuscús judías",
-    "categoria": "Ensaladas"
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "Cuscús",
+      "Judías verdes",
+      "Champiñones",
+      "huevo",
+      "Pimentón"
+    ]
   },
   {
     "plato": "E. Pimientos",
-    "categoria": "Ensaladas"
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "Pimientos asados",
+      "Tomate",
+      "Queso feta",
+      "Almendras",
+      "Bonito"
+    ]
   },
   {
     "plato": "E. Quinoa brécol calabacín",
     "categoria": "Ensaladas",
+    "ingredientes": [
+      "Quinoa",
+      "Brécol",
+      "Calabacín"
+    ],
     "url_receta": "Recipes/E. Quinoa brécol calabacín.html"
   },
   {
     "plato": "E. Salmón",
-    "categoria": "Ensaladas"
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "Salmón",
+      "Aguacate",
+      "Queso feta",
+      "Tomate",
+      "Canónigos",
+      "Nueces"
+    ]
   },
   {
     "plato": "E. Judias ANCHOAS",
-    "categoria": "Ensaladas"
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "Mayonesa",
+      "Judías verdes",
+      "Lechuga",
+      "Tomate",
+      "Aceitunas",
+      "Huevo",
+      "Anchoas"
+    ]
   },
   {
     "plato": "E. atún",
-    "categoria": "Ensaladas"
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "Bonito",
+      "Aguacate",
+      "Mozzarella",
+      "Tomate",
+      "Canónigos",
+      "Pepino"
+    ]
   },
   {
     "plato": "E. atún mango",
-    "categoria": "Ensaladas"
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "Bonito",
+      "mango",
+      "Queso feta",
+      "Tomate",
+      "Canónigos",
+      "Cebolla"
+    ]
   },
   {
     "plato": "E. pasta",
-    "categoria": "Ensaladas"
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "Pasta integral",
+      "Bonito",
+      "Aguacate",
+      "Mozzarella"
+    ]
   },
   {
     "plato": "E. patata",
-    "categoria": "Ensaladas"
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "Patata",
+      "Huevo",
+      "Bonito",
+      "Aceitunas negras"
+    ]
   },
   {
     "plato": "E. pimientos rojos",
-    "categoria": "Ensaladas"
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "Pimientos asados",
+      "Almendras o nueces",
+      "Queso fresco",
+      "cherrys",
+      "Bonito"
+    ]
   },
   {
     "plato": "E. queso cabra",
-    "categoria": "Ensaladas"
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "Salmón",
+      "Queso de cabra",
+      "Nueces",
+      "Tomate",
+      "Canónigos"
+    ]
   },
   {
     "plato": "E. salmón",
-    "categoria": "Ensaladas"
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "Salmón",
+      "aguacate",
+      "Feta",
+      "Tomate",
+      "Canónigos",
+      "Pepino"
+    ]
   },
   {
     "plato": "E. rulo",
-    "categoria": "Ensaladas"
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "Tomates maduros",
+      "Rulo de cabra"
+    ]
   },
   {
     "plato": "E. fabes",
-    "categoria": "Ensaladas"
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "Fabes",
+      "Atun",
+      "Huevo cocido",
+      "Aceite y vinagre"
+    ]
   },
   {
     "plato": "Ensaladilla rusa",
     "categoria": "Ensaladas",
+    "ingredientes": [
+      "Patatas cocidas",
+      "Zanahorias",
+      "Guisantes",
+      "Mayonesa",
+      "bonito"
+    ],
     "url_receta": "Recipes/Ensaladilla rusa.html"
   },
   {
     "plato": "Tacos lechuga  ensaladilla atún",
-    "categoria": "Ensaladas"
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "Cogollos de lechuga",
+      "bonito",
+      "Albahaca fresca",
+      "Mostaza",
+      "Cebolleta",
+      "Manzana",
+      "Pepinillos",
+      "Mahonesa"
+    ]
   },
   {
     "plato": "Tomate relleno burrata",
-    "categoria": "Ensaladas"
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "Tomate",
+      "Burrata",
+      "cebollino",
+      "Albahaca",
+      "Pistachos"
+    ]
   },
   {
     "plato": "Lasaña",
-    "categoria": "Pasta y arroces"
+    "categoria": "Pasta y arroces",
+    "ingredientes": [
+      "Placas de lasaña",
+      "Carne picada",
+      "Champiñones",
+      "Espinacas",
+      "Bechamel",
+      "Queso rallado"
+    ]
   },
   {
     "plato": "Boloñesa pasta",
-    "categoria": "Pasta y arroces"
+    "categoria": "Pasta y arroces",
+    "ingredientes": [
+      "Carne picada",
+      "Apio",
+      "Zanahoria",
+      "Puerro",
+      "Vino tinto",
+      "Tomate triturado",
+      "Pasta"
+    ]
   },
   {
     "plato": "Canelones espinacas",
-    "categoria": "Pasta y arroces"
+    "categoria": "Pasta y arroces",
+    "ingredientes": [
+      "Placas de canelón",
+      "Carne picada",
+      "Champiñones",
+      "Espinacas",
+      "Bechamel",
+      "Queso rallado"
+    ]
   },
   {
     "plato": "Pasta fresca",
-    "categoria": "Pasta y arroces"
+    "categoria": "Pasta y arroces",
+    "ingredientes": [
+      "Pasta fresca",
+      "Pesto",
+      "Langostinos pelados",
+      "Brécol"
+    ]
   },
   {
     "plato": "Chocos  arroz",
-    "categoria": "Pescados"
+    "categoria": "Pescados",
+    "ingredientes": [
+      "Chocos",
+      "Arroz",
+      "Pimiento verde",
+      "Vino blanco",
+      "Fumet"
+    ]
   },
   {
     "plato": "Pescado Horno",
-    "categoria": "Pescados"
+    "categoria": "Pescados",
+    "ingredientes": [
+      "bacalao, jurelos, dorada, rodaballo, sargo, palometa, menda, coruxo, corvina",
+      "Pimiento"
+    ]
   },
   {
     "plato": "Pulpo",
     "categoria": "Pescados",
+    "ingredientes": [
+      "Pulpo",
+      "Pimentón dulce",
+      "Pimentón picante"
+    ],
     "url_receta": "Recipes/Pulpo.html"
   },
   {
     "plato": "Rapantes",
     "categoria": "Pescados",
+    "ingredientes": [
+      "Rapantes"
+    ],
     "url_receta": "Recipes/Rapantes.html"
   },
   {
     "plato": "Rape marinera langostinos",
     "categoria": "Pescados",
+    "ingredientes": [
+      "Rape en trozos",
+      "Langostinos",
+      "Patatas",
+      "Guindilla",
+      "Vino blanco",
+      "Salsa de tomate",
+      "Harina",
+      "Fumet",
+      "Perejil fresco"
+    ],
     "url_receta": "Recipes/Rape marinera langostinos.html"
   },
   {
     "plato": "Rodaballo plancha",
     "categoria": "Pescados",
+    "ingredientes": [
+      "Rodaballo",
+      "Perejil",
+      "Limón"
+    ],
     "url_receta": "Recipes/Rodaballo plancha.html"
   },
   {
     "plato": "Salmón AirFryer",
     "categoria": "Pescados",
+    "ingredientes": [
+      "Lomos de salmón",
+      "Boniato"
+    ],
     "url_receta": "Recipes/Salmón AirFryer.html"
   },
   {
     "plato": "Empanada pollo",
     "categoria": "Internacionales",
+    "ingredientes": [
+      "Planchas de masa brisa o quebrada",
+      "Filetes P.",
+      "Queso mozzarella",
+      "Huevo",
+      "parmesano",
+      "Philadelphia",
+      "Zanahoria",
+      "Calabacín",
+      "Champiñones",
+      "Pimiento rojo",
+      "Hierbas provenzales"
+    ],
     "url_receta": "Recipes/Empanada pollo.html"
   },
   {
     "plato": "Falafel salsa de yogur",
-    "categoria": "Internacionales"
+    "categoria": "Internacionales",
+    "ingredientes": [
+      "Garbanzos secos",
+      "Comino",
+      "Yogur natural",
+      "Cilantro",
+      "Perejil fresco al gusto",
+      "Levadura Royal",
+      "Limón",
+      "Menta picada"
+    ]
   },
   {
     "plato": "Fideos chinos",
     "categoria": "Internacionales",
+    "ingredientes": [
+      "Fideos chinos",
+      "Pechuga de pollo",
+      "Calabacín",
+      "Pimiento rojo",
+      "Zanahoria",
+      "Jengibre",
+      "Salsa de soja",
+      "Miel",
+      "Vinagre suave",
+      "Aceite de sésamo",
+      "Semillas de sésamo"
+    ],
     "url_receta": "Recipes/Fideos chinos.html"
   },
   {
     "plato": "Poke de salmón",
     "categoria": "Internacionales",
+    "ingredientes": [
+      "Salmón fresco",
+      "Salsa de soja",
+      "Miel",
+      "lima",
+      "Aceite de sésamo",
+      "Jengibre",
+      "Arroz de sushi o quinoa",
+      "Edamame",
+      "Mango",
+      "Aguacate",
+      "Algas",
+      "Cebolla crunchys"
+    ],
     "url_receta": "Recipes/Poke de salmón.html"
   },
   {
     "plato": "Pollo butter chicken",
     "categoria": "Internacionales",
+    "ingredientes": [
+      "Pollo",
+      "Ghee",
+      "Yogur",
+      "limon",
+      "Jengibre",
+      "Garam masala",
+      "Comino",
+      "Cúrcuma",
+      "Chile en polvo",
+      "Tomate triturado",
+      "Anacardos",
+      "Nata"
+    ],
     "url_receta": "Recipes/Pollo butter chicken.html"
   },
   {
     "plato": "Pollo coreano",
     "categoria": "Internacionales",
+    "ingredientes": [
+      "Pollo",
+      "Salsa de soja",
+      "Miel",
+      "Jengibre",
+      "Aceite de sésamo",
+      "Maicena"
+    ],
     "url_receta": "Recipes/Pollo coreano.html"
   },
   {
     "plato": "Wraps",
     "categoria": "Internacionales",
+    "ingredientes": [
+      "Fajitas"
+    ],
     "url_receta": "Recipes/Wraps.html"
   },
   {
     "plato": "Crema Champiñones",
     "categoria": "Sopas y cremas",
+    "ingredientes": [
+      "Champiñones Portobello",
+      "Puerro",
+      "Chalota",
+      "Piñones",
+      "Caldo de verduras",
+      "Nata"
+    ],
     "url_receta": "Recipes/Crema Champiñones.html"
   },
   {
     "plato": "Crema Verduras",
     "categoria": "Sopas y cremas",
+    "ingredientes": [
+      "Puerro",
+      "Calabacín",
+      "Calabaza",
+      "Zanahorias",
+      "Nuez moscada"
+    ],
     "url_receta": "Recipes/Crema Verduras.html"
   },
   {
     "plato": "Gazpacho",
     "categoria": "Sopas y cremas",
+    "ingredientes": [
+      "Tomates maduros",
+      "Pimiento verde",
+      "Pepino"
+    ],
     "url_receta": "Recipes/Gazpacho.html"
   },
   {
     "plato": "Pastel de puerro y huevo",
     "categoria": "Sopas y cremas",
+    "ingredientes": [
+      "Puerros",
+      "Huevo",
+      "Nata",
+      "Masa brisa",
+      "Queso rallado"
+    ],
     "url_receta": "Recipes/Pastel de puerro y huevo.html"
   },
   {
     "plato": "Sopa de Coles con Sobrasada",
     "categoria": "Sopas y cremas",
+    "ingredientes": [
+      "Coles de Bruselas",
+      "Tomate concentrado",
+      "caldo pollo o verduras",
+      "Sobrasada o pimentón",
+      "Perejil fresco",
+      "Pan para freír"
+    ],
     "url_receta": "Recipes/Sopa de Coles con Sobrasada.html"
   },
   {
     "plato": "Sopa de espárragos y langostinos",
     "categoria": "Sopas y cremas",
+    "ingredientes": [
+      "Langostinos",
+      "Pimiento verde",
+      "Pimiento rojo",
+      "Tomate maduro",
+      "Espárragos trigueros",
+      "Laurel",
+      "Avecrem",
+      "Pan del día anterior"
+    ],
     "url_receta": "Recipes/Sopa de espárragos y langostinos.html"
   },
   {
     "plato": "Sopa de pescado (TM31)",
     "categoria": "Sopas y cremas",
+    "ingredientes": [
+      "Huesos de rape",
+      "gambas",
+      "Mejillones",
+      "Almejas",
+      "Zanahoria",
+      "Puerro",
+      "Pimiento choricero",
+      "Vino blanco",
+      "Rape",
+      "Gambas",
+      "Perejil"
+    ],
     "url_receta": "Recipes/Sopa de pescado (TM31).html"
   }
 ];

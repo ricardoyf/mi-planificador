@@ -33,14 +33,20 @@ def main():
         idx_plato = encabezados.index('plato') if 'plato' in encabezados else 0
         idx_categoria = encabezados.index('categoria') if 'categoria' in encabezados else 1
         
+        idx_ingredientes = [i for i, h in enumerate(encabezados) if h.startswith('ingrediente_')]
+        if not idx_ingredientes:
+            idx_ingredientes = list(range(2, len(encabezados)))
+        
         for row in ws.iter_rows(min_row=2, values_only=True):
             if not row or idx_plato >= len(row) or not row[idx_plato]:
                 continue
             nombre = str(row[idx_plato]).strip()
             categoria = str(row[idx_categoria]).strip() if idx_categoria < len(row) and row[idx_categoria] else 'Sin categoría'
+            ingredientes = [str(row[i]).strip() for i in idx_ingredientes if i < len(row) and row[i] not in (None, '')]
             platos.append({
                 'plato': nombre,
-                'categoria': categoria
+                'categoria': categoria,
+                'ingredientes': ingredientes
             })
     else:
         print("Advertencia: No se encontró ningún archivo Excel de platos.")
