@@ -241,7 +241,8 @@ const app = {
             li.style.padding = '12px 16px';
             li.style.borderBottom = '1px solid var(--border)';
             li.style.fontSize = '14px';
-            li.innerHTML = `<strong>- ${ing}</strong> ${conteo[ing] > 1 ? \`<span style="color:var(--primary); font-weight:600; float:right;">x${conteo[ing]}</span>\` : ''}`;
+            let extra = conteo[ing] > 1 ? '<span style="color:var(--primary); font-weight:600; float:right;">x' + conteo[ing] + '</span>' : '';
+            li.innerHTML = '<strong>- ' + ing + '</strong> ' + extra;
             ul.appendChild(li);
         });
         
