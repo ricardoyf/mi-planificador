@@ -128,10 +128,38 @@ const app = {
                     `;
                     
                     // Interaction
+                    let pressTimer = null;
+                    let longPressTriggered = false;
+                    const actual = () => (this.plan[dia] && this.plan[dia][tipo] && this.plan[dia][tipo][slot]) || '';
+
+                    const startPress = () => {
+                        longPressTriggered = false;
+                        pressTimer = setTimeout(() => {
+                            const currentDish = actual();
+                            if (currentDish) {
+                                longPressTriggered = true;
+                                this.openRecipeForDish(currentDish);
+                            }
+                        }, 550);
+                    };
+
+                    const cancelPress = () => {
+                        if (pressTimer) {
+                            clearTimeout(pressTimer);
+                            pressTimer = null;
+                        }
+                    };
+
+                    slotDiv.addEventListener('mousedown', startPress);
+                    slotDiv.addEventListener('touchstart', startPress, { passive: true });
+                    slotDiv.addEventListener('mouseup', cancelPress);
+                    slotDiv.addEventListener('mouseleave', cancelPress);
+                    slotDiv.addEventListener('touchend', cancelPress);
+                    slotDiv.addEventListener('touchcancel', cancelPress);
+
                     slotDiv.onclick = () => {
-                        const actual = (this.plan[dia] && this.plan[dia][tipo] && this.plan[dia][tipo][slot]) || '';
-                        if (actual && !this.selectedPlato) {
-                            this.openRecipeForDish(actual);
+                        if (longPressTriggered) {
+                            longPressTriggered = false;
                             return;
                         }
                         this.assignSlot(dia, tipo, slot);
