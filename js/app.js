@@ -130,40 +130,58 @@ const app = {
                     // Interaction
                     let pressTimer = null;
                     let longPressTriggered = false;
+                    let pressStartX = 0;
+                    let pressStartY = 0;
                     const actual = () => (this.plan[dia] && this.plan[dia][tipo] && this.plan[dia][tipo][slot]) || '';
 
-                    const startPress = () => {
-                        longPressTriggered = false;
-                        pressTimer = setTimeout(() => {
-                            const currentDish = actual();
-                            if (currentDish) {
-                                longPressTriggered = true;
-                                this.openRecipeForDish(currentDish);
-                            }
-                        }, 550);
-                    };
-
-                    const cancelPress = () => {
+                    const clearPressTimer = () => {
                         if (pressTimer) {
                             clearTimeout(pressTimer);
                             pressTimer = null;
                         }
                     };
 
-                    slotDiv.addEventListener('mousedown', startPress);
-                    slotDiv.addEventListener('touchstart', startPress, { passive: true });
-                    slotDiv.addEventListener('mouseup', cancelPress);
-                    slotDiv.addEventListener('mouseleave', cancelPress);
-                    slotDiv.addEventListener('touchend', cancelPress);
-                    slotDiv.addEventListener('touchcancel', cancelPress);
+                    const startPress = (event) => {
+                        clearPressTimer();
+                        longPressTriggered = false;
+                        const point = event.touches ? event.touches[0] : event;
+                        pressStartX = point?.clientX || 0;
+                        pressStartY = point?.clientY || 0;
+                        pressTimer = setTimeout(() => {
+                            const currentDish = actual();
+                            if (currentDish) {
+                                longPressTriggered = true;
+                                this.openRecipeForDish(currentDish);
+                            }
+                            clearPressTimer();
+                        }, 650);
+                    };
 
-                    slotDiv.onclick = () => {
+                    const maybeCancelByMove = (event) => {
+                        const point = event.touches ? event.touches[0] : event;
+                        const x = point?.clientX || 0;
+                        const y = point?.clientY || 0;
+                        if (Math.abs(x - pressStartX) > 10 || Math.abs(y - pressStartY) > 10) {
+                            clearPressTimer();
+                        }
+                    };
+
+                    const endPress = (event) => {
+                        clearPressTimer();
                         if (longPressTriggered) {
+                            event.preventDefault();
+                            event.stopPropagation();
                             longPressTriggered = false;
                             return;
                         }
                         this.assignSlot(dia, tipo, slot);
                     };
+
+                    slotDiv.addEventListener('pointerdown', startPress);
+                    slotDiv.addEventListener('pointermove', maybeCancelByMove);
+                    slotDiv.addEventListener('pointerup', endPress);
+                    slotDiv.addEventListener('pointerleave', clearPressTimer);
+                    slotDiv.addEventListener('pointercancel', clearPressTimer);
                     
                     slots.appendChild(slotDiv);
                 });
