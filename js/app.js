@@ -48,9 +48,40 @@ const app = {
         this.renderCompra();
     },
 
+    getWeekFileBase() {
+        const now = new Date();
+        const jsDay = now.getDay();
+        const mondayOffset = jsDay === 0 ? -6 : 1 - jsDay;
+        const monday = new Date(now);
+        monday.setHours(0,0,0,0);
+        monday.setDate(now.getDate() + mondayOffset);
+        const sunday = new Date(monday);
+        sunday.setDate(monday.getDate() + 6);
+        const pad = n => n.toString().padStart(2, '0');
+        return `plan${pad(monday.getDate())}_${pad(monday.getMonth()+1)}-${pad(sunday.getDate())}_${pad(sunday.getMonth()+1)}`;
+    },
+
+    downloadJson(filename, payload) {
+        const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    },
+
     savePlan(name) {
         localStorage.setItem(`plan_${name}`, JSON.stringify(this.plan));
-        alert(`Plan guardado localmente como ${name.toUpperCase()}`);
+        if (name === 'base') {
+            const payload = { ...this.plan, _meta: { tipo: 'base', nombre: this.getWeekFileBase() } };
+            this.downloadJson(`${this.getWeekFileBase()}.json`, payload);
+            alert(`BASE guardada y descargada como ${this.getWeekFileBase()}.json`);
+        } else {
+            alert(`Plan guardado localmente como ${name.toUpperCase()}`);
+        }
     },
 
     action(type, name) {
