@@ -90,6 +90,43 @@ const app = {
         document.getElementById('dropdown-menu').classList.add('hidden');
     },
 
+    savePlanAsJson() {
+        localStorage.setItem('plan_base', JSON.stringify(this.plan));
+        const payload = { ...this.plan, _meta: { tipo: 'base', nombre: this.getWeekFileBase() } };
+        this.downloadJson(`${this.getWeekFileBase()}.json`, payload);
+        alert(`JSON descargado como ${this.getWeekFileBase()}.json`);
+        document.getElementById('dropdown-menu').classList.add('hidden');
+    },
+
+    loadJsonFile() {
+        const input = document.getElementById('json-file-input');
+        if (!input) return;
+        input.value = '';
+        input.click();
+        document.getElementById('dropdown-menu').classList.add('hidden');
+    },
+
+    importJsonFile(file) {
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = () => {
+            try {
+                const parsed = JSON.parse(reader.result);
+                if (!parsed['lunes'] || !parsed['lunes']['comida']) throw new Error('Estructura no válida');
+                this.plan = parsed;
+                delete this.plan._meta;
+                localStorage.setItem('plan_base', JSON.stringify(this.plan));
+                this.renderPlanificador();
+                this.renderCompra();
+                alert('JSON cargado correctamente');
+            } catch (e) {
+                alert('No se pudo cargar el JSON');
+                console.error(e);
+            }
+        };
+        reader.readAsText(file);
+    },
+
     renderPlanificador() {
         const container = document.getElementById('days-container');
         container.innerHTML = '';
@@ -447,6 +484,14 @@ const app = {
                 this.switchTab(btn.dataset.target);
             });
         });
+
+        const jsonInput = document.getElementById('json-file-input');
+        if (jsonInput) {
+            jsonInput.addEventListener('change', (e) => {
+                const file = e.target.files && e.target.files[0];
+                this.importJsonFile(file);
+            });
+        }
     },
 
     exportHTML() {
