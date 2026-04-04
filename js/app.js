@@ -128,7 +128,14 @@ const app = {
                     `;
                     
                     // Interaction
-                    slotDiv.onclick = () => this.assignSlot(dia, tipo, slot);
+                    slotDiv.onclick = () => {
+                        const actual = (this.plan[dia] && this.plan[dia][tipo] && this.plan[dia][tipo][slot]) || '';
+                        if (actual && !this.selectedPlato) {
+                            this.openRecipeForDish(actual);
+                            return;
+                        }
+                        this.assignSlot(dia, tipo, slot);
+                    };
                     
                     slots.appendChild(slotDiv);
                 });
@@ -186,6 +193,17 @@ const app = {
         });
     },
     
+    openRecipeForDish(name) {
+        const matched = platosData.find(p => p.plato === name && p.url_receta);
+        if (!matched || !matched.url_receta) {
+            alert('Ese plato no tiene receta enlazada.');
+            return;
+        }
+        const baseUrl = window.location.href.split('index.html')[0].replace(/\/$/, '');
+        const absoluteUrl = `${baseUrl}/${matched.url_receta}`;
+        window.open(absoluteUrl, '_blank');
+    },
+
     renderRecetario(filter = '') {
         const container = document.getElementById('recetas-container');
         container.innerHTML = '';
