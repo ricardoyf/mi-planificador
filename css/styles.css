@@ -27,15 +27,45 @@ header.app-header {
     z-index: 100;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 16px 20px;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 12px;
     border-bottom: 1px solid var(--border);
     box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 }
 
+.header-title-block {
+    min-width: 0;
+    flex: 1;
+}
+
 header h1 {
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.week-summary {
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--text-sec);
     font-weight: 600;
+}
+
+.header-actions {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.week-select {
+    max-width: 180px;
+    font-size: 12px;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: white;
+    color: var(--text-main);
 }
 
 .icon-btn {
@@ -89,7 +119,7 @@ header h1 {
 }
 
 main {
-    padding: 16px;
+    padding: 10px;
 }
 
 .view {
@@ -107,51 +137,68 @@ main {
 }
 
 /* Planificador */
+.days-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
 .day-card {
     background: var(--card-bg);
     border-radius: 12px;
-    padding: 16px;
-    margin-bottom: 16px;
+    padding: 10px;
+    margin-bottom: 0;
     box-shadow: var(--shadow);
 }
 
 .day-header {
-    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 16px;
     text-transform: capitalize;
-    font-weight: 600;
-    margin-bottom: 12px;
+    font-weight: 700;
+    margin-bottom: 8px;
     color: var(--primary);
-    border-bottom: 2px solid var(--primary-light);
-    padding-bottom: 8px;
+    border-bottom: 1px solid var(--primary-light);
+    padding-bottom: 6px;
+}
+
+.day-date {
+    font-size: 13px;
+    color: var(--text-main);
+    font-weight: 700;
 }
 
 .meal-section {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .meal-title {
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 11px;
+    font-weight: 700;
     color: var(--text-sec);
     text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+    letter-spacing: .05em;
 }
 
 .slots-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    gap: 8px;
 }
 
 .slot {
     background: var(--bg-color);
     border: 1px solid var(--border);
     border-radius: 8px;
-    padding: 12px 8px;
+    padding: 8px 6px;
     text-align: center;
     position: relative;
     cursor: pointer;
-    min-height: 80px;
+    min-height: 58px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -165,16 +212,16 @@ main {
 }
 
 .slot .slot-label {
-    font-size: 11px;
-    font-weight: 600;
+    font-size: 10px;
+    font-weight: 700;
     color: var(--text-sec);
-    margin-bottom: 4px;
+    margin-bottom: 3px;
 }
 
 .slot .slot-value {
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 1.3;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
 }
 
 /* Platos */
@@ -337,12 +384,17 @@ main {
 /* Responsive (iPad/Desktop) */
 @media (min-width: 600px) {
     main {
-        max-width: 800px;
+        max-width: 1100px;
         margin: 0 auto;
+    }
+
+    .days-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
     }
     
     .slots-container {
-        gap: 16px;
+        gap: 10px;
     }
     
     .fab {
@@ -362,6 +414,8 @@ main {
         position: fixed;
         width: 100%;
         top: 0;
+        align-items: center;
+        padding: 12px 20px;
     }
     
     /* Navigation inside header for desktop */

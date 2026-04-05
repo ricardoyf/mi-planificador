@@ -1,12 +1,16 @@
 const DIAS = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'];
+const DIAS_LABEL = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
 const TIPOS = ['comida', 'cena'];
 const SLOTS = ['primero', 'segundo'];
 
 const app = {
     plan: {},
     selectedPlato: null,
+    weekOptions: [],
+    currentWeekKey: null,
     
     init() {
+        this.setupWeekOptions();
         this.loadPlan('base');
         this.renderPlatos();
         this.renderRecetario();
@@ -30,6 +34,56 @@ const app = {
         return p;
     },
 
+    setupWeekOptions() {
+        const now = new Date();
+        const jsDay = now.getDay();
+        const mondayOffset = jsDay === 0 ? -6 : 1 - jsDay;
+        const baseMonday = new Date(now);
+        baseMonday.setHours(0,0,0,0);
+        baseMonday.setDate(now.getDate() + mondayOffset);
+        const pad = n => n.toString().padStart(2, '0');
+        this.weekOptions = [0,1,2].map(offset => {
+            const monday = new Date(baseMonday);
+            monday.setDate(baseMonday.getDate() + (offset * 7));
+            const sunday = new Date(monday);
+            sunday.setDate(monday.getDate() + 6);
+            const key = `plan${pad(monday.getDate())}_${pad(monday.getMonth()+1)}-${pad(sunday.getDate())}_${pad(sunday.getMonth()+1)}`;
+            return {
+                key,
+                label: `Semana ${pad(monday.getDate())}/${pad(monday.getMonth()+1)} - ${pad(sunday.getDate())}/${pad(sunday.getMonth()+1)}`,
+                summary: `${pad(monday.getDate())}/${pad(monday.getMonth()+1)} → ${pad(sunday.getDate())}/${pad(sunday.getMonth()+1)}`,
+                monday,
+                sunday
+            };
+        });
+        this.currentWeekKey = this.weekOptions[0].key;
+    },
+
+    getWeekOption(key = this.currentWeekKey) {
+        return this.weekOptions.find(w => w.key === key) || this.weekOptions[0];
+    },
+
+    getDayDateLabel(dia, key = this.currentWeekKey) {
+        const week = this.getWeekOption(key);
+        const index = DIAS.indexOf(dia);
+        const d = new Date(week.monday);
+        d.setDate(week.monday.getDate() + index);
+        const pad = n => n.toString().padStart(2, '0');
+        return `${pad(d.getDate())}/${pad(d.getMonth()+1)}`;
+    },
+
+    renderWeekSelector() {
+        const select = document.getElementById('week-select');
+        const summary = document.getElementById('week-summary');
+        if (!select) return;
+        select.innerHTML = this.weekOptions.map(w => `<option value="${w.key}">${w.label}</option>`).join('');
+        select.value = this.currentWeekKey;
+        if (summary) {
+            const current = this.getWeekOption();
+            summary.textContent = `${current.label} · JSON: ${current.key}.json`;
+        }
+    },
+
     loadPlan(name) {
         try {
             const data = localStorage.getItem(`plan_${name}`);
@@ -44,21 +98,13 @@ const app = {
             console.error("Plan corrupto, reseteando", e);
             this.plan = this.getEmptyPlan();
         }
+        this.renderWeekSelector();
         this.renderPlanificador();
         this.renderCompra();
     },
 
     getWeekFileBase() {
-        const now = new Date();
-        const jsDay = now.getDay();
-        const mondayOffset = jsDay === 0 ? -6 : 1 - jsDay;
-        const monday = new Date(now);
-        monday.setHours(0,0,0,0);
-        monday.setDate(now.getDate() + mondayOffset);
-        const sunday = new Date(monday);
-        sunday.setDate(monday.getDate() + 6);
-        const pad = n => n.toString().padStart(2, '0');
-        return `plan${pad(monday.getDate())}_${pad(monday.getMonth()+1)}-${pad(sunday.getDate())}_${pad(sunday.getMonth()+1)}`;
+        return this.currentWeekKey || this.getWeekOption().key;
     },
 
     downloadJson(filename, payload) {
@@ -131,13 +177,13 @@ const app = {
         const container = document.getElementById('days-container');
         container.innerHTML = '';
         
-        DIAS.forEach(dia => {
+        DIAS.forEach((dia, idx) => {
             const card = document.createElement('div');
             card.className = 'day-card';
             
             const header = document.createElement('div');
             header.className = 'day-header';
-            header.textContent = dia;
+            header.innerHTML = `<span>${DIAS_LABEL[idx]}</span><span class="day-date">${this.getDayDateLabel(dia)}</span>`;
             card.appendChild(header);
             
             TIPOS.forEach(tipo => {
@@ -475,6 +521,15 @@ const app = {
         document.getElementById('menu-btn').onclick = () => {
             document.getElementById('dropdown-menu').classList.toggle('hidden');
         };
+
+        const weekSelect = document.getElementById('week-select');
+        if (weekSelect) {
+            weekSelect.addEventListener('change', (e) => {
+                this.currentWeekKey = e.target.value;
+                this.renderWeekSelector();
+                this.renderPlanificador();
+            });
+        }
         
         document.getElementById('search-platos').oninput = (e) => this.renderPlatos(e.target.value);
         document.getElementById('search-recetas').oninput = (e) => this.renderRecetario(e.target.value);

@@ -9,8 +9,13 @@
 </head>
 <body>
     <header class="app-header">
-        <h1>Planificador</h1>
-        <div class="menu-container">
+        <div class="header-title-block">
+            <h1>Planificador</h1>
+            <div id="week-summary" class="week-summary">Semana actual</div>
+        </div>
+        <div class="header-actions">
+            <select id="week-select" class="week-select"></select>
+            <div class="menu-container">
             <button id="menu-btn" class="icon-btn">⋮</button>
             <div id="dropdown-menu" class="dropdown hidden">
                 <button onclick="app.loadJsonFile()">Cargar JSON</button>
