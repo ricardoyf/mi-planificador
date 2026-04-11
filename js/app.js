@@ -6,6 +6,7 @@ const SLOTS = ['primero', 'segundo'];
 const app = {
     plan: {},
     selectedPlato: null,
+    pendingSlot: null,
     weekOptions: [],
     currentWeekKey: null,
     
@@ -356,33 +357,47 @@ const app = {
         this.selectedPlato = name;
         document.getElementById('selected-plato-name').textContent = name;
         document.getElementById('selected-plato-fab').classList.remove('hidden');
+
+        if (this.pendingSlot) {
+            const { dia, tipo, slot } = this.pendingSlot;
+            if (!this.plan[dia]) this.plan[dia] = {};
+            if (!this.plan[dia][tipo]) this.plan[dia][tipo] = {};
+            this.plan[dia][tipo][slot] = name;
+            this.pendingSlot = null;
+            this.selectedPlato = null;
+            document.getElementById('selected-plato-fab').classList.add('hidden');
+            this.renderPlanificador();
+            this.renderCompra();
+            this.switchTab('view-planificador');
+            return;
+        }
     },
 
     clearSelection() {
         this.selectedPlato = null;
+        this.pendingSlot = null;
         document.getElementById('selected-plato-fab').classList.add('hidden');
     },
 
     assignSlot(dia, tipo, slot) {
-        if (!this.selectedPlato) {
-            // Emulate removal when clicking with no selection
-            if(this.plan[dia] && this.plan[dia][tipo] && this.plan[dia][tipo][slot]) {
-                if(confirm('¿Eliminar plato actual?')) {
-                    this.plan[dia][tipo][slot] = '';
-                    this.renderPlanificador();
-                    this.renderCompra();
-                }
-            } else {
-                alert('Primero selecciona un plato de la pestaña Platos.');
+        const currentDish = this.plan[dia] && this.plan[dia][tipo] && this.plan[dia][tipo][slot];
+        if (currentDish) {
+            const action = confirm('Aceptar para cambiar este plato. Cancelar para eliminarlo.');
+            if (!action) {
+                this.plan[dia][tipo][slot] = '';
+                this.renderPlanificador();
+                this.renderCompra();
+                return;
             }
-            return;
         }
-        
-        if (!this.plan[dia]) this.plan[dia] = {};
-        if (!this.plan[dia][tipo]) this.plan[dia][tipo] = {};
-        this.plan[dia][tipo][slot] = this.selectedPlato;
-        this.renderPlanificador();
-        this.renderCompra();
+
+        this.pendingSlot = { dia, tipo, slot };
+        this.switchTab('view-platos');
+        const search = document.getElementById('search-platos');
+        if (search) {
+            search.focus();
+            search.select?.();
+        }
     },
 
     renderCompra() {
