@@ -43,7 +43,7 @@ const app = {
         baseMonday.setHours(0,0,0,0);
         baseMonday.setDate(now.getDate() + mondayOffset);
         const pad = n => n.toString().padStart(2, '0');
-        this.weekOptions = [0,1,2].map(offset => {
+        this.weekOptions = Array.from({ length: 9 }, (_, offset) => offset).map(offset => {
             const monday = new Date(baseMonday);
             monday.setDate(baseMonday.getDate() + (offset * 7));
             const sunday = new Date(monday);
@@ -264,6 +264,13 @@ const app = {
                     slotDiv.addEventListener('pointerdown', startPress);
                     slotDiv.addEventListener('pointermove', maybeCancelByMove);
                     slotDiv.addEventListener('pointerup', endPress);
+                    slotDiv.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        if (!longPressTriggered) {
+                            this.assignSlot(dia, tipo, slot);
+                        }
+                    });
                     slotDiv.addEventListener('pointerleave', clearPressTimer);
                     slotDiv.addEventListener('pointercancel', clearPressTimer);
                     
@@ -385,6 +392,9 @@ const app = {
             const action = confirm('Aceptar para cambiar este plato. Cancelar para eliminarlo.');
             if (!action) {
                 this.plan[dia][tipo][slot] = '';
+                this.pendingSlot = null;
+                this.selectedPlato = null;
+                document.getElementById('selected-plato-fab').classList.add('hidden');
                 this.renderPlanificador();
                 this.renderCompra();
                 return;
@@ -392,6 +402,8 @@ const app = {
         }
 
         this.pendingSlot = { dia, tipo, slot };
+        this.selectedPlato = null;
+        document.getElementById('selected-plato-fab').classList.add('hidden');
         this.switchTab('view-platos');
         const search = document.getElementById('search-platos');
         if (search) {
