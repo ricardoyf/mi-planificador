@@ -1,51 +1,51 @@
 {
   "lunes": {
     "comida": {
-      "primero": "Pavo relleno",
-      "segundo": ""
+      "primero": "Filetes",
+      "segundo": "Judías verdes"
     },
     "cena": {
-      "primero": "Piadina Vikika",
+      "primero": "Salmón AirFryer",
       "segundo": ""
     }
   },
   "martes": {
     "comida": {
-      "primero": "Judías verdes",
-      "segundo": "Rapantes"
+      "primero": "Rapantes",
+      "segundo": "Judías verdes"
     },
     "cena": {
       "primero": "Pisto",
-      "segundo": "Filetes"
+      "segundo": ""
     }
   },
   "miercoles": {
     "comida": {
       "primero": "Pescado Horno",
-      "segundo": "Brécol al vapor"
+      "segundo": "Brécol"
     },
     "cena": {
-      "primero": "Salmón AirFryer",
-      "segundo": "Verduras horno"
+      "primero": "Muslos AirFryer",
+      "segundo": "Crema Verduras"
     }
   },
   "jueves": {
     "comida": {
-      "primero": "Alcachofas",
-      "segundo": "Pechugas pollo"
+      "primero": "Lentejas",
+      "segundo": ""
     },
     "cena": {
-      "primero": "Piadina",
-      "segundo": ""
+      "primero": "Pulpo",
+      "segundo": "Coliflor"
     }
   },
   "viernes": {
     "comida": {
-      "primero": "Salmón",
-      "segundo": "Boniato"
+      "primero": "Chocos  arroz",
+      "segundo": ""
     },
     "cena": {
-      "primero": "Cottage",
+      "primero": "Albóndigas",
       "segundo": ""
     }
   },
@@ -55,7 +55,7 @@
       "segundo": ""
     },
     "cena": {
-      "primero": "Hamburguesas",
+      "primero": "Piadina Vikika",
       "segundo": ""
     }
   },
@@ -65,7 +65,7 @@
       "segundo": ""
     },
     "cena": {
-      "primero": "Pollo butter chicken",
+      "primero": "Wrap Cottage",
       "segundo": ""
     }
   }
