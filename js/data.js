@@ -20,7 +20,8 @@ const platosData = [
     "categoria": "Básicos",
     "ingredientes": [
       "Brécol"
-    ]
+    ],
+    "url_receta": "Recipes/Brécol al vapor.html"
   },
   {
     "plato": "Calabacín en espaguetis",
@@ -35,7 +36,8 @@ const platosData = [
     "categoria": "Básicos",
     "ingredientes": [
       "Coliflor"
-    ]
+    ],
+    "url_receta": "Recipes/Coliflor al vapor.html"
   },
   {
     "plato": "Espinacas garbanzos",
@@ -45,14 +47,16 @@ const platosData = [
       "Garbanzos cocidos",
       "Salsa de tomate",
       "Huevo"
-    ]
+    ],
+    "url_receta": "Recipes/Espinacas y garbanzos con salsa de tomate y huevos.html"
   },
   {
     "plato": "Grelos",
     "categoria": "Básicos",
     "ingredientes": [
       "Grelos"
-    ]
+    ],
+    "url_receta": "Recipes/Grelos salteados.html"
   },
   {
     "plato": "Judías verdes",
@@ -82,7 +86,8 @@ const platosData = [
       "Salsa de ostras",
       "Romero",
       "Pimentón"
-    ]
+    ],
+    "url_receta": "Recipes/Patatas asadas Marcos.html"
   },
   {
     "plato": "Puré Patata TM31",
@@ -130,7 +135,8 @@ const platosData = [
       "Salsa de soja",
       "Huevo",
       "Levadura"
-    ]
+    ],
+    "url_receta": "Recipes/Judías.html"
   },
   {
     "plato": "Empanadillas",
@@ -177,7 +183,8 @@ const platosData = [
       "Lacón ibérico",
       "Mozzarella",
       "Otras opciones: tomate, aguacate, lentejas, quinoa, pollo, atún"
-    ]
+    ],
+    "url_receta": "Recipes/Flautín de calabacín ¿.html"
   },
   {
     "plato": "Piadina Vikika",
@@ -228,7 +235,8 @@ const platosData = [
       "Tomate",
       "Pavo",
       "Queso de cabra"
-    ]
+    ],
+    "url_receta": "Recipes/Wrap de aguacate al horno.html"
   },
   {
     "plato": "Zoodles langostinos",
@@ -252,7 +260,8 @@ const platosData = [
     "categoria": "Carnes",
     "ingredientes": [
       "ternera, pollo, pavo, solomillo o castaña"
-    ]
+    ],
+    "url_receta": "Recipes/Filetes de ternera, pollo, solomillo o castaña.html"
   },
   {
     "plato": "Jarrete arroz",
@@ -262,7 +271,8 @@ const platosData = [
       "Pimiento rojo",
       "Tomates",
       "Arroz"
-    ]
+    ],
+    "url_receta": "Recipes/Jarrete con arroz.html"
   },
   {
     "plato": "Llana",
@@ -273,14 +283,16 @@ const platosData = [
       "Vino blanco",
       "Caldo de carne o agua",
       "Perejil fresco"
-    ]
+    ],
+    "url_receta": "Recipes/Llana asada con salsa de su jugo.html"
   },
   {
     "plato": "Muslos AirFryer",
     "categoria": "Carnes",
     "ingredientes": [
       "Muslos"
-    ]
+    ],
+    "url_receta": "Recipes/Muslos de pollo en AirFryer.html"
   },
   {
     "plato": "Pavo relleno",
@@ -359,7 +371,8 @@ const platosData = [
       "Queso feta",
       "Zanahorias",
       "Semillas variadas"
-    ]
+    ],
+    "url_receta": "Recipes/E. Pimientos tomate feta almendras bonito.html"
   },
   {
     "plato": "E. Caprese",
@@ -380,7 +393,8 @@ const platosData = [
       "Champiñones",
       "huevo",
       "Pimentón"
-    ]
+    ],
+    "url_receta": "Recipes/E. Cuscús judías champiñones yema.html"
   },
   {
     "plato": "E. Pimientos",
@@ -391,7 +405,8 @@ const platosData = [
       "Queso feta",
       "Almendras",
       "Bonito"
-    ]
+    ],
+    "url_receta": "Recipes/E. Pimientos tomate feta almendras bonito.html"
   },
   {
     "plato": "E. Quinoa brécol calabacín",
@@ -413,7 +428,8 @@ const platosData = [
       "Tomate",
       "Canónigos",
       "Nueces"
-    ]
+    ],
+    "url_receta": "Recipes/E. Salmón aguacate feta tomate canónigos nueces.html"
   },
   {
     "plato": "E. Judias ANCHOAS",
@@ -426,7 +442,8 @@ const platosData = [
       "Aceitunas",
       "Huevo",
       "Anchoas"
-    ]
+    ],
+    "url_receta": "Recipes/Judías.html"
   },
   {
     "plato": "E. atún",
@@ -438,7 +455,8 @@ const platosData = [
       "Tomate",
       "Canónigos",
       "Pepino"
-    ]
+    ],
+    "url_receta": "Recipes/Ensalada de atún.html"
   },
   {
     "plato": "E. atún mango",
@@ -450,7 +468,8 @@ const platosData = [
       "Tomate",
       "Canónigos",
       "Cebolla"
-    ]
+    ],
+    "url_receta": "Recipes/Ensalada de atún y mango.html"
   },
   {
     "plato": "E. pasta",
@@ -460,7 +479,8 @@ const platosData = [
       "Bonito",
       "Aguacate",
       "Mozzarella"
-    ]
+    ],
+    "url_receta": "Recipes/Ensalada de pasta.html"
   },
   {
     "plato": "E. patata",
@@ -470,7 +490,8 @@ const platosData = [
       "Huevo",
       "Bonito",
       "Aceitunas negras"
-    ]
+    ],
+    "url_receta": "Recipes/Ensalada de patata.html"
   },
   {
     "plato": "E. pimientos rojos",
@@ -481,7 +502,8 @@ const platosData = [
       "Queso fresco",
       "cherrys",
       "Bonito"
-    ]
+    ],
+    "url_receta": "Recipes/Ensalada de pimientos rojos asados.html"
   },
   {
     "plato": "E. queso cabra",
@@ -492,7 +514,8 @@ const platosData = [
       "Nueces",
       "Tomate",
       "Canónigos"
-    ]
+    ],
+    "url_receta": "Recipes/Ensalada de queso de cabra.html"
   },
   {
     "plato": "E. salmón",
@@ -504,7 +527,8 @@ const platosData = [
       "Tomate",
       "Canónigos",
       "Pepino"
-    ]
+    ],
+    "url_receta": "Recipes/E. Salmón aguacate feta tomate canónigos nueces.html"
   },
   {
     "plato": "E. rulo",
@@ -548,7 +572,8 @@ const platosData = [
       "Manzana",
       "Pepinillos",
       "Mahonesa"
-    ]
+    ],
+    "url_receta": "Recipes/Tacos de lechuga y ensaladilla de atún.html"
   },
   {
     "plato": "Tomate relleno burrata",
@@ -559,7 +584,8 @@ const platosData = [
       "cebollino",
       "Albahaca",
       "Pistachos"
-    ]
+    ],
+    "url_receta": "Recipes/Tomate relleno.html"
   },
   {
     "plato": "Lasaña",
@@ -571,7 +597,8 @@ const platosData = [
       "Espinacas",
       "Bechamel",
       "Queso rallado"
-    ]
+    ],
+    "url_receta": "Recipes/Lasaña o Musaka (carne, champiñón, espinaca, bechamel).html"
   },
   {
     "plato": "Boloñesa pasta",
@@ -584,7 +611,8 @@ const platosData = [
       "Vino tinto",
       "Tomate triturado",
       "Pasta"
-    ]
+    ],
+    "url_receta": "Recipes/Boloñesa.html"
   },
   {
     "plato": "Canelones espinacas",
@@ -596,7 +624,8 @@ const platosData = [
       "Espinacas",
       "Bechamel",
       "Queso rallado"
-    ]
+    ],
+    "url_receta": "Recipes/Canelones de carne y espinacas.html"
   },
   {
     "plato": "Pasta fresca",
@@ -606,7 +635,8 @@ const platosData = [
       "Pesto",
       "Langostinos pelados",
       "Brécol"
-    ]
+    ],
+    "url_receta": "Recipes/Pasta fresca con pesto, langostinos y brécol.html"
   },
   {
     "plato": "Chocos  arroz",
@@ -617,7 +647,8 @@ const platosData = [
       "Pimiento verde",
       "Vino blanco",
       "Fumet"
-    ]
+    ],
+    "url_receta": "Recipes/Chocos con arroz.html"
   },
   {
     "plato": "Pescado Horno",
@@ -625,7 +656,8 @@ const platosData = [
     "ingredientes": [
       "bacalao, jurelos, dorada, rodaballo, sargo, palometa, menda, coruxo, corvina",
       "Pimiento"
-    ]
+    ],
+    "url_receta": "Recipes/Pescado Horno (bacalao, jurelos, dorada, rodaballo, sargo, palometa, menda, coruxo,…).html"
   },
   {
     "plato": "Pulpo",
@@ -710,7 +742,8 @@ const platosData = [
       "Levadura Royal",
       "Limón",
       "Menta picada"
-    ]
+    ],
+    "url_receta": "Recipes/Falafel con salsa de yogur.html"
   },
   {
     "plato": "Fideos chinos",

@@ -1,5 +1,7 @@
 import os
 import json
+import re
+import unicodedata
 from pathlib import Path
 from openpyxl import load_workbook
 
@@ -17,6 +19,65 @@ def fix_viewport_in_html(file_path):
             file_path.write_text(content, encoding='utf-8')
     except Exception as e:
         pass
+
+def normalize_text(value):
+    text = str(value or '').strip().lower()
+    text = ''.join(c for c in unicodedata.normalize('NFD', text) if unicodedata.category(c) != 'Mn')
+    replacements = {
+        'air fryer': 'airfryer',
+        '&': ' y ',
+        '/': ' ',
+        ',': ' ',
+        '(': ' ',
+        ')': ' ',
+        '¿': ' ',
+        '?': ' ',
+        '…': ' ',
+        '.': ' ',
+        '-': ' '
+    }
+    for old, new in replacements.items():
+        text = text.replace(old, new)
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
+
+def token_set(value):
+    stopwords = {'de', 'del', 'la', 'el', 'los', 'las', 'con', 'y', 'en', 'al', 'a', 'o', 'estilo'}
+    return {t for t in normalize_text(value).split() if t and t not in stopwords}
+
+
+def pick_recipe_url(plato_nombre, recetas):
+    nombre_norm = normalize_text(plato_nombre)
+    nombre_tokens = token_set(plato_nombre)
+
+    exact = next((r['url'] for r in recetas if normalize_text(r['nombre']) == nombre_norm), None)
+    if exact:
+        return exact
+
+    candidates = []
+    for receta in recetas:
+        receta_norm = normalize_text(receta['nombre'])
+        receta_tokens = token_set(receta['nombre'])
+        overlap = len(nombre_tokens & receta_tokens)
+        subset_bonus = 0
+        if nombre_norm and nombre_norm in receta_norm:
+            subset_bonus = 3
+        elif receta_norm and receta_norm in nombre_norm:
+            subset_bonus = 2
+        if overlap:
+            score = overlap + subset_bonus
+            candidates.append((score, len(receta_tokens), receta['url']))
+
+    if not candidates:
+        return None
+
+    candidates.sort(key=lambda x: (-x[0], x[1]))
+    best_score = candidates[0][0]
+    if best_score < 2:
+        return None
+    return candidates[0][2]
+
 
 def main():
     print("Iniciando actualización de datos para la Web App...")
@@ -68,11 +129,10 @@ def main():
         print(f"Se han encontrado {len(recetas)} recetas en la carpeta Recipes.")
     
     # Match plates to recipes
-    recetas_lower = {r['nombre'].lower(): r['url'] for r in recetas}
     for p in platos:
-        nombre_lower = p['plato'].lower()
-        if nombre_lower in recetas_lower:
-            p['url_receta'] = recetas_lower[nombre_lower]
+        matched_url = pick_recipe_url(p['plato'], recetas)
+        if matched_url:
+            p['url_receta'] = matched_url
             
     # Write to data.js
     DATA_JS.parent.mkdir(exist_ok=True)
