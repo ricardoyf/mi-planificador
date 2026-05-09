@@ -52,7 +52,20 @@
             <div class="search-bar">
                 <input type="text" id="search-recetas" placeholder="Buscar recetas...">
             </div>
-            <div class="recetas-container" id="recetas-container"></div>
+            <div class="platos-container" id="recetas-container"></div>
+        </section>
+
+        <!-- View: Compacta -->
+        <section id="view-compacta" class="view">
+            <div class="compacta-header-row">
+                <div class="compacta-title-block">
+                    <div class="compacta-kicker">Vista compacta</div>
+                    <div id="compacta-week-label" class="compacta-week-label">Semana actual</div>
+                </div>
+                <button onclick="app.copyCompactaYCompra()" class="compact-copy-btn">Copiar</button>
+            </div>
+            <div id="compacta-container" class="compacta-container"></div>
+            <div class="compacta-help">Copia planificación + lista de la compra para pegarla aquí y pedirme la actualización de COMIDAS.</div>
         </section>
 
         <!-- View: Compra -->
@@ -78,6 +91,7 @@
         <button class="nav-item active" data-target="view-planificador">📅 <span>Plan</span></button>
         <button class="nav-item" data-target="view-platos">🍲 <span>Platos</span></button>
         <button class="nav-item" data-target="view-recetario">📖 <span>Recetario</span></button>
+        <button class="nav-item" data-target="view-compacta">🧾 <span>Compacta</span></button>
         <button class="nav-item" data-target="view-compra">🛒 <span>Compra</span></button>
     </nav>
 

@@ -9,13 +9,17 @@ const app = {
     pendingSlot: null,
     weekOptions: [],
     currentWeekKey: null,
+    storagePrefix: 'plan_week_',
+    currentWeekStorageKey: 'plan_current_week',
     
     init() {
         this.setupWeekOptions();
-        this.loadPlan('base');
+        this.restoreCurrentWeekKey();
+        this.loadCurrentWeekPlan();
         this.renderPlatos();
         this.renderRecetario();
         this.renderCompra();
+        this.renderCompacta();
         this.setupEventListeners();
         
         // Build desktop navigation if screen is large
@@ -42,26 +46,77 @@ const app = {
         const baseMonday = new Date(now);
         baseMonday.setHours(0,0,0,0);
         baseMonday.setDate(now.getDate() + mondayOffset);
-        const pad = n => n.toString().padStart(2, '0');
-        this.weekOptions = Array.from({ length: 9 }, (_, offset) => offset).map(offset => {
-            const monday = new Date(baseMonday);
-            monday.setDate(baseMonday.getDate() + (offset * 7));
-            const sunday = new Date(monday);
-            sunday.setDate(monday.getDate() + 6);
-            const key = `plan${pad(monday.getDate())}_${pad(monday.getMonth()+1)}-${pad(sunday.getDate())}_${pad(sunday.getMonth()+1)}`;
-            return {
-                key,
-                label: `Semana ${pad(monday.getDate())}/${pad(monday.getMonth()+1)} - ${pad(sunday.getDate())}/${pad(sunday.getMonth()+1)}`,
-                summary: `${pad(monday.getDate())}/${pad(monday.getMonth()+1)} → ${pad(sunday.getDate())}/${pad(sunday.getMonth()+1)}`,
-                monday,
-                sunday
-            };
-        });
+        this.weekOptions = Array.from({ length: 12 }, (_, offset) => this.buildWeekOptionFromMonday(this.addDays(baseMonday, offset * 7)));
         this.currentWeekKey = this.weekOptions[0].key;
+    },
+
+    addDays(date, days) {
+        const d = new Date(date);
+        d.setDate(d.getDate() + days);
+        return d;
+    },
+
+    buildWeekOptionFromMonday(mondayInput) {
+        const monday = new Date(mondayInput);
+        monday.setHours(0,0,0,0);
+        const sunday = this.addDays(monday, 6);
+        const pad = n => n.toString().padStart(2, '0');
+        const key = `plan${pad(monday.getDate())}_${pad(monday.getMonth()+1)}-${pad(sunday.getDate())}_${pad(sunday.getMonth()+1)}`;
+        return {
+            key,
+            label: `Semana ${pad(monday.getDate())}/${pad(monday.getMonth()+1)} - ${pad(sunday.getDate())}/${pad(sunday.getMonth()+1)}`,
+            summary: `${pad(monday.getDate())}/${pad(monday.getMonth()+1)} → ${pad(sunday.getDate())}/${pad(sunday.getMonth()+1)}`,
+            monday,
+            sunday
+        };
+    },
+
+    parseWeekKey(key) {
+        const match = /^plan(\d{2})_(\d{2})-(\d{2})_(\d{2})$/.exec(key || '');
+        if (!match) return null;
+        const [, sd, sm, ed, em] = match.map(Number);
+        const currentYear = new Date().getFullYear();
+        for (let year = currentYear - 2; year <= currentYear + 2; year++) {
+            const monday = new Date(year, sm - 1, sd);
+            monday.setHours(0,0,0,0);
+            if (monday.getDay() !== 1) continue;
+            const sunday = this.addDays(monday, 6);
+            if (sunday.getDate() === ed && (sunday.getMonth() + 1) === em) {
+                return monday;
+            }
+        }
+        return null;
     },
 
     getWeekOption(key = this.currentWeekKey) {
         return this.weekOptions.find(w => w.key === key) || this.weekOptions[0];
+    },
+
+    getStorageKeyForWeek(key = this.currentWeekKey) {
+        return `${this.storagePrefix}${key}`;
+    },
+
+    restoreCurrentWeekKey() {
+        const hashKey = window.location.hash ? window.location.hash.replace(/^#/, '') : '';
+        const savedKey = hashKey || localStorage.getItem(this.currentWeekStorageKey);
+        if (!savedKey) return;
+        if (!this.weekOptions.some(w => w.key === savedKey)) {
+            const monday = this.parseWeekKey(savedKey);
+            if (monday) {
+                this.weekOptions.push(this.buildWeekOptionFromMonday(monday));
+                this.weekOptions.sort((a, b) => a.monday - b.monday);
+            }
+        }
+        if (this.weekOptions.some(w => w.key === savedKey)) {
+            this.currentWeekKey = savedKey;
+        }
+    },
+
+    persistCurrentWeekKey() {
+        localStorage.setItem(this.currentWeekStorageKey, this.currentWeekKey);
+        if (this.currentWeekKey) {
+            history.replaceState(null, '', `#${this.currentWeekKey}`);
+        }
     },
 
     getDayDateLabel(dia, key = this.currentWeekKey) {
@@ -102,6 +157,40 @@ const app = {
         this.renderWeekSelector();
         this.renderPlanificador();
         this.renderCompra();
+        this.renderCompacta();
+    },
+
+    loadCurrentWeekPlan() {
+        try {
+            const data = localStorage.getItem(this.getStorageKeyForWeek());
+            if (data) {
+                this.plan = JSON.parse(data);
+                if (!this.plan['lunes'] || !this.plan['lunes']['comida']) throw new Error('Estructura corrupta');
+            } else {
+                const legacyBase = localStorage.getItem('plan_base');
+                if (legacyBase && this.currentWeekKey === this.weekOptions[0].key) {
+                    this.plan = JSON.parse(legacyBase);
+                    if (!this.plan['lunes'] || !this.plan['lunes']['comida']) throw new Error('Estructura corrupta');
+                    this.autosaveCurrentWeek();
+                } else {
+                    this.plan = this.getEmptyPlan();
+                }
+            }
+        } catch (e) {
+            console.error('Plan semanal corrupto, reseteando', e);
+            this.plan = this.getEmptyPlan();
+        }
+        this.persistCurrentWeekKey();
+        this.renderWeekSelector();
+        this.renderPlanificador();
+        this.renderCompra();
+        this.renderCompacta();
+    },
+
+    autosaveCurrentWeek() {
+        localStorage.setItem(this.getStorageKeyForWeek(), JSON.stringify(this.plan));
+        localStorage.setItem('plan_base', JSON.stringify(this.plan));
+        this.persistCurrentWeekKey();
     },
 
     getWeekFileBase() {
@@ -162,9 +251,10 @@ const app = {
                 if (!parsed['lunes'] || !parsed['lunes']['comida']) throw new Error('Estructura no válida');
                 this.plan = parsed;
                 delete this.plan._meta;
-                localStorage.setItem('plan_base', JSON.stringify(this.plan));
+                this.autosaveCurrentWeek();
                 this.renderPlanificador();
                 this.renderCompra();
+                this.renderCompacta();
                 alert('JSON cargado correctamente');
             } catch (e) {
                 alert('No se pudo cargar el JSON');
@@ -291,7 +381,6 @@ const app = {
         
         const f = filter.toLowerCase();
         
-        // Group by category
         const groups = {};
         platosData.forEach(p => {
             if (f && !p.plato.toLowerCase().includes(f) && !p.categoria.toLowerCase().includes(f)) return;
@@ -309,7 +398,7 @@ const app = {
             
             const list = document.createElement('div');
             list.className = 'categoria-list';
-            if(!f) list.style.display = 'none'; // Auto collapse if no filter
+            if(!f) list.style.display = 'none';
             
             header.onclick = () => {
                 list.style.display = list.style.display === 'none' ? 'block' : 'none';
@@ -329,6 +418,51 @@ const app = {
             container.appendChild(grp);
         });
     },
+
+    renderRecetario(filter = '') {
+        const container = document.getElementById('recetas-container');
+        if (!container) return;
+        container.innerHTML = '';
+        const f = filter.toLowerCase();
+        const groups = {};
+        platosData.forEach(p => {
+            if (!p.url_receta) return;
+            if (f && !p.plato.toLowerCase().includes(f) && !p.categoria.toLowerCase().includes(f)) return;
+            if (!groups[p.categoria]) groups[p.categoria] = [];
+            groups[p.categoria].push(p);
+        });
+
+        Object.keys(groups).sort().forEach(cat => {
+            const grp = document.createElement('div');
+            grp.className = 'categoria-group';
+
+            const header = document.createElement('div');
+            header.className = 'categoria-header';
+            header.innerHTML = `<span>${cat}</span> <span>▼</span>`;
+
+            const list = document.createElement('div');
+            list.className = 'categoria-list';
+            if(!f) list.style.display = 'none';
+
+            header.onclick = () => {
+                list.style.display = list.style.display === 'none' ? 'block' : 'none';
+                header.innerHTML = `<span>${cat}</span> <span>${list.style.display === 'none' ? '▼' : '▲'}</span>`;
+            };
+
+            groups[cat].sort((a,b) => a.plato.localeCompare(b.plato)).forEach(p => {
+                const item = document.createElement('a');
+                item.className = 'receta-link-item';
+                item.textContent = p.plato;
+                item.href = p.url_receta;
+                item.target = '_blank';
+                list.appendChild(item);
+            });
+
+            grp.appendChild(header);
+            grp.appendChild(list);
+            container.appendChild(grp);
+        });
+    },
     
     openRecipeForDish(name) {
         const matched = platosData.find(p => p.plato === name && p.url_receta);
@@ -341,23 +475,86 @@ const app = {
         window.open(absoluteUrl, '_blank');
     },
 
-    renderRecetario(filter = '') {
-        const container = document.getElementById('recetas-container');
-        container.innerHTML = '';
-        
-        const f = filter.toLowerCase();
-        
-        recetasData.forEach(r => {
-            if (f && !r.nombre.toLowerCase().includes(f)) return;
-            
-            const card = document.createElement('a');
-            card.className = 'receta-card';
-            card.href = r.url;
-            card.target = '_blank';
-            
-            card.innerHTML = `<div class="receta-title">${r.nombre}</div>`;
-            container.appendChild(card);
+    getCompactaRows() {
+        return DIAS.map((dia, idx) => {
+            const comida1 = this.plan[dia]?.comida?.primero || '';
+            const comida2 = this.plan[dia]?.comida?.segundo || '';
+            const cena1 = this.plan[dia]?.cena?.primero || '';
+            const cena2 = this.plan[dia]?.cena?.segundo || '';
+            const comida = [comida1, comida2].filter(Boolean).join(' ');
+            const cena = [cena1, cena2].filter(Boolean).join(' ');
+            const dateLabel = this.getDayDateLabel(dia).replace('/', '_');
+            const initial = idx === 2 ? 'X' : DIAS_LABEL[idx][0];
+            return {
+                dia,
+                label: `${initial}${dateLabel.split('_')[0]}`,
+                comida: comida || '—',
+                cena: cena || '—'
+            };
         });
+    },
+
+    renderCompacta() {
+        const container = document.getElementById('compacta-container');
+        const weekLabel = document.getElementById('compacta-week-label');
+        if (!container) return;
+        const current = this.getWeekOption();
+        if (weekLabel) weekLabel.textContent = current.label;
+        const rows = this.getCompactaRows();
+        container.innerHTML = rows.map(r => `<div class="compacta-line"><span class="compacta-day">${r.label}</span> ${r.comida} / ${r.cena}</div>`).join('');
+    },
+
+    getCompraConteo() {
+        let conteo = {};
+        DIAS.forEach(dia => {
+            TIPOS.forEach(tipo => {
+                SLOTS.forEach(slot => {
+                    const pname = this.plan[dia] && this.plan[dia][tipo] && this.plan[dia][tipo][slot];
+                    if (pname) {
+                        const matchedData = platosData.find(p => p.plato === pname);
+                        if (matchedData && matchedData.ingredientes) {
+                            matchedData.ingredientes.forEach(ing => {
+                                if (ing) conteo[ing] = (conteo[ing] || 0) + 1;
+                            });
+                        }
+                    }
+                });
+            });
+        });
+        return conteo;
+    },
+
+    buildCompactaYCompraText() {
+        const current = this.getWeekOption();
+        const rows = this.getCompactaRows();
+        const conteo = this.getCompraConteo();
+        const ingredientes = Object.keys(conteo).sort();
+        let texto = `${current.label}\n\n`;
+        rows.forEach(r => {
+            texto += `${r.label} ${r.comida} / ${r.cena}\n`;
+        });
+        texto += `\nLISTA DE LA COMPRA\n`;
+        if (!ingredientes.length) {
+            texto += `- Sin ingredientes calculados\n`;
+        } else {
+            ingredientes.forEach(ing => {
+                texto += `- ${ing}${conteo[ing] > 1 ? ` (x${conteo[ing]})` : ''}\n`;
+            });
+        }
+        return texto;
+    },
+
+    copyCompactaYCompra() {
+        const texto = this.buildCompactaYCompraText();
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(texto).then(() => {
+                alert('Compacta + compra copiadas al portapapeles.');
+            }).catch(err => {
+                alert('Error al copiar: ' + err);
+            });
+        } else {
+            alert('Tu navegador no soporta la copia automática.');
+        }
     },
 
     selectPlato(name) {
@@ -373,8 +570,10 @@ const app = {
             this.pendingSlot = null;
             this.selectedPlato = null;
             document.getElementById('selected-plato-fab').classList.add('hidden');
+            this.autosaveCurrentWeek();
             this.renderPlanificador();
             this.renderCompra();
+            this.renderCompacta();
             this.switchTab('view-planificador');
             return;
         }
@@ -395,8 +594,10 @@ const app = {
                 this.pendingSlot = null;
                 this.selectedPlato = null;
                 document.getElementById('selected-plato-fab').classList.add('hidden');
+                this.autosaveCurrentWeek();
                 this.renderPlanificador();
                 this.renderCompra();
+                this.renderCompacta();
                 return;
             }
         }
@@ -417,25 +618,7 @@ const app = {
         if(!container) return;
         container.innerHTML = '';
         
-        let conteo = {};
-        
-        DIAS.forEach(dia => {
-            TIPOS.forEach(tipo => {
-                SLOTS.forEach(slot => {
-                    const pname = this.plan[dia] && this.plan[dia][tipo] && this.plan[dia][tipo][slot];
-                    if (pname) {
-                        const matchedData = platosData.find(p => p.plato === pname);
-                        if (matchedData && matchedData.ingredientes) {
-                            matchedData.ingredientes.forEach(ing => {
-                                if(ing) {
-                                    conteo[ing] = (conteo[ing] || 0) + 1;
-                                }
-                            });
-                        }
-                    }
-                });
-            });
-        });
+        let conteo = this.getCompraConteo();
         
         const keys = Object.keys(conteo).sort();
         if (keys.length === 0) {
@@ -465,46 +648,15 @@ const app = {
     },
 
     copyCompra() {
-        let conteo = {};
-        
-        DIAS.forEach(dia => {
-            TIPOS.forEach(tipo => {
-                SLOTS.forEach(slot => {
-                    const pname = this.plan[dia] && this.plan[dia][tipo] && this.plan[dia][tipo][slot];
-                    if (pname) {
-                        const matchedData = platosData.find(p => p.plato === pname);
-                        if (matchedData && matchedData.ingredientes) {
-                            matchedData.ingredientes.forEach(ing => {
-                                if(ing) {
-                                    conteo[ing] = (conteo[ing] || 0) + 1;
-                                }
-                            });
-                        }
-                    }
-                });
-            });
-        });
-        
-        const keys = Object.keys(conteo).sort();
-        if (keys.length === 0) {
-            alert("No hay ingredientes en el planificador para copiar.");
-            return;
-        }
-        
-        let texto = "LISTA DE LA COMPRA\n==================\n\n";
-        keys.forEach(ing => {
-            texto += '- ' + ing + (conteo[ing] > 1 ? ' (x' + conteo[ing] + ')' : '') + '\n';
-        });
-        
+        const texto = this.buildCompactaYCompraText();
         if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(texto).then(() => {
-                alert("🛒 ¡Lista de la compra copiada a tu portapapeles!");
+                alert('Planificación compacta + compra copiadas al portapapeles.');
             }).catch(err => {
-                alert("Error al copiar: " + err);
+                alert('Error al copiar: ' + err);
             });
         } else {
-            // Fallback for older browsers
-            alert("Tu navegador no soporta la copia automática. Por favor selecciona el texto y cópialo a mano.");
+            alert('Tu navegador no soporta la copia automática. Por favor selecciona el texto y cópialo a mano.');
         }
     },
 
@@ -552,14 +704,17 @@ const app = {
         const weekSelect = document.getElementById('week-select');
         if (weekSelect) {
             weekSelect.addEventListener('change', (e) => {
+                this.autosaveCurrentWeek();
                 this.currentWeekKey = e.target.value;
-                this.renderWeekSelector();
-                this.renderPlanificador();
+                this.loadCurrentWeekPlan();
             });
         }
         
         document.getElementById('search-platos').oninput = (e) => this.renderPlatos(e.target.value);
-        document.getElementById('search-recetas').oninput = (e) => this.renderRecetario(e.target.value);
+        const searchRecetas = document.getElementById('search-recetas');
+        if (searchRecetas) {
+            searchRecetas.oninput = (e) => this.renderRecetario(e.target.value);
+        }
         
         document.querySelectorAll('.nav-item').forEach(btn => {
             btn.addEventListener('click', () => {
