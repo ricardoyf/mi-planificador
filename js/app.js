@@ -421,7 +421,6 @@ const app = {
         const f = filter.toLowerCase();
         const groups = {};
         platosData.forEach(p => {
-            if (!p.url_receta) return;
             if (f && !p.plato.toLowerCase().includes(f) && !p.categoria.toLowerCase().includes(f)) return;
             if (!groups[p.categoria]) groups[p.categoria] = [];
             groups[p.categoria].push(p);
@@ -445,12 +444,21 @@ const app = {
             };
 
             groups[cat].sort((a,b) => a.plato.localeCompare(b.plato)).forEach(p => {
-                const item = document.createElement('a');
-                item.className = 'receta-link-item';
-                item.textContent = p.plato;
-                item.href = p.url_receta;
-                item.target = '_blank';
-                list.appendChild(item);
+                if (p.url_receta) {
+                    const item = document.createElement('a');
+                    item.className = 'receta-link-item';
+                    item.textContent = p.plato;
+                    item.href = p.url_receta;
+                    item.target = '_blank';
+                    list.appendChild(item);
+                } else {
+                    const item = document.createElement('button');
+                    item.className = 'receta-link-item receta-missing-item';
+                    item.type = 'button';
+                    item.innerHTML = `<span>${p.plato}</span><span class="receta-missing-badge">Sin receta</span>`;
+                    item.onclick = () => alert('Este plato aún no tiene receta HTML creada.');
+                    list.appendChild(item);
+                }
             });
 
             grp.appendChild(header);
