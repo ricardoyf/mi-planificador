@@ -1,6 +1,7 @@
 import os
 import json
 import re
+import html
 import unicodedata
 from pathlib import Path
 from openpyxl import load_workbook
@@ -17,8 +18,35 @@ def fix_viewport_in_html(file_path):
         if '<meta name="viewport"' not in content and '<head>' in content:
             content = content.replace('<head>', '<head>\n        <meta name="viewport" content="width=device-width, initial-scale=1">')
             file_path.write_text(content, encoding='utf-8')
-    except Exception as e:
+    except Exception:
         pass
+
+
+def strip_html(text):
+    text = re.sub(r'<[^>]+>', ' ', text or '')
+    text = html.unescape(text).replace('\xa0', ' ')
+    return re.sub(r'\s+', ' ', text).strip()
+
+
+def parse_recipe_html(file_path):
+    content = file_path.read_text(encoding='utf-8', errors='ignore')
+    name_match = re.search(r'<h1[^>]*class="name"[^>]*>(.*?)</h1>', content, re.S | re.I)
+    cat_match = re.search(r'<p[^>]*class="categories"[^>]*>(.*?)</p>', content, re.S | re.I)
+    ingredient_matches = re.findall(r'<p[^>]*class="line"[^>]*itemprop="recipeIngredient"[^>]*>(.*?)</p>', content, re.S | re.I)
+    name = strip_html(name_match.group(1)) if name_match else file_path.stem
+    category = strip_html(cat_match.group(1)) if cat_match else 'Sin categoría'
+    ingredients = []
+    for raw in ingredient_matches:
+        clean = strip_html(raw)
+        clean = re.sub(r'^[-•]\s*', '', clean).strip()
+        if clean:
+            ingredients.append(clean)
+    return {
+        'nombre': name,
+        'categoria': category,
+        'ingredientes_html': ingredients,
+        'url': f'Recipes/{file_path.name}'
+    }
 
 def normalize_text(value):
     text = str(value or '').strip().lower()
@@ -119,20 +147,35 @@ def main():
             if f.endswith('.html'):
                 file_path = RECIPES_DIR / f
                 fix_viewport_in_html(file_path)
-                nombre_receta = f[:-5]
-                recetas.append({
-                    'nombre': nombre_receta,
-                    'url': f'Recipes/{f}'
-                })
-        # Ordenar alfabéticamente
+                recetas.append(parse_recipe_html(file_path))
         recetas.sort(key=lambda x: x['nombre'].lower())
         print(f"Se han encontrado {len(recetas)} recetas en la carpeta Recipes.")
-    
-    # Match plates to recipes
+
+    # Match / merge Excel plates with Paprika recipes
+    platos_by_name = {normalize_text(p['plato']): p for p in platos}
+
     for p in platos:
         matched_url = pick_recipe_url(p['plato'], recetas)
         if matched_url:
+            receta = next((r for r in recetas if r['url'] == matched_url), None)
             p['url_receta'] = matched_url
+            if receta and receta.get('categoria'):
+                p['categoria'] = receta['categoria']
+
+    # Add recipes that only exist in Paprika/HTML
+    used_recipe_urls = {p.get('url_receta') for p in platos if p.get('url_receta')}
+    for receta in recetas:
+        key = normalize_text(receta['nombre'])
+        if key in platos_by_name or receta['url'] in used_recipe_urls:
+            continue
+        platos.append({
+            'plato': receta['nombre'],
+            'categoria': receta.get('categoria') or 'Sin categoría',
+            'ingredientes': receta.get('ingredientes_html', []),
+            'url_receta': receta['url']
+        })
+
+    platos.sort(key=lambda x: (x.get('categoria', 'Sin categoría').lower(), x.get('plato', '').lower()))
             
     # Write to data.js
     DATA_JS.parent.mkdir(exist_ok=True)
@@ -140,7 +183,7 @@ def main():
     js_content += f"const recetasData = {json.dumps(recetas, ensure_ascii=False, indent=2)};\n"
     
     DATA_JS.write_text(js_content, encoding='utf-8')
-    print(f"✅ Se han exportado {len(platos)} platos extraídos de tu Excel.")
+    print(f"✅ Se han exportado {len(platos)} elementos combinados (Excel + Paprika).")
     print(f"✅ Datos guardados correctamente en {DATA_JS}")
     print("--------------------------------------------------")
     print("Sube los cambios a GitHub para actualizar la web.")
