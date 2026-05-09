@@ -1,0 +1,32 @@
+- name: Tostada salmón_aguacate
+  categories:
+    - Desayunos
+  tags:
+    - rápido
+    - brunch
+    - salmón
+    - aguacate
+    - tostada
+  servings: "1"
+  ingredients: |
+    - 1 rebanada de pan rústico
+    - Philadelphia
+    - 1 aguacate
+    - Salmón ahumado
+    - Limón
+    - Pimienta negra
+    - Aceite de oliva
+    - Eneldo o cebollino (opcional)
+    - Alcaparras (opcional)
+    - Sal
+  directions: |
+    1. Tostar el pan rústico hasta que quede firme y crujiente. Opcional: añadir un hilo fino de aceite de oliva.
+    2. Untar una capa fina de Philadelphia sobre la tostada.
+    3. Añadir encima un poco de pimienta y un toque muy ligero de limón.
+    4. Machacar el aguacate con sal y limón hasta obtener una textura cremosa, pero conservando algo de trozo.
+    5. Extender una capa generosa de aguacate sobre el queso crema.
+    6. Colocar el salmón en pliegues, no completamente plano.
+    7. Rematar con pimienta negra, un chorrito de aceite de oliva y, opcionalmente, eneldo o cebollino, alcaparras o unas gotas de limón.
+    8. Respetar el orden correcto de montaje: pan, queso, aguacate, salmón y toppings.
+  notes: |
+    Truco de restaurante: añadir el limón al final para un sabor más fresco y no aplastar el conjunto para conservar volumen. Buscar equilibrio entre la parte grasa (aguacate, queso, salmón) y el punto ácido del limón. Tiempo total aproximado: 3–5 minutos. Resultado: nivel brunch profesional sin complicación.

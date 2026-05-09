@@ -26,6 +26,7 @@
                     <button onclick="app.action('save', 'par')">Guardar como PAR</button>
                     <button onclick="app.action('save', 'impar')">Guardar como IMPAR</button>
                     <hr>
+                    <button onclick="app.clearCurrentWeek()">Borrar semana</button>
                     <button onclick="app.exportHTML()">Exportar HTML</button>
                     <input type="file" id="json-file-input" accept="application/json,.json" style="display:none"> 
                 </div>
@@ -65,18 +66,9 @@
                 <button onclick="app.copyCompactaYCompra()" class="compact-copy-btn">Copiar</button>
             </div>
             <div id="compacta-container" class="compacta-container"></div>
+            <div class="compacta-buy-header">Lista de la compra asociada</div>
+            <div id="compacta-compra-container" class="compacta-buy-container"></div>
             <div class="compacta-help">Copia planificación + lista de la compra para pegarla aquí y pedirme la actualización de COMIDAS.</div>
-        </section>
-
-        <!-- View: Compra -->
-        <section id="view-compra" class="view" style="padding-bottom: 2rem;">
-            <div class="day-header" style="margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">
-                <span>Cálculo de la Compra</span>
-                <button onclick="app.copyCompra()" class="icon-btn" style="font-size: 14px; padding: 4px 8px; border-radius: 4px; border: 1px solid #ccc; background: white; color: #111;">Copiar Lista</button>
-            </div>
-            <div class="platos-container" id="compra-container">
-                <!-- Se llena dinamica con js -->
-            </div>
         </section>
     </main>
 
@@ -92,7 +84,6 @@
         <button class="nav-item" data-target="view-platos">🍲 <span>Platos</span></button>
         <button class="nav-item" data-target="view-recetario">📖 <span>Recetario</span></button>
         <button class="nav-item" data-target="view-compacta">🧾 <span>Compacta</span></button>
-        <button class="nav-item" data-target="view-compra">🛒 <span>Compra</span></button>
     </nav>
 
     <script src="js/data.js"></script>

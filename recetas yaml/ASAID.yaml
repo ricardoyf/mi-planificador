@@ -1,0 +1,21 @@
+- name: Asaid
+  categories:
+    - Desayunos
+  tags:
+    - saludable
+    - fácil
+    - vegano
+    - sin azúcar
+  servings: "1"
+  ingredients: |
+    - 1 paquete de açaí
+    - 1 plátano congelado
+    - 1 puñado de frutos rojos congelados
+    - 30 ml de leche de avena
+    - Toppings: fresas, plátano, granola, semillas de lino
+  directions: |
+    1. Coloque el açaí, el plátano congelado, los frutos rojos y la leche de avena en una batidora potente.
+    2. Triture hasta obtener una mezcla cremosa y espesa.
+    3. Sirva en un bol y decore con los toppings: rodajas de fresa y plátano, granola y semillas de lino.
+  notes: |
+    Puede ajustar la cantidad de leche según la textura deseada. Ideal para un desayuno energético o merienda fresca.

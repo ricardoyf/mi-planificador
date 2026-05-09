@@ -1,0 +1,26 @@
+- name: Empanada jamón y queso
+  categories:
+    - Aperitivos
+  tags:
+    - horno
+    - hojaldre
+    - jamón
+    - queso
+    - fácil
+  servings: "4"
+  ingredients: |
+    - 2 láminas de hojaldre
+    - Jamón cocido
+    - Queso
+    - 1 huevo batido
+  directions: |
+    1. Precalentar el horno a 180 °C con calor arriba y abajo. Si se usa ventilador, ajustar a 170 °C.
+    2. Introducir la empanada de hojaldre rellena de jamón y queso ya montada sobre bandeja con papel de horno.
+    3. Hornear durante 25–30 minutos, vigilando que el hojaldre quede bien laminado y dorado de forma uniforme.
+    4. Confirmar que la base quede seca y crujiente, no blanquecina, y que el queso esté fundido sin exceso de fuga lateral.
+    5. Si el relleno está muy frío o es abundante, prolongar hasta 35 minutos si hiciera falta.
+    6. Si a los 20 minutos la parte superior dora demasiado, cubrir ligeramente con papel de aluminio y continuar.
+    7. Si la base suele quedar pálida, dejar 5 minutos más colocando la bandeja en una guía inferior del horno.
+    8. Sacar del horno y dejar reposar 5 minutos antes de cortar para estabilizar el relleno y evitar fugas de queso.
+  notes: |
+    Parámetros recomendados: 180 °C, calor arriba y abajo, sin ventilador. Tiempo total estándar: 25–30 minutos. Punto óptimo: superficie dorada uniforme, base crujiente y queso fundido internamente.

@@ -31,21 +31,21 @@
   },
   "jueves": {
     "comida": {
-      "primero": "Lentejas",
-      "segundo": ""
+      "primero": "Alcachofas",
+      "segundo": "Pechugas pollo"
     },
     "cena": {
-      "primero": "Albóndigas",
+      "primero": "Piadina",
       "segundo": ""
     }
   },
   "viernes": {
     "comida": {
-      "primero": "Chocos  arroz",
-      "segundo": ""
+      "primero": "Salmón",
+      "segundo": "Boniato"
     },
     "cena": {
-      "primero": "E. Cuscús judías",
+      "primero": "Cottage",
       "segundo": ""
     }
   },
@@ -65,7 +65,7 @@
       "segundo": ""
     },
     "cena": {
-      "primero": "Sandwinch",
+      "primero": "Pollo butter chicken",
       "segundo": ""
     }
   }

@@ -18,7 +18,6 @@ const app = {
         this.loadCurrentWeekPlan();
         this.renderPlatos();
         this.renderRecetario();
-        this.renderCompra();
         this.renderCompacta();
         this.setupEventListeners();
         
@@ -156,7 +155,6 @@ const app = {
         }
         this.renderWeekSelector();
         this.renderPlanificador();
-        this.renderCompra();
         this.renderCompacta();
     },
 
@@ -183,7 +181,6 @@ const app = {
         this.persistCurrentWeekKey();
         this.renderWeekSelector();
         this.renderPlanificador();
-        this.renderCompra();
         this.renderCompacta();
     },
 
@@ -253,7 +250,6 @@ const app = {
                 delete this.plan._meta;
                 this.autosaveCurrentWeek();
                 this.renderPlanificador();
-                this.renderCompra();
                 this.renderCompacta();
                 alert('JSON cargado correctamente');
             } catch (e) {
@@ -348,7 +344,6 @@ const app = {
                             longPressTriggered = false;
                             return;
                         }
-                        this.assignSlot(dia, tipo, slot);
                     };
 
                     slotDiv.addEventListener('pointerdown', startPress);
@@ -502,6 +497,7 @@ const app = {
         if (weekLabel) weekLabel.textContent = current.label;
         const rows = this.getCompactaRows();
         container.innerHTML = rows.map(r => `<div class="compacta-line"><span class="compacta-day">${r.label}</span> ${r.comida} / ${r.cena}</div>`).join('');
+        this.renderCompra('compacta-compra-container');
     },
 
     getCompraConteo() {
@@ -572,7 +568,6 @@ const app = {
             document.getElementById('selected-plato-fab').classList.add('hidden');
             this.autosaveCurrentWeek();
             this.renderPlanificador();
-            this.renderCompra();
             this.renderCompacta();
             this.switchTab('view-planificador');
             return;
@@ -596,7 +591,6 @@ const app = {
                 document.getElementById('selected-plato-fab').classList.add('hidden');
                 this.autosaveCurrentWeek();
                 this.renderPlanificador();
-                this.renderCompra();
                 this.renderCompacta();
                 return;
             }
@@ -613,8 +607,8 @@ const app = {
         }
     },
 
-    renderCompra() {
-        const container = document.getElementById('compra-container');
+    renderCompra(containerId = 'compra-container') {
+        const container = document.getElementById(containerId);
         if(!container) return;
         container.innerHTML = '';
         
@@ -658,6 +652,17 @@ const app = {
         } else {
             alert('Tu navegador no soporta la copia automática. Por favor selecciona el texto y cópialo a mano.');
         }
+    },
+
+    clearCurrentWeek() {
+        const current = this.getWeekOption();
+        const ok = confirm(`¿Borrar toda la semana ${current.label}?`);
+        if (!ok) return;
+        this.plan = this.getEmptyPlan();
+        this.autosaveCurrentWeek();
+        this.renderPlanificador();
+        this.renderCompacta();
+        document.getElementById('dropdown-menu').classList.add('hidden');
     },
 
     switchTab(tabId) {

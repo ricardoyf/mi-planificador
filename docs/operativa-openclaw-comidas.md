@@ -141,3 +141,17 @@ En temas de comidas, cenas, compra, calendar y correo relacionado:
 - `mi-planificador` actúa como agente responsable
 - debe ejecutar y no limitarse a sugerir
 - debe respetar esta operativa como referencia principal
+
+## 8. Conversión de recetas a YAML
+
+Cuando Ricardo pida pasar una receta a YAML, debe tomarse como referencia el formato de `ASAID.yaml` dentro de la carpeta `Yaml` del proyecto.
+
+### Regla de categoría
+
+- Si Ricardo no indica la categoría, hay que preguntársela antes de crear el archivo YAML.
+- En cuanto Ricardo indique la categoría, debe crearse el YAML directamente.
+- No deben hacerse más preguntas una vez indicada la categoría.
+
+### Regla permanente
+
+Esto aplica siempre para cualquier receta que Ricardo pida convertir a YAML.
