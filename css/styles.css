@@ -581,12 +581,22 @@ main {
     font-size: 14px;
     font-weight: 800;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .slot-action-btn.primary {
     border-color: var(--primary);
     background: var(--primary);
     color: white;
+}
+
+.slot-action-btn.disabled {
+    color: var(--text-sec);
+    background: #f5f5f5;
+    cursor: default;
 }
 
 /* Bottom Nav */

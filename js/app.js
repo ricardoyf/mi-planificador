@@ -656,9 +656,13 @@ const app = {
             alert('Ese plato no tiene receta enlazada.');
             return;
         }
-        const baseUrl = window.location.href.split('index.html')[0].replace(/\/$/, '');
-        const absoluteUrl = `${baseUrl}/${recipePath}`;
-        window.open(absoluteUrl, '_blank');
+        const link = document.createElement('a');
+        link.href = recipePath;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     },
 
     closeSlotActions() {
@@ -687,6 +691,7 @@ const app = {
     showSlotActions(dia, tipo, slot, dish) {
         this.closeSlotActions();
         this.slotAction = { dia, tipo, slot, dish };
+        const recipePath = this.findRecipeUrlForDish(dish);
 
         const backdrop = document.createElement('div');
         backdrop.id = 'slot-action-backdrop';
@@ -697,13 +702,41 @@ const app = {
 
         const sheet = document.createElement('div');
         sheet.className = 'slot-action-sheet';
-        sheet.innerHTML = `
-            <div class="slot-action-title">${this.escapeHtml(dish)}</div>
-            <div class="slot-action-buttons">
-                <button type="button" class="slot-action-btn primary" onclick="app.changeSlotPlato()">Cambiar plato</button>
-                <button type="button" class="slot-action-btn" onclick="app.viewSlotRecipe()">Ver receta</button>
-            </div>
-        `;
+
+        const title = document.createElement('div');
+        title.className = 'slot-action-title';
+        title.textContent = dish;
+
+        const buttons = document.createElement('div');
+        buttons.className = 'slot-action-buttons';
+
+        const changeBtn = document.createElement('button');
+        changeBtn.type = 'button';
+        changeBtn.className = 'slot-action-btn primary';
+        changeBtn.textContent = 'Cambiar plato';
+        changeBtn.addEventListener('click', () => this.changeSlotPlato());
+
+        let recipeAction;
+        if (recipePath) {
+            recipeAction = document.createElement('a');
+            recipeAction.href = recipePath;
+            recipeAction.target = '_blank';
+            recipeAction.rel = 'noopener';
+            recipeAction.className = 'slot-action-btn';
+            recipeAction.textContent = 'Ver receta';
+            recipeAction.addEventListener('click', () => this.closeSlotActions());
+        } else {
+            recipeAction = document.createElement('button');
+            recipeAction.type = 'button';
+            recipeAction.className = 'slot-action-btn disabled';
+            recipeAction.textContent = 'Sin receta';
+            recipeAction.disabled = true;
+        }
+
+        buttons.appendChild(changeBtn);
+        buttons.appendChild(recipeAction);
+        sheet.appendChild(title);
+        sheet.appendChild(buttons);
 
         backdrop.appendChild(sheet);
         document.body.appendChild(backdrop);
