@@ -956,6 +956,256 @@ const app = {
         }
     },
 
+    getPublicBaseUrl() {
+        const href = window.location.href.split('#')[0];
+        if (href.startsWith('file:')) return 'https://ricardoyf.github.io/mi-planificador/';
+        const base = href.split('index.html')[0];
+        return base.endsWith('/') ? base : `${base}/`;
+    },
+
+    async fetchTextAsset(path) {
+        const normalizedPath = String(path || '').split('?')[0].replace(/^\.\//, '');
+        const embeddedAssets = window.STANDALONE_SOURCE_ASSETS || {};
+        if (embeddedAssets[normalizedPath]) return embeddedAssets[normalizedPath];
+        const response = await fetch(path, { cache: 'no-store' });
+        if (!response.ok) throw new Error(`No se pudo leer ${path}`);
+        return response.text();
+    },
+
+    escapeInlineScript(text) {
+        return String(text || '').replace(/<\/script/gi, '<\\/script');
+    },
+
+    escapeInlineStyle(text) {
+        return String(text || '').replace(/<\/style/gi, '<\\/style');
+    },
+
+    getCurrentCssPath() {
+        const cssLink = document.querySelector('link[rel="stylesheet"][href*="css/styles.css"]');
+        return cssLink ? cssLink.getAttribute('href') : 'css/styles.css';
+    },
+
+    getCurrentScriptPath(partial) {
+        const script = Array.from(document.scripts).find(s => s.src && s.src.includes(partial));
+        if (!script) return partial;
+        const src = script.getAttribute('src') || partial;
+        return src;
+    },
+
+    async collectStandaloneRecipes() {
+        const recipes = {};
+        const embedded = window.STANDALONE_RECIPES || {};
+        const uniqueUrls = Array.from(new Set((recetasData || []).map(r => r.url).filter(Boolean)));
+        await Promise.all(uniqueUrls.map(async (url) => {
+            if (embedded[url]) {
+                recipes[url] = embedded[url];
+                return;
+            }
+            try {
+                recipes[url] = await this.fetchTextAsset(url);
+            } catch (_e) {
+                // Si el navegador no puede leer una receta, el enlace seguirá funcionando con <base>.
+            }
+        }));
+        return recipes;
+    },
+
+    buildStandaloneBootstrapScript(exportedState) {
+        return `
+(function () {
+    window.EXPORTED_WEEK_KEY = ${JSON.stringify(exportedState.weekKey)};
+    window.EXPORTED_PLAN = ${JSON.stringify(exportedState.plan)};
+    window.EXPORTED_COMPRA_CHECKED = ${JSON.stringify(exportedState.compraChecked)};
+    window.EXPORTED_BASE_URL = ${JSON.stringify(exportedState.baseUrl)};
+    window.STANDALONE_RECIPES = ${JSON.stringify(exportedState.recipes).replace(/<\/script/gi, '<\\/script')};
+
+    const originalOnload = window.onload;
+    window.onload = function () {
+        if (typeof originalOnload === 'function') originalOnload();
+        if (!window.app) return;
+        const monday = app.parseWeekKey(window.EXPORTED_WEEK_KEY);
+        if (monday) app.rebuildWeekOptionsAround(monday);
+        app.currentWeekKey = window.EXPORTED_WEEK_KEY;
+        app.plan = JSON.parse(JSON.stringify(window.EXPORTED_PLAN));
+        app.compraChecked = Object.assign({}, window.EXPORTED_COMPRA_CHECKED || {});
+        app.renderWeekSelector();
+        app.persistCurrentWeekKey();
+        app.renderPlanificador();
+        app.renderCompacta();
+    };
+
+    const recipeBlobs = new Map();
+    function recipeUrl(path) {
+        const html = window.STANDALONE_RECIPES && window.STANDALONE_RECIPES[path];
+        if (!html) return null;
+        if (!recipeBlobs.has(path)) {
+            recipeBlobs.set(path, URL.createObjectURL(new Blob([html], { type: 'text/html;charset=utf-8' })));
+        }
+        return recipeBlobs.get(path);
+    }
+
+    function openStandaloneRecipe(path) {
+        const url = recipeUrl(path);
+        if (url) {
+            window.open(url, '_blank');
+            return;
+        }
+        window.open(new URL(path, window.EXPORTED_BASE_URL).href, '_blank');
+    }
+
+    document.addEventListener('click', function (event) {
+        const link = event.target.closest && event.target.closest('a[href^="Recipes/"]');
+        if (!link) return;
+        event.preventDefault();
+        openStandaloneRecipe(link.getAttribute('href'));
+    });
+
+    const patchApp = setInterval(function () {
+        if (!window.app) return;
+        clearInterval(patchApp);
+        app.openRecipeForDish = function (name) {
+            const recipePath = app.findRecipeUrlForDish ? app.findRecipeUrlForDish(name) : null;
+            if (!recipePath) {
+                alert('Ese plato no tiene receta enlazada.');
+                return;
+            }
+            openStandaloneRecipe(recipePath);
+        };
+    }, 20);
+}());
+`;
+    },
+
+    async exportStandaloneHTML() {
+        const menu = document.getElementById('dropdown-menu');
+        if (menu) menu.classList.add('hidden');
+        const originalTitle = document.title;
+        document.title = 'Generando standalone...';
+        try {
+            const [css, dataJs, appJs, recipes] = await Promise.all([
+                this.fetchTextAsset(this.getCurrentCssPath()),
+                this.fetchTextAsset(this.getCurrentScriptPath('js/data.js')),
+                this.fetchTextAsset(this.getCurrentScriptPath('js/app.js')),
+                this.collectStandaloneRecipes()
+            ]);
+
+            const exportedState = {
+                weekKey: this.getWeekFileBase(),
+                plan: this.plan,
+                compraChecked: this.getVisibleCompraChecked(),
+                baseUrl: this.getPublicBaseUrl(),
+                recipes
+            };
+            const current = this.getWeekOption();
+            const title = `Plan semanal ${current.summary}`;
+            const bootstrap = this.buildStandaloneBootstrapScript(exportedState);
+            const htmlStr = `<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <base href="${this.escapeHtml(exportedState.baseUrl)}">
+    <title>${this.escapeHtml(title)}</title>
+    <style>
+${this.escapeInlineStyle(css)}
+    </style>
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-title-block">
+            <h1>Planificador</h1>
+            <div id="week-summary" class="week-summary">Semana exportada</div>
+        </div>
+        <div class="header-actions">
+            <div class="week-controls">
+                <button id="week-prev-btn" class="week-nav-btn" type="button" aria-label="Semana anterior">‹</button>
+                <select id="week-select" class="week-select"></select>
+                <button id="week-next-btn" class="week-nav-btn" type="button" aria-label="Semana siguiente">›</button>
+                <input id="week-date-input" class="week-date-input" type="date" aria-label="Elegir fecha">
+            </div>
+            <div class="menu-container">
+                <button id="menu-btn" class="icon-btn">⋮</button>
+                <div id="dropdown-menu" class="dropdown hidden">
+                    <button onclick="app.exportHTML()">Exportar HTML</button>
+                    <button onclick="app.exportStandaloneHTML()">Exportar standalone</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section id="view-planificador" class="view active">
+            <div class="days-container" id="days-container"></div>
+        </section>
+        <section id="view-platos" class="view">
+            <div class="search-bar"><input type="text" id="search-platos" placeholder="Buscar platos..."></div>
+            <div class="platos-container" id="platos-container"></div>
+        </section>
+        <section id="view-recetario" class="view">
+            <div class="search-bar"><input type="text" id="search-recetas" placeholder="Buscar recetas..."></div>
+            <div class="platos-container" id="recetas-container"></div>
+        </section>
+        <section id="view-xls" class="view">
+            <div class="search-bar"><input type="text" id="search-xls" placeholder="Buscar platos del Excel..."></div>
+            <div class="platos-container" id="xls-container"></div>
+        </section>
+        <section id="view-compacta" class="view">
+            <div class="compacta-header-row">
+                <div class="compacta-title-block">
+                    <div class="compacta-kicker">Vista compacta</div>
+                    <div id="compacta-week-label" class="compacta-week-label">Semana exportada</div>
+                </div>
+                <button onclick="app.copyCompactaYCompra()" class="compact-copy-btn">Copiar</button>
+            </div>
+            <div id="compacta-container" class="compacta-container"></div>
+            <div class="compacta-buy-header">Lista de la compra asociada</div>
+            <div id="compacta-compra-container" class="compacta-buy-container"></div>
+            <div class="compacta-help">Copia planificación + lista de la compra.</div>
+        </section>
+    </main>
+
+    <div id="selected-plato-fab" class="fab hidden">
+        <span>Seleccionado: <strong id="selected-plato-name">Ninguno</strong></span>
+        <button onclick="app.clearSelection()">✕</button>
+    </div>
+
+    <nav class="bottom-nav">
+        <button class="nav-item active" data-target="view-planificador">📅 <span>Plan</span></button>
+        <button class="nav-item" data-target="view-platos">🍲 <span>Platos</span></button>
+        <button class="nav-item" data-target="view-recetario">📖 <span>Recetario</span></button>
+        <button class="nav-item" data-target="view-xls">📊 <span>xls</span></button>
+        <button class="nav-item" data-target="view-compacta">🧾 <span>Compacta</span></button>
+    </nav>
+
+    <input type="file" id="json-file-input" accept="application/json,.json" style="display:none">
+    <script>
+${this.escapeInlineScript(dataJs)}
+    </script>
+    <script>
+${this.escapeInlineScript(appJs)}
+    </script>
+    <script>
+${this.escapeInlineScript(bootstrap)}
+    </script>
+</body>
+</html>`;
+
+            const blob = new Blob([htmlStr], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${this.getWeekFileBase()}_standalone.html`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        } catch (error) {
+            alert(`No se pudo generar el standalone: ${error.message}`);
+        } finally {
+            document.title = originalTitle;
+        }
+    },
+
     clearCurrentWeek() {
         const current = this.getWeekOption();
         const ok = confirm(`¿Borrar toda la semana ${current.label}?`);

@@ -60,9 +60,17 @@ def main():
 
     recipes_json = json.dumps(recipes, ensure_ascii=False)
     recipes_b64 = base64.b64encode(recipes_json.encode("utf-8")).decode("ascii")
+    source_assets = {
+        "css/styles.css": css,
+        "js/data.js": data_js,
+        "js/app.js": app_js,
+    }
+    source_assets_json = json.dumps(source_assets, ensure_ascii=False)
+    source_assets_b64 = base64.b64encode(source_assets_json.encode("utf-8")).decode("ascii")
     standalone_script = f"""
     <script>
 window.STANDALONE_VERSION = "{version}";
+window.STANDALONE_SOURCE_ASSETS = JSON.parse(new TextDecoder().decode(Uint8Array.from(atob("{source_assets_b64}"), c => c.charCodeAt(0))));
 window.STANDALONE_RECIPES = JSON.parse(new TextDecoder().decode(Uint8Array.from(atob("{recipes_b64}"), c => c.charCodeAt(0))));
     </script>
     <script>
