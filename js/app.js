@@ -13,6 +13,7 @@ const app = {
     compraStoragePrefix: 'compra_week_',
     currentWeekStorageKey: 'plan_current_week',
     compraChecked: {},
+    slotAction: null,
     
     init() {
         this.setupWeekOptions();
@@ -613,6 +614,54 @@ const app = {
         window.open(absoluteUrl, '_blank');
     },
 
+    closeSlotActions() {
+        const existing = document.getElementById('slot-action-backdrop');
+        if (existing) existing.remove();
+        this.slotAction = null;
+    },
+
+    changeSlotPlato() {
+        if (!this.slotAction) return;
+        const { dia, tipo, slot } = this.slotAction;
+        this.closeSlotActions();
+        this.pendingSlot = { dia, tipo, slot };
+        this.selectedPlato = null;
+        document.getElementById('selected-plato-fab').classList.add('hidden');
+        this.switchTab('view-platos');
+    },
+
+    viewSlotRecipe() {
+        if (!this.slotAction) return;
+        const { dish } = this.slotAction;
+        this.closeSlotActions();
+        this.openRecipeForDish(dish);
+    },
+
+    showSlotActions(dia, tipo, slot, dish) {
+        this.closeSlotActions();
+        this.slotAction = { dia, tipo, slot, dish };
+
+        const backdrop = document.createElement('div');
+        backdrop.id = 'slot-action-backdrop';
+        backdrop.className = 'slot-action-backdrop';
+        backdrop.addEventListener('click', (event) => {
+            if (event.target === backdrop) this.closeSlotActions();
+        });
+
+        const sheet = document.createElement('div');
+        sheet.className = 'slot-action-sheet';
+        sheet.innerHTML = `
+            <div class="slot-action-title">${this.escapeHtml(dish)}</div>
+            <div class="slot-action-buttons">
+                <button type="button" class="slot-action-btn primary" onclick="app.changeSlotPlato()">Cambiar plato</button>
+                <button type="button" class="slot-action-btn" onclick="app.viewSlotRecipe()">Ver receta</button>
+            </div>
+        `;
+
+        backdrop.appendChild(sheet);
+        document.body.appendChild(backdrop);
+    },
+
     getCompactaRows() {
         return DIAS.map((dia, idx) => {
             const comida1 = this.plan[dia]?.comida?.primero || '';
@@ -740,22 +789,13 @@ const app = {
 
     assignSlot(dia, tipo, slot) {
         const currentDish = this.plan[dia] && this.plan[dia][tipo] && this.plan[dia][tipo][slot];
-        if (currentDish) {
-            const action = confirm('Aceptar para cambiar este plato. Cancelar para eliminarlo.');
-            if (!action) {
-                this.plan[dia][tipo][slot] = '';
-                this.pendingSlot = null;
-                this.selectedPlato = null;
-                document.getElementById('selected-plato-fab').classList.add('hidden');
-                this.autosaveCurrentWeek();
-                this.renderPlanificador();
-                this.renderCompacta();
-                return;
-            }
-        }
-
         if (this.selectedPlato) {
             this.setSlotPlato(dia, tipo, slot, this.selectedPlato);
+            return;
+        }
+
+        if (currentDish) {
+            this.showSlotActions(dia, tipo, slot, currentDish);
             return;
         }
 

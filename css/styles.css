@@ -538,6 +538,57 @@ main {
     cursor: pointer;
 }
 
+/* Slot Action Sheet */
+.slot-action-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 220;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 16px 12px 86px;
+    background: rgba(0, 0, 0, 0.28);
+}
+
+.slot-action-sheet {
+    width: min(420px, 100%);
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
+    padding: 14px;
+}
+
+.slot-action-title {
+    color: var(--text-main);
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.slot-action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.slot-action-btn {
+    min-height: 44px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: white;
+    color: var(--text-main);
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.slot-action-btn.primary {
+    border-color: var(--primary);
+    background: var(--primary);
+    color: white;
+}
+
 /* Bottom Nav */
 .bottom-nav {
     position: fixed;
