@@ -105,12 +105,12 @@ window.STANDALONE_RECIPES = JSON.parse(new TextDecoder().decode(Uint8Array.from(
         }};
 
         app.openRecipeForDish = function (name) {{
-            const matched = platosData.find(p => p.plato === name && p.url_receta);
-            if (!matched || !matched.url_receta) {{
+            const recipePath = app.findRecipeUrlForDish ? app.findRecipeUrlForDish(name) : null;
+            if (!recipePath) {{
                 alert("Ese plato no tiene receta enlazada.");
                 return;
             }}
-            openStandaloneRecipe(matched.url_receta);
+            openStandaloneRecipe(recipePath);
         }};
     }}
 }}());

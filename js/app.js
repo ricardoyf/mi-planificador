@@ -602,15 +602,62 @@ const app = {
             container.appendChild(grp);
         });
     },
+
+    normalizeMatchText(value) {
+        return (value || '')
+            .toString()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .toLowerCase()
+            .replace(/&/g, ' y ')
+            .replace(/[\/,().¿?….-]/g, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
+    },
+
+    tokenSet(value) {
+        const stopwords = new Set(['de', 'del', 'la', 'el', 'los', 'las', 'con', 'y', 'en', 'al', 'a', 'o', 'estilo']);
+        return this.normalizeMatchText(value).split(' ').filter(t => t && !stopwords.has(t));
+    },
+
+    findRecipeUrlForDish(name) {
+        const exactPlate = platosData.find(p => p.plato === name && p.url_receta);
+        if (exactPlate) return exactPlate.url_receta;
+
+        const nameNorm = this.normalizeMatchText(name);
+        const exactRecipe = recetasData.find(r => this.normalizeMatchText(r.nombre) === nameNorm);
+        if (exactRecipe) return exactRecipe.url;
+
+        const nameTokens = this.tokenSet(name);
+        let best = null;
+        recetasData.forEach(recipe => {
+            const recipeTokens = this.tokenSet(recipe.nombre);
+            const overlap = nameTokens.filter(t => recipeTokens.includes(t)).length;
+            if (!overlap) return;
+            const dishCoverage = overlap / Math.max(nameTokens.length, 1);
+            const recipeCoverage = overlap / Math.max(recipeTokens.length, 1);
+            if (nameTokens.length === 1) {
+                const recipeNorm = this.normalizeMatchText(recipe.nombre);
+                if (!(nameNorm === recipeNorm || recipeNorm.startsWith(`${nameNorm} `))) return;
+            } else if (dishCoverage < 0.75) {
+                return;
+            }
+            const recipeNorm = this.normalizeMatchText(recipe.nombre);
+            const subsetBonus = nameNorm && recipeNorm.includes(nameNorm) ? 3 : 0;
+            const score = (dishCoverage * 4) + (recipeCoverage * 2) + overlap + subsetBonus;
+            if (!best || score > best.score) best = { score, url: recipe.url };
+        });
+        return best && best.score >= 3 ? best.url : null;
+    },
     
     openRecipeForDish(name) {
-        const matched = platosData.find(p => p.plato === name && p.url_receta);
-        if (!matched || !matched.url_receta) {
+        const recipePath = this.findRecipeUrlForDish(name);
+        if (!recipePath) {
             alert('Ese plato no tiene receta enlazada.');
             return;
         }
         const baseUrl = window.location.href.split('index.html')[0].replace(/\/$/, '');
-        const absoluteUrl = `${baseUrl}/${matched.url_receta}`;
+        const absoluteUrl = `${baseUrl}/${recipePath}`;
         window.open(absoluteUrl, '_blank');
     },
 
