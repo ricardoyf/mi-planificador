@@ -837,33 +837,6 @@ const app = {
         const trigger = document.querySelector(`.nav-item[data-target="${tabId}"]`);
         if(trigger) trigger.classList.add('active');
     },
-    
-    buildDesktopNav() {
-        const header = document.querySelector('.app-header');
-        const nav = document.createElement('div');
-        nav.className = 'desktop-nav';
-        nav.style.display = 'flex';
-        nav.style.gap = '20px';
-        
-        document.querySelectorAll('.nav-item').forEach(btn => {
-            const clone = document.createElement('button');
-            clone.className = 'nav-item';
-            clone.innerHTML = btn.innerHTML;
-            clone.onclick = () => this.switchTab(btn.dataset.target);
-            nav.appendChild(clone);
-        });
-        
-        header.insertBefore(nav, document.querySelector('.menu-container'));
-        document.querySelector('.bottom-nav').style.display = 'none';
-        
-        // Re-bind to new desktop tabs
-        document.querySelectorAll('.desktop-nav .nav-item').forEach(n => {
-            n.addEventListener('click', function() {
-                document.querySelectorAll('.desktop-nav .nav-item').forEach(x => x.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-    },
 
     setupEventListeners() {
         document.getElementById('menu-btn').onclick = () => {
