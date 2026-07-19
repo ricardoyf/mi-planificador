@@ -604,11 +604,7 @@ main {
         min-width: 300px;
     }
     
-    .bottom-nav {
-        display: none;
-    }
-    
-    body { padding-bottom: 20px; padding-top: 60px; }
+    body { padding-bottom: 80px; padding-top: 60px; }
     
     header.app-header {
         position: fixed;

@@ -23,11 +23,6 @@ const app = {
         this.renderXls();
         this.renderCompacta();
         this.setupEventListeners();
-        
-        // Build desktop navigation if screen is large
-        if (window.innerWidth >= 600) {
-            this.buildDesktopNav();
-        }
     },
 
     getEmptyPlan() {
