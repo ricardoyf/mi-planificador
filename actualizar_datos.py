@@ -94,23 +94,31 @@ def pick_recipe_url(plato_nombre, recetas):
         receta_norm = normalize_text(receta['nombre'])
         receta_tokens = token_set(receta['nombre'])
         overlap = len(nombre_tokens & receta_tokens)
+        if not overlap:
+            continue
+        dish_coverage = overlap / max(len(nombre_tokens), 1)
+        recipe_coverage = overlap / max(len(receta_tokens), 1)
+        if len(nombre_tokens) == 1:
+            if not (nombre_norm == receta_norm or receta_norm.startswith(nombre_norm + ' ')):
+                continue
+        elif dish_coverage < 0.75:
+            continue
         subset_bonus = 0
         if nombre_norm and nombre_norm in receta_norm:
             subset_bonus = 3
         elif receta_norm and receta_norm in nombre_norm:
             subset_bonus = 2
-        if overlap:
-            score = overlap + subset_bonus
-            candidates.append((score, len(receta_tokens), receta['url']))
+        score = (dish_coverage * 4) + (recipe_coverage * 2) + overlap + subset_bonus
+        candidates.append((score, -overlap, len(receta_tokens), receta['url']))
 
     if not candidates:
         return None
 
-    candidates.sort(key=lambda x: (-x[0], x[1]))
+    candidates.sort(key=lambda x: (-x[0], x[2]))
     best_score = candidates[0][0]
-    if best_score < 2:
+    if best_score < 3:
         return None
-    return candidates[0][2]
+    return candidates[0][3]
 
 
 def main():
@@ -166,8 +174,6 @@ def main():
         if matched_url:
             receta = next((r for r in recetas if r['url'] == matched_url), None)
             p['url_receta'] = matched_url
-            if receta and receta.get('categoria'):
-                p['categoria'] = normalize_category(receta['categoria'])
 
     # Add recipes that only exist in Paprika/HTML
     used_recipe_urls = {p.get('url_receta') for p in platos if p.get('url_receta')}

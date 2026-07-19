@@ -725,6 +725,19 @@ const app = {
         document.getElementById('selected-plato-fab').classList.add('hidden');
     },
 
+    setSlotPlato(dia, tipo, slot, name) {
+        if (!this.plan[dia]) this.plan[dia] = {};
+        if (!this.plan[dia][tipo]) this.plan[dia][tipo] = {};
+        this.plan[dia][tipo][slot] = name;
+        this.pendingSlot = null;
+        this.selectedPlato = null;
+        document.getElementById('selected-plato-fab').classList.add('hidden');
+        this.autosaveCurrentWeek();
+        this.renderPlanificador();
+        this.renderCompacta();
+        this.switchTab('view-planificador');
+    },
+
     assignSlot(dia, tipo, slot) {
         const currentDish = this.plan[dia] && this.plan[dia][tipo] && this.plan[dia][tipo][slot];
         if (currentDish) {
@@ -739,6 +752,11 @@ const app = {
                 this.renderCompacta();
                 return;
             }
+        }
+
+        if (this.selectedPlato) {
+            this.setSlotPlato(dia, tipo, slot, this.selectedPlato);
+            return;
         }
 
         this.pendingSlot = { dia, tipo, slot };

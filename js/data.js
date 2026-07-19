@@ -153,20 +153,8 @@ const platosData = [
     "en_excel": true
   },
   {
-    "plato": "Acelgas",
-    "categoria": "Básicos y acompañamientos",
-    "ingredientes": [
-      "400 g acelgas troceadas",
-      "2 dientes de ajo",
-      "20 g aceite de oliva",
-      "1 cdta sal"
-    ],
-    "url_receta": "Recipes/Acelgas.html",
-    "en_excel": false
-  },
-  {
     "plato": "Alcachofas",
-    "categoria": "Básicos y acompañamientos",
+    "categoria": "Básicos",
     "ingredientes": [
       "Alcachofas",
       "Avecrem"
@@ -176,7 +164,7 @@ const platosData = [
   },
   {
     "plato": "Brécol",
-    "categoria": "Básicos y acompañamientos",
+    "categoria": "Básicos",
     "ingredientes": [
       "Brécol"
     ],
@@ -185,7 +173,7 @@ const platosData = [
   },
   {
     "plato": "Calabacín en espaguetis",
-    "categoria": "Básicos y acompañamientos",
+    "categoria": "Básicos",
     "ingredientes": [
       "Calabacin"
     ],
@@ -194,7 +182,7 @@ const platosData = [
   },
   {
     "plato": "Coliflor",
-    "categoria": "Básicos y acompañamientos",
+    "categoria": "Básicos",
     "ingredientes": [
       "Coliflor"
     ],
@@ -203,7 +191,7 @@ const platosData = [
   },
   {
     "plato": "Espinacas garbanzos",
-    "categoria": "Básicos y acompañamientos",
+    "categoria": "Básicos",
     "ingredientes": [
       "Espinacas",
       "Garbanzos cocidos",
@@ -215,7 +203,7 @@ const platosData = [
   },
   {
     "plato": "Grelos",
-    "categoria": "Básicos y acompañamientos",
+    "categoria": "Básicos",
     "ingredientes": [
       "Grelos"
     ],
@@ -224,7 +212,7 @@ const platosData = [
   },
   {
     "plato": "Judías verdes",
-    "categoria": "Básicos y acompañamientos",
+    "categoria": "Básicos",
     "ingredientes": [
       "Judías verdes"
     ],
@@ -232,20 +220,32 @@ const platosData = [
     "url_receta": "Recipes/Judías verdes.html"
   },
   {
+    "plato": "Lentejas",
+    "categoria": "Básicos",
+    "ingredientes": [
+      "Lentejas",
+      "Calabacín",
+      "Zanahorias",
+      "Puerro",
+      "Pimentón"
+    ],
+    "en_excel": true,
+    "url_receta": "Recipes/Lentejas 2..html"
+  },
+  {
     "plato": "Patatas asadas ostras",
-    "categoria": "Básicos y acompañamientos",
+    "categoria": "Básicos",
     "ingredientes": [
       "Patatas",
       "Salsa de ostras",
       "Romero",
       "Pimentón"
     ],
-    "en_excel": true,
-    "url_receta": "Recipes/Patatas asadas Marcos.html"
+    "en_excel": true
   },
   {
     "plato": "Puré Patata TM31",
-    "categoria": "Básicos y acompañamientos",
+    "categoria": "Básicos",
     "ingredientes": [
       "Patatas",
       "Leche SIN LACTOSA",
@@ -258,7 +258,7 @@ const platosData = [
   },
   {
     "plato": "Verduras horno",
-    "categoria": "Básicos y acompañamientos",
+    "categoria": "Básicos",
     "ingredientes": [
       "Boniato",
       "Calabacín",
@@ -266,6 +266,51 @@ const platosData = [
     ],
     "en_excel": true,
     "url_receta": "Recipes/Verduras horno.html"
+  },
+  {
+    "plato": "Acelgas",
+    "categoria": "Básicos y acompañamientos",
+    "ingredientes": [
+      "400 g acelgas troceadas",
+      "2 dientes de ajo",
+      "20 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url_receta": "Recipes/Acelgas.html",
+    "en_excel": false
+  },
+  {
+    "plato": "Patatas asadas Marcos",
+    "categoria": "Básicos y acompañamientos",
+    "ingredientes": [
+      "1 kg patatas en gajos o chascadas",
+      "30 g aceite de oliva",
+      "1 cdta sal",
+      "1 pizca pimienta",
+      "1 cda salsa de ostras",
+      "2 dientes de ajo aplastados",
+      "1 ramita de romero",
+      "1 pizca pimentón (opcional)",
+      "150 ml agua"
+    ],
+    "url_receta": "Recipes/Patatas asadas Marcos.html",
+    "en_excel": false
+  },
+  {
+    "plato": "Albóndigas",
+    "categoria": "Carnes",
+    "ingredientes": [
+      "Carne picada",
+      "Huevo",
+      "Pan rallado",
+      "Puerro",
+      "Pimiento",
+      "Zanahorias",
+      "Vino blanco",
+      "Caldo de carne"
+    ],
+    "en_excel": true,
+    "url_receta": "Recipes/Albóndigas.html"
   },
   {
     "plato": "Albóndigas Carmen",
@@ -535,23 +580,20 @@ const platosData = [
     "url_receta": "Recipes/Berenjenas rellenas.html"
   },
   {
-    "plato": "Cuscús con champiñones y judías verdes",
+    "plato": "Cuscús champiñones judías",
     "categoria": "CENAS",
     "ingredientes": [
-      "100 g cuscús",
-      "100 ml agua o caldo caliente",
-      "200 g judías verdes",
-      "100 g champiñones",
-      "2 dientes de ajo",
-      "1 cdta pimentón",
-      "1 cdta salsa de soja",
-      "1 yema de huevo (opcional)",
-      "1 cda levadura nutricional",
-      "20 g aceite de oliva",
-      "1 cdta sal"
+      "Cuscús",
+      "Agua o caldo caliente",
+      "Judías verdes",
+      "Champiñones",
+      "Pimentón",
+      "Salsa de soja",
+      "Huevo",
+      "Levadura"
     ],
-    "url_receta": "Recipes/Cuscús con champiñones y judías verdes.html",
-    "en_excel": false
+    "en_excel": true,
+    "url_receta": "Recipes/Cuscús con champiñones y judías verdes.html"
   },
   {
     "plato": "Empanadillas",
@@ -720,8 +762,7 @@ const platosData = [
       "Canónigos",
       "Pepino"
     ],
-    "en_excel": true,
-    "url_receta": "Recipes/Ensalada de atún.html"
+    "en_excel": true
   },
   {
     "plato": "E. atún mango",
@@ -734,8 +775,7 @@ const platosData = [
       "Canónigos",
       "Cebolla"
     ],
-    "en_excel": true,
-    "url_receta": "Recipes/Ensalada de atún y mango.html"
+    "en_excel": true
   },
   {
     "plato": "E. Bonito feta",
@@ -803,6 +843,20 @@ const platosData = [
     "en_excel": true
   },
   {
+    "plato": "E. Judias ANCHOAS",
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "Mayonesa",
+      "Judías verdes",
+      "Lechuga",
+      "Tomate",
+      "Aceitunas",
+      "Huevo",
+      "Anchoas"
+    ],
+    "en_excel": true
+  },
+  {
     "plato": "E. pasta",
     "categoria": "Ensaladas",
     "ingredientes": [
@@ -811,8 +865,7 @@ const platosData = [
       "Aguacate",
       "Mozzarella"
     ],
-    "en_excel": true,
-    "url_receta": "Recipes/Ensalada de pasta.html"
+    "en_excel": true
   },
   {
     "plato": "E. patata",
@@ -823,8 +876,7 @@ const platosData = [
       "Bonito",
       "Aceitunas negras"
     ],
-    "en_excel": true,
-    "url_receta": "Recipes/Ensalada de patata.html"
+    "en_excel": true
   },
   {
     "plato": "E. Pimientos",
@@ -849,8 +901,7 @@ const platosData = [
       "cherrys",
       "Bonito"
     ],
-    "en_excel": true,
-    "url_receta": "Recipes/Ensalada de pimientos rojos asados.html"
+    "en_excel": true
   },
   {
     "plato": "E. queso cabra",
@@ -862,8 +913,7 @@ const platosData = [
       "Tomate",
       "Canónigos"
     ],
-    "en_excel": true,
-    "url_receta": "Recipes/Ensalada de queso de cabra.html"
+    "en_excel": true
   },
   {
     "plato": "E. Quinoa brécol calabacín",
@@ -912,6 +962,92 @@ const platosData = [
     ],
     "en_excel": true,
     "url_receta": "Recipes/E. Salmón aguacate feta tomate canónigos nueces.html"
+  },
+  {
+    "plato": "Ensalada de atún",
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "1 lata de atún al natural (60 g)",
+      "1/2 aguacate",
+      "60 g mozzarella light",
+      "Tomate (cantidad al gusto)",
+      "Canónigos (cantidad al gusto)",
+      "Pepino (cantidad al gusto)",
+      "5 g aceite de oliva virgen extra (AOVE)"
+    ],
+    "url_receta": "Recipes/Ensalada de atún.html",
+    "en_excel": false
+  },
+  {
+    "plato": "Ensalada de atún y mango",
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "1 lata de atún al natural",
+      "1/2 unidad de mango",
+      "60 g queso feta",
+      "Tomate (cantidad al gusto)",
+      "Canónigos (cantidad al gusto)",
+      "Cebolla (cantidad al gusto)",
+      "5 g aceite de oliva virgen extra (AOVE)"
+    ],
+    "url_receta": "Recipes/Ensalada de atún y mango.html",
+    "en_excel": false
+  },
+  {
+    "plato": "Ensalada de pasta",
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "50 g pasta integral",
+      "1 lata de atún al natural",
+      "60 g aguacate",
+      "60 g mozzarella",
+      "Verduras al gusto",
+      "5 g aceite de oliva virgen extra (AOVE)"
+    ],
+    "url_receta": "Recipes/Ensalada de pasta.html",
+    "en_excel": false
+  },
+  {
+    "plato": "Ensalada de patata",
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "200 g patata",
+      "1 huevo cocido",
+      "50 g ventresca en conserva",
+      "10 aceitunas negras",
+      "1 cucharada pequeña (cp) de aceite de oliva virgen extra (AOVE)"
+    ],
+    "url_receta": "Recipes/Ensalada de patata.html",
+    "en_excel": false
+  },
+  {
+    "plato": "Ensalada de pimientos rojos asados",
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "Pimientos rojos asados en tiras",
+      "20 g almendras o nueces",
+      "60 g queso fresco",
+      "Tomates cherry (cantidad al gusto)",
+      "1 lata de atún al natural (60 g)",
+      "5 g aceite de oliva virgen extra (AOVE)"
+    ],
+    "url_receta": "Recipes/Ensalada de pimientos rojos asados.html",
+    "en_excel": false
+  },
+  {
+    "plato": "Ensalada de queso de cabra",
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "60 g salmón ahumado",
+      "40 g queso de cabra",
+      "5 nueces",
+      "Tomate (cantidad al gusto)",
+      "Canónigos (cantidad al gusto)",
+      "Cebolla (cantidad al gusto)",
+      "5 g aceite de oliva virgen extra (AOVE)"
+    ],
+    "url_receta": "Recipes/Ensalada de queso de cabra.html",
+    "en_excel": false
   },
   {
     "plato": "Ensalada de salmón marinado",
@@ -1002,20 +1138,17 @@ const platosData = [
     "url_receta": "Recipes/Tacos de lechuga y ensaladilla de atún.html"
   },
   {
-    "plato": "Tomate relleno de burrata",
+    "plato": "Tomate relleno burrata",
     "categoria": "Ensaladas",
     "ingredientes": [
-      "1 tomate rosa grande y maduro",
-      "1 burrata (125 g aprox.)",
-      "30 ml aceite de oliva virgen extra",
-      "1 buen manojo de cebollino",
-      "Hojas de albahaca fresca (al gusto)",
-      "20 g pistachos pelados",
-      "Sal gorda",
-      "Pimienta negra"
+      "Tomate",
+      "Burrata",
+      "cebollino",
+      "Albahaca",
+      "Pistachos"
     ],
-    "url_receta": "Recipes/Tomate relleno de burrata.html",
-    "en_excel": false
+    "en_excel": true,
+    "url_receta": "Recipes/Tomate relleno de burrata.html"
   },
   {
     "plato": "Tomates rellenos de ventresca con muhammara",
@@ -1051,6 +1184,123 @@ const platosData = [
     "en_excel": false
   },
   {
+    "plato": "Empanada pollo",
+    "categoria": "Internacionales",
+    "ingredientes": [
+      "Planchas de masa brisa o quebrada",
+      "Filetes P.",
+      "Queso mozzarella",
+      "Huevo",
+      "parmesano",
+      "Philadelphia",
+      "Zanahoria",
+      "Calabacín",
+      "Champiñones",
+      "Pimiento rojo",
+      "Hierbas provenzales"
+    ],
+    "en_excel": true,
+    "url_receta": "Recipes/Empanada pollo.html"
+  },
+  {
+    "plato": "Falafel salsa de yogur",
+    "categoria": "Internacionales",
+    "ingredientes": [
+      "Garbanzos secos",
+      "Comino",
+      "Yogur natural",
+      "Cilantro",
+      "Perejil fresco al gusto",
+      "Levadura Royal",
+      "Limón",
+      "Menta picada"
+    ],
+    "en_excel": true,
+    "url_receta": "Recipes/Falafel con salsa de yogur.html"
+  },
+  {
+    "plato": "Fideos chinos",
+    "categoria": "Internacionales",
+    "ingredientes": [
+      "Fideos chinos",
+      "Pechuga de pollo",
+      "Calabacín",
+      "Pimiento rojo",
+      "Zanahoria",
+      "Jengibre",
+      "Salsa de soja",
+      "Miel",
+      "Vinagre suave",
+      "Aceite de sésamo",
+      "Semillas de sésamo"
+    ],
+    "en_excel": true,
+    "url_receta": "Recipes/Fideos chinos.html"
+  },
+  {
+    "plato": "Poke de salmón",
+    "categoria": "Internacionales",
+    "ingredientes": [
+      "Salmón fresco",
+      "Salsa de soja",
+      "Miel",
+      "lima",
+      "Aceite de sésamo",
+      "Jengibre",
+      "Arroz de sushi o quinoa",
+      "Edamame",
+      "Mango",
+      "Aguacate",
+      "Algas",
+      "Cebolla crunchys"
+    ],
+    "en_excel": true,
+    "url_receta": "Recipes/Poke de salmón.html"
+  },
+  {
+    "plato": "Pollo butter chicken",
+    "categoria": "Internacionales",
+    "ingredientes": [
+      "Pollo",
+      "Ghee",
+      "Yogur",
+      "limon",
+      "Jengibre",
+      "Garam masala",
+      "Comino",
+      "Cúrcuma",
+      "Chile en polvo",
+      "Tomate triturado",
+      "Anacardos",
+      "Nata"
+    ],
+    "en_excel": true,
+    "url_receta": "Recipes/Pollo butter chicken.html"
+  },
+  {
+    "plato": "Pollo coreano",
+    "categoria": "Internacionales",
+    "ingredientes": [
+      "Pollo",
+      "Salsa de soja",
+      "Miel",
+      "Jengibre",
+      "Aceite de sésamo",
+      "Maicena"
+    ],
+    "en_excel": true,
+    "url_receta": "Recipes/Pollo coreano.html"
+  },
+  {
+    "plato": "Wraps",
+    "categoria": "Internacionales",
+    "ingredientes": [
+      "Fajitas"
+    ],
+    "en_excel": true,
+    "url_receta": "Recipes/Wraps.html"
+  },
+  {
     "plato": "Aceite de ajos, soja y limón",
     "categoria": "MACU",
     "ingredientes": [
@@ -1073,22 +1323,6 @@ const platosData = [
     ],
     "url_receta": "Recipes/Ajada.html",
     "en_excel": false
-  },
-  {
-    "plato": "Albóndigas",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Carne picada",
-      "Huevo",
-      "Pan rallado",
-      "Puerro",
-      "Pimiento",
-      "Zanahorias",
-      "Vino blanco",
-      "Caldo de carne"
-    ],
-    "en_excel": true,
-    "url_receta": "Recipes/Albóndigas.html"
   },
   {
     "plato": "Albóndigas con sepia",
@@ -1213,19 +1447,25 @@ const platosData = [
     "en_excel": false
   },
   {
-    "plato": "Boloñesa pasta",
+    "plato": "Boloñesa",
     "categoria": "MACU",
     "ingredientes": [
-      "Carne picada",
-      "Apio",
-      "Zanahoria",
-      "Puerro",
-      "Vino tinto",
-      "Tomate triturado",
-      "Pasta"
+      "800gr de carne picada mezcla",
+      "1 puerro pequeño",
+      "1 cebolla pequeña",
+      "1 pimiento rojo pequeño",
+      "1 pimiento verde pequeño",
+      "2 dientes de ajo",
+      "1 cucharada de orégano",
+      "Media cucharada de albahaca",
+      "1 cucharada de perejil",
+      "Pimienta",
+      "Aceite",
+      "1 bote de tomate triturado",
+      "1 brik de tomate frito"
     ],
-    "en_excel": true,
-    "url_receta": "Recipes/Boloñesa.html"
+    "url_receta": "Recipes/Boloñesa.html",
+    "en_excel": false
   },
   {
     "plato": "Calamares en su tinta",
@@ -1445,22 +1685,6 @@ const platosData = [
     "en_excel": false
   },
   {
-    "plato": "Cuscús champiñones judías",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Cuscús",
-      "Agua o caldo caliente",
-      "Judías verdes",
-      "Champiñones",
-      "Pimentón",
-      "Salsa de soja",
-      "Huevo",
-      "Levadura"
-    ],
-    "en_excel": true,
-    "url_receta": "Recipes/Judías.html"
-  },
-  {
     "plato": "Dorada con jamón",
     "categoria": "MACU",
     "ingredientes": [
@@ -1474,21 +1698,6 @@ const platosData = [
     ],
     "url_receta": "Recipes/Dorada con jamón.html",
     "en_excel": false
-  },
-  {
-    "plato": "E. Judias ANCHOAS",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Mayonesa",
-      "Judías verdes",
-      "Lechuga",
-      "Tomate",
-      "Aceitunas",
-      "Huevo",
-      "Anchoas"
-    ],
-    "en_excel": true,
-    "url_receta": "Recipes/Judías.html"
   },
   {
     "plato": "Empanada de hojaldre de jamón y queso",
@@ -1768,6 +1977,20 @@ const platosData = [
     "en_excel": false
   },
   {
+    "plato": "Judías",
+    "categoria": "MACU",
+    "ingredientes": [
+      "Judías congeladas (mejor redondas)",
+      "2 Zanahorias",
+      "1 patata en rodajas",
+      "Tomate cortado en rodajas",
+      "2 huevos cocidos",
+      "1 lata de bonito (opcional)"
+    ],
+    "url_receta": "Recipes/Judías.html",
+    "en_excel": false
+  },
+  {
     "plato": "Judías con chorizo y patata",
     "categoria": "MACU",
     "ingredientes": [
@@ -1780,19 +2003,6 @@ const platosData = [
     ],
     "url_receta": "Recipes/Judías con chorizo y patata.html",
     "en_excel": false
-  },
-  {
-    "plato": "Lentejas",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Lentejas",
-      "Calabacín",
-      "Zanahorias",
-      "Puerro",
-      "Pimentón"
-    ],
-    "en_excel": true,
-    "url_receta": "Recipes/Lentejas 2..html"
   },
   {
     "plato": "Macu Crema fría al pesto",
@@ -2352,17 +2562,6 @@ const platosData = [
     "en_excel": false
   },
   {
-    "plato": "Pulpo",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Pulpo",
-      "Pimentón dulce",
-      "Pimentón picante"
-    ],
-    "en_excel": true,
-    "url_receta": "Recipes/Pulpo.html"
-  },
-  {
     "plato": "Rape Fernando",
     "categoria": "MACU",
     "ingredientes": [
@@ -2643,17 +2842,17 @@ const platosData = [
     "en_excel": false
   },
   {
-    "plato": "Tomate relleno burrata",
+    "plato": "Tomate relleno",
     "categoria": "MACU",
     "ingredientes": [
-      "Tomate",
-      "Burrata",
-      "cebollino",
-      "Albahaca",
-      "Pistachos"
+      "Tomates",
+      "Ventresca atún",
+      "1 lata de anchoas",
+      "1 cucharada de alcaparras",
+      "Mayonesa"
     ],
-    "en_excel": true,
-    "url_receta": "Recipes/Tomate relleno.html"
+    "url_receta": "Recipes/Tomate relleno.html",
+    "en_excel": false
   },
   {
     "plato": "Torrijas",
@@ -2797,21 +2996,19 @@ const platosData = [
     "en_excel": false
   },
   {
-    "plato": "Boloñesa con pasta",
+    "plato": "Boloñesa pasta",
     "categoria": "Pasta y arroces",
     "ingredientes": [
-      "400 g carne picada",
-      "1 rama de apio",
-      "1 zanahoria",
-      "1 puerro",
-      "100 ml vino tinto",
-      "500 g tomate triturado",
-      "300 g pasta",
-      "30 g aceite de oliva",
-      "1 cdta sal"
+      "Carne picada",
+      "Apio",
+      "Zanahoria",
+      "Puerro",
+      "Vino tinto",
+      "Tomate triturado",
+      "Pasta"
     ],
-    "url_receta": "Recipes/Boloñesa con pasta.html",
-    "en_excel": false
+    "en_excel": true,
+    "url_receta": "Recipes/Boloñesa con pasta.html"
   },
   {
     "plato": "Canelones espinacas",
@@ -2854,6 +3051,87 @@ const platosData = [
     "url_receta": "Recipes/Pasta fresca con pesto, langostinos y brécol.html"
   },
   {
+    "plato": "Chocos  arroz",
+    "categoria": "Pescados",
+    "ingredientes": [
+      "Chocos",
+      "Arroz",
+      "Pimiento verde",
+      "Vino blanco",
+      "Fumet"
+    ],
+    "en_excel": true,
+    "url_receta": "Recipes/Chocos con arroz.html"
+  },
+  {
+    "plato": "Pescado Horno",
+    "categoria": "Pescados",
+    "ingredientes": [
+      "bacalao, jurelos, dorada, rodaballo, sargo, palometa, menda, coruxo, corvina",
+      "Pimiento"
+    ],
+    "en_excel": true,
+    "url_receta": "Recipes/Pescado Horno (bacalao, jurelos, dorada, rodaballo, sargo, palometa, menda, coruxo,…).html"
+  },
+  {
+    "plato": "Pulpo",
+    "categoria": "Pescados",
+    "ingredientes": [
+      "Pulpo",
+      "Pimentón dulce",
+      "Pimentón picante"
+    ],
+    "en_excel": true,
+    "url_receta": "Recipes/Pulpo.html"
+  },
+  {
+    "plato": "Rapantes",
+    "categoria": "Pescados",
+    "ingredientes": [
+      "Rapantes"
+    ],
+    "en_excel": true,
+    "url_receta": "Recipes/Rapantes.html"
+  },
+  {
+    "plato": "Rape marinera langostinos",
+    "categoria": "Pescados",
+    "ingredientes": [
+      "Rape en trozos",
+      "Langostinos",
+      "Patatas",
+      "Guindilla",
+      "Vino blanco",
+      "Salsa de tomate",
+      "Harina",
+      "Fumet",
+      "Perejil fresco"
+    ],
+    "en_excel": true,
+    "url_receta": "Recipes/Rape marinera langostinos.html"
+  },
+  {
+    "plato": "Rodaballo plancha",
+    "categoria": "Pescados",
+    "ingredientes": [
+      "Rodaballo",
+      "Perejil",
+      "Limón"
+    ],
+    "en_excel": true,
+    "url_receta": "Recipes/Rodaballo plancha.html"
+  },
+  {
+    "plato": "Salmón AirFryer",
+    "categoria": "Pescados",
+    "ingredientes": [
+      "Lomos de salmón",
+      "Boniato"
+    ],
+    "en_excel": true,
+    "url_receta": "Recipes/Salmón AirFryer.html"
+  },
+  {
     "plato": "Almejas a la marinera",
     "categoria": "Pescados y mariscos",
     "ingredientes": [
@@ -2873,29 +3151,6 @@ const platosData = [
     "en_excel": false
   },
   {
-    "plato": "Chocos  arroz",
-    "categoria": "Pescados y mariscos",
-    "ingredientes": [
-      "Chocos",
-      "Arroz",
-      "Pimiento verde",
-      "Vino blanco",
-      "Fumet"
-    ],
-    "en_excel": true,
-    "url_receta": "Recipes/Chocos con arroz.html"
-  },
-  {
-    "plato": "Pescado Horno",
-    "categoria": "Pescados y mariscos",
-    "ingredientes": [
-      "bacalao, jurelos, dorada, rodaballo, sargo, palometa, menda, coruxo, corvina",
-      "Pimiento"
-    ],
-    "en_excel": true,
-    "url_receta": "Recipes/Pescado Horno (bacalao, jurelos, dorada, rodaballo, sargo, palometa, menda, coruxo,…).html"
-  },
-  {
     "plato": "Pulpo á feira (versión rápida)",
     "categoria": "Pescados y mariscos",
     "ingredientes": [
@@ -2908,15 +3163,6 @@ const platosData = [
     ],
     "url_receta": "Recipes/Pulpo á feira (versión rápida).html",
     "en_excel": false
-  },
-  {
-    "plato": "Rapantes",
-    "categoria": "Pescados y mariscos",
-    "ingredientes": [
-      "Rapantes"
-    ],
-    "en_excel": true,
-    "url_receta": "Recipes/Rapantes.html"
   },
   {
     "plato": "Rape Alangostado",
@@ -2932,44 +3178,6 @@ const platosData = [
     ],
     "url_receta": "Recipes/Rape Alangostado.html",
     "en_excel": false
-  },
-  {
-    "plato": "Rape marinera langostinos",
-    "categoria": "Pescados y mariscos",
-    "ingredientes": [
-      "Rape en trozos",
-      "Langostinos",
-      "Patatas",
-      "Guindilla",
-      "Vino blanco",
-      "Salsa de tomate",
-      "Harina",
-      "Fumet",
-      "Perejil fresco"
-    ],
-    "en_excel": true,
-    "url_receta": "Recipes/Rape marinera langostinos.html"
-  },
-  {
-    "plato": "Rodaballo plancha",
-    "categoria": "Pescados y mariscos",
-    "ingredientes": [
-      "Rodaballo",
-      "Perejil",
-      "Limón"
-    ],
-    "en_excel": true,
-    "url_receta": "Recipes/Rodaballo plancha.html"
-  },
-  {
-    "plato": "Salmón AirFryer",
-    "categoria": "Pescados y mariscos",
-    "ingredientes": [
-      "Lomos de salmón",
-      "Boniato"
-    ],
-    "en_excel": true,
-    "url_receta": "Recipes/Salmón AirFryer.html"
   },
   {
     "plato": "Vieiras al horno",
@@ -2990,114 +3198,6 @@ const platosData = [
     "en_excel": false
   },
   {
-    "plato": "Empanada pollo",
-    "categoria": "Platos especiales, internacionales",
-    "ingredientes": [
-      "Planchas de masa brisa o quebrada",
-      "Filetes P.",
-      "Queso mozzarella",
-      "Huevo",
-      "parmesano",
-      "Philadelphia",
-      "Zanahoria",
-      "Calabacín",
-      "Champiñones",
-      "Pimiento rojo",
-      "Hierbas provenzales"
-    ],
-    "en_excel": true,
-    "url_receta": "Recipes/Empanada pollo.html"
-  },
-  {
-    "plato": "Falafel salsa de yogur",
-    "categoria": "Platos especiales, internacionales",
-    "ingredientes": [
-      "Garbanzos secos",
-      "Comino",
-      "Yogur natural",
-      "Cilantro",
-      "Perejil fresco al gusto",
-      "Levadura Royal",
-      "Limón",
-      "Menta picada"
-    ],
-    "en_excel": true,
-    "url_receta": "Recipes/Falafel con salsa de yogur.html"
-  },
-  {
-    "plato": "Fideos chinos",
-    "categoria": "Platos especiales, internacionales",
-    "ingredientes": [
-      "Fideos chinos",
-      "Pechuga de pollo",
-      "Calabacín",
-      "Pimiento rojo",
-      "Zanahoria",
-      "Jengibre",
-      "Salsa de soja",
-      "Miel",
-      "Vinagre suave",
-      "Aceite de sésamo",
-      "Semillas de sésamo"
-    ],
-    "en_excel": true,
-    "url_receta": "Recipes/Fideos chinos.html"
-  },
-  {
-    "plato": "Poke de salmón",
-    "categoria": "Platos especiales, internacionales",
-    "ingredientes": [
-      "Salmón fresco",
-      "Salsa de soja",
-      "Miel",
-      "lima",
-      "Aceite de sésamo",
-      "Jengibre",
-      "Arroz de sushi o quinoa",
-      "Edamame",
-      "Mango",
-      "Aguacate",
-      "Algas",
-      "Cebolla crunchys"
-    ],
-    "en_excel": true,
-    "url_receta": "Recipes/Poke de salmón.html"
-  },
-  {
-    "plato": "Pollo butter chicken",
-    "categoria": "Platos especiales, internacionales",
-    "ingredientes": [
-      "Pollo",
-      "Ghee",
-      "Yogur",
-      "limon",
-      "Jengibre",
-      "Garam masala",
-      "Comino",
-      "Cúrcuma",
-      "Chile en polvo",
-      "Tomate triturado",
-      "Anacardos",
-      "Nata"
-    ],
-    "en_excel": true,
-    "url_receta": "Recipes/Pollo butter chicken.html"
-  },
-  {
-    "plato": "Pollo coreano",
-    "categoria": "Platos especiales, internacionales",
-    "ingredientes": [
-      "Pollo",
-      "Salsa de soja",
-      "Miel",
-      "Jengibre",
-      "Aceite de sésamo",
-      "Maicena"
-    ],
-    "en_excel": true,
-    "url_receta": "Recipes/Pollo coreano.html"
-  },
-  {
     "plato": "Quinoa con pollo, halloumi y verduras al horno ¿?",
     "categoria": "Platos especiales, internacionales",
     "ingredientes": [
@@ -3116,15 +3216,6 @@ const platosData = [
     ],
     "url_receta": "Recipes/Quinoa con pollo, halloumi y verduras al horno ¿.html",
     "en_excel": false
-  },
-  {
-    "plato": "Wraps",
-    "categoria": "Platos especiales, internacionales",
-    "ingredientes": [
-      "Fajitas"
-    ],
-    "en_excel": true,
-    "url_receta": "Recipes/Wraps.html"
   },
   {
     "plato": "Barritas de pistacho sin horno",
