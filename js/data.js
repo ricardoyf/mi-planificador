@@ -374,6 +374,24 @@ const platosData = [
     "url_receta": "Recipes/Muslos de pollo en AirFryer.html"
   },
   {
+    "plato": "Pastel de carne con puré de patata",
+    "categoria": "Carnes",
+    "ingredientes": [
+      "Carne picada",
+      "Cebolla",
+      "Zanahorias",
+      "Ajo",
+      "Tomate frito",
+      "Patatas",
+      "Mantequilla",
+      "Leche SIN LACTOSA",
+      "Pimienta",
+      "Nuez moscada",
+      "Queso mozzarella"
+    ],
+    "url_receta": "Recipes/Pastel de carne con puré de patata.html"
+  },
+  {
     "plato": "Pavo relleno",
     "categoria": "Carnes",
     "ingredientes": [
@@ -2919,6 +2937,18 @@ const platosData = [
     "url_receta": "Recipes/Barritas de pistacho sin horno.html"
   },
   {
+    "plato": "Bizcocho con pepitas de chocolate",
+    "categoria": "Postres",
+    "ingredientes": [
+      "Plátanos",
+      "Huevo",
+      "Harina de avena, almendra o arroz",
+      "Chocolate 85%",
+      "Polvo de hornear"
+    ],
+    "url_receta": "Recipes/Bizcocho con pepitas de chocolate.html"
+  },
+  {
     "plato": "Bizcocho de naranja",
     "categoria": "Postres",
     "ingredientes": [
@@ -3570,6 +3600,19 @@ const recetasData = [
       "champiñoes picados"
     ],
     "url": "Recipes/Berenjenas rellenas.html"
+  },
+  {
+    "nombre": "Bizcocho con pepitas de chocolate",
+    "categoria": "Postres",
+    "ingredientes_html": [
+      "2 plátanos (o 2 manzanas asadas)",
+      "2 huevos",
+      "120 g de harina de avena, almendra o arroz",
+      "4 cucharadas de AOVE",
+      "1 cucharadita de polvo de hornear",
+      "Trocitos de chocolate de más del 85 % de cacao, al gusto"
+    ],
+    "url": "Recipes/Bizcocho con pepitas de chocolate.html"
   },
   {
     "nombre": "Bizcocho de naranja",
@@ -5406,6 +5449,27 @@ const recetasData = [
       "1 cdta sal"
     ],
     "url": "Recipes/Pasta fresca con pesto, langostinos y brécol.html"
+  },
+  {
+    "nombre": "Pastel de carne con puré de patata",
+    "categoria": "Carnes",
+    "ingredientes_html": [
+      "500 g de carne picada",
+      "1 cebolla",
+      "1 zanahoria grande",
+      "3 dientes de ajo",
+      "Sal, al gusto",
+      "AOVE, cantidad necesaria",
+      "250 g de tomate frito",
+      "500 g de patata",
+      "30 g de mantequilla",
+      "100-120 ml de leche o bebida vegetal caliente",
+      "Pimienta negra, al gusto",
+      "Nuez moscada, al gusto",
+      "Sal, al gusto",
+      "Queso mozzarella, cantidad necesaria"
+    ],
+    "url": "Recipes/Pastel de carne con puré de patata.html"
   },
   {
     "nombre": "Pastel de patata y bacon",

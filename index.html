@@ -14,7 +14,12 @@
             <div id="week-summary" class="week-summary">Semana actual</div>
         </div>
         <div class="header-actions">
-            <select id="week-select" class="week-select"></select>
+            <div class="week-controls">
+                <button id="week-prev-btn" class="week-nav-btn" type="button" aria-label="Semana anterior">‹</button>
+                <select id="week-select" class="week-select"></select>
+                <button id="week-next-btn" class="week-nav-btn" type="button" aria-label="Semana siguiente">›</button>
+                <input id="week-date-input" class="week-date-input" type="date" aria-label="Elegir fecha">
+            </div>
             <div class="menu-container">
                 <button id="menu-btn" class="icon-btn">⋮</button>
                 <div id="dropdown-menu" class="dropdown hidden">
@@ -86,7 +91,7 @@
         <button class="nav-item" data-target="view-compacta">🧾 <span>Compacta</span></button>
     </nav>
 
-    <script src="js/data.js?v=20260509b"></script>
-    <script src="js/app.js?v=20260509b"></script>
+    <script src="js/data.js?v=20260718c"></script>
+    <script src="js/app.js?v=20260718c"></script>
 </body>
 </html>

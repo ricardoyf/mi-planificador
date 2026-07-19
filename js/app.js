@@ -10,7 +10,9 @@ const app = {
     weekOptions: [],
     currentWeekKey: null,
     storagePrefix: 'plan_week_',
+    compraStoragePrefix: 'compra_week_',
     currentWeekStorageKey: 'plan_current_week',
+    compraChecked: {},
     
     init() {
         this.setupWeekOptions();
@@ -39,14 +41,41 @@ const app = {
     },
 
     setupWeekOptions() {
-        const now = new Date();
-        const jsDay = now.getDay();
+        const baseMonday = this.getMondayForDate(new Date());
+        this.rebuildWeekOptionsAround(baseMonday);
+        this.currentWeekKey = this.buildWeekOptionFromMonday(baseMonday).key;
+    },
+
+    getMondayForDate(dateInput) {
+        const date = new Date(dateInput);
+        date.setHours(0,0,0,0);
+        const jsDay = date.getDay();
         const mondayOffset = jsDay === 0 ? -6 : 1 - jsDay;
-        const baseMonday = new Date(now);
-        baseMonday.setHours(0,0,0,0);
-        baseMonday.setDate(now.getDate() + mondayOffset);
-        this.weekOptions = Array.from({ length: 12 }, (_, offset) => this.buildWeekOptionFromMonday(this.addDays(baseMonday, offset * 7)));
-        this.currentWeekKey = this.weekOptions[0].key;
+        date.setDate(date.getDate() + mondayOffset);
+        return date;
+    },
+
+    formatDateInputValue(dateInput) {
+        const d = new Date(dateInput);
+        const pad = n => n.toString().padStart(2, '0');
+        return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+    },
+
+    rebuildWeekOptionsAround(centerMondayInput) {
+        const centerMonday = this.getMondayForDate(centerMondayInput);
+        this.weekOptions = Array.from({ length: 53 }, (_, offset) => {
+            const delta = offset - 26;
+            return this.buildWeekOptionFromMonday(this.addDays(centerMonday, delta * 7));
+        });
+    },
+
+    ensureWeekOptionForMonday(mondayInput) {
+        const monday = this.getMondayForDate(mondayInput);
+        const option = this.buildWeekOptionFromMonday(monday);
+        if (!this.weekOptions.some(w => w.key === option.key)) {
+            this.rebuildWeekOptionsAround(monday);
+        }
+        return option;
     },
 
     addDays(date, days) {
@@ -63,7 +92,7 @@ const app = {
         const key = `plan${pad(monday.getDate())}_${pad(monday.getMonth()+1)}-${pad(sunday.getDate())}_${pad(sunday.getMonth()+1)}`;
         return {
             key,
-            label: `Semana ${pad(monday.getDate())}/${pad(monday.getMonth()+1)} - ${pad(sunday.getDate())}/${pad(sunday.getMonth()+1)}`,
+            label: `Semana ${pad(monday.getDate())}/${pad(monday.getMonth()+1)}/${monday.getFullYear()} - ${pad(sunday.getDate())}/${pad(sunday.getMonth()+1)}/${sunday.getFullYear()}`,
             summary: `${pad(monday.getDate())}/${pad(monday.getMonth()+1)} → ${pad(sunday.getDate())}/${pad(sunday.getMonth()+1)}`,
             monday,
             sunday
@@ -88,31 +117,39 @@ const app = {
     },
 
     getWeekOption(key = this.currentWeekKey) {
-        return this.weekOptions.find(w => w.key === key) || this.weekOptions[0];
+        let option = this.weekOptions.find(w => w.key === key);
+        if (!option) {
+            const monday = this.parseWeekKey(key);
+            if (monday) {
+                option = this.ensureWeekOptionForMonday(monday);
+            }
+        }
+        return option || this.weekOptions[26] || this.weekOptions[0];
     },
 
     getStorageKeyForWeek(key = this.currentWeekKey) {
         return `${this.storagePrefix}${key}`;
     },
 
+    getCompraStorageKeyForWeek(key = this.currentWeekKey) {
+        return `${this.compraStoragePrefix}${key}`;
+    },
+
     restoreCurrentWeekKey() {
         const hashKey = window.location.hash ? window.location.hash.replace(/^#/, '') : '';
-        const savedKey = hashKey || localStorage.getItem(this.currentWeekStorageKey);
-        if (!savedKey) return;
-        if (!this.weekOptions.some(w => w.key === savedKey)) {
-            const monday = this.parseWeekKey(savedKey);
+        if (!hashKey) return;
+        if (!this.weekOptions.some(w => w.key === hashKey)) {
+            const monday = this.parseWeekKey(hashKey);
             if (monday) {
-                this.weekOptions.push(this.buildWeekOptionFromMonday(monday));
-                this.weekOptions.sort((a, b) => a.monday - b.monday);
+                this.rebuildWeekOptionsAround(monday);
             }
         }
-        if (this.weekOptions.some(w => w.key === savedKey)) {
-            this.currentWeekKey = savedKey;
+        if (this.weekOptions.some(w => w.key === hashKey)) {
+            this.currentWeekKey = hashKey;
         }
     },
 
     persistCurrentWeekKey() {
-        localStorage.setItem(this.currentWeekStorageKey, this.currentWeekKey);
         if (this.currentWeekKey) {
             history.replaceState(null, '', `#${this.currentWeekKey}`);
         }
@@ -130,13 +167,36 @@ const app = {
     renderWeekSelector() {
         const select = document.getElementById('week-select');
         const summary = document.getElementById('week-summary');
+        const dateInput = document.getElementById('week-date-input');
         if (!select) return;
         select.innerHTML = this.weekOptions.map(w => `<option value="${w.key}">${w.label}</option>`).join('');
         select.value = this.currentWeekKey;
+        const current = this.getWeekOption();
+        if (dateInput && current) {
+            dateInput.value = this.formatDateInputValue(current.monday);
+        }
         if (summary) {
-            const current = this.getWeekOption();
             summary.textContent = `${current.label} · JSON: ${current.key}.json`;
         }
+    },
+
+    switchToWeekByMonday(mondayInput) {
+        this.autosaveCurrentWeek();
+        const option = this.ensureWeekOptionForMonday(mondayInput);
+        this.currentWeekKey = option.key;
+        this.loadCurrentWeekPlan();
+    },
+
+    moveWeek(deltaWeeks) {
+        const current = this.getWeekOption();
+        this.switchToWeekByMonday(this.addDays(current.monday, deltaWeeks * 7));
+    },
+
+    switchToDate(dateValue) {
+        if (!dateValue) return;
+        const selected = new Date(`${dateValue}T00:00:00`);
+        if (Number.isNaN(selected.getTime())) return;
+        this.switchToWeekByMonday(this.getMondayForDate(selected));
     },
 
     loadPlan(name) {
@@ -178,6 +238,7 @@ const app = {
             console.error('Plan semanal corrupto, reseteando', e);
             this.plan = this.getEmptyPlan();
         }
+        this.loadCompraStateForCurrentWeek();
         this.persistCurrentWeekKey();
         this.renderWeekSelector();
         this.renderPlanificador();
@@ -188,6 +249,69 @@ const app = {
         localStorage.setItem(this.getStorageKeyForWeek(), JSON.stringify(this.plan));
         localStorage.setItem('plan_base', JSON.stringify(this.plan));
         this.persistCurrentWeekKey();
+    },
+
+    loadCompraStateForCurrentWeek() {
+        try {
+            const data = localStorage.getItem(this.getCompraStorageKeyForWeek());
+            this.compraChecked = data ? JSON.parse(data) : {};
+        } catch (e) {
+            console.error('Estado de compra corrupto, reseteando', e);
+            this.compraChecked = {};
+        }
+    },
+
+    autosaveCompraState() {
+        localStorage.setItem(this.getCompraStorageKeyForWeek(), JSON.stringify(this.compraChecked || {}));
+    },
+
+    normalizeCompraKey(text) {
+        return String(text || '')
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-+|-+$/g, '') || 'ingrediente';
+    },
+
+    getCompraItemId(ingrediente) {
+        return `ing_${this.normalizeCompraKey(ingrediente)}`;
+    },
+
+    escapeHtml(text) {
+        return String(text ?? '')
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    },
+
+    getVisibleCompraChecked() {
+        const conteo = this.getCompraConteo();
+        return Object.keys(conteo).sort().reduce((acc, ing) => {
+            const id = this.getCompraItemId(ing);
+            if (this.compraChecked && this.compraChecked[id]) {
+                acc[id] = true;
+            }
+            return acc;
+        }, {});
+    },
+
+    buildJsonPayload(tipo = 'base') {
+        return {
+            ...this.plan,
+            _meta: {
+                tipo,
+                nombre: this.getWeekFileBase(),
+                version: 2,
+                incluyeEstadoCompra: true
+            },
+            _compra: {
+                checked: this.getVisibleCompraChecked(),
+                updatedAt: new Date().toISOString()
+            }
+        };
     },
 
     getWeekFileBase() {
@@ -209,7 +333,7 @@ const app = {
     savePlan(name) {
         localStorage.setItem(`plan_${name}`, JSON.stringify(this.plan));
         if (name === 'base') {
-            const payload = { ...this.plan, _meta: { tipo: 'base', nombre: this.getWeekFileBase() } };
+            const payload = this.buildJsonPayload('base');
             this.downloadJson(`${this.getWeekFileBase()}.json`, payload);
             alert(`BASE guardada y descargada como ${this.getWeekFileBase()}.json`);
         } else {
@@ -225,7 +349,8 @@ const app = {
 
     savePlanAsJson() {
         localStorage.setItem('plan_base', JSON.stringify(this.plan));
-        const payload = { ...this.plan, _meta: { tipo: 'base', nombre: this.getWeekFileBase() } };
+        this.autosaveCompraState();
+        const payload = this.buildJsonPayload('base');
         this.downloadJson(`${this.getWeekFileBase()}.json`, payload);
         alert(`JSON descargado como ${this.getWeekFileBase()}.json`);
         document.getElementById('dropdown-menu').classList.add('hidden');
@@ -246,9 +371,13 @@ const app = {
             try {
                 const parsed = JSON.parse(reader.result);
                 if (!parsed['lunes'] || !parsed['lunes']['comida']) throw new Error('Estructura no válida');
+                const importedCompra = parsed._compra && parsed._compra.checked ? parsed._compra.checked : {};
                 this.plan = parsed;
                 delete this.plan._meta;
+                delete this.plan._compra;
+                this.compraChecked = importedCompra;
                 this.autosaveCurrentWeek();
+                this.autosaveCompraState();
                 this.renderPlanificador();
                 this.renderCompacta();
                 alert('JSON cargado correctamente');
@@ -542,7 +671,9 @@ const app = {
             texto += `- Sin ingredientes calculados\n`;
         } else {
             ingredientes.forEach(ing => {
-                texto += `- ${ing}${conteo[ing] > 1 ? ` (x${conteo[ing]})` : ''}\n`;
+                const id = this.getCompraItemId(ing);
+                const marca = this.compraChecked && this.compraChecked[id] ? '[x]' : '[ ]';
+                texto += `${marca} ${ing}${conteo[ing] > 1 ? ` (x${conteo[ing]})` : ''}\n`;
             });
         }
         return texto;
@@ -629,23 +760,47 @@ const app = {
         }
         
         const ul = document.createElement('ul');
-        ul.style.listStyleType = 'none';
-        ul.style.padding = '0';
-        ul.style.background = 'var(--card-bg)';
-        ul.style.borderRadius = '12px';
-        ul.style.boxShadow = 'var(--shadow)';
+        ul.className = 'shopping-list';
         
         keys.forEach(ing => {
+            const id = this.getCompraItemId(ing);
+            const checked = !!(this.compraChecked && this.compraChecked[id]);
             const li = document.createElement('li');
-            li.style.padding = '12px 16px';
-            li.style.borderBottom = '1px solid var(--border)';
-            li.style.fontSize = '14px';
-            let extra = conteo[ing] > 1 ? '<span style="color:var(--primary); font-weight:600; float:right;">x' + conteo[ing] + '</span>' : '';
-            li.innerHTML = '<strong>- ' + ing + '</strong> ' + extra;
+            li.className = `shopping-item${checked ? ' checked' : ''}`;
+
+            const label = document.createElement('label');
+            label.className = 'shopping-check-label';
+
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.checked = checked;
+            checkbox.setAttribute('aria-label', ing);
+
+            const text = document.createElement('span');
+            text.className = 'shopping-item-text';
+            text.textContent = ing;
+
+            label.appendChild(checkbox);
+            label.appendChild(text);
+            li.appendChild(label);
+
+            if (conteo[ing] > 1) {
+                const extra = document.createElement('span');
+                extra.className = 'shopping-count';
+                extra.textContent = `x${conteo[ing]}`;
+                li.appendChild(extra);
+            }
+
+            checkbox.addEventListener('change', () => {
+                this.compraChecked[id] = checkbox.checked;
+                if (!checkbox.checked) delete this.compraChecked[id];
+                li.classList.toggle('checked', checkbox.checked);
+                this.autosaveCompraState();
+            });
+
             ul.appendChild(li);
         });
         
-        if (ul.lastChild) ul.lastChild.style.borderBottom = 'none';
         container.appendChild(ul);
     },
 
@@ -719,8 +874,25 @@ const app = {
             weekSelect.addEventListener('change', (e) => {
                 this.autosaveCurrentWeek();
                 this.currentWeekKey = e.target.value;
+                const option = this.getWeekOption(this.currentWeekKey);
+                if (option) this.rebuildWeekOptionsAround(option.monday);
                 this.loadCurrentWeekPlan();
             });
+        }
+
+        const prevBtn = document.getElementById('week-prev-btn');
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => this.moveWeek(-1));
+        }
+
+        const nextBtn = document.getElementById('week-next-btn');
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => this.moveWeek(1));
+        }
+
+        const dateInput = document.getElementById('week-date-input');
+        if (dateInput) {
+            dateInput.addEventListener('change', (e) => this.switchToDate(e.target.value));
         }
         
         document.getElementById('search-platos').oninput = (e) => this.renderPlatos(e.target.value);
@@ -759,7 +931,9 @@ const app = {
                         if (matchedData && matchedData.url_receta) {
                             const baseUrl = window.location.href.split('index.html')[0].replace(/\/$/, "");
                             const absoluteUrl = `${baseUrl}/${matchedData.url_receta}`;
-                            cellHtml = `<a href="${absoluteUrl}" target="_blank" style="color:#4990E2; font-weight:bold;">${pname}</a>`;
+                            cellHtml = `<a href="${this.escapeHtml(absoluteUrl)}" target="_blank" style="color:#4990E2; font-weight:bold;">${this.escapeHtml(pname)}</a>`;
+                        } else {
+                            cellHtml = this.escapeHtml(pname);
                         }
                     }
                     celdas += `<td>${cellHtml}</td>`;
@@ -767,17 +941,32 @@ const app = {
                 rows += `<tr><th>${etiqueta}</th>${celdas}</tr>`;
             });
         });
+        const conteo = this.getCompraConteo();
+        const compraItems = Object.keys(conteo).sort().map(ing => {
+            const id = this.getCompraItemId(ing);
+            const checked = !!(this.compraChecked && this.compraChecked[id]);
+            const extra = conteo[ing] > 1 ? ` <strong class="count">x${conteo[ing]}</strong>` : '';
+            return `<li class="${checked ? 'checked' : ''}"><label><input type="checkbox" ${checked ? 'checked' : ''}> <span>${this.escapeHtml(ing)}</span>${extra}</label></li>`;
+        }).join('');
 
         const htmlStr = `<!doctype html>
 <html lang="es"><head><meta charset="utf-8"><title>Plan semanal comidas</title>
 <style>
 body { font-family: Arial, sans-serif; margin: 20px; color:#111; }
 h1 { margin-bottom: 8px; }
+h2 { margin-top: 24px; }
 table { width:100%; border-collapse: collapse; margin-top: 12px; }
 th, td { border:1px solid #ccc; padding:10px; text-align:center; vertical-align:top; }
 th { background:#f3f6fb; }
+ul { list-style:none; padding:0; margin:12px 0 0; columns:2; column-gap:24px; }
+li { break-inside:avoid; padding:7px 0; border-bottom:1px solid #eee; }
+label { display:flex; gap:8px; align-items:center; }
+input { width:18px; height:18px; }
+.checked span { color:#777; text-decoration:line-through; }
+.count { margin-left:auto; color:#0b57d0; }
 .small { color:#555; display:block; margin-bottom: 12px; }
 @page { size: A4 landscape; margin: 12mm; }
+@media (max-width:700px) { ul { columns:1; } }
 </style></head><body>
 <h1>Plan semanal de comidas</h1>
 <div class="small">Lunes a domingo · comidas y cenas · primer y segundo plato</div>
@@ -785,6 +974,8 @@ th { background:#f3f6fb; }
 <thead><tr><th></th>${DIAS.map(d => `<th>${d.charAt(0).toUpperCase() + d.slice(1)}</th>`).join('')}</tr></thead>
 <tbody>${rows}</tbody>
 </table>
+<h2>Lista de la compra</h2>
+${compraItems ? `<ul>${compraItems}</ul>` : '<p>Sin ingredientes calculados.</p>'}
 </body></html>`;
 
         const blob = new Blob([htmlStr], { type: 'text/html' });

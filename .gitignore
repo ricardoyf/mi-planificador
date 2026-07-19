@@ -3,3 +3,4 @@ __pycache__/
 *.pyc
 "en una app para movil*"
 nombre_del_archivo.txt
+.~lock.*#

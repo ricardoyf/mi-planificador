@@ -28,6 +28,7 @@ header.app-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
     gap: 10px;
     padding: 10px 12px;
     border-bottom: 1px solid var(--border);
@@ -55,17 +56,59 @@ header h1 {
 .header-actions {
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
     gap: 8px;
+    flex: 1 1 100%;
+}
+
+.week-controls {
+    display: grid;
+    grid-template-columns: 34px minmax(138px, 1fr) 34px;
+    gap: 6px;
+    align-items: center;
+    max-width: 330px;
 }
 
 .week-select {
-    max-width: 180px;
+    width: 100%;
+    min-width: 0;
     font-size: 12px;
     padding: 8px 10px;
     border: 1px solid var(--border);
     border-radius: 10px;
     background: white;
     color: var(--text-main);
+}
+
+.week-nav-btn,
+.week-date-input {
+    height: 34px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: white;
+    color: var(--text-main);
+}
+
+.week-nav-btn {
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.week-date-input {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 7px 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.week-nav-btn:hover,
+.week-date-input:focus,
+.week-select:focus {
+    border-color: var(--primary);
+    outline: none;
 }
 
 .icon-btn {
@@ -396,6 +439,65 @@ main {
     overflow: hidden;
 }
 
+.shopping-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: var(--card-bg);
+}
+
+.shopping-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 46px;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+}
+
+.shopping-item:last-child {
+    border-bottom: none;
+}
+
+.shopping-check-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    flex: 1 1 auto;
+    cursor: pointer;
+}
+
+.shopping-check-label input {
+    flex: 0 0 auto;
+    width: 20px;
+    height: 20px;
+    accent-color: var(--primary);
+}
+
+.shopping-item-text {
+    min-width: 0;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.shopping-item.checked .shopping-item-text {
+    color: var(--text-sec);
+    text-decoration: line-through;
+}
+
+.shopping-count {
+    flex: 0 0 auto;
+    color: var(--primary);
+    background: var(--primary-light);
+    border-radius: 999px;
+    padding: 3px 8px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
 .compacta-help {
     margin-top: 10px;
     font-size: 12px;
@@ -513,7 +615,21 @@ main {
         width: 100%;
         top: 0;
         align-items: center;
+        flex-wrap: nowrap;
         padding: 12px 20px;
+    }
+
+    .header-actions {
+        flex: 0 0 auto;
+    }
+
+    .week-controls {
+        grid-template-columns: 34px minmax(180px, 220px) 34px 146px;
+        max-width: none;
+    }
+
+    .week-date-input {
+        grid-column: auto;
     }
     
     /* Navigation inside header for desktop */
