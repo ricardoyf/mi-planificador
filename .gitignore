@@ -4,3 +4,4 @@ __pycache__/
 "en una app para movil*"
 nombre_del_archivo.txt
 .~lock.*#
+standalone/

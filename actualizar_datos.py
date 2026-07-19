@@ -34,7 +34,7 @@ def parse_recipe_html(file_path):
     cat_match = re.search(r'<p[^>]*class="categories"[^>]*>(.*?)</p>', content, re.S | re.I)
     ingredient_matches = re.findall(r'<p[^>]*class="line"[^>]*itemprop="recipeIngredient"[^>]*>(.*?)</p>', content, re.S | re.I)
     name = strip_html(name_match.group(1)) if name_match else file_path.stem
-    category = strip_html(cat_match.group(1)) if cat_match else 'Sin categoría'
+    category = normalize_category(strip_html(cat_match.group(1)) if cat_match else 'Sin categoría')
     ingredients = []
     for raw in ingredient_matches:
         clean = strip_html(raw)
@@ -47,6 +47,12 @@ def parse_recipe_html(file_path):
         'ingredientes_html': ingredients,
         'url': f'Recipes/{file_path.name}'
     }
+
+
+def normalize_category(category):
+    parts = [strip_html(p).strip() for p in re.split(r'[,;/]+', category or '')]
+    parts = [p for p in parts if p and normalize_text(p) not in {'findesemana', 'finde semana'}]
+    return parts[0] if len(parts) == 1 else ', '.join(parts) if parts else 'Sin categoría'
 
 def normalize_text(value):
     text = str(value or '').strip().lower()
@@ -134,8 +140,9 @@ def main():
             ingredientes = [str(row[i]).strip() for i in idx_ingredientes if i < len(row) and row[i] not in (None, '')]
             platos.append({
                 'plato': nombre,
-                'categoria': categoria,
-                'ingredientes': ingredientes
+                'categoria': normalize_category(categoria),
+                'ingredientes': ingredientes,
+                'en_excel': True
             })
     else:
         print("Advertencia: No se encontró ningún archivo Excel de platos.")
@@ -160,7 +167,7 @@ def main():
             receta = next((r for r in recetas if r['url'] == matched_url), None)
             p['url_receta'] = matched_url
             if receta and receta.get('categoria'):
-                p['categoria'] = receta['categoria']
+                p['categoria'] = normalize_category(receta['categoria'])
 
     # Add recipes that only exist in Paprika/HTML
     used_recipe_urls = {p.get('url_receta') for p in platos if p.get('url_receta')}
@@ -170,9 +177,10 @@ def main():
             continue
         platos.append({
             'plato': receta['nombre'],
-            'categoria': receta.get('categoria') or 'Sin categoría',
+            'categoria': normalize_category(receta.get('categoria') or 'Sin categoría'),
             'ingredientes': receta.get('ingredientes_html', []),
-            'url_receta': receta['url']
+            'url_receta': receta['url'],
+            'en_excel': False
         })
 
     platos.sort(key=lambda x: (x.get('categoria', 'Sin categoría').lower(), x.get('plato', '').lower()))

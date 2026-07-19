@@ -12,7 +12,8 @@ const platosData = [
       "Sal",
       "Aceite de oliva virgen extra"
     ],
-    "url_receta": "Recipes/Canastillas de Patata con Salmón de Noruega.html"
+    "url_receta": "Recipes/Canastillas de Patata con Salmón de Noruega.html",
+    "en_excel": false
   },
   {
     "plato": "Empanada Hojaldre Esto Salmón",
@@ -23,7 +24,8 @@ const platosData = [
       "2 bandejas de salmón",
       "1 huevo"
     ],
-    "url_receta": "Recipes/Empanada Hojaldre Esto Salmón.html"
+    "url_receta": "Recipes/Empanada Hojaldre Esto Salmón.html",
+    "en_excel": false
   },
   {
     "plato": "ENSALADILLA_PULPO",
@@ -42,7 +44,8 @@ const platosData = [
       "Chorrito de limón exprimido",
       "Aceite de oliva suave o de girasol"
     ],
-    "url_receta": "Recipes/ENSALADILLA_PULPO.html"
+    "url_receta": "Recipes/ENSALADILLA_PULPO.html",
+    "en_excel": false
   },
   {
     "plato": "Guacamole (TMX)",
@@ -57,7 +60,8 @@ const platosData = [
       "2 aguacates maduros",
       "1 cucharadita sal"
     ],
-    "url_receta": "Recipes/Guacamole (TMX).html"
+    "url_receta": "Recipes/Guacamole (TMX).html",
+    "en_excel": false
   },
   {
     "plato": "Huevos Rellenos (Lucía)",
@@ -68,7 +72,8 @@ const platosData = [
       "Salsa de tomate (mamá)",
       "Mayonesa"
     ],
-    "url_receta": "Recipes/Huevos Rellenos (Lucía).html"
+    "url_receta": "Recipes/Huevos Rellenos (Lucía).html",
+    "en_excel": false
   },
   {
     "plato": "Lazos de Hojaldre con Pavo y Queso Brie",
@@ -80,7 +85,8 @@ const platosData = [
       "1 huevo batido (para pincelar)",
       "Sésamo y queso parmesano (opcional para decorar)"
     ],
-    "url_receta": "Recipes/Lazos de Hojaldre con Pavo y Queso Brie.html"
+    "url_receta": "Recipes/Lazos de Hojaldre con Pavo y Queso Brie.html",
+    "en_excel": false
   },
   {
     "plato": "Rollo de Hojaldre con Espinacas, Feta y Cottage",
@@ -94,7 +100,8 @@ const platosData = [
       "Semillas de sésamo o ajonjolí (opcional, para decorar)",
       "Sal y pimienta al gusto"
     ],
-    "url_receta": "Recipes/Rollo de Hojaldre con Espinacas, Feta y Cottage.html"
+    "url_receta": "Recipes/Rollo de Hojaldre con Espinacas, Feta y Cottage.html",
+    "en_excel": false
   },
   {
     "plato": "Tartar de remolacha con ajo blanco y pepinillos",
@@ -117,7 +124,8 @@ const platosData = [
       "1‑2 cditas de vinagre de Jerez o vino blanco",
       "Sal al gusto"
     ],
-    "url_receta": "Recipes/Tartar de remolacha con ajo blanco y pepinillos.html"
+    "url_receta": "Recipes/Tartar de remolacha con ajo blanco y pepinillos.html",
+    "en_excel": false
   },
   {
     "plato": "Vasitos de Crema de Coliflor y Pulpo",
@@ -133,14 +141,16 @@ const platosData = [
       "Aceite de oliva virgen extra",
       "Pimentón extra para decorar"
     ],
-    "url_receta": "Recipes/Vasitos de Crema de Coliflor y Pulpo.html"
+    "url_receta": "Recipes/Vasitos de Crema de Coliflor y Pulpo.html",
+    "en_excel": false
   },
   {
     "plato": "Acelgasgithub",
     "categoria": "Básicos",
     "ingredientes": [
       "Acelgas"
-    ]
+    ],
+    "en_excel": true
   },
   {
     "plato": "Acelgas",
@@ -151,7 +161,8 @@ const platosData = [
       "20 g aceite de oliva",
       "1 cdta sal"
     ],
-    "url_receta": "Recipes/Acelgas.html"
+    "url_receta": "Recipes/Acelgas.html",
+    "en_excel": false
   },
   {
     "plato": "Alcachofas",
@@ -160,6 +171,7 @@ const platosData = [
       "Alcachofas",
       "Avecrem"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Alcachofas.html"
   },
   {
@@ -168,6 +180,7 @@ const platosData = [
     "ingredientes": [
       "Brécol"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Brécol al vapor.html"
   },
   {
@@ -176,6 +189,7 @@ const platosData = [
     "ingredientes": [
       "Calabacin"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Calabacín en espaguetis.html"
   },
   {
@@ -184,6 +198,7 @@ const platosData = [
     "ingredientes": [
       "Coliflor"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Coliflor al vapor.html"
   },
   {
@@ -195,6 +210,7 @@ const platosData = [
       "Salsa de tomate",
       "Huevo"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Espinacas y garbanzos con salsa de tomate y huevos.html"
   },
   {
@@ -203,6 +219,7 @@ const platosData = [
     "ingredientes": [
       "Grelos"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Grelos salteados.html"
   },
   {
@@ -211,6 +228,7 @@ const platosData = [
     "ingredientes": [
       "Judías verdes"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Judías verdes.html"
   },
   {
@@ -222,6 +240,7 @@ const platosData = [
       "Romero",
       "Pimentón"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Patatas asadas Marcos.html"
   },
   {
@@ -234,6 +253,7 @@ const platosData = [
       "Pimienta",
       "Nuez moscada"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Puré Patata TM31.html"
   },
   {
@@ -244,7 +264,28 @@ const platosData = [
       "Calabacín",
       "Berenjena"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Verduras horno.html"
+  },
+  {
+    "plato": "Albóndigas Carmen",
+    "categoria": "Carnes",
+    "ingredientes": [
+      "600 g carne picada (mezcla ternera/cerdo)",
+      "1 huevo",
+      "3 cucharadas pan rallado",
+      "1 trozo de puerro (picado muy fino para la masa)",
+      "1 diente ajo",
+      "1 puerro",
+      "1 cebolla",
+      "1 pimiento",
+      "2 zanahorias",
+      "1 vaso vino blanco",
+      "500 ml caldo de carne",
+      "Aceite de oliva, sal y pimienta"
+    ],
+    "url_receta": "Recipes/Albóndigas Carmen.html",
+    "en_excel": false
   },
   {
     "plato": "Carrilleras ternera vino tinto",
@@ -271,7 +312,8 @@ const platosData = [
       "30 g mantequilla",
       "Semillas de chía o amapola (opcional)"
     ],
-    "url_receta": "Recipes/Carrilleras ternera vino tinto.html"
+    "url_receta": "Recipes/Carrilleras ternera vino tinto.html",
+    "en_excel": false
   },
   {
     "plato": "Churrasco al horno ¿?",
@@ -281,7 +323,8 @@ const platosData = [
       "Sal",
       "Especias al gusto"
     ],
-    "url_receta": "Recipes/Churrasco al horno ¿.html"
+    "url_receta": "Recipes/Churrasco al horno ¿.html",
+    "en_excel": false
   },
   {
     "plato": "Cochinillo asado estilo segoviano",
@@ -293,7 +336,8 @@ const platosData = [
       "4 ramas de laurel o tablillas de madera",
       "Papel de aluminio (para proteger orejas, patas y rabo)"
     ],
-    "url_receta": "Recipes/Cochinillo asado estilo segoviano.html"
+    "url_receta": "Recipes/Cochinillo asado estilo segoviano.html",
+    "en_excel": false
   },
   {
     "plato": "Cocido Carmem",
@@ -310,7 +354,8 @@ const platosData = [
       "Repollo",
       "Patatas enteras"
     ],
-    "url_receta": "Recipes/Cocido Carmem.html"
+    "url_receta": "Recipes/Cocido Carmem.html",
+    "en_excel": false
   },
   {
     "plato": "Costillas de cerdo papillote ¿?",
@@ -322,7 +367,8 @@ const platosData = [
       "Especias al gusto",
       "Papel de aluminio"
     ],
-    "url_receta": "Recipes/Costillas de cerdo papillote ¿.html"
+    "url_receta": "Recipes/Costillas de cerdo papillote ¿.html",
+    "en_excel": false
   },
   {
     "plato": "Filetes",
@@ -330,6 +376,7 @@ const platosData = [
     "ingredientes": [
       "ternera, pollo, pavo, solomillo o castaña"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Filetes de ternera, pollo, solomillo o castaña.html"
   },
   {
@@ -340,7 +387,8 @@ const platosData = [
       "Lechuga",
       "Tomate",
       "Queso"
-    ]
+    ],
+    "en_excel": true
   },
   {
     "plato": "Jarrete arroz",
@@ -351,6 +399,7 @@ const platosData = [
       "Tomates",
       "Arroz"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Jarrete con arroz.html"
   },
   {
@@ -363,6 +412,7 @@ const platosData = [
       "Caldo de carne o agua",
       "Perejil fresco"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Llana asada con salsa de su jugo.html"
   },
   {
@@ -371,6 +421,7 @@ const platosData = [
     "ingredientes": [
       "Muslos"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Muslos de pollo en AirFryer.html"
   },
   {
@@ -389,6 +440,7 @@ const platosData = [
       "Nuez moscada",
       "Queso mozzarella"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Pastel de carne con puré de patata.html"
   },
   {
@@ -404,7 +456,20 @@ const platosData = [
       "Caldo de carne",
       "Vino blanco"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Pavo relleno.html"
+  },
+  {
+    "plato": "Pechugas de Pollo",
+    "categoria": "Carnes",
+    "ingredientes": [
+      "Filetes P.",
+      "Caldo de carne",
+      "Vino blanco",
+      "Pimiento rojo"
+    ],
+    "en_excel": true,
+    "url_receta": "Recipes/Pechugas de Pollo.html"
   },
   {
     "plato": "Pollo con quinoa, pim. calabacín ¿?",
@@ -417,7 +482,8 @@ const platosData = [
       "30 g aceite de oliva",
       "1 cdta sal"
     ],
-    "url_receta": "Recipes/Pollo con quinoa, pim. calabacín ¿.html"
+    "url_receta": "Recipes/Pollo con quinoa, pim. calabacín ¿.html",
+    "en_excel": false
   },
   {
     "plato": "Salsa boloñesa",
@@ -433,6 +499,7 @@ const platosData = [
       "Laurel",
       "Nuez moscada"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Salsa boloñesa.html"
   },
   {
@@ -451,37 +518,8 @@ const platosData = [
       "Sal",
       "Patatas (cantidad al gusto, para acompañar)"
     ],
-    "url_receta": "Recipes/Secreto de cerdo al horno ¿.html"
-  },
-  {
-    "plato": "Albóndigas Carmen",
-    "categoria": "Carnes, FINDESEMANA",
-    "ingredientes": [
-      "600 g carne picada (mezcla ternera/cerdo)",
-      "1 huevo",
-      "3 cucharadas pan rallado",
-      "1 trozo de puerro (picado muy fino para la masa)",
-      "1 diente ajo",
-      "1 puerro",
-      "1 cebolla",
-      "1 pimiento",
-      "2 zanahorias",
-      "1 vaso vino blanco",
-      "500 ml caldo de carne",
-      "Aceite de oliva, sal y pimienta"
-    ],
-    "url_receta": "Recipes/Albóndigas Carmen.html"
-  },
-  {
-    "plato": "Pechugas de Pollo",
-    "categoria": "Carnes, FINDESEMANA",
-    "ingredientes": [
-      "Filetes P.",
-      "Caldo de carne",
-      "Vino blanco",
-      "Pimiento rojo"
-    ],
-    "url_receta": "Recipes/Pechugas de Pollo.html"
+    "url_receta": "Recipes/Secreto de cerdo al horno ¿.html",
+    "en_excel": false
   },
   {
     "plato": "Berenjenas rellenas",
@@ -493,6 +531,7 @@ const platosData = [
       "Pimiento rojo",
       "Champiñones"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Berenjenas rellenas.html"
   },
   {
@@ -511,7 +550,8 @@ const platosData = [
       "20 g aceite de oliva",
       "1 cdta sal"
     ],
-    "url_receta": "Recipes/Cuscús con champiñones y judías verdes.html"
+    "url_receta": "Recipes/Cuscús con champiñones y judías verdes.html",
+    "en_excel": false
   },
   {
     "plato": "Empanadillas",
@@ -522,6 +562,7 @@ const platosData = [
       "Poquito de aceite",
       "Atun NATURAL"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Empanadillas.html"
   },
   {
@@ -534,6 +575,7 @@ const platosData = [
       "Huevo",
       "Queso rallado"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Espinacas a la crema.html"
   },
   {
@@ -547,7 +589,8 @@ const platosData = [
       "Lechuga",
       "Yogur griego",
       "Fajitas integrales"
-    ]
+    ],
+    "en_excel": true
   },
   {
     "plato": "Flautín de calabacín ¿?",
@@ -559,6 +602,7 @@ const platosData = [
       "Mozzarella",
       "Otras opciones: tomate, aguacate, lentejas, quinoa, pollo, atún"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Flautín de calabacín ¿.html"
   },
   {
@@ -574,7 +618,8 @@ const platosData = [
       "Pavo en taquitos (opcional)",
       "Sal, pimienta negra y perejil"
     ],
-    "url_receta": "Recipes/Piadina Rellena Estilo Vikika (Air Fryer).html"
+    "url_receta": "Recipes/Piadina Rellena Estilo Vikika (Air Fryer).html",
+    "en_excel": false
   },
   {
     "plato": "Piadina Vikika",
@@ -588,6 +633,7 @@ const platosData = [
       "Queso rallado",
       "Pavo en taquitos"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Piadina Vikika.html"
   },
   {
@@ -600,6 +646,7 @@ const platosData = [
       "Calabacín",
       "Tomate triturado"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Pisto.html"
   },
   {
@@ -607,7 +654,8 @@ const platosData = [
     "categoria": "CENAS",
     "ingredientes": [
       "Pan molde"
-    ]
+    ],
+    "en_excel": true
   },
   {
     "plato": "Wrap Cottage",
@@ -617,6 +665,7 @@ const platosData = [
       "Huevo",
       "Perejil picado"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Wrap Cottage.html"
   },
   {
@@ -633,6 +682,7 @@ const platosData = [
       "Pavo",
       "Queso de cabra"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Wrap de aguacate al horno.html"
   },
   {
@@ -643,6 +693,7 @@ const platosData = [
       "Langostinos",
       "cayena"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Zoodles langostinos.html"
   },
   {
@@ -655,7 +706,8 @@ const platosData = [
       "30 ml de leche de avena",
       "Toppings: fresas, plátano, granola, semillas de lino"
     ],
-    "url_receta": "Recipes/Asaid.html"
+    "url_receta": "Recipes/Asaid.html",
+    "en_excel": false
   },
   {
     "plato": "E. atún",
@@ -668,6 +720,7 @@ const platosData = [
       "Canónigos",
       "Pepino"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Ensalada de atún.html"
   },
   {
@@ -681,6 +734,7 @@ const platosData = [
       "Canónigos",
       "Cebolla"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Ensalada de atún y mango.html"
   },
   {
@@ -694,6 +748,7 @@ const platosData = [
       "Zanahorias",
       "Semillas variadas"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/E. Pimientos tomate feta almendras bonito.html"
   },
   {
@@ -709,7 +764,8 @@ const platosData = [
       "30 g aceite de oliva",
       "1 cdta sal"
     ],
-    "url_receta": "Recipes/E. Bonito lechuga tomate feta zanahoria semillas.html"
+    "url_receta": "Recipes/E. Bonito lechuga tomate feta zanahoria semillas.html",
+    "en_excel": false
   },
   {
     "plato": "E. Caprese",
@@ -719,6 +775,7 @@ const platosData = [
       "Mozzarella",
       "Albahaca fresca"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/E. Caprese.html"
   },
   {
@@ -731,6 +788,7 @@ const platosData = [
       "huevo",
       "Pimentón"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/E. Cuscús judías champiñones yema.html"
   },
   {
@@ -741,7 +799,8 @@ const platosData = [
       "Atun",
       "Huevo cocido",
       "Aceite y vinagre"
-    ]
+    ],
+    "en_excel": true
   },
   {
     "plato": "E. pasta",
@@ -752,6 +811,7 @@ const platosData = [
       "Aguacate",
       "Mozzarella"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Ensalada de pasta.html"
   },
   {
@@ -763,6 +823,7 @@ const platosData = [
       "Bonito",
       "Aceitunas negras"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Ensalada de patata.html"
   },
   {
@@ -775,6 +836,7 @@ const platosData = [
       "Almendras",
       "Bonito"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/E. Pimientos tomate feta almendras bonito.html"
   },
   {
@@ -787,6 +849,7 @@ const platosData = [
       "cherrys",
       "Bonito"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Ensalada de pimientos rojos asados.html"
   },
   {
@@ -799,6 +862,7 @@ const platosData = [
       "Tomate",
       "Canónigos"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Ensalada de queso de cabra.html"
   },
   {
@@ -809,6 +873,7 @@ const platosData = [
       "Brécol",
       "Calabacín"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/E. Quinoa brécol calabacín.html"
   },
   {
@@ -817,7 +882,8 @@ const platosData = [
     "ingredientes": [
       "Tomates maduros",
       "Rulo de cabra"
-    ]
+    ],
+    "en_excel": true
   },
   {
     "plato": "E. Salmón",
@@ -830,6 +896,7 @@ const platosData = [
       "Canónigos",
       "Nueces"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/E. Salmón aguacate feta tomate canónigos nueces.html"
   },
   {
@@ -843,6 +910,7 @@ const platosData = [
       "Canónigos",
       "Pepino"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/E. Salmón aguacate feta tomate canónigos nueces.html"
   },
   {
@@ -857,7 +925,8 @@ const platosData = [
       "Pepino (cantidad al gusto)",
       "5 g aceite de oliva virgen extra (AOVE)"
     ],
-    "url_receta": "Recipes/Ensalada de salmón marinado.html"
+    "url_receta": "Recipes/Ensalada de salmón marinado.html",
+    "en_excel": false
   },
   {
     "plato": "Ensalada de tomate y rulo de cabra",
@@ -868,7 +937,8 @@ const platosData = [
       "30 g aceite de oliva",
       "1 cdta sal"
     ],
-    "url_receta": "Recipes/Ensalada de tomate y rulo de cabra.html"
+    "url_receta": "Recipes/Ensalada de tomate y rulo de cabra.html",
+    "en_excel": false
   },
   {
     "plato": "Ensalada fabes",
@@ -880,7 +950,8 @@ const platosData = [
       "huevo cocido",
       "aceite y vinagre"
     ],
-    "url_receta": "Recipes/Ensalada fabes.html"
+    "url_receta": "Recipes/Ensalada fabes.html",
+    "en_excel": false
   },
   {
     "plato": "Ensalada Judias ANCHOAS (Carmen)",
@@ -898,7 +969,8 @@ const platosData = [
       "50g aceite de oliva",
       "30g vinagre"
     ],
-    "url_receta": "Recipes/Ensalada Judias ANCHOAS (Carmen).html"
+    "url_receta": "Recipes/Ensalada Judias ANCHOAS (Carmen).html",
+    "en_excel": false
   },
   {
     "plato": "Ensaladilla rusa",
@@ -910,6 +982,7 @@ const platosData = [
       "Mayonesa",
       "bonito"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Ensaladilla rusa.html"
   },
   {
@@ -925,6 +998,7 @@ const platosData = [
       "Pepinillos",
       "Mahonesa"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Tacos de lechuga y ensaladilla de atún.html"
   },
   {
@@ -940,7 +1014,8 @@ const platosData = [
       "Sal gorda",
       "Pimienta negra"
     ],
-    "url_receta": "Recipes/Tomate relleno de burrata.html"
+    "url_receta": "Recipes/Tomate relleno de burrata.html",
+    "en_excel": false
   },
   {
     "plato": "Tomates rellenos de ventresca con muhammara",
@@ -972,20 +1047,8 @@ const platosData = [
       "50 g de nueces peladas y tostadas",
       "Sal al gusto"
     ],
-    "url_receta": "Recipes/Tomates rellenos de ventresca con muhammara.html"
-  },
-  {
-    "plato": "Lasaña",
-    "categoria": "FINDESEMANA, Pasta y arroces",
-    "ingredientes": [
-      "Placas de lasaña",
-      "Carne picada",
-      "Champiñones",
-      "Espinacas",
-      "Bechamel",
-      "Queso rallado"
-    ],
-    "url_receta": "Recipes/Lasaña o Musaka (carne, champiñón, espinaca, bechamel).html"
+    "url_receta": "Recipes/Tomates rellenos de ventresca con muhammara.html",
+    "en_excel": false
   },
   {
     "plato": "Aceite de ajos, soja y limón",
@@ -997,7 +1060,8 @@ const platosData = [
       "Zumo de media limón y ralladura",
       "Pimienta blanca"
     ],
-    "url_receta": "Recipes/Aceite de ajos, soja y limón.html"
+    "url_receta": "Recipes/Aceite de ajos, soja y limón.html",
+    "en_excel": false
   },
   {
     "plato": "Ajada",
@@ -1007,7 +1071,8 @@ const platosData = [
       "150 gr de aceite",
       "1 cucharilla de pimentón dulce"
     ],
-    "url_receta": "Recipes/Ajada.html"
+    "url_receta": "Recipes/Ajada.html",
+    "en_excel": false
   },
   {
     "plato": "Albóndigas",
@@ -1022,6 +1087,7 @@ const platosData = [
       "Vino blanco",
       "Caldo de carne"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Albóndigas.html"
   },
   {
@@ -1046,7 +1112,8 @@ const platosData = [
       "Sepia",
       "Perifollo"
     ],
-    "url_receta": "Recipes/Albóndigas con sepia.html"
+    "url_receta": "Recipes/Albóndigas con sepia.html",
+    "en_excel": false
   },
   {
     "plato": "Alioli verde",
@@ -1058,7 +1125,8 @@ const platosData = [
       "4 cucharadas de perejil picado",
       "Sal"
     ],
-    "url_receta": "Recipes/Alioli verde.html"
+    "url_receta": "Recipes/Alioli verde.html",
+    "en_excel": false
   },
   {
     "plato": "Alitas de pollo confitadas y fritas con lima",
@@ -1071,7 +1139,8 @@ const platosData = [
       "20g pimienta en grano",
       "2 limas"
     ],
-    "url_receta": "Recipes/Alitas de pollo confitadas y fritas con lima.html"
+    "url_receta": "Recipes/Alitas de pollo confitadas y fritas con lima.html",
+    "en_excel": false
   },
   {
     "plato": "Almejas a la marinera",
@@ -1086,7 +1155,8 @@ const platosData = [
       "Pimentón dulce",
       "Pan rallado"
     ],
-    "url_receta": "Recipes/Almejas a la marinera 2..html"
+    "url_receta": "Recipes/Almejas a la marinera 2..html",
+    "en_excel": false
   },
   {
     "plato": "Bacalao al horno",
@@ -1100,7 +1170,8 @@ const platosData = [
       "1 vasito de guisantes",
       "3 cucharadas de tomate frito"
     ],
-    "url_receta": "Recipes/Bacalao al horno.html"
+    "url_receta": "Recipes/Bacalao al horno.html",
+    "en_excel": false
   },
   {
     "plato": "Batata asada",
@@ -1108,7 +1179,8 @@ const platosData = [
     "ingredientes": [
       "1 batata"
     ],
-    "url_receta": "Recipes/Batata asada.html"
+    "url_receta": "Recipes/Batata asada.html",
+    "en_excel": false
   },
   {
     "plato": "Batido de fresas",
@@ -1120,7 +1192,8 @@ const platosData = [
       "7 chorros de sacarina",
       "1 vaso de yogur lleno de leche (opcional)"
     ],
-    "url_receta": "Recipes/Batido de fresas.html"
+    "url_receta": "Recipes/Batido de fresas.html",
+    "en_excel": false
   },
   {
     "plato": "Bizcocho de yogur",
@@ -1136,7 +1209,8 @@ const platosData = [
       "Cacao (opcional)",
       "Mantequilla"
     ],
-    "url_receta": "Recipes/Bizcocho de yogur.html"
+    "url_receta": "Recipes/Bizcocho de yogur.html",
+    "en_excel": false
   },
   {
     "plato": "Boloñesa pasta",
@@ -1150,6 +1224,7 @@ const platosData = [
       "Tomate triturado",
       "Pasta"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Boloñesa.html"
   },
   {
@@ -1165,7 +1240,8 @@ const platosData = [
       "1 onza de chocolate o una cucharilla de cacao desgrasado",
       "Sal y pimienta"
     ],
-    "url_receta": "Recipes/Calamares en su tinta.html"
+    "url_receta": "Recipes/Calamares en su tinta.html",
+    "en_excel": false
   },
   {
     "plato": "Callos",
@@ -1186,7 +1262,8 @@ const platosData = [
       "1 cucharilla de pimentón",
       "Azafrán (opcional 2 sobres)"
     ],
-    "url_receta": "Recipes/Callos.html"
+    "url_receta": "Recipes/Callos.html",
+    "en_excel": false
   },
   {
     "plato": "Carne a la minuta",
@@ -1199,7 +1276,8 @@ const platosData = [
       "Pimienta",
       "Aceite para freír"
     ],
-    "url_receta": "Recipes/Carne a la minuta.html"
+    "url_receta": "Recipes/Carne a la minuta.html",
+    "en_excel": false
   },
   {
     "plato": "Carne estofada con mostaza y cerveza negra",
@@ -1216,7 +1294,8 @@ const platosData = [
       "Zanahoria",
       "Champiñones"
     ],
-    "url_receta": "Recipes/Carne estofada con mostaza y cerveza negra.html"
+    "url_receta": "Recipes/Carne estofada con mostaza y cerveza negra.html",
+    "en_excel": false
   },
   {
     "plato": "Carne gisada o pollo guisado",
@@ -1235,7 +1314,8 @@ const platosData = [
       "Ternera para guisar limpia de grasas y en trozos",
       "Un par de cucharadas de tomate frito o de salsa de tomate"
     ],
-    "url_receta": "Recipes/Carne gisada o pollo guisado.html"
+    "url_receta": "Recipes/Carne gisada o pollo guisado.html",
+    "en_excel": false
   },
   {
     "plato": "Causa de salmonete a la bilbaina con patata canaria",
@@ -1259,7 +1339,8 @@ const platosData = [
       "Principal:",
       "Salmonete fresco (para laminar)"
     ],
-    "url_receta": "Recipes/Causa de salmonete a la bilbaina con patata canaria.html"
+    "url_receta": "Recipes/Causa de salmonete a la bilbaina con patata canaria.html",
+    "en_excel": false
   },
   {
     "plato": "Ceviche de langostinos y fruta de la pasión",
@@ -1274,7 +1355,8 @@ const platosData = [
       "Cebollino",
       "Pellizco de azúcar"
     ],
-    "url_receta": "Recipes/Ceviche de langostinos y fruta de la pasión.html"
+    "url_receta": "Recipes/Ceviche de langostinos y fruta de la pasión.html",
+    "en_excel": false
   },
   {
     "plato": "Cocido",
@@ -1291,7 +1373,8 @@ const platosData = [
       "Morcilla",
       "Patatas"
     ],
-    "url_receta": "Recipes/Cocido.html"
+    "url_receta": "Recipes/Cocido.html",
+    "en_excel": false
   },
   {
     "plato": "Cocochas de merluza a la romana con asadillo manchego y sopa de parmesano",
@@ -1305,7 +1388,8 @@ const platosData = [
       "Aceite",
       "Sal"
     ],
-    "url_receta": "Recipes/Cocochas de merluza a la romana con asadillo manchego y sopa de parmesano.html"
+    "url_receta": "Recipes/Cocochas de merluza a la romana con asadillo manchego y sopa de parmesano.html",
+    "en_excel": false
   },
   {
     "plato": "Copa de café y vainilla",
@@ -1323,7 +1407,8 @@ const platosData = [
       "4 cucharadas de azúcar",
       "cacao puro o canela en polvo"
     ],
-    "url_receta": "Recipes/Copa de café y vainilla.html"
+    "url_receta": "Recipes/Copa de café y vainilla.html",
+    "en_excel": false
   },
   {
     "plato": "Coulant de chocolate",
@@ -1340,7 +1425,8 @@ const platosData = [
       "14 flaneras",
       "1 Cubitera de huecos redondos"
     ],
-    "url_receta": "Recipes/Coulant de chocolate.html"
+    "url_receta": "Recipes/Coulant de chocolate.html",
+    "en_excel": false
   },
   {
     "plato": "Croquetas",
@@ -1355,7 +1441,8 @@ const platosData = [
       "Nuez moscada y pimienta negra",
       "Mantequilla"
     ],
-    "url_receta": "Recipes/Croquetas.html"
+    "url_receta": "Recipes/Croquetas.html",
+    "en_excel": false
   },
   {
     "plato": "Cuscús champiñones judías",
@@ -1370,6 +1457,7 @@ const platosData = [
       "Huevo",
       "Levadura"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Judías.html"
   },
   {
@@ -1384,7 +1472,8 @@ const platosData = [
       "Aceite",
       "Perejil"
     ],
-    "url_receta": "Recipes/Dorada con jamón.html"
+    "url_receta": "Recipes/Dorada con jamón.html",
+    "en_excel": false
   },
   {
     "plato": "E. Judias ANCHOAS",
@@ -1398,6 +1487,7 @@ const platosData = [
       "Huevo",
       "Anchoas"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Judías.html"
   },
   {
@@ -1409,6 +1499,7 @@ const platosData = [
       "Queso",
       "1 huevo batido"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Empanada de hojaldre de jamón y queso.html"
   },
   {
@@ -1426,7 +1517,8 @@ const platosData = [
       "Gulas hechas con su ajito y aceite o bien bonito en lata",
       "Pimiento asado (según receta) o bien comprado en conserva."
     ],
-    "url_receta": "Recipes/Ensalada de garbanzos y gulas.html"
+    "url_receta": "Recipes/Ensalada de garbanzos y gulas.html",
+    "en_excel": false
   },
   {
     "plato": "Ensalada de langostinos con salsa rosa",
@@ -1440,7 +1532,8 @@ const platosData = [
       "Piña",
       "Salsa Rosa"
     ],
-    "url_receta": "Recipes/Ensalada de langostinos con salsa rosa.html"
+    "url_receta": "Recipes/Ensalada de langostinos con salsa rosa.html",
+    "en_excel": false
   },
   {
     "plato": "Ensalada de pasta con papaya y vinagreta",
@@ -1454,7 +1547,8 @@ const platosData = [
       "Vinagreta de cítricos y jengibre",
       "Sal y pimienta"
     ],
-    "url_receta": "Recipes/Ensalada de pasta con papaya y vinagreta.html"
+    "url_receta": "Recipes/Ensalada de pasta con papaya y vinagreta.html",
+    "en_excel": false
   },
   {
     "plato": "Ensalada de pasta y pollo",
@@ -1474,7 +1568,8 @@ const platosData = [
       "Cebollino",
       "Ajo"
     ],
-    "url_receta": "Recipes/Ensalada de pasta y pollo.html"
+    "url_receta": "Recipes/Ensalada de pasta y pollo.html",
+    "en_excel": false
   },
   {
     "plato": "Ensalada de salmón",
@@ -1490,7 +1585,8 @@ const platosData = [
       "Huevo cocido",
       "Pimiento asado"
     ],
-    "url_receta": "Recipes/Ensalada de salmón.html"
+    "url_receta": "Recipes/Ensalada de salmón.html",
+    "en_excel": false
   },
   {
     "plato": "Ensaladilla",
@@ -1508,7 +1604,8 @@ const platosData = [
       "Sal",
       "Aceite de girasol o de oliva suave"
     ],
-    "url_receta": "Recipes/Ensaladilla.html"
+    "url_receta": "Recipes/Ensaladilla.html",
+    "en_excel": false
   },
   {
     "plato": "Escabeche",
@@ -1524,7 +1621,8 @@ const platosData = [
       "300ml aceite oliva",
       "200gr ventresca de atún"
     ],
-    "url_receta": "Recipes/Escabeche.html"
+    "url_receta": "Recipes/Escabeche.html",
+    "en_excel": false
   },
   {
     "plato": "Espaguetis con gulas y gambas",
@@ -1538,7 +1636,8 @@ const platosData = [
       "Albahaca",
       "Espaguetis (preferiblemente integrales)"
     ],
-    "url_receta": "Recipes/Espaguetis con gulas y gambas.html"
+    "url_receta": "Recipes/Espaguetis con gulas y gambas.html",
+    "en_excel": false
   },
   {
     "plato": "Espárragos a la plancha",
@@ -1548,7 +1647,8 @@ const platosData = [
       "Aceite de oliva",
       "Sal"
     ],
-    "url_receta": "Recipes/Espárragos a la plancha.html"
+    "url_receta": "Recipes/Espárragos a la plancha.html",
+    "en_excel": false
   },
   {
     "plato": "Fabada",
@@ -1569,7 +1669,8 @@ const platosData = [
       "Aceite",
       "Ajo"
     ],
-    "url_receta": "Recipes/Fabada.html"
+    "url_receta": "Recipes/Fabada.html",
+    "en_excel": false
   },
   {
     "plato": "Filloas",
@@ -1582,7 +1683,8 @@ const platosData = [
       "350gr agua",
       "Tocino blanco"
     ],
-    "url_receta": "Recipes/Filloas.html"
+    "url_receta": "Recipes/Filloas.html",
+    "en_excel": false
   },
   {
     "plato": "Flan de queso",
@@ -1594,7 +1696,8 @@ const platosData = [
       "370gr leche condensada",
       "Leche entera (la medida del bote de la leche condensada La lechera de 370gr)"
     ],
-    "url_receta": "Recipes/Flan de queso.html"
+    "url_receta": "Recipes/Flan de queso.html",
+    "en_excel": false
   },
   {
     "plato": "Gazpacho de fresas con salmón ahumado y sus huevas",
@@ -1614,7 +1717,8 @@ const platosData = [
       "Salmón ahumado",
       "Huevas de salmón"
     ],
-    "url_receta": "Recipes/Gazpacho de fresas con salmón ahumado y sus huevas.html"
+    "url_receta": "Recipes/Gazpacho de fresas con salmón ahumado y sus huevas.html",
+    "en_excel": false
   },
   {
     "plato": "Gnocchis con salsa de tomate picante, berberechos y gambas",
@@ -1632,7 +1736,8 @@ const platosData = [
       "Orégano",
       "Aceite, sal y pimienta"
     ],
-    "url_receta": "Recipes/Gnocchis con salsa de tomate picante, berberechos y gambas.html"
+    "url_receta": "Recipes/Gnocchis con salsa de tomate picante, berberechos y gambas.html",
+    "en_excel": false
   },
   {
     "plato": "Helado de turrón",
@@ -1643,7 +1748,8 @@ const platosData = [
       "6 cucharadas de azúcar",
       "400 gr de nata para montar"
     ],
-    "url_receta": "Recipes/Helado de turrón.html"
+    "url_receta": "Recipes/Helado de turrón.html",
+    "en_excel": false
   },
   {
     "plato": "Hojaldre de pollo, jamon y champiñones",
@@ -1658,7 +1764,8 @@ const platosData = [
       "4 filetes de pavo",
       "1 cucharada de philadelphia"
     ],
-    "url_receta": "Recipes/Hojaldre de pollo, jamon y champiñones.html"
+    "url_receta": "Recipes/Hojaldre de pollo, jamon y champiñones.html",
+    "en_excel": false
   },
   {
     "plato": "Judías con chorizo y patata",
@@ -1671,7 +1778,8 @@ const platosData = [
       "Agua",
       "Huevo"
     ],
-    "url_receta": "Recipes/Judías con chorizo y patata.html"
+    "url_receta": "Recipes/Judías con chorizo y patata.html",
+    "en_excel": false
   },
   {
     "plato": "Lentejas",
@@ -1683,6 +1791,7 @@ const platosData = [
       "Puerro",
       "Pimentón"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Lentejas 2..html"
   },
   {
@@ -1698,7 +1807,8 @@ const platosData = [
       "1 bote leche evaporada",
       "1 l agua aprox."
     ],
-    "url_receta": "Recipes/Macu Crema fría al pesto.html"
+    "url_receta": "Recipes/Macu Crema fría al pesto.html",
+    "en_excel": false
   },
   {
     "plato": "Macu Crujientes de verduras con queso Brie",
@@ -1715,7 +1825,8 @@ const platosData = [
       "Vinagreta: 30 g vinagre balsámico, 100 g aceite de oliva virgen extra, sal",
       "Cebollino para atar paquetes (opcional)"
     ],
-    "url_receta": "Recipes/Macu Crujientes de verduras con queso Brie.html"
+    "url_receta": "Recipes/Macu Crujientes de verduras con queso Brie.html",
+    "en_excel": false
   },
   {
     "plato": "Macu Guiso \"Mar y Tierra\"",
@@ -1728,7 +1839,8 @@ const platosData = [
       "2 pastillas caldo pescado",
       "Hebras de azafrán"
     ],
-    "url_receta": "Recipes/Macu Guiso Mar y Tierra.html"
+    "url_receta": "Recipes/Macu Guiso Mar y Tierra.html",
+    "en_excel": false
   },
   {
     "plato": "Macu Pechugas de pollo en salsa de coco con curry",
@@ -1749,7 +1861,8 @@ const platosData = [
       "Cayena (opcional)",
       "Para acompañar: arroz blanco"
     ],
-    "url_receta": "Recipes/Macu Pechugas de pollo en salsa de coco con curry.html"
+    "url_receta": "Recipes/Macu Pechugas de pollo en salsa de coco con curry.html",
+    "en_excel": false
   },
   {
     "plato": "Macu Pepinos rellenos de queso fresco y verduras",
@@ -1766,7 +1879,8 @@ const platosData = [
       "2 cdas mostaza",
       "Sal y pimienta"
     ],
-    "url_receta": "Recipes/Macu Pepinos rellenos de queso fresco y verduras.html"
+    "url_receta": "Recipes/Macu Pepinos rellenos de queso fresco y verduras.html",
+    "en_excel": false
   },
   {
     "plato": "Macu Pimientos de piquillo rellenos de gulas con salsa de tinta",
@@ -1787,7 +1901,8 @@ const platosData = [
       "100 g vino blanco",
       "Pimienta"
     ],
-    "url_receta": "Recipes/Macu Pimientos de piquillo rellenos de gulas con salsa de tinta.html"
+    "url_receta": "Recipes/Macu Pimientos de piquillo rellenos de gulas con salsa de tinta.html",
+    "en_excel": false
   },
   {
     "plato": "Macu Rollo tricolor",
@@ -1805,7 +1920,8 @@ const platosData = [
       "½ cdta mostaza",
       "Gotas de tabasco"
     ],
-    "url_receta": "Recipes/Macu Rollo tricolor.html"
+    "url_receta": "Recipes/Macu Rollo tricolor.html",
+    "en_excel": false
   },
   {
     "plato": "Macu Tartar de bonito",
@@ -1821,7 +1937,8 @@ const platosData = [
       "1 aguacate",
       "Cebollino, sal y pimienta"
     ],
-    "url_receta": "Recipes/Macu Tartar de bonito.html"
+    "url_receta": "Recipes/Macu Tartar de bonito.html",
+    "en_excel": false
   },
   {
     "plato": "Masa empanada",
@@ -1835,7 +1952,8 @@ const platosData = [
       "Levadura",
       "Media cucharilla de sal"
     ],
-    "url_receta": "Recipes/Masa empanada.html"
+    "url_receta": "Recipes/Masa empanada.html",
+    "en_excel": false
   },
   {
     "plato": "Masa pizza",
@@ -1847,7 +1965,8 @@ const platosData = [
       "1 nuez de levadura prensada",
       "400gr de harina"
     ],
-    "url_receta": "Recipes/Masa pizza.html"
+    "url_receta": "Recipes/Masa pizza.html",
+    "en_excel": false
   },
   {
     "plato": "Masa pizza sin robot",
@@ -1860,7 +1979,8 @@ const platosData = [
       "Aceite oliva",
       "250g tomate (mezclado con sal, aceite y orégano)"
     ],
-    "url_receta": "Recipes/Masa pizza sin robot.html"
+    "url_receta": "Recipes/Masa pizza sin robot.html",
+    "en_excel": false
   },
   {
     "plato": "Mayonesa y salsa rosa",
@@ -1871,7 +1991,8 @@ const platosData = [
       "Sal",
       "Aceite (mejor de girasol o de oliva suave)"
     ],
-    "url_receta": "Recipes/Mayonesa y salsa rosa.html"
+    "url_receta": "Recipes/Mayonesa y salsa rosa.html",
+    "en_excel": false
   },
   {
     "plato": "Mejillones al vapor",
@@ -1880,7 +2001,8 @@ const platosData = [
       "2 kilos de mejillones",
       "Unas hojas de laurel"
     ],
-    "url_receta": "Recipes/Mejillones al vapor.html"
+    "url_receta": "Recipes/Mejillones al vapor.html",
+    "en_excel": false
   },
   {
     "plato": "Muslos de pollo a la sidra",
@@ -1895,7 +2017,8 @@ const platosData = [
       "3 patatas",
       "Aceite, sal y pimienta"
     ],
-    "url_receta": "Recipes/Muslos de pollo a la sidra.html"
+    "url_receta": "Recipes/Muslos de pollo a la sidra.html",
+    "en_excel": false
   },
   {
     "plato": "Natillas de leche de coco con chocolate blanco, fruta de la pasión y polvo de galletas",
@@ -1912,7 +2035,8 @@ const platosData = [
       "60 ml zumo de fruta de la pasión",
       "6 frutas de la pasión"
     ],
-    "url_receta": "Recipes/Natillas de leche de coco con chocolate blanco, fruta de la pasión y polvo de galletas.html"
+    "url_receta": "Recipes/Natillas de leche de coco con chocolate blanco, fruta de la pasión y polvo de galletas.html",
+    "en_excel": false
   },
   {
     "plato": "Orejas",
@@ -1927,7 +2051,8 @@ const platosData = [
       "460 gr de harina",
       "Aceite de girasol para freír"
     ],
-    "url_receta": "Recipes/Orejas.html"
+    "url_receta": "Recipes/Orejas.html",
+    "en_excel": false
   },
   {
     "plato": "Paella",
@@ -1944,7 +2069,8 @@ const platosData = [
       "1 bote de tomate frito",
       "Pimiento asado"
     ],
-    "url_receta": "Recipes/Paella.html"
+    "url_receta": "Recipes/Paella.html",
+    "en_excel": false
   },
   {
     "plato": "Paella de fideos con mejillones en escabeche al curry con puré de limón",
@@ -1961,7 +2087,8 @@ const platosData = [
       "Arroz inflado",
       "Aceite"
     ],
-    "url_receta": "Recipes/Paella de fideos con mejillones en escabeche al curry con puré de limón.html"
+    "url_receta": "Recipes/Paella de fideos con mejillones en escabeche al curry con puré de limón.html",
+    "en_excel": false
   },
   {
     "plato": "Papas arrugás con mojo verde",
@@ -1980,7 +2107,8 @@ const platosData = [
       "Comino",
       "Sal y pimienta negra"
     ],
-    "url_receta": "Recipes/Papas arrugás con mojo verde.html"
+    "url_receta": "Recipes/Papas arrugás con mojo verde.html",
+    "en_excel": false
   },
   {
     "plato": "Pasta carbonara",
@@ -1997,7 +2125,8 @@ const platosData = [
       "Brioche",
       "Sal y pimienta"
     ],
-    "url_receta": "Recipes/Pasta carbonara.html"
+    "url_receta": "Recipes/Pasta carbonara.html",
+    "en_excel": false
   },
   {
     "plato": "Pastel de patata y bacon",
@@ -2009,7 +2138,8 @@ const platosData = [
       "200ml de nata",
       "Sal y pimienta"
     ],
-    "url_receta": "Recipes/Pastel de patata y bacon.html"
+    "url_receta": "Recipes/Pastel de patata y bacon.html",
+    "en_excel": false
   },
   {
     "plato": "Patatas rellenas",
@@ -2023,7 +2153,8 @@ const platosData = [
       "1 cucharada de nata o leche",
       "Pimienta y perejil"
     ],
-    "url_receta": "Recipes/Patatas rellenas.html"
+    "url_receta": "Recipes/Patatas rellenas.html",
+    "en_excel": false
   },
   {
     "plato": "Pechugas de pavo con bacon al horno",
@@ -2035,7 +2166,8 @@ const platosData = [
       "250 gr de bacon en lonchas",
       "Aceite"
     ],
-    "url_receta": "Recipes/Pechugas de pavo con bacon al horno 2..html"
+    "url_receta": "Recipes/Pechugas de pavo con bacon al horno 2..html",
+    "en_excel": false
   },
   {
     "plato": "Pechugas de pavo con bacon al horno",
@@ -2047,7 +2179,8 @@ const platosData = [
       "250 gr de bacon en lonchas",
       "Aceite"
     ],
-    "url_receta": "Recipes/Pechugas de pavo con bacon al horno.html"
+    "url_receta": "Recipes/Pechugas de pavo con bacon al horno.html",
+    "en_excel": false
   },
   {
     "plato": "Pernil",
@@ -2066,7 +2199,8 @@ const platosData = [
       "Vino dulce",
       "Mantequilla"
     ],
-    "url_receta": "Recipes/Pernil.html"
+    "url_receta": "Recipes/Pernil.html",
+    "en_excel": false
   },
   {
     "plato": "Perrito caliente",
@@ -2085,7 +2219,8 @@ const platosData = [
       "Sal",
       "Pimienta"
     ],
-    "url_receta": "Recipes/Perrito caliente.html"
+    "url_receta": "Recipes/Perrito caliente.html",
+    "en_excel": false
   },
   {
     "plato": "Pescado a la sal",
@@ -2094,7 +2229,8 @@ const platosData = [
       "2 Lubinas de piscifactoría (limpias para la sal)",
       "1 paquete de sal gruesa especial para hornear"
     ],
-    "url_receta": "Recipes/Pescado a la sal.html"
+    "url_receta": "Recipes/Pescado a la sal.html",
+    "en_excel": false
   },
   {
     "plato": "Pescado al horno",
@@ -2109,7 +2245,8 @@ const platosData = [
       "Aceite",
       "Agua"
     ],
-    "url_receta": "Recipes/Pescado al horno.html"
+    "url_receta": "Recipes/Pescado al horno.html",
+    "en_excel": false
   },
   {
     "plato": "Pescado cocido",
@@ -2127,7 +2264,8 @@ const platosData = [
       "Mayonesa o ajada",
       "Espárragos de bote para acompañar"
     ],
-    "url_receta": "Recipes/Pescado cocido.html"
+    "url_receta": "Recipes/Pescado cocido.html",
+    "en_excel": false
   },
   {
     "plato": "Picada de almendras, ajo y perejil",
@@ -2139,7 +2277,8 @@ const platosData = [
       "12 cucharadas de aceite",
       "Sal y pimienta"
     ],
-    "url_receta": "Recipes/Picada de almendras, ajo y perejil.html"
+    "url_receta": "Recipes/Picada de almendras, ajo y perejil.html",
+    "en_excel": false
   },
   {
     "plato": "Pimiento asado",
@@ -2149,7 +2288,8 @@ const platosData = [
       "Sal",
       "Aceite"
     ],
-    "url_receta": "Recipes/Pimiento asado.html"
+    "url_receta": "Recipes/Pimiento asado.html",
+    "en_excel": false
   },
   {
     "plato": "Pimiento asado (1)",
@@ -2159,7 +2299,8 @@ const platosData = [
       "Aceite",
       "Papel de aluminio"
     ],
-    "url_receta": "Recipes/Pimiento asado (1).html"
+    "url_receta": "Recipes/Pimiento asado (1).html",
+    "en_excel": false
   },
   {
     "plato": "Pollo a la albahaca",
@@ -2173,7 +2314,8 @@ const platosData = [
       "200 gr de champiñones",
       "Harina, sal y aceite"
     ],
-    "url_receta": "Recipes/Pollo a la albahaca.html"
+    "url_receta": "Recipes/Pollo a la albahaca.html",
+    "en_excel": false
   },
   {
     "plato": "Pollo a la cervezacon champiñones",
@@ -2188,7 +2330,8 @@ const platosData = [
       "1 hoja de laurel",
       "Sal, pimienta y orégano u otra hierba"
     ],
-    "url_receta": "Recipes/Pollo a la cervezacon champiñones.html"
+    "url_receta": "Recipes/Pollo a la cervezacon champiñones.html",
+    "en_excel": false
   },
   {
     "plato": "Pollo al horno",
@@ -2205,7 +2348,8 @@ const platosData = [
       "Agua",
       "Verduras variadas (opcional)"
     ],
-    "url_receta": "Recipes/Pollo al horno.html"
+    "url_receta": "Recipes/Pollo al horno.html",
+    "en_excel": false
   },
   {
     "plato": "Pulpo",
@@ -2215,6 +2359,7 @@ const platosData = [
       "Pimentón dulce",
       "Pimentón picante"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Pulpo.html"
   },
   {
@@ -2234,7 +2379,8 @@ const platosData = [
       "Sal",
       "Un vasito de agua de cocer los guisantes"
     ],
-    "url_receta": "Recipes/Rape Fernando.html"
+    "url_receta": "Recipes/Rape Fernando.html",
+    "en_excel": false
   },
   {
     "plato": "Risotto crujiente-meloso de setas",
@@ -2251,7 +2397,8 @@ const platosData = [
       "Caldo de las propias setas u otro",
       "150 gr queso parmesano"
     ],
-    "url_receta": "Recipes/Risotto crujiente-meloso de setas.html"
+    "url_receta": "Recipes/Risotto crujiente-meloso de setas.html",
+    "en_excel": false
   },
   {
     "plato": "Rosbif",
@@ -2266,7 +2413,8 @@ const platosData = [
       "Aceite de oliva virgen extra",
       "Caldo de pollo (gallina blanca 100% natural)"
     ],
-    "url_receta": "Recipes/Rosbif.html"
+    "url_receta": "Recipes/Rosbif.html",
+    "en_excel": false
   },
   {
     "plato": "Salsa de aguacate",
@@ -2279,7 +2427,8 @@ const platosData = [
       "1 cucharadita de orégano",
       "Pimienta"
     ],
-    "url_receta": "Recipes/Salsa de aguacate.html"
+    "url_receta": "Recipes/Salsa de aguacate.html",
+    "en_excel": false
   },
   {
     "plato": "Salsa de castañas",
@@ -2294,7 +2443,8 @@ const platosData = [
       "1/2 puerro",
       "Sal y pimienta"
     ],
-    "url_receta": "Recipes/Salsa de castañas.html"
+    "url_receta": "Recipes/Salsa de castañas.html",
+    "en_excel": false
   },
   {
     "plato": "Sandwich de langostinos gabardina",
@@ -2316,7 +2466,8 @@ const platosData = [
       "Huevos",
       "Pan brioche"
     ],
-    "url_receta": "Recipes/Sandwich de langostinos gabardina.html"
+    "url_receta": "Recipes/Sandwich de langostinos gabardina.html",
+    "en_excel": false
   },
   {
     "plato": "Socarrat de pintada",
@@ -2336,7 +2487,8 @@ const platosData = [
       "600gr Arroz",
       "1l de caldo de pintada"
     ],
-    "url_receta": "Recipes/Socarrat de pintada.html"
+    "url_receta": "Recipes/Socarrat de pintada.html",
+    "en_excel": false
   },
   {
     "plato": "Sopa",
@@ -2348,7 +2500,8 @@ const platosData = [
       "1 litro y medio de agua",
       "1 pastilla de Avecrem pollo 100% natural"
     ],
-    "url_receta": "Recipes/Sopa.html"
+    "url_receta": "Recipes/Sopa.html",
+    "en_excel": false
   },
   {
     "plato": "Sopa de parmesano",
@@ -2357,7 +2510,8 @@ const platosData = [
       "200 gr de queso parmesano",
       "80 ml de leche"
     ],
-    "url_receta": "Recipes/Sopa de parmesano.html"
+    "url_receta": "Recipes/Sopa de parmesano.html",
+    "en_excel": false
   },
   {
     "plato": "Tarta de almendra",
@@ -2373,7 +2527,8 @@ const platosData = [
       "Azúcar Glass para adornar",
       "Un molde engrasado y espolvoreado con harina"
     ],
-    "url_receta": "Recipes/Tarta de almendra.html"
+    "url_receta": "Recipes/Tarta de almendra.html",
+    "en_excel": false
   },
   {
     "plato": "Tarta de galletas",
@@ -2385,7 +2540,8 @@ const platosData = [
       "1 tableta de chocolate postres Nestle",
       "Leche"
     ],
-    "url_receta": "Recipes/Tarta de galletas.html"
+    "url_receta": "Recipes/Tarta de galletas.html",
+    "en_excel": false
   },
   {
     "plato": "Tarta de queso al horno",
@@ -2404,7 +2560,8 @@ const platosData = [
       "50g de azúcar (Opción base 2)",
       "2g de sal (Opción base 2)"
     ],
-    "url_receta": "Recipes/Tarta de queso al horno.html"
+    "url_receta": "Recipes/Tarta de queso al horno.html",
+    "en_excel": false
   },
   {
     "plato": "Tarta de queso sin horno",
@@ -2420,7 +2577,8 @@ const platosData = [
       "50 gr de margarina",
       "1 paquete de galletas tipo María (unas 40 unidades)"
     ],
-    "url_receta": "Recipes/Tarta de queso sin horno.html"
+    "url_receta": "Recipes/Tarta de queso sin horno.html",
+    "en_excel": false
   },
   {
     "plato": "Tartar japo-castizo",
@@ -2438,7 +2596,8 @@ const platosData = [
       "Tomate",
       "Croissant"
     ],
-    "url_receta": "Recipes/Tartar japo-castizo.html"
+    "url_receta": "Recipes/Tartar japo-castizo.html",
+    "en_excel": false
   },
   {
     "plato": "Tempura para varitas",
@@ -2449,7 +2608,8 @@ const platosData = [
       "Lomitos de merluza congelados",
       "Aceite para freír"
     ],
-    "url_receta": "Recipes/Tempura para varitas.html"
+    "url_receta": "Recipes/Tempura para varitas.html",
+    "en_excel": false
   },
   {
     "plato": "Tiramisú",
@@ -2463,7 +2623,8 @@ const platosData = [
       "Licor café",
       "Cacao puro"
     ],
-    "url_receta": "Recipes/Tiramisú.html"
+    "url_receta": "Recipes/Tiramisú.html",
+    "en_excel": false
   },
   {
     "plato": "Tiramisú de turrón",
@@ -2478,7 +2639,8 @@ const platosData = [
       "Licor café",
       "2 cucharadas rasas de tagatosa o 4 cucharadas de azúcar blanco"
     ],
-    "url_receta": "Recipes/Tiramisú de turrón.html"
+    "url_receta": "Recipes/Tiramisú de turrón.html",
+    "en_excel": false
   },
   {
     "plato": "Tomate relleno burrata",
@@ -2490,6 +2652,7 @@ const platosData = [
       "Albahaca",
       "Pistachos"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Tomate relleno.html"
   },
   {
@@ -2509,7 +2672,8 @@ const platosData = [
       "Mantequilla clarificada",
       "Azúcar para caramelizar"
     ],
-    "url_receta": "Recipes/Torrijas.html"
+    "url_receta": "Recipes/Torrijas.html",
+    "en_excel": false
   },
   {
     "plato": "Tortilla de camarones",
@@ -2524,7 +2688,8 @@ const platosData = [
       "75cl de agua",
       "Chorro de agua con gas"
     ],
-    "url_receta": "Recipes/Tortilla de camarones.html"
+    "url_receta": "Recipes/Tortilla de camarones.html",
+    "en_excel": false
   },
   {
     "plato": "Vieiras",
@@ -2539,7 +2704,8 @@ const platosData = [
       "1 cucharadita de pimentón dulce",
       "Pan rallado con ajo y perejil"
     ],
-    "url_receta": "Recipes/Vieiras.html"
+    "url_receta": "Recipes/Vieiras.html",
+    "en_excel": false
   },
   {
     "plato": "Vinagreta de cítricos y jengibre",
@@ -2551,7 +2717,8 @@ const platosData = [
       "Jengibre rallado",
       "Ralladura de lima"
     ],
-    "url_receta": "Recipes/Vinagreta de cítricos y jengibre.html"
+    "url_receta": "Recipes/Vinagreta de cítricos y jengibre.html",
+    "en_excel": false
   },
   {
     "plato": "Yogurt de leche de oveja con frambuesas al Pedro Jimenez y aceite de oliva",
@@ -2564,7 +2731,8 @@ const platosData = [
       "200ml leche entera",
       "4 hojas de hierbabuena"
     ],
-    "url_receta": "Recipes/Yogurt de leche de oveja con frambuesas al Pedro Jimenez y aceite de oliva.html"
+    "url_receta": "Recipes/Yogurt de leche de oveja con frambuesas al Pedro Jimenez y aceite de oliva.html",
+    "en_excel": false
   },
   {
     "plato": "Zaragallada empanada",
@@ -2582,7 +2750,8 @@ const platosData = [
       "Pimentón dulce",
       "1 cubito de Avecrem pollo gallina blanca 100% natural"
     ],
-    "url_receta": "Recipes/Zaragallada empanada.html"
+    "url_receta": "Recipes/Zaragallada empanada.html",
+    "en_excel": false
   },
   {
     "plato": "Pan de trigo sarraceno",
@@ -2595,7 +2764,8 @@ const platosData = [
       "(Opcional) 240 g trigo sarraceno + 160 g lentejas en grano",
       "(Opcional) harina de trigo sarraceno extra para espolvorear"
     ],
-    "url_receta": "Recipes/Pan de trigo sarraceno.html"
+    "url_receta": "Recipes/Pan de trigo sarraceno.html",
+    "en_excel": false
   },
   {
     "plato": "Pan Desayuno (arroz y espelta)",
@@ -2607,7 +2777,8 @@ const platosData = [
       "800 ml agua caliente",
       "1 cdta sal (tamaño postre)"
     ],
-    "url_receta": "Recipes/Pan Desayuno (arroz y espelta).html"
+    "url_receta": "Recipes/Pan Desayuno (arroz y espelta).html",
+    "en_excel": false
   },
   {
     "plato": "Pan keto de almendras y coco",
@@ -2622,7 +2793,8 @@ const platosData = [
       "200 ml agua caliente",
       "Semillas para decorar (opcional)"
     ],
-    "url_receta": "Recipes/Pan keto de almendras y coco.html"
+    "url_receta": "Recipes/Pan keto de almendras y coco.html",
+    "en_excel": false
   },
   {
     "plato": "Boloñesa con pasta",
@@ -2638,7 +2810,8 @@ const platosData = [
       "30 g aceite de oliva",
       "1 cdta sal"
     ],
-    "url_receta": "Recipes/Boloñesa con pasta.html"
+    "url_receta": "Recipes/Boloñesa con pasta.html",
+    "en_excel": false
   },
   {
     "plato": "Canelones espinacas",
@@ -2651,7 +2824,22 @@ const platosData = [
       "Bechamel",
       "Queso rallado"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Canelones de carne y espinacas.html"
+  },
+  {
+    "plato": "Lasaña",
+    "categoria": "Pasta y arroces",
+    "ingredientes": [
+      "Placas de lasaña",
+      "Carne picada",
+      "Champiñones",
+      "Espinacas",
+      "Bechamel",
+      "Queso rallado"
+    ],
+    "en_excel": true,
+    "url_receta": "Recipes/Lasaña o Musaka (carne, champiñón, espinaca, bechamel).html"
   },
   {
     "plato": "Pasta fresca",
@@ -2662,6 +2850,7 @@ const platosData = [
       "Langostinos pelados",
       "Brécol"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Pasta fresca con pesto, langostinos y brécol.html"
   },
   {
@@ -2680,7 +2869,8 @@ const platosData = [
       "1000 g de agua",
       "1 cucharadita de sal"
     ],
-    "url_receta": "Recipes/Almejas a la marinera.html"
+    "url_receta": "Recipes/Almejas a la marinera.html",
+    "en_excel": false
   },
   {
     "plato": "Chocos  arroz",
@@ -2692,6 +2882,7 @@ const platosData = [
       "Vino blanco",
       "Fumet"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Chocos con arroz.html"
   },
   {
@@ -2701,6 +2892,7 @@ const platosData = [
       "bacalao, jurelos, dorada, rodaballo, sargo, palometa, menda, coruxo, corvina",
       "Pimiento"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Pescado Horno (bacalao, jurelos, dorada, rodaballo, sargo, palometa, menda, coruxo,…).html"
   },
   {
@@ -2714,7 +2906,8 @@ const platosData = [
       "1 cdta pimentón picante",
       "30 g aceite de oliva"
     ],
-    "url_receta": "Recipes/Pulpo á feira (versión rápida).html"
+    "url_receta": "Recipes/Pulpo á feira (versión rápida).html",
+    "en_excel": false
   },
   {
     "plato": "Rapantes",
@@ -2722,6 +2915,7 @@ const platosData = [
     "ingredientes": [
       "Rapantes"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Rapantes.html"
   },
   {
@@ -2736,7 +2930,8 @@ const platosData = [
       "1 huevo duro en rodajas o gambas (para adornar)",
       "Salsa: mayonesa simple, mayonesa con tomate y coñac, o vinagreta"
     ],
-    "url_receta": "Recipes/Rape Alangostado.html"
+    "url_receta": "Recipes/Rape Alangostado.html",
+    "en_excel": false
   },
   {
     "plato": "Rape marinera langostinos",
@@ -2752,6 +2947,7 @@ const platosData = [
       "Fumet",
       "Perejil fresco"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Rape marinera langostinos.html"
   },
   {
@@ -2762,6 +2958,7 @@ const platosData = [
       "Perejil",
       "Limón"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Rodaballo plancha.html"
   },
   {
@@ -2771,6 +2968,7 @@ const platosData = [
       "Lomos de salmón",
       "Boniato"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Salmón AirFryer.html"
   },
   {
@@ -2788,11 +2986,12 @@ const platosData = [
       "1 cebolla",
       "Pan rallado (aprox. 100 g)"
     ],
-    "url_receta": "Recipes/Vieiras al horno.html"
+    "url_receta": "Recipes/Vieiras al horno.html",
+    "en_excel": false
   },
   {
     "plato": "Empanada pollo",
-    "categoria": "Platos especiales / internacionales",
+    "categoria": "Platos especiales, internacionales",
     "ingredientes": [
       "Planchas de masa brisa o quebrada",
       "Filetes P.",
@@ -2806,11 +3005,12 @@ const platosData = [
       "Pimiento rojo",
       "Hierbas provenzales"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Empanada pollo.html"
   },
   {
     "plato": "Falafel salsa de yogur",
-    "categoria": "Platos especiales / internacionales",
+    "categoria": "Platos especiales, internacionales",
     "ingredientes": [
       "Garbanzos secos",
       "Comino",
@@ -2821,11 +3021,12 @@ const platosData = [
       "Limón",
       "Menta picada"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Falafel con salsa de yogur.html"
   },
   {
     "plato": "Fideos chinos",
-    "categoria": "Platos especiales / internacionales",
+    "categoria": "Platos especiales, internacionales",
     "ingredientes": [
       "Fideos chinos",
       "Pechuga de pollo",
@@ -2839,11 +3040,12 @@ const platosData = [
       "Aceite de sésamo",
       "Semillas de sésamo"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Fideos chinos.html"
   },
   {
     "plato": "Poke de salmón",
-    "categoria": "Platos especiales / internacionales",
+    "categoria": "Platos especiales, internacionales",
     "ingredientes": [
       "Salmón fresco",
       "Salsa de soja",
@@ -2858,11 +3060,12 @@ const platosData = [
       "Algas",
       "Cebolla crunchys"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Poke de salmón.html"
   },
   {
     "plato": "Pollo butter chicken",
-    "categoria": "Platos especiales / internacionales",
+    "categoria": "Platos especiales, internacionales",
     "ingredientes": [
       "Pollo",
       "Ghee",
@@ -2877,11 +3080,12 @@ const platosData = [
       "Anacardos",
       "Nata"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Pollo butter chicken.html"
   },
   {
     "plato": "Pollo coreano",
-    "categoria": "Platos especiales / internacionales",
+    "categoria": "Platos especiales, internacionales",
     "ingredientes": [
       "Pollo",
       "Salsa de soja",
@@ -2890,11 +3094,12 @@ const platosData = [
       "Aceite de sésamo",
       "Maicena"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Pollo coreano.html"
   },
   {
     "plato": "Quinoa con pollo, halloumi y verduras al horno ¿?",
-    "categoria": "Platos especiales / internacionales",
+    "categoria": "Platos especiales, internacionales",
     "ingredientes": [
       "180 g Quinoa",
       "350 g Pechuga de pollo (sazonada)",
@@ -2909,14 +3114,16 @@ const platosData = [
       "90 g Pasta de harissa",
       "1 cda Sal, pimienta, pimentón, comino"
     ],
-    "url_receta": "Recipes/Quinoa con pollo, halloumi y verduras al horno ¿.html"
+    "url_receta": "Recipes/Quinoa con pollo, halloumi y verduras al horno ¿.html",
+    "en_excel": false
   },
   {
     "plato": "Wraps",
-    "categoria": "Platos especiales / internacionales",
+    "categoria": "Platos especiales, internacionales",
     "ingredientes": [
       "Fajitas"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Wraps.html"
   },
   {
@@ -2934,7 +3141,8 @@ const platosData = [
       "1 pizca sal gruesa",
       "Pistachos enteros para decorar"
     ],
-    "url_receta": "Recipes/Barritas de pistacho sin horno.html"
+    "url_receta": "Recipes/Barritas de pistacho sin horno.html",
+    "en_excel": false
   },
   {
     "plato": "Bizcocho con pepitas de chocolate",
@@ -2946,6 +3154,7 @@ const platosData = [
       "Chocolate 85%",
       "Polvo de hornear"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Bizcocho con pepitas de chocolate.html"
   },
   {
@@ -2962,7 +3171,8 @@ const platosData = [
       "1 sobre de levadura química",
       "1 pellizco de sal"
     ],
-    "url_receta": "Recipes/Bizcocho de naranja.html"
+    "url_receta": "Recipes/Bizcocho de naranja.html",
+    "en_excel": false
   },
   {
     "plato": "Bizcocho de plátano y chocolate",
@@ -2977,7 +3187,8 @@ const platosData = [
       "7 g levadura en polvo",
       "(Opcional) nueces para decorar"
     ],
-    "url_receta": "Recipes/Bizcocho de plátano y chocolate.html"
+    "url_receta": "Recipes/Bizcocho de plátano y chocolate.html",
+    "en_excel": false
   },
   {
     "plato": "Bizcocho marmolado de boniato y plátano",
@@ -2995,7 +3206,8 @@ const platosData = [
       "1 cda vinagre de manzana",
       "(opcional: sustituir por 16 g de levadura en polvo)"
     ],
-    "url_receta": "Recipes/Bizcocho marmolado de boniato y plátano.html"
+    "url_receta": "Recipes/Bizcocho marmolado de boniato y plátano.html",
+    "en_excel": false
   },
   {
     "plato": "Donuts de mandarina sin harinas",
@@ -3008,7 +3220,8 @@ const platosData = [
       "1 cdta de levadura en polvo y una pizca de bicarbonato (para que suban más)",
       "Canela Ceylán"
     ],
-    "url_receta": "Recipes/Donuts de mandarina sin harinas.html"
+    "url_receta": "Recipes/Donuts de mandarina sin harinas.html",
+    "en_excel": false
   },
   {
     "plato": "Galletas de avena y chocolate",
@@ -3021,7 +3234,8 @@ const platosData = [
       "80 g aceite",
       "100 g pepitas de chocolate"
     ],
-    "url_receta": "Recipes/Galletas de avena y chocolate.html"
+    "url_receta": "Recipes/Galletas de avena y chocolate.html",
+    "en_excel": false
   },
   {
     "plato": "Galletas saludables de chocolate (MyebyCosta)",
@@ -3035,7 +3249,8 @@ const platosData = [
       "Chocolate negro 85% (cantidad suficiente)",
       "Un poco de aceite de coco (para derretir el chocolate)"
     ],
-    "url_receta": "Recipes/Galletas saludables de chocolate (MyebyCosta).html"
+    "url_receta": "Recipes/Galletas saludables de chocolate (MyebyCosta).html",
+    "en_excel": false
   },
   {
     "plato": "Helado de pistacho",
@@ -3046,7 +3261,8 @@ const platosData = [
       "Edulcorante al gusto",
       "Chocolate negro (para la cobertura)"
     ],
-    "url_receta": "Recipes/Helado de pistacho.html"
+    "url_receta": "Recipes/Helado de pistacho.html",
+    "en_excel": false
   },
   {
     "plato": "Helado saludable de chocolate (3 ingredientes)",
@@ -3056,7 +3272,8 @@ const platosData = [
       "2 plátanos grandes congelados",
       "1 cda cacao en polvo"
     ],
-    "url_receta": "Recipes/Helado saludable de chocolate (3 ingredientes).html"
+    "url_receta": "Recipes/Helado saludable de chocolate (3 ingredientes).html",
+    "en_excel": false
   },
   {
     "plato": "Muffins cetogénicos de arándanos",
@@ -3070,7 +3287,8 @@ const platosData = [
       "100 g arándanos",
       "50 g mantequilla"
     ],
-    "url_receta": "Recipes/Muffins cetogénicos de arándanos.html"
+    "url_receta": "Recipes/Muffins cetogénicos de arándanos.html",
+    "en_excel": false
   },
   {
     "plato": "Pan de nueces (bizcocho)",
@@ -3084,7 +3302,8 @@ const platosData = [
       "1 sobre levadura",
       "50 ml leche (opcional)"
     ],
-    "url_receta": "Recipes/Pan de nueces (bizcocho).html"
+    "url_receta": "Recipes/Pan de nueces (bizcocho).html",
+    "en_excel": false
   },
   {
     "plato": "Pan de nueces (bizcocho)",
@@ -3098,7 +3317,8 @@ const platosData = [
       "1 sobre levadura",
       "50 ml leche (si la masa está muy densa)"
     ],
-    "url_receta": "Recipes/Pan de nueces (bizcocho) 2..html"
+    "url_receta": "Recipes/Pan de nueces (bizcocho) 2..html",
+    "en_excel": false
   },
   {
     "plato": "Quesada",
@@ -3111,7 +3331,8 @@ const platosData = [
       "1 yogur natural",
       "250 ml leche"
     ],
-    "url_receta": "Recipes/Quesada.html"
+    "url_receta": "Recipes/Quesada.html",
+    "en_excel": false
   },
   {
     "plato": "Rosca de Carmen",
@@ -3129,7 +3350,8 @@ const platosData = [
       "250 g harina",
       "125 g levadura fresca de panadería"
     ],
-    "url_receta": "Recipes/Rosca de Carmen.html"
+    "url_receta": "Recipes/Rosca de Carmen.html",
+    "en_excel": false
   },
   {
     "plato": "Tarta de chocolate (Blancanutri)",
@@ -3140,7 +3362,8 @@ const platosData = [
       "160 g chocolate 85% cacao",
       "Cacao puro o harina de algarroba (para decorar)"
     ],
-    "url_receta": "Recipes/Tarta de chocolate (Blancanutri).html"
+    "url_receta": "Recipes/Tarta de chocolate (Blancanutri).html",
+    "en_excel": false
   },
   {
     "plato": "Tarta de Nesquik",
@@ -3154,7 +3377,8 @@ const platosData = [
       "50 ml leche",
       "4 cda Nesquik"
     ],
-    "url_receta": "Recipes/Tarta de Nesquik.html"
+    "url_receta": "Recipes/Tarta de Nesquik.html",
+    "en_excel": false
   },
   {
     "plato": "Tarta de queso de la Viña",
@@ -3166,7 +3390,8 @@ const platosData = [
       "1 cda harina",
       "280 ml nata (mín 35% MG)"
     ],
-    "url_receta": "Recipes/Tarta de queso de la Viña.html"
+    "url_receta": "Recipes/Tarta de queso de la Viña.html",
+    "en_excel": false
   },
   {
     "plato": "Tarta de queso La Viña (TM31, 600 g queso)",
@@ -3178,7 +3403,8 @@ const platosData = [
       "180 g de azúcar (140 reales)",
       "18 g de harina de trigo (tamizada)"
     ],
-    "url_receta": "Recipes/Tarta de queso La Viña (TM31, 600 g queso).html"
+    "url_receta": "Recipes/Tarta de queso La Viña (TM31, 600 g queso).html",
+    "en_excel": false
   },
   {
     "plato": "Tarta de queso Thermomix",
@@ -3196,7 +3422,8 @@ const platosData = [
       "2 cdtas gelatina neutra",
       "50 g agua"
     ],
-    "url_receta": "Recipes/Tarta de queso Thermomix.html"
+    "url_receta": "Recipes/Tarta de queso Thermomix.html",
+    "en_excel": false
   },
   {
     "plato": "Tarta de zanahoria",
@@ -3213,7 +3440,8 @@ const platosData = [
       "1 pizca sal",
       "1 sobre levadura"
     ],
-    "url_receta": "Recipes/Tarta de zanahoria.html"
+    "url_receta": "Recipes/Tarta de zanahoria.html",
+    "en_excel": false
   },
   {
     "plato": "Tortitas de manzana y avena (3 ingredientes)",
@@ -3223,7 +3451,8 @@ const platosData = [
       "4 cdas copos de avena",
       "2 huevos"
     ],
-    "url_receta": "Recipes/Tortitas de manzana y avena (3 ingredientes).html"
+    "url_receta": "Recipes/Tortitas de manzana y avena (3 ingredientes).html",
+    "en_excel": false
   },
   {
     "plato": "Tortitas esponjosas",
@@ -3237,7 +3466,8 @@ const platosData = [
       "150 g harina",
       "1 cdta levadura"
     ],
-    "url_receta": "Recipes/Tortitas esponjosas.html"
+    "url_receta": "Recipes/Tortitas esponjosas.html",
+    "en_excel": false
   },
   {
     "plato": "Verduras horno atún queso rallado ¿?",
@@ -3250,7 +3480,8 @@ const platosData = [
       "Pimienta negra",
       "Aceite de oliva virgen extra"
     ],
-    "url_receta": "Recipes/Verduras horno atún queso rallado ¿.html"
+    "url_receta": "Recipes/Verduras horno atún queso rallado ¿.html",
+    "en_excel": false
   },
   {
     "plato": "Crema Champiñones",
@@ -3263,6 +3494,7 @@ const platosData = [
       "Caldo de verduras",
       "Nata"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Crema Champiñones.html"
   },
   {
@@ -3275,6 +3507,7 @@ const platosData = [
       "Zanahorias",
       "Nuez moscada"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Crema Verduras.html"
   },
   {
@@ -3285,6 +3518,7 @@ const platosData = [
       "Pimiento verde",
       "Pepino"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Gazpacho.html"
   },
   {
@@ -3297,6 +3531,7 @@ const platosData = [
       "Masa brisa",
       "Queso rallado"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Pastel de puerro y huevo.html"
   },
   {
@@ -3310,6 +3545,7 @@ const platosData = [
       "Perejil fresco",
       "Pan para freír"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Sopa de Coles con Sobrasada.html"
   },
   {
@@ -3325,6 +3561,7 @@ const platosData = [
       "Avecrem",
       "Pan del día anterior"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Sopa de espárragos y langostinos.html"
   },
   {
@@ -3343,6 +3580,7 @@ const platosData = [
       "Gambas",
       "Perejil"
     ],
+    "en_excel": true,
     "url_receta": "Recipes/Sopa de pescado (TM31).html"
   }
 ];
@@ -3409,7 +3647,7 @@ const recetasData = [
   },
   {
     "nombre": "Albóndigas Carmen",
-    "categoria": "Carnes, FINDESEMANA",
+    "categoria": "Carnes",
     "ingredientes_html": [
       "600 g carne picada (mezcla ternera/cerdo)",
       "1 huevo",
@@ -4254,7 +4492,7 @@ const recetasData = [
   },
   {
     "nombre": "Empanada pollo",
-    "categoria": "Platos especiales / internacionales",
+    "categoria": "Platos especiales, internacionales",
     "ingredientes_html": [
       "2 planchas de masa brisa o quebrada",
       "300 g pechuga de pollo",
@@ -4648,7 +4886,7 @@ const recetasData = [
   },
   {
     "nombre": "Falafel con salsa de yogur",
-    "categoria": "Platos especiales / internacionales",
+    "categoria": "Platos especiales, internacionales",
     "ingredientes_html": [
       "300 g de garbanzos secos",
       "1 cucharadita de comino",
@@ -4669,7 +4907,7 @@ const recetasData = [
   },
   {
     "nombre": "Fideos chinos",
-    "categoria": "Platos especiales / internacionales",
+    "categoria": "Platos especiales, internacionales",
     "ingredientes_html": [
       "200 g fideos chinos",
       "200 g pechuga de pollo",
@@ -4955,7 +5193,7 @@ const recetasData = [
   },
   {
     "nombre": "Lasaña o Musaka (carne, champiñón, espinaca, bechamel)",
-    "categoria": "FINDESEMANA, Pasta y arroces",
+    "categoria": "Pasta y arroces",
     "ingredientes_html": [
       "12 placas de lasaña precocida o láminas de berenjena (para musaka)",
       "400 g carne picada",
@@ -5573,7 +5811,7 @@ const recetasData = [
   },
   {
     "nombre": "Pechugas de Pollo",
-    "categoria": "Carnes, FINDESEMANA",
+    "categoria": "Carnes",
     "ingredientes_html": [
       "Filetes P.",
       "Ajos 4-6 dientes en laminas",
@@ -5757,7 +5995,7 @@ const recetasData = [
   },
   {
     "nombre": "Poke de salmón",
-    "categoria": "Platos especiales / internacionales",
+    "categoria": "Platos especiales, internacionales",
     "ingredientes_html": [
       "400 g salmón fresco en dados",
       "30 ml salsa de soja",
@@ -5823,7 +6061,7 @@ const recetasData = [
   },
   {
     "nombre": "Pollo butter chicken",
-    "categoria": "Platos especiales / internacionales",
+    "categoria": "Platos especiales, internacionales",
     "ingredientes_html": [
       "600 g pollo en trozos (3 pechugas)",
       "6 cdas ghee (o 40 g mantequilla)",
@@ -5860,7 +6098,7 @@ const recetasData = [
   },
   {
     "nombre": "Pollo coreano",
-    "categoria": "Platos especiales / internacionales",
+    "categoria": "Platos especiales, internacionales",
     "ingredientes_html": [
       "800 g pollo troceado",
       "50 ml salsa de soja",
@@ -5930,7 +6168,7 @@ const recetasData = [
   },
   {
     "nombre": "Quinoa con pollo, halloumi y verduras al horno ¿?",
-    "categoria": "Platos especiales / internacionales",
+    "categoria": "Platos especiales, internacionales",
     "ingredientes_html": [
       "180 g Quinoa",
       "350 g Pechuga de pollo (sazonada)",
@@ -6762,7 +7000,7 @@ const recetasData = [
   },
   {
     "nombre": "Wraps",
-    "categoria": "Platos especiales / internacionales",
+    "categoria": "Platos especiales, internacionales",
     "ingredientes_html": [
       "4 tortillas de trigo",
       "Relleno al gusto (pollo, verduras, atún…)"

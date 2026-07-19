@@ -20,6 +20,7 @@ const app = {
         this.loadCurrentWeekPlan();
         this.renderPlatos();
         this.renderRecetario();
+        this.renderXls();
         this.renderCompacta();
         this.setupEventListeners();
         
@@ -499,14 +500,16 @@ const app = {
         });
     },
 
-    renderPlatos(filter = '') {
-        const container = document.getElementById('platos-container');
+    renderDishList(containerId, filter = '', options = {}) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
         container.innerHTML = '';
         
         const f = filter.toLowerCase();
         
         const groups = {};
         platosData.forEach(p => {
+            if (options.onlyExcel && !p.en_excel) return;
             if (f && !p.plato.toLowerCase().includes(f) && !p.categoria.toLowerCase().includes(f)) return;
             if (!groups[p.categoria]) groups[p.categoria] = [];
             groups[p.categoria].push(p);
@@ -541,6 +544,14 @@ const app = {
             grp.appendChild(list);
             container.appendChild(grp);
         });
+    },
+
+    renderPlatos(filter = '') {
+        this.renderDishList('platos-container', filter);
+    },
+
+    renderXls(filter = '') {
+        this.renderDishList('xls-container', filter, { onlyExcel: true });
     },
 
     renderRecetario(filter = '') {
@@ -739,11 +750,6 @@ const app = {
         this.selectedPlato = null;
         document.getElementById('selected-plato-fab').classList.add('hidden');
         this.switchTab('view-platos');
-        const search = document.getElementById('search-platos');
-        if (search) {
-            search.focus();
-            search.select?.();
-        }
     },
 
     renderCompra(containerId = 'compra-container') {
@@ -899,6 +905,10 @@ const app = {
         const searchRecetas = document.getElementById('search-recetas');
         if (searchRecetas) {
             searchRecetas.oninput = (e) => this.renderRecetario(e.target.value);
+        }
+        const searchXls = document.getElementById('search-xls');
+        if (searchXls) {
+            searchXls.oninput = (e) => this.renderXls(e.target.value);
         }
         
         document.querySelectorAll('.nav-item').forEach(btn => {

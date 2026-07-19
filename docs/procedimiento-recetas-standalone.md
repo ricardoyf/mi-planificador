@@ -8,7 +8,7 @@ Mantener sincronizados tres niveles:
 
 - `Recipes/`: recetario completo exportado desde Paprika en HTML.
 - `base_platos_editable.xlsx`: capa operativa para planificar y generar lista de la compra.
-- Standalone local: un unico HTML con el planificador y todas las recetas incrustadas.
+- Standalone local: versiones sucesivas `standalone/v1`, `standalone/v2`, `standalone/v3`, etc., cada una con un unico HTML que incrusta el planificador y todas las recetas.
 
 ## Regla clave de ingredientes
 
@@ -41,14 +41,15 @@ python3 actualizar_datos.py
 ```
 
 7. Subir la version de cache en `index.html`.
-8. Generar un ZIP con un unico HTML standalone que incruste:
+8. Generar la siguiente version local en `standalone/vN/` con un unico HTML standalone que incruste:
    - `index.html`
    - `css/styles.css`
    - `js/data.js`
    - `js/app.js`
    - todos los HTML de `Recipes/`
-9. Verificar `js/app.js`, los ingredientes generados y el ZIP.
-10. Dejar los cambios locales preparados para GitHub. Subir solo cuando `gh` vuelva a estar autenticado.
+   Comando: `python3 scripts/build_standalone.py`.
+9. Verificar `js/app.js`, los ingredientes generados y el HTML standalone.
+10. Dejar los cambios locales preparados para GitHub. No subir los standalone pesados salvo peticion explicita de Ricardo.
 
 ## Ejemplos corregidos
 
