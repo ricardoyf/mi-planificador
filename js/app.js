@@ -1081,7 +1081,16 @@ const app = {
     },
 
     getCompraConteo() {
-        let conteo = {};
+        const items = this.getCompraItems();
+        const conteo = {};
+        Object.keys(items).forEach(ing => {
+            conteo[ing] = items[ing].count;
+        });
+        return conteo;
+    },
+
+    getCompraItems() {
+        let items = {};
         DIAS.forEach(dia => {
             TIPOS.forEach(tipo => {
                 SLOTS.forEach(slot => {
@@ -1099,14 +1108,38 @@ const app = {
                                 const override = overrides[canonical] || {};
                                 if (override.deleted) return;
                                 const finalText = this.canonicalCompraText(override.text || canonical);
-                                if (finalText) conteo[finalText] = (conteo[finalText] || 0) + 1;
+                                if (!finalText) return;
+                                if (!items[finalText]) {
+                                    items[finalText] = { count: 0, sources: new Set() };
+                                }
+                                items[finalText].count += 1;
+                                items[finalText].sources.add(pname);
                             });
                         }
                     }
                 });
             });
         });
-        return conteo;
+        Object.keys(items).forEach(key => {
+            items[key].sources = Array.from(items[key].sources);
+        });
+        return items;
+    },
+
+    abbreviateSource(name) {
+        const clean = String(name || '').replace(/\s+/g, ' ').trim();
+        if (clean.length <= 18) return clean;
+        const stop = new Set(['de', 'del', 'la', 'el', 'los', 'las', 'con', 'y', 'en', 'al', 'a']);
+        const words = clean.split(' ').filter(w => w && !stop.has(w.toLowerCase()));
+        if (words.length <= 2) return clean.slice(0, 20).trim();
+        return `${words[0]} ${words.slice(1, 4).map(w => w[0].toUpperCase()).join(' ')}`;
+    },
+
+    compraSourceText(sources) {
+        const unique = Array.from(new Set(sources || [])).filter(Boolean);
+        if (!unique.length) return '';
+        if (unique.length === 1) return unique[0];
+        return unique.map(s => this.abbreviateSource(s)).join(' + ');
     },
 
     buildCompactaYCompraText() {
@@ -1267,9 +1300,9 @@ const app = {
         if(!container) return;
         container.innerHTML = '';
         
-        let conteo = this.getCompraConteo();
+        let compraItems = this.getCompraItems();
         
-        const keys = Object.keys(conteo).sort();
+        const keys = Object.keys(compraItems).sort();
         if (keys.length === 0) {
             container.innerHTML = '<div style="color:#555; text-align:center; padding:20px;">Aún no hay ingredientes cargados o seleccionados en tu planificador.</div>';
             return;
@@ -1281,6 +1314,8 @@ const app = {
         keys.forEach(ing => {
             const id = this.getCompraItemId(ing);
             const checked = !!(this.compraChecked && this.compraChecked[id]);
+            const item = compraItems[ing];
+            const sourceText = this.compraSourceText(item.sources);
             const li = document.createElement('li');
             li.className = `shopping-item${checked ? ' checked' : ''}`;
 
@@ -1296,14 +1331,26 @@ const app = {
             text.className = 'shopping-item-text';
             text.textContent = ing;
 
+            const main = document.createElement('span');
+            main.className = 'shopping-item-main';
+            main.appendChild(text);
+
+            if (sourceText) {
+                const source = document.createElement('span');
+                source.className = 'shopping-item-source';
+                source.textContent = sourceText;
+                source.title = item.sources.join(' · ');
+                main.appendChild(source);
+            }
+
             label.appendChild(checkbox);
-            label.appendChild(text);
+            label.appendChild(main);
             li.appendChild(label);
 
-            if (conteo[ing] > 1) {
+            if (item.count > 1) {
                 const extra = document.createElement('span');
                 extra.className = 'shopping-count';
-                extra.textContent = `x${conteo[ing]}`;
+                extra.textContent = `x${item.count}`;
                 li.appendChild(extra);
             }
 

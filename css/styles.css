@@ -938,9 +938,33 @@ main {
     line-height: 1.25;
 }
 
+.shopping-item-main {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.shopping-item-source {
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    color: var(--text-sec);
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.05;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .shopping-item.checked .shopping-item-text {
     color: var(--text-sec);
     text-decoration: line-through;
+}
+
+.shopping-item.checked .shopping-item-source {
+    color: var(--text-sec);
 }
 
 .shopping-count {
