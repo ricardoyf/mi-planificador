@@ -19,16 +19,13 @@
                 <button id="menu-btn" class="icon-btn" type="button" aria-label="Menú">⋮</button>
                 <div id="dropdown-menu" class="dropdown hidden">
                     <button class="menu-item" onclick="app.copyCompactaYCompra()">Copiar plan + compra<span>Texto listo para email o WhatsApp</span></button>
-                    <button class="menu-item" onclick="app.savePlanAsJson()">Exportar plan semanal<span>JSON de la semana actual</span></button>
-                    <button class="menu-item" onclick="app.loadJsonFile()">Importar plan semanal<span>Elegir archivo JSON</span></button>
-                    <button class="menu-item" onclick="app.action('load', 'par')">Cargar PAR<span>Plan guardado localmente</span></button>
-                    <button class="menu-item" onclick="app.action('load', 'impar')">Cargar IMPAR<span>Plan guardado localmente</span></button>
-                    <button class="menu-item" onclick="app.action('save', 'par')">Guardar como PAR<span>Persistencia local</span></button>
-                    <button class="menu-item" onclick="app.action('save', 'impar')">Guardar como IMPAR<span>Persistencia local</span></button>
-                    <button class="menu-item" onclick="app.clearCurrentWeek()">Borrar semana<span>Vacía la semana visible</span></button>
-                    <button class="menu-item" onclick="app.exportHTML()">Exportar HTML<span>Plan semanal imprimible</span></button>
-                    <button class="menu-item" onclick="app.exportStandaloneHTML()">Exportar standalone<span>HTML completo con recetas incrustadas</span></button>
-                    <input type="file" id="json-file-input" accept="application/json,.json" style="display:none">
+                    <button class="menu-item" onclick="app.savePlanAsJson()">Exportar plan semanal<span>JSON de la semana actual para compartir</span></button>
+                    <button class="menu-item" onclick="app.exportRecipesJson()">Exportar recetario<span>JSON completo de recetas y ListaCompra</span></button>
+                    <button class="menu-item" onclick="app.chooseImportFile('week')">Importar plan semanal<span>Elegir archivo JSON</span></button>
+                    <button class="menu-item" onclick="app.chooseImportFile('recipes')">Importar recetario<span>Elegir archivo JSON</span></button>
+                    <button class="menu-item" onclick="app.chooseImportFile('html')">Importar receta HTML Paprika<span>Elegir archivo HTML exportado</span></button>
+                    <button class="menu-item" onclick="app.chooseImportFile('txt')">Importar receta TXT Paprika<span>Elegir texto copiado/exportado</span></button>
+                    <input type="file" id="json-file-input" accept=".json,.html,.htm,.txt,application/json,text/html,text/plain" style="display:none">
                 </div>
             </div>
         </div>
@@ -72,7 +69,7 @@
         <button class="nav-item" data-target="view-recetario"><span class="nav-ico nav-ico-rec"></span>Recetario</button>
     </nav>
 
-    <script src="js/data.js?v=20260725b"></script>
-    <script src="js/app.js?v=20260725b"></script>
+    <script src="js/data.js?v=20260725c"></script>
+    <script src="js/app.js?v=20260725c"></script>
 </body>
 </html>

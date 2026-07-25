@@ -16,6 +16,7 @@ const app = {
     compraChecked: {},
     slotAction: null,
     shoppingAction: null,
+    importMode: 'week',
     
     init() {
         this.setupWeekOptions();
@@ -327,7 +328,7 @@ const app = {
 
     getVisibleDishRows(options = {}) {
         const byName = new Map();
-        platosData.forEach(p => {
+        this.getAllPlatos().forEach(p => {
             if (options.onlyExcel && !p.en_excel) return;
             if (!options.onlyExcel && this.isHiddenRecipe(p) && !p.en_excel) return;
             const key = this.normalizeMatchText(p.plato);
@@ -337,6 +338,23 @@ const app = {
             }
         });
         return Array.from(byName.values());
+    },
+
+    getLocalPlatos() {
+        try {
+            const parsed = JSON.parse(localStorage.getItem('pcv84_local_platos') || '[]');
+            return Array.isArray(parsed) ? parsed : [];
+        } catch (_e) {
+            return [];
+        }
+    },
+
+    setLocalPlatos(platos) {
+        localStorage.setItem('pcv84_local_platos', JSON.stringify(platos || []));
+    },
+
+    getAllPlatos() {
+        return (platosData || []).concat(this.getLocalPlatos());
     },
 
     getCompraItemId(ingrediente) {
@@ -422,6 +440,11 @@ const app = {
     },
 
     loadJsonFile() {
+        this.chooseImportFile('week');
+    },
+
+    chooseImportFile(mode = 'week') {
+        this.importMode = mode;
         const input = document.getElementById('json-file-input');
         if (!input) return;
         input.value = '';
@@ -429,29 +452,130 @@ const app = {
         document.getElementById('dropdown-menu').classList.add('hidden');
     },
 
+    exportRecipesJson() {
+        const payload = {
+            version: 'v8.4-web',
+            exportedAt: new Date().toISOString(),
+            platosData: this.getAllPlatos(),
+            recetasData: recetasData || []
+        };
+        this.downloadJson('recetario_plancomidas_v8_4.json', payload);
+        document.getElementById('dropdown-menu').classList.add('hidden');
+    },
+
+    importSelectedFile(file) {
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = () => {
+            const text = String(reader.result || '');
+            if (this.importMode === 'recipes') {
+                this.importRecipesJson(text);
+            } else if (this.importMode === 'html') {
+                this.importRecipeHtmlText(text, file.name);
+            } else if (this.importMode === 'txt') {
+                this.importRecipePlainText(text, file.name);
+            } else {
+                this.importJsonText(text);
+            }
+        };
+        reader.readAsText(file);
+    },
+
     importJsonFile(file) {
         if (!file) return;
         const reader = new FileReader();
         reader.onload = () => {
-            try {
-                const parsed = JSON.parse(reader.result);
-                if (!parsed['lunes'] || !parsed['lunes']['comida']) throw new Error('Estructura no válida');
-                const importedCompra = parsed._compra && parsed._compra.checked ? parsed._compra.checked : {};
-                this.plan = parsed;
-                delete this.plan._meta;
-                delete this.plan._compra;
-                this.compraChecked = importedCompra;
-                this.autosaveCurrentWeek();
-                this.autosaveCompraState();
-                this.renderPlanificador();
-                this.renderCompacta();
-                alert('JSON cargado correctamente');
-            } catch (e) {
-                alert('No se pudo cargar el JSON');
-                console.error(e);
-            }
+            this.importJsonText(String(reader.result || ''));
         };
         reader.readAsText(file);
+    },
+
+    importJsonText(text) {
+        try {
+            const parsed = JSON.parse(text);
+            if (!parsed['lunes'] || !parsed['lunes']['comida']) throw new Error('Estructura no válida');
+            const importedCompra = parsed._compra && parsed._compra.checked ? parsed._compra.checked : {};
+            this.plan = parsed;
+            delete this.plan._meta;
+            delete this.plan._compra;
+            this.compraChecked = importedCompra;
+            this.autosaveCurrentWeek();
+            this.autosaveCompraState();
+            this.renderPlanificador();
+            this.renderCompacta();
+            alert('JSON cargado correctamente');
+        } catch (e) {
+            alert('No se pudo cargar el JSON');
+            console.error(e);
+        }
+    },
+
+    importRecipesJson(text) {
+        try {
+            const parsed = JSON.parse(text);
+            const imported = parsed.platosData || parsed.platos || [];
+            if (!Array.isArray(imported)) throw new Error('Recetario no válido');
+            const local = this.getLocalPlatos();
+            const byName = new Map(local.map(p => [this.normalizeMatchText(p.plato), p]));
+            imported.forEach(p => {
+                if (!p || !p.plato) return;
+                const shopping = Array.isArray(p.ingredientes) && p.ingredientes.length ? p.ingredientes :
+                    Array.isArray(p.listaCompra) && p.listaCompra.length ? p.listaCompra :
+                    Array.isArray(p.shoppingIngredients) ? p.shoppingIngredients : [];
+                byName.set(this.normalizeMatchText(p.plato), {
+                    plato: p.plato,
+                    categoria: p.categoria || 'Sin categoría',
+                    ingredientes: shopping,
+                    url_receta: p.url_receta || '',
+                    oculta_recetario: !!p.oculta_recetario,
+                    en_excel: !!p.en_excel || shopping.length > 0
+                });
+            });
+            this.setLocalPlatos(Array.from(byName.values()));
+            this.renderRecetario();
+            this.renderCompacta();
+            alert('Recetario importado en este navegador.');
+        } catch (e) {
+            alert('No se pudo importar el recetario.');
+            console.error(e);
+        }
+    },
+
+    importRecipeHtmlText(text, filename = 'receta.html') {
+        const doc = new DOMParser().parseFromString(text, 'text/html');
+        const name = doc.querySelector('.name, [itemprop="name"], h1')?.textContent?.trim() || filename.replace(/\.(html?|txt)$/i, '');
+        const category = doc.querySelector('.categories, [itemprop="recipeCategory"]')?.textContent?.trim() || 'Sin categoría';
+        const ingredients = Array.from(doc.querySelectorAll('[itemprop="recipeIngredient"], .ingredients .line'))
+            .map(el => el.textContent.trim())
+            .filter(Boolean);
+        this.addLocalRecipePlate({ plato: name, categoria: category, ingredientes, en_excel: false });
+        alert('Receta HTML importada en este navegador.');
+    },
+
+    importRecipePlainText(text, filename = 'receta.txt') {
+        const lines = String(text || '').split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+        const name = lines[0] || filename.replace(/\.(html?|txt)$/i, '');
+        const ingStart = lines.findIndex(l => /^ingredientes:?$/i.test(l));
+        const nextSection = ingStart >= 0 ? lines.findIndex((l, i) => i > ingStart && /^(instrucciones|preparaci[oó]n|notas):?$/i.test(l)) : -1;
+        const ingredients = ingStart >= 0
+            ? lines.slice(ingStart + 1, nextSection > ingStart ? nextSection : undefined)
+            : [];
+        this.addLocalRecipePlate({ plato: name, categoria: 'Sin categoría', ingredientes, en_excel: false });
+        alert('Receta TXT importada en este navegador.');
+    },
+
+    addLocalRecipePlate(plate) {
+        const local = this.getLocalPlatos();
+        const key = this.normalizeMatchText(plate.plato);
+        const next = local.filter(p => this.normalizeMatchText(p.plato) !== key);
+        next.push({
+            ...plate,
+            oculta_recetario: this.isHiddenRecipe(plate),
+            local_import: true
+        });
+        this.setLocalPlatos(next);
+        this.renderRecetario();
+        this.renderCompacta();
     },
 
     renderPlanificador() {
@@ -626,7 +750,6 @@ const app = {
         const f = this.normalizeMatchText(filter);
         const groups = {};
         this.getVisibleDishRows().forEach(p => {
-            if (!p.url_receta) return;
             const cat = this.displayCategory(p);
             if (f && !this.normalizeMatchText(p.plato).includes(f) && !this.normalizeMatchText(cat).includes(f)) return;
             if (!groups[cat]) groups[cat] = [];
@@ -692,7 +815,7 @@ const app = {
     },
 
     findRecipeUrlForDish(name) {
-        const exactPlate = platosData.find(p => p.plato === name && p.url_receta);
+        const exactPlate = this.getAllPlatos().find(p => p.plato === name && p.url_receta);
         if (exactPlate) return exactPlate.url_receta;
 
         const nameNorm = this.normalizeMatchText(name);
@@ -907,8 +1030,9 @@ const app = {
                     const pname = this.plan[dia] && this.plan[dia][tipo] && this.plan[dia][tipo][slot];
                     if (pname) {
                         const pnameNorm = this.normalizeMatchText(pname);
-                        const matchedData = platosData.find(p => p.plato === pname && p.en_excel) ||
-                            platosData.find(p => p.en_excel && this.normalizeMatchText(p.plato) === pnameNorm);
+                        const allPlatos = this.getAllPlatos();
+                        const matchedData = allPlatos.find(p => p.plato === pname && p.en_excel) ||
+                            allPlatos.find(p => p.en_excel && this.normalizeMatchText(p.plato) === pnameNorm);
                         if (matchedData && matchedData.ingredientes) {
                             matchedData.ingredientes.forEach(ing => {
                                 const canonical = this.canonicalCompraText(ing);
@@ -1519,7 +1643,7 @@ ${this.escapeInlineScript(bootstrap)}
         if (jsonInput) {
             jsonInput.addEventListener('change', (e) => {
                 const file = e.target.files && e.target.files[0];
-                this.importJsonFile(file);
+                this.importSelectedFile(file);
             });
         }
 
