@@ -43,7 +43,7 @@ def main():
     version = f"v{version_num}"
 
     html = re.sub(
-        r'\s*<link rel="stylesheet" href="css/styles.css">\s*',
+        r'\s*<link rel="stylesheet" href="css/styles.css(?:\?v=[^"]+)?">\s*',
         lambda _m: f"\n    <style>\n{css}\n    </style>\n",
         index,
     )
