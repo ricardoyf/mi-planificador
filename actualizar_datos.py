@@ -140,6 +140,17 @@ def find_recipe_url_for_canonical(canonical_recipe, recetas):
     return exact_name['url'] if exact_name else None
 
 
+def load_plancomidas_v84_history():
+    weeks_path = PLANCOMIDAS_SEED_DIR / 'v5_weeks.json'
+    slots_path = PLANCOMIDAS_SEED_DIR / 'v5_meal_slots.json'
+    if not weeks_path.exists() or not slots_path.exists():
+        return {'weeks': [], 'slots': []}
+    return {
+        'weeks': json.loads(weeks_path.read_text(encoding='utf-8')),
+        'slots': json.loads(slots_path.read_text(encoding='utf-8')),
+    }
+
+
 def token_set(value):
     stopwords = {'de', 'del', 'la', 'el', 'los', 'las', 'con', 'y', 'en', 'al', 'a', 'o', 'estilo'}
     return {t for t in normalize_text(value).split() if t and t not in stopwords}
@@ -301,8 +312,10 @@ def main():
             
     # Write to data.js
     DATA_JS.parent.mkdir(exist_ok=True)
+    plan_history = load_plancomidas_v84_history()
     js_content = f"const platosData = {json.dumps(platos, ensure_ascii=False, indent=2)};\n"
     js_content += f"const recetasData = {json.dumps(recetas, ensure_ascii=False, indent=2)};\n"
+    js_content += f"const planHistoryData = {json.dumps(plan_history, ensure_ascii=False, indent=2)};\n"
     
     DATA_JS.write_text(js_content, encoding='utf-8')
     print(f"✅ Se han exportado {len(platos)} elementos combinados (Excel + Paprika).")

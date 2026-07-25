@@ -46,6 +46,14 @@ const app = {
         this.currentWeekKey = this.buildWeekOptionFromMonday(baseMonday).key;
     },
 
+    getHistoryWeeks() {
+        return (typeof planHistoryData !== 'undefined' && Array.isArray(planHistoryData.weeks)) ? planHistoryData.weeks : [];
+    },
+
+    getHistorySlots() {
+        return (typeof planHistoryData !== 'undefined' && Array.isArray(planHistoryData.slots)) ? planHistoryData.slots : [];
+    },
+
     getMondayForDate(dateInput) {
         const date = new Date(dateInput);
         date.setHours(0,0,0,0);
@@ -63,10 +71,12 @@ const app = {
 
     rebuildWeekOptionsAround(centerMondayInput) {
         const centerMonday = this.getMondayForDate(centerMondayInput);
-        this.weekOptions = Array.from({ length: 53 }, (_, offset) => {
+        const generated = Array.from({ length: 53 }, (_, offset) => {
             const delta = offset - 26;
             return this.buildWeekOptionFromMonday(this.addDays(centerMonday, delta * 7));
         });
+        const historic = this.getHistoryWeeks().map(w => this.buildWeekOptionFromHistoryWeek(w));
+        this.weekOptions = this.mergeWeekOptions(generated.concat(historic));
     },
 
     ensureWeekOptionForMonday(mondayInput) {
@@ -99,6 +109,29 @@ const app = {
         };
     },
 
+    buildWeekOptionFromHistoryWeek(week) {
+        const monday = this.getMondayForDate(`${week.mondayDate}T12:00:00`);
+        const option = this.buildWeekOptionFromMonday(monday);
+        return {
+            ...option,
+            label: `Semana ${week.label || option.summary}`,
+            historyWeekId: week.id || week.mondayDate,
+            mondayDate: week.mondayDate,
+            sundayDate: week.sundayDate
+        };
+    },
+
+    mergeWeekOptions(options) {
+        const byKey = new Map();
+        options.forEach(option => {
+            const existing = byKey.get(option.key);
+            if (!existing || option.historyWeekId) {
+                byKey.set(option.key, option);
+            }
+        });
+        return Array.from(byKey.values()).sort((a, b) => a.monday - b.monday);
+    },
+
     parseWeekKey(key) {
         const match = /^plan(\d{2})_(\d{2})-(\d{2})_(\d{2})$/.exec(key || '');
         if (!match) return null;
@@ -129,6 +162,31 @@ const app = {
 
     getStorageKeyForWeek(key = this.currentWeekKey) {
         return `${this.storagePrefix}${key}`;
+    },
+
+    getSeedPlanForWeek(key = this.currentWeekKey) {
+        const option = this.getWeekOption(key);
+        if (!option || !option.historyWeekId) return null;
+        const plan = this.getEmptyPlan();
+        let hasData = false;
+        this.getHistorySlots()
+            .filter(slot => slot.weekId === option.historyWeekId)
+            .forEach(slot => {
+                const dayIndex = Number.isInteger(slot.dayIndex) ? slot.dayIndex : DIAS.indexOf(this.dayKeyForDate(slot.date));
+                const dia = DIAS[dayIndex];
+                const tipo = slot.mealType;
+                if (!dia || !plan[dia] || !plan[dia][tipo]) return;
+                plan[dia][tipo].primero = slot.firstText || '';
+                plan[dia][tipo].segundo = slot.secondText || '';
+                if (slot.firstText || slot.secondText) hasData = true;
+            });
+        return hasData ? plan : null;
+    },
+
+    dayKeyForDate(dateText) {
+        const d = new Date(`${dateText}T12:00:00`);
+        const index = d.getDay() === 0 ? 6 : d.getDay() - 1;
+        return DIAS[index];
     },
 
     getCompraStorageKeyForWeek(key = this.currentWeekKey) {
@@ -231,7 +289,7 @@ const app = {
                     if (!this.plan['lunes'] || !this.plan['lunes']['comida']) throw new Error('Estructura corrupta');
                     this.autosaveCurrentWeek();
                 } else {
-                    this.plan = this.getEmptyPlan();
+                    this.plan = this.getSeedPlanForWeek() || this.getEmptyPlan();
                 }
             }
         } catch (e) {
