@@ -7,6 +7,7 @@ import subprocess
 import html
 import os
 import datetime
+import unicodedata
 
 BASE = Path(__file__).resolve().parent
 LEGACY_EXCEL_PATH = BASE / 'platos_ingredientes.xlsx'
@@ -21,6 +22,23 @@ DIAS = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'
 TIPOS = ['comida', 'cena']
 SLOTS = ['primero', 'segundo']
 COLUMNAS_EXCEL = ['plato', 'categoria', 'ingrediente_1', 'ingrediente_2', 'ingrediente_3', 'ingrediente_4', 'ingrediente_5', 'ingrediente_6', 'ingrediente_7', 'ingrediente_8', 'ingrediente_9', 'ingrediente_10', 'ingrediente_11', 'ingrediente_12']
+COMPRA_CANONICAL_MAP = {
+    'berenjenas': 'Berenjena',
+    'patatas': 'Patata',
+    'puerros': 'Puerro',
+    'tomates': 'Tomate',
+    'zanahorias': 'Zanahoria',
+}
+
+
+def normalizar_texto_compra(texto):
+    limpio = str(texto or '').strip()
+    key = ''.join(
+        c for c in unicodedata.normalize('NFD', limpio.lower())
+        if unicodedata.category(c) != 'Mn'
+    )
+    key = ' '.join(key.split())
+    return COMPRA_CANONICAL_MAP.get(key, limpio)
 
 
 class PlanificadorComidas:
@@ -499,7 +517,9 @@ class PlanificadorComidas:
                         ingredientes_totales.extend(info['ingredientes'])
         conteo = {}
         for ing in ingredientes_totales:
-            conteo[ing] = conteo.get(ing, 0) + 1
+            canonico = normalizar_texto_compra(ing)
+            if canonico:
+                conteo[canonico] = conteo.get(canonico, 0) + 1
         return conteo
 
     def refrescar_resumen(self):

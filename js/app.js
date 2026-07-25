@@ -11,9 +11,11 @@ const app = {
     currentWeekKey: null,
     storagePrefix: 'plan_week_',
     compraStoragePrefix: 'compra_week_',
+    compraOverridesPrefix: 'compra_overrides_week_',
     currentWeekStorageKey: 'plan_current_week',
     compraChecked: {},
     slotAction: null,
+    shoppingAction: null,
     
     init() {
         this.setupWeekOptions();
@@ -262,6 +264,22 @@ const app = {
         localStorage.setItem(this.getCompraStorageKeyForWeek(), JSON.stringify(this.compraChecked || {}));
     },
 
+    getCompraOverridesKeyForWeek() {
+        return `${this.compraOverridesPrefix}${this.getWeekFileBase()}`;
+    },
+
+    getCompraOverrides() {
+        try {
+            return JSON.parse(localStorage.getItem(this.getCompraOverridesKeyForWeek()) || '{}');
+        } catch (_e) {
+            return {};
+        }
+    },
+
+    setCompraOverrides(overrides) {
+        localStorage.setItem(this.getCompraOverridesKeyForWeek(), JSON.stringify(overrides || {}));
+    },
+
     normalizeCompraKey(text) {
         return String(text || '')
             .normalize('NFD')
@@ -269,6 +287,56 @@ const app = {
             .toLowerCase()
             .replace(/[^a-z0-9]+/g, '-')
             .replace(/^-+|-+$/g, '') || 'ingrediente';
+    },
+
+    hiddenRecipeCategoryKeys: new Set(['macu', 'findesemana', 'fin-de-semana', 'finde-semana']),
+
+    compraCanonicalMap: {
+        berenjenas: 'Berenjena',
+        patatas: 'Patata',
+        puerros: 'Puerro',
+        tomates: 'Tomate',
+        zanahorias: 'Zanahoria'
+    },
+
+    categoryParts(item) {
+        return String(item && item.categoria ? item.categoria : '')
+            .split(',')
+            .map(c => c.trim())
+            .filter(Boolean);
+    },
+
+    visibleCategoryParts(item) {
+        return this.categoryParts(item).filter(cat => !this.hiddenRecipeCategoryKeys.has(this.normalizeCompraKey(cat)));
+    },
+
+    isHiddenRecipe(item) {
+        return !!(item && item.oculta_recetario) || this.visibleCategoryParts(item).length === 0;
+    },
+
+    displayCategory(item) {
+        return this.visibleCategoryParts(item).join(', ') || 'Sin categoría';
+    },
+
+    canonicalCompraText(text) {
+        const clean = String(text || '').replace(/\s+/g, ' ').trim();
+        if (!clean) return '';
+        const key = this.normalizeMatchText(clean).replace(/\s+/g, ' ');
+        return this.compraCanonicalMap[key] || clean;
+    },
+
+    getVisibleDishRows(options = {}) {
+        const byName = new Map();
+        platosData.forEach(p => {
+            if (options.onlyExcel && !p.en_excel) return;
+            if (!options.onlyExcel && this.isHiddenRecipe(p) && !p.en_excel) return;
+            const key = this.normalizeMatchText(p.plato);
+            const existing = byName.get(key);
+            if (!existing || (p.en_excel && !existing.en_excel) || (p.url_receta && !existing.url_receta)) {
+                byName.set(key, p);
+            }
+        });
+        return Array.from(byName.values());
     },
 
     getCompraItemId(ingrediente) {
@@ -388,6 +456,7 @@ const app = {
 
     renderPlanificador() {
         const container = document.getElementById('days-container');
+        if (!container) return;
         container.innerHTML = '';
         
         DIAS.forEach((dia, idx) => {
@@ -501,14 +570,14 @@ const app = {
         if (!container) return;
         container.innerHTML = '';
         
-        const f = filter.toLowerCase();
+        const f = this.normalizeMatchText(filter);
         
         const groups = {};
-        platosData.forEach(p => {
-            if (options.onlyExcel && !p.en_excel) return;
-            if (f && !p.plato.toLowerCase().includes(f) && !p.categoria.toLowerCase().includes(f)) return;
-            if (!groups[p.categoria]) groups[p.categoria] = [];
-            groups[p.categoria].push(p);
+        this.getVisibleDishRows(options).forEach(p => {
+            const cat = this.displayCategory(p);
+            if (f && !this.normalizeMatchText(p.plato).includes(f) && !this.normalizeMatchText(cat).includes(f)) return;
+            if (!groups[cat]) groups[cat] = [];
+            groups[cat].push(p);
         });
         
         Object.keys(groups).sort().forEach(cat => {
@@ -554,12 +623,14 @@ const app = {
         const container = document.getElementById('recetas-container');
         if (!container) return;
         container.innerHTML = '';
-        const f = filter.toLowerCase();
+        const f = this.normalizeMatchText(filter);
         const groups = {};
-        platosData.forEach(p => {
-            if (f && !p.plato.toLowerCase().includes(f) && !p.categoria.toLowerCase().includes(f)) return;
-            if (!groups[p.categoria]) groups[p.categoria] = [];
-            groups[p.categoria].push(p);
+        this.getVisibleDishRows().forEach(p => {
+            if (!p.url_receta) return;
+            const cat = this.displayCategory(p);
+            if (f && !this.normalizeMatchText(p.plato).includes(f) && !this.normalizeMatchText(cat).includes(f)) return;
+            if (!groups[cat]) groups[cat] = [];
+            groups[cat].push(p);
         });
 
         Object.keys(groups).sort().forEach(cat => {
@@ -675,10 +746,7 @@ const app = {
         if (!this.slotAction) return;
         const { dia, tipo, slot } = this.slotAction;
         this.closeSlotActions();
-        this.pendingSlot = { dia, tipo, slot };
-        this.selectedPlato = null;
-        document.getElementById('selected-plato-fab').classList.add('hidden');
-        this.switchTab('view-platos');
+        this.openDishChooser(dia, tipo, slot);
     },
 
     viewSlotRecipe() {
@@ -762,6 +830,65 @@ const app = {
     },
 
     renderCompacta() {
+        const view = document.getElementById('view-compacta');
+        if (!view) return;
+        const current = this.getWeekOption();
+        const weekOptions = this.weekOptions.map(w => `<option value="${this.escapeHtml(w.key)}" ${w.key === this.getWeekFileBase() ? 'selected' : ''}>${this.escapeHtml(w.label)}</option>`).join('');
+        const dayCards = DIAS.map((dia, idx) => {
+            const comida = this.renderCompactaMeal(dia, 'comida', 'Comida');
+            const cena = this.renderCompactaMeal(dia, 'cena', 'Cena');
+            return `<article class="day">
+                <div class="day-head">${this.escapeHtml(this.getCompactaDayLabel(dia, idx))}</div>
+                ${comida}
+                ${cena}
+            </article>`;
+        }).join('');
+        view.innerHTML = `
+            <div class="week-nav">
+                <button class="btn secondary" type="button" onclick="app.moveWeek(-1)">‹</button>
+                <select id="week-select">${weekOptions}</select>
+                <button class="btn secondary" type="button" onclick="app.moveWeek(1)">›</button>
+            </div>
+            <div class="week-grid">${dayCards}</div>
+            <section class="panel">
+                <div class="panel-title">Lista de la compra de la semana</div>
+                <div id="compacta-compra-container"></div>
+            </section>
+        `;
+        const weekSelect = document.getElementById('week-select');
+        if (weekSelect) {
+            weekSelect.addEventListener('change', (e) => {
+                this.autosaveCurrentWeek();
+                this.currentWeekKey = e.target.value;
+                const option = this.getWeekOption(this.currentWeekKey);
+                if (option) this.rebuildWeekOptionsAround(option.monday);
+                this.loadCurrentWeekPlan();
+            });
+        }
+        const weekSummary = document.getElementById('week-summary');
+        if (weekSummary) weekSummary.textContent = current.label;
+        this.renderCompra('compacta-compra-container');
+    },
+
+    getCompactaDayLabel(dia, idx) {
+        const initial = idx === 2 ? 'X' : DIAS_LABEL[idx][0];
+        return `${initial} ${this.getDayDateLabel(dia)}`;
+    },
+
+    renderCompactaMeal(dia, tipo, label) {
+        const primero = this.renderCompactaSlot(dia, tipo, 'primero', 'Primer plato');
+        const segundo = this.renderCompactaSlot(dia, tipo, 'segundo', 'Segundo plato');
+        return `<div class="meal"><div class="meal-label">${label}</div>${primero}${segundo}</div>`;
+    },
+
+    renderCompactaSlot(dia, tipo, slot, label) {
+        const text = this.plan[dia]?.[tipo]?.[slot] || '';
+        return `<button class="slot ${text ? '' : 'empty'}" type="button" onclick="app.assignSlot('${dia}','${tipo}','${slot}')">
+            <small>${this.escapeHtml(label)}</small>${this.escapeHtml(text || 'Tocar para elegir')}
+        </button>`;
+    },
+
+    renderLegacyCompacta() {
         const container = document.getElementById('compacta-container');
         const weekLabel = document.getElementById('compacta-week-label');
         if (!container) return;
@@ -779,10 +906,18 @@ const app = {
                 SLOTS.forEach(slot => {
                     const pname = this.plan[dia] && this.plan[dia][tipo] && this.plan[dia][tipo][slot];
                     if (pname) {
-                        const matchedData = platosData.find(p => p.plato === pname);
+                        const pnameNorm = this.normalizeMatchText(pname);
+                        const matchedData = platosData.find(p => p.plato === pname && p.en_excel) ||
+                            platosData.find(p => p.en_excel && this.normalizeMatchText(p.plato) === pnameNorm);
                         if (matchedData && matchedData.ingredientes) {
                             matchedData.ingredientes.forEach(ing => {
-                                if (ing) conteo[ing] = (conteo[ing] || 0) + 1;
+                                const canonical = this.canonicalCompraText(ing);
+                                if (!canonical) return;
+                                const overrides = this.getCompraOverrides();
+                                const override = overrides[canonical] || {};
+                                if (override.deleted) return;
+                                const finalText = this.canonicalCompraText(override.text || canonical);
+                                if (finalText) conteo[finalText] = (conteo[finalText] || 0) + 1;
                             });
                         }
                     }
@@ -829,8 +964,9 @@ const app = {
 
     selectPlato(name) {
         this.selectedPlato = name;
-        document.getElementById('selected-plato-name').textContent = name;
-        document.getElementById('selected-plato-fab').classList.remove('hidden');
+        const selectedName = document.getElementById('selected-plato-name');
+        if (selectedName) selectedName.textContent = name;
+        document.getElementById('selected-plato-fab')?.classList.remove('hidden');
 
         if (this.pendingSlot) {
             const { dia, tipo, slot } = this.pendingSlot;
@@ -839,7 +975,7 @@ const app = {
             this.plan[dia][tipo][slot] = name;
             this.pendingSlot = null;
             this.selectedPlato = null;
-            document.getElementById('selected-plato-fab').classList.add('hidden');
+            document.getElementById('selected-plato-fab')?.classList.add('hidden');
             this.autosaveCurrentWeek();
             this.renderPlanificador();
             this.renderCompacta();
@@ -851,7 +987,7 @@ const app = {
     clearSelection() {
         this.selectedPlato = null;
         this.pendingSlot = null;
-        document.getElementById('selected-plato-fab').classList.add('hidden');
+        document.getElementById('selected-plato-fab')?.classList.add('hidden');
     },
 
     setSlotPlato(dia, tipo, slot, name) {
@@ -860,11 +996,12 @@ const app = {
         this.plan[dia][tipo][slot] = name;
         this.pendingSlot = null;
         this.selectedPlato = null;
-        document.getElementById('selected-plato-fab').classList.add('hidden');
+        document.getElementById('selected-plato-fab')?.classList.add('hidden');
         this.autosaveCurrentWeek();
         this.renderPlanificador();
         this.renderCompacta();
-        this.switchTab('view-planificador');
+        this.closeSlotModal();
+        this.switchTab('view-compacta');
     },
 
     assignSlot(dia, tipo, slot) {
@@ -879,10 +1016,68 @@ const app = {
             return;
         }
 
+        this.openDishChooser(dia, tipo, slot);
+    },
+
+    openDishChooser(dia, tipo, slot) {
         this.pendingSlot = { dia, tipo, slot };
-        this.selectedPlato = null;
-        document.getElementById('selected-plato-fab').classList.add('hidden');
-        this.switchTab('view-platos');
+        const currentDish = this.plan[dia]?.[tipo]?.[slot] || '';
+        const title = document.getElementById('slot-title');
+        const modal = document.getElementById('slot-modal');
+        const search = document.getElementById('dish-search');
+        if (!modal || !search) return;
+        if (title) title.textContent = currentDish || 'Elegir plato';
+        search.value = '';
+        modal.classList.add('active');
+        if (currentDish) {
+            this.drawSlotActions(dia, tipo, slot, currentDish);
+        } else {
+            this.drawDishResults('');
+            setTimeout(() => search.focus(), 80);
+        }
+    },
+
+    closeSlotModal() {
+        document.getElementById('slot-modal')?.classList.remove('active');
+    },
+
+    drawSlotActions(dia, tipo, slot, dish) {
+        const results = document.getElementById('dish-results');
+        if (!results) return;
+        const recipePath = this.findRecipeUrlForDish(dish);
+        const dishArg = encodeURIComponent(dish);
+        results.innerHTML = `
+            ${recipePath ? `<button class="choice" type="button" onclick="app.openRecipeForDish(decodeURIComponent('${dishArg}'))"><strong>Ver receta</strong><span>${this.escapeHtml(dish)}</span></button>` : ''}
+            <button class="choice" type="button" onclick="app.drawDishResults('')"><strong>Cambiar plato</strong><span>Elegir otro plato del recetario</span></button>
+            <button class="choice" type="button" onclick="app.setSlotPlato('${dia}','${tipo}','${slot}','')"><strong>Vaciar campo</strong><span>Quitar este plato del plan</span></button>
+        `;
+    },
+
+    getDishChoices(filter = '') {
+        const f = this.normalizeMatchText(filter);
+        return this.getVisibleDishRows()
+            .filter(p => !f || this.normalizeMatchText(p.plato).includes(f) || this.normalizeMatchText(this.displayCategory(p)).includes(f))
+            .sort((a, b) => a.plato.localeCompare(b.plato, 'es'))
+            .slice(0, 120);
+    },
+
+    drawDishResults(filter = '') {
+        const results = document.getElementById('dish-results');
+        if (!results) return;
+        const rows = this.getDishChoices(filter);
+        const free = String(filter || '').trim();
+        const canUseFree = free && !rows.some(r => this.normalizeMatchText(r.plato) === this.normalizeMatchText(free));
+        results.innerHTML = `
+            <button class="choice" type="button" onclick="app.chooseDish('')"><strong>Vaciar campo</strong><span>Dejar este plato sin asignar</span></button>
+            ${canUseFree ? `<button class="choice" type="button" onclick="app.chooseDish(decodeURIComponent('${encodeURIComponent(free)}'))"><strong>Usar texto libre</strong><span>${this.escapeHtml(free)}</span></button>` : ''}
+            ${rows.map(p => `<button class="choice" type="button" onclick="app.chooseDish(decodeURIComponent('${encodeURIComponent(p.plato)}'))"><strong>${this.escapeHtml(p.plato)}</strong><span>${this.escapeHtml(this.displayCategory(p))}${p.url_receta ? ' · receta' : ''}</span></button>`).join('')}
+        `;
+    },
+
+    chooseDish(name) {
+        if (!this.pendingSlot) return;
+        const { dia, tipo, slot } = this.pendingSlot;
+        this.setSlotPlato(dia, tipo, slot, name);
     },
 
     renderCompra(containerId = 'compra-container') {
@@ -930,6 +1125,14 @@ const app = {
                 li.appendChild(extra);
             }
 
+            const more = document.createElement('button');
+            more.type = 'button';
+            more.className = 'shop-more';
+            more.textContent = '⋮';
+            more.setAttribute('aria-label', `Editar ${ing}`);
+            more.addEventListener('click', () => this.openShoppingModal(ing));
+            li.appendChild(more);
+
             checkbox.addEventListener('change', () => {
                 this.compraChecked[id] = checkbox.checked;
                 if (!checkbox.checked) delete this.compraChecked[id];
@@ -941,6 +1144,42 @@ const app = {
         });
         
         container.appendChild(ul);
+    },
+
+    openShoppingModal(ing) {
+        this.shoppingAction = ing;
+        const modal = document.getElementById('shopping-modal');
+        if (!modal) return;
+        document.getElementById('shopping-title').textContent = ing;
+        document.getElementById('shopping-edit-input').value = ing;
+        modal.classList.add('active');
+    },
+
+    closeShoppingModal() {
+        document.getElementById('shopping-modal')?.classList.remove('active');
+        this.shoppingAction = null;
+    },
+
+    saveShoppingEdit() {
+        if (!this.shoppingAction) return;
+        const next = document.getElementById('shopping-edit-input')?.value.trim();
+        if (!next) return;
+        const overrides = this.getCompraOverrides();
+        overrides[this.shoppingAction] = { text: next };
+        this.setCompraOverrides(overrides);
+        this.closeShoppingModal();
+        this.renderCompacta();
+    },
+
+    deleteShoppingSelected() {
+        if (!this.shoppingAction) return;
+        const overrides = this.getCompraOverrides();
+        overrides[this.shoppingAction] = { deleted: true };
+        this.setCompraOverrides(overrides);
+        delete this.compraChecked[this.getCompraItemId(this.shoppingAction)];
+        this.autosaveCompraState();
+        this.closeShoppingModal();
+        this.renderCompacta();
     },
 
     copyCompra() {
@@ -1257,7 +1496,10 @@ ${this.escapeInlineScript(bootstrap)}
             dateInput.addEventListener('change', (e) => this.switchToDate(e.target.value));
         }
         
-        document.getElementById('search-platos').oninput = (e) => this.renderPlatos(e.target.value);
+        const searchPlatos = document.getElementById('search-platos');
+        if (searchPlatos) {
+            searchPlatos.oninput = (e) => this.renderPlatos(e.target.value);
+        }
         const searchRecetas = document.getElementById('search-recetas');
         if (searchRecetas) {
             searchRecetas.oninput = (e) => this.renderRecetario(e.target.value);
@@ -1279,6 +1521,11 @@ ${this.escapeInlineScript(bootstrap)}
                 const file = e.target.files && e.target.files[0];
                 this.importJsonFile(file);
             });
+        }
+
+        const dishSearch = document.getElementById('dish-search');
+        if (dishSearch) {
+            dishSearch.addEventListener('input', (e) => this.drawDishResults(e.target.value));
         }
     },
 

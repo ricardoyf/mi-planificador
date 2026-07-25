@@ -3,105 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Planificador de Comidas</title>
+    <title>PlanComidas v8.4</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header class="app-header">
-        <div class="header-title-block">
-            <h1>Planificador</h1>
-            <div id="week-summary" class="week-summary">Semana actual</div>
-        </div>
-        <div class="header-actions">
-            <div class="week-controls">
-                <button id="week-prev-btn" class="week-nav-btn" type="button" aria-label="Semana anterior">‹</button>
-                <select id="week-select" class="week-select"></select>
-                <button id="week-next-btn" class="week-nav-btn" type="button" aria-label="Semana siguiente">›</button>
-                <input id="week-date-input" class="week-date-input" type="date" aria-label="Elegir fecha">
+        <div class="top">
+            <div class="head-left">
+                <div class="title">PlanComidas</div>
+                <div class="badge">v8.4</div>
+                <div id="week-summary" class="week-summary">Semana actual</div>
             </div>
-            <div class="menu-container">
-                <button id="menu-btn" class="icon-btn">⋮</button>
+            <div class="head-actions menu-container">
+                <button id="menu-btn" class="icon-btn" type="button" aria-label="Menú">⋮</button>
                 <div id="dropdown-menu" class="dropdown hidden">
-                    <button onclick="app.loadJsonFile()">Cargar JSON</button>
-                    <button onclick="app.savePlanAsJson()">Guardar JSON</button>
-                    <hr>
-                    <button onclick="app.action('load', 'par')">Cargar PAR</button>
-                    <button onclick="app.action('load', 'impar')">Cargar IMPAR</button>
-                    <button onclick="app.action('save', 'par')">Guardar como PAR</button>
-                    <button onclick="app.action('save', 'impar')">Guardar como IMPAR</button>
-                    <hr>
-                    <button onclick="app.clearCurrentWeek()">Borrar semana</button>
-                    <button onclick="app.exportHTML()">Exportar HTML</button>
-                    <button onclick="app.exportStandaloneHTML()">Exportar standalone</button>
-                    <input type="file" id="json-file-input" accept="application/json,.json" style="display:none"> 
+                    <button class="menu-item" onclick="app.copyCompactaYCompra()">Copiar plan + compra<span>Texto listo para email o WhatsApp</span></button>
+                    <button class="menu-item" onclick="app.savePlanAsJson()">Exportar plan semanal<span>JSON de la semana actual</span></button>
+                    <button class="menu-item" onclick="app.loadJsonFile()">Importar plan semanal<span>Elegir archivo JSON</span></button>
+                    <button class="menu-item" onclick="app.action('load', 'par')">Cargar PAR<span>Plan guardado localmente</span></button>
+                    <button class="menu-item" onclick="app.action('load', 'impar')">Cargar IMPAR<span>Plan guardado localmente</span></button>
+                    <button class="menu-item" onclick="app.action('save', 'par')">Guardar como PAR<span>Persistencia local</span></button>
+                    <button class="menu-item" onclick="app.action('save', 'impar')">Guardar como IMPAR<span>Persistencia local</span></button>
+                    <button class="menu-item" onclick="app.clearCurrentWeek()">Borrar semana<span>Vacía la semana visible</span></button>
+                    <button class="menu-item" onclick="app.exportHTML()">Exportar HTML<span>Plan semanal imprimible</span></button>
+                    <button class="menu-item" onclick="app.exportStandaloneHTML()">Exportar standalone<span>HTML completo con recetas incrustadas</span></button>
+                    <input type="file" id="json-file-input" accept="application/json,.json" style="display:none">
                 </div>
             </div>
         </div>
     </header>
 
     <main id="main-content">
-        <!-- View: Planificador -->
-        <section id="view-planificador" class="view active">
-            <div class="days-container" id="days-container"></div>
-        </section>
-
-        <!-- View: Platos -->
-        <section id="view-platos" class="view">
-            <div class="search-bar">
-                <input type="text" id="search-platos" placeholder="Buscar platos...">
-            </div>
-            <div class="platos-container" id="platos-container"></div>
-        </section>
-
-        <!-- View: Recetario -->
+        <section id="view-compacta" class="view active"></section>
         <section id="view-recetario" class="view">
             <div class="search-bar">
                 <input type="text" id="search-recetas" placeholder="Buscar recetas...">
             </div>
             <div class="platos-container" id="recetas-container"></div>
         </section>
-
-        <!-- View: XLS -->
-        <section id="view-xls" class="view">
-            <div class="search-bar">
-                <input type="text" id="search-xls" placeholder="Buscar platos del Excel...">
-            </div>
-            <div class="platos-container" id="xls-container"></div>
-        </section>
-
-        <!-- View: Compacta -->
-        <section id="view-compacta" class="view">
-            <div class="compacta-header-row">
-                <div class="compacta-title-block">
-                    <div class="compacta-kicker">Vista compacta</div>
-                    <div id="compacta-week-label" class="compacta-week-label">Semana actual</div>
-                </div>
-                <button onclick="app.copyCompactaYCompra()" class="compact-copy-btn">Copiar</button>
-            </div>
-            <div id="compacta-container" class="compacta-container"></div>
-            <div class="compacta-buy-header">Lista de la compra asociada</div>
-            <div id="compacta-compra-container" class="compacta-buy-container"></div>
-            <div class="compacta-help">Copia planificación + lista de la compra para pegarla aquí y pedirme la actualización de COMIDAS.</div>
-        </section>
     </main>
 
-    <!-- Floating Action - Plato Seleccionado -->
-    <div id="selected-plato-fab" class="fab hidden">
-        <span>Seleccionado: <strong id="selected-plato-name">Ninguno</strong></span>
-        <button onclick="app.clearSelection()">✕</button>
+    <div id="slot-modal" class="modal">
+        <div class="sheet">
+            <div class="bar">
+                <strong id="slot-title">Elegir plato</strong>
+                <button class="btn secondary" type="button" onclick="app.closeSlotModal()">Cerrar</button>
+            </div>
+            <input id="dish-search" placeholder="Buscar plato o receta">
+            <div id="dish-results"></div>
+        </div>
     </div>
 
-    <!-- Bottom Navigation -->
+    <div id="shopping-modal" class="modal">
+        <div class="sheet">
+            <div class="bar">
+                <strong id="shopping-title">Item de compra</strong>
+                <button class="btn secondary" type="button" onclick="app.closeShoppingModal()">Cerrar</button>
+            </div>
+            <input id="shopping-edit-input" placeholder="Item">
+            <button class="choice" type="button" onclick="app.saveShoppingEdit()"><strong>Guardar edición</strong><span>Cambiar el texto de este item</span></button>
+            <button class="choice" type="button" onclick="app.deleteShoppingSelected()"><strong>Borrar</strong><span>Ocultarlo de esta lista semanal</span></button>
+        </div>
+    </div>
+
     <nav class="bottom-nav">
-        <button class="nav-item active" data-target="view-planificador">📅 <span>Plan</span></button>
-        <button class="nav-item" data-target="view-platos">🍲 <span>Platos</span></button>
-        <button class="nav-item" data-target="view-recetario">📖 <span>Recetario</span></button>
-        <button class="nav-item" data-target="view-xls">📊 <span>xls</span></button>
-        <button class="nav-item" data-target="view-compacta">🧾 <span>Compacta</span></button>
+        <button class="nav-item active" data-target="view-compacta"><span class="nav-ico nav-ico-grid"></span>Compacta</button>
+        <button class="nav-item" data-target="view-recetario"><span class="nav-ico nav-ico-rec"></span>Recetario</button>
     </nav>
 
-    <script src="js/data.js?v=20260719h"></script>
-    <script src="js/app.js?v=20260719h"></script>
+    <script src="js/data.js?v=20260725b"></script>
+    <script src="js/app.js?v=20260725b"></script>
 </body>
 </html>

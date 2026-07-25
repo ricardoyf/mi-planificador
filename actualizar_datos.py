@@ -34,7 +34,8 @@ def parse_recipe_html(file_path):
     cat_match = re.search(r'<p[^>]*class="categories"[^>]*>(.*?)</p>', content, re.S | re.I)
     ingredient_matches = re.findall(r'<p[^>]*class="line"[^>]*itemprop="recipeIngredient"[^>]*>(.*?)</p>', content, re.S | re.I)
     name = strip_html(name_match.group(1)) if name_match else file_path.stem
-    category = normalize_category(strip_html(cat_match.group(1)) if cat_match else 'Sin categoría')
+    raw_category = strip_html(cat_match.group(1)) if cat_match else 'Sin categoría'
+    category = normalize_category(raw_category)
     ingredients = []
     for raw in ingredient_matches:
         clean = strip_html(raw)
@@ -44,15 +45,26 @@ def parse_recipe_html(file_path):
     return {
         'nombre': name,
         'categoria': category,
+        'categoria_original': raw_category,
+        'oculta_recetario': is_hidden_recipe_category(raw_category),
         'ingredientes_html': ingredients,
         'url': f'Recipes/{file_path.name}'
     }
 
 
+HIDDEN_RECIPE_CATEGORIES = {'macu', 'findesemana', 'fin de semana', 'finde semana'}
+
+
 def normalize_category(category):
     parts = [strip_html(p).strip() for p in re.split(r'[,;/]+', category or '')]
-    parts = [p for p in parts if p and normalize_text(p) not in {'findesemana', 'finde semana'}]
+    parts = [p for p in parts if p and normalize_text(p) not in HIDDEN_RECIPE_CATEGORIES]
     return parts[0] if len(parts) == 1 else ', '.join(parts) if parts else 'Sin categoría'
+
+
+def is_hidden_recipe_category(category):
+    parts = [strip_html(p).strip() for p in re.split(r'[,;/]+', category or '')]
+    visible = [p for p in parts if p and normalize_text(p) not in HIDDEN_RECIPE_CATEGORIES]
+    return not visible
 
 def normalize_text(value):
     text = str(value or '').strip().lower()
@@ -150,6 +162,7 @@ def main():
                 'plato': nombre,
                 'categoria': normalize_category(categoria),
                 'ingredientes': ingredientes,
+                'oculta_recetario': is_hidden_recipe_category(categoria),
                 'en_excel': True
             })
     else:
@@ -174,6 +187,8 @@ def main():
         if matched_url:
             receta = next((r for r in recetas if r['url'] == matched_url), None)
             p['url_receta'] = matched_url
+            if receta and not p.get('oculta_recetario'):
+                p['oculta_recetario'] = False
 
     # Add recipes that only exist in Paprika/HTML
     used_recipe_urls = {p.get('url_receta') for p in platos if p.get('url_receta')}
@@ -186,6 +201,7 @@ def main():
             'categoria': normalize_category(receta.get('categoria') or 'Sin categoría'),
             'ingredientes': receta.get('ingredientes_html', []),
             'url_receta': receta['url'],
+            'oculta_recetario': receta.get('oculta_recetario', False),
             'en_excel': False
         })
 

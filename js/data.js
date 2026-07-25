@@ -13,6 +13,7 @@ const platosData = [
       "Aceite de oliva virgen extra"
     ],
     "url_receta": "Recipes/Canastillas de Patata con Salmón de Noruega.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -25,6 +26,7 @@ const platosData = [
       "1 huevo"
     ],
     "url_receta": "Recipes/Empanada Hojaldre Esto Salmón.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -45,6 +47,7 @@ const platosData = [
       "Aceite de oliva suave o de girasol"
     ],
     "url_receta": "Recipes/ENSALADILLA_PULPO.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -61,6 +64,7 @@ const platosData = [
       "1 cucharadita sal"
     ],
     "url_receta": "Recipes/Guacamole (TMX).html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -73,6 +77,7 @@ const platosData = [
       "Mayonesa"
     ],
     "url_receta": "Recipes/Huevos Rellenos (Lucía).html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -86,6 +91,7 @@ const platosData = [
       "Sésamo y queso parmesano (opcional para decorar)"
     ],
     "url_receta": "Recipes/Lazos de Hojaldre con Pavo y Queso Brie.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -101,6 +107,7 @@ const platosData = [
       "Sal y pimienta al gusto"
     ],
     "url_receta": "Recipes/Rollo de Hojaldre con Espinacas, Feta y Cottage.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -125,6 +132,7 @@ const platosData = [
       "Sal al gusto"
     ],
     "url_receta": "Recipes/Tartar de remolacha con ajo blanco y pepinillos.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -142,6 +150,7 @@ const platosData = [
       "Pimentón extra para decorar"
     ],
     "url_receta": "Recipes/Vasitos de Crema de Coliflor y Pulpo.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -150,6 +159,7 @@ const platosData = [
     "ingredientes": [
       "Acelgas"
     ],
+    "oculta_recetario": false,
     "en_excel": true
   },
   {
@@ -159,6 +169,7 @@ const platosData = [
       "Alcachofas",
       "Avecrem"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Alcachofas.html"
   },
@@ -168,6 +179,7 @@ const platosData = [
     "ingredientes": [
       "Brécol"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Brécol al vapor.html"
   },
@@ -177,6 +189,7 @@ const platosData = [
     "ingredientes": [
       "Calabacin"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Calabacín en espaguetis.html"
   },
@@ -186,6 +199,7 @@ const platosData = [
     "ingredientes": [
       "Coliflor"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Coliflor al vapor.html"
   },
@@ -198,6 +212,7 @@ const platosData = [
       "Salsa de tomate",
       "Huevo"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Espinacas y garbanzos con salsa de tomate y huevos.html"
   },
@@ -207,6 +222,7 @@ const platosData = [
     "ingredientes": [
       "Grelos"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Grelos salteados.html"
   },
@@ -216,6 +232,7 @@ const platosData = [
     "ingredientes": [
       "Judías verdes"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Judías verdes.html"
   },
@@ -229,6 +246,7 @@ const platosData = [
       "Puerro",
       "Pimentón"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Lentejas 2..html"
   },
@@ -241,6 +259,7 @@ const platosData = [
       "Romero",
       "Pimentón"
     ],
+    "oculta_recetario": false,
     "en_excel": true
   },
   {
@@ -253,6 +272,7 @@ const platosData = [
       "Pimienta",
       "Nuez moscada"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Puré Patata TM31.html"
   },
@@ -264,6 +284,7 @@ const platosData = [
       "Calabacín",
       "Berenjena"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Verduras horno.html"
   },
@@ -277,6 +298,7 @@ const platosData = [
       "1 cdta sal"
     ],
     "url_receta": "Recipes/Acelgas.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -294,6 +316,7 @@ const platosData = [
       "150 ml agua"
     ],
     "url_receta": "Recipes/Patatas asadas Marcos.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -309,6 +332,7 @@ const platosData = [
       "Vino blanco",
       "Caldo de carne"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Albóndigas.html"
   },
@@ -330,6 +354,7 @@ const platosData = [
       "Aceite de oliva, sal y pimienta"
     ],
     "url_receta": "Recipes/Albóndigas Carmen.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -358,6 +383,7 @@ const platosData = [
       "Semillas de chía o amapola (opcional)"
     ],
     "url_receta": "Recipes/Carrilleras ternera vino tinto.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -369,6 +395,7 @@ const platosData = [
       "Especias al gusto"
     ],
     "url_receta": "Recipes/Churrasco al horno ¿.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -382,6 +409,7 @@ const platosData = [
       "Papel de aluminio (para proteger orejas, patas y rabo)"
     ],
     "url_receta": "Recipes/Cochinillo asado estilo segoviano.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -400,6 +428,7 @@ const platosData = [
       "Patatas enteras"
     ],
     "url_receta": "Recipes/Cocido Carmem.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -413,6 +442,7 @@ const platosData = [
       "Papel de aluminio"
     ],
     "url_receta": "Recipes/Costillas de cerdo papillote ¿.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -421,6 +451,7 @@ const platosData = [
     "ingredientes": [
       "ternera, pollo, pavo, solomillo o castaña"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Filetes de ternera, pollo, solomillo o castaña.html"
   },
@@ -433,6 +464,7 @@ const platosData = [
       "Tomate",
       "Queso"
     ],
+    "oculta_recetario": false,
     "en_excel": true
   },
   {
@@ -444,6 +476,7 @@ const platosData = [
       "Tomates",
       "Arroz"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Jarrete con arroz.html"
   },
@@ -457,6 +490,7 @@ const platosData = [
       "Caldo de carne o agua",
       "Perejil fresco"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Llana asada con salsa de su jugo.html"
   },
@@ -466,6 +500,7 @@ const platosData = [
     "ingredientes": [
       "Muslos"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Muslos de pollo en AirFryer.html"
   },
@@ -485,6 +520,7 @@ const platosData = [
       "Nuez moscada",
       "Queso mozzarella"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Pastel de carne con puré de patata.html"
   },
@@ -501,6 +537,7 @@ const platosData = [
       "Caldo de carne",
       "Vino blanco"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Pavo relleno.html"
   },
@@ -513,6 +550,7 @@ const platosData = [
       "Vino blanco",
       "Pimiento rojo"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Pechugas de Pollo.html"
   },
@@ -528,6 +566,7 @@ const platosData = [
       "1 cdta sal"
     ],
     "url_receta": "Recipes/Pollo con quinoa, pim. calabacín ¿.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -544,6 +583,7 @@ const platosData = [
       "Laurel",
       "Nuez moscada"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Salsa boloñesa.html"
   },
@@ -564,6 +604,7 @@ const platosData = [
       "Patatas (cantidad al gusto, para acompañar)"
     ],
     "url_receta": "Recipes/Secreto de cerdo al horno ¿.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -576,6 +617,7 @@ const platosData = [
       "Pimiento rojo",
       "Champiñones"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Berenjenas rellenas.html"
   },
@@ -592,6 +634,7 @@ const platosData = [
       "Huevo",
       "Levadura"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Cuscús con champiñones y judías verdes.html"
   },
@@ -604,6 +647,7 @@ const platosData = [
       "Poquito de aceite",
       "Atun NATURAL"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Empanadillas.html"
   },
@@ -617,6 +661,7 @@ const platosData = [
       "Huevo",
       "Queso rallado"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Espinacas a la crema.html"
   },
@@ -632,6 +677,7 @@ const platosData = [
       "Yogur griego",
       "Fajitas integrales"
     ],
+    "oculta_recetario": false,
     "en_excel": true
   },
   {
@@ -644,6 +690,7 @@ const platosData = [
       "Mozzarella",
       "Otras opciones: tomate, aguacate, lentejas, quinoa, pollo, atún"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Flautín de calabacín ¿.html"
   },
@@ -661,6 +708,7 @@ const platosData = [
       "Sal, pimienta negra y perejil"
     ],
     "url_receta": "Recipes/Piadina Rellena Estilo Vikika (Air Fryer).html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -675,6 +723,7 @@ const platosData = [
       "Queso rallado",
       "Pavo en taquitos"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Piadina Vikika.html"
   },
@@ -688,6 +737,7 @@ const platosData = [
       "Calabacín",
       "Tomate triturado"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Pisto.html"
   },
@@ -697,6 +747,7 @@ const platosData = [
     "ingredientes": [
       "Pan molde"
     ],
+    "oculta_recetario": false,
     "en_excel": true
   },
   {
@@ -707,6 +758,7 @@ const platosData = [
       "Huevo",
       "Perejil picado"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Wrap Cottage.html"
   },
@@ -724,6 +776,7 @@ const platosData = [
       "Pavo",
       "Queso de cabra"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Wrap de aguacate al horno.html"
   },
@@ -735,6 +788,7 @@ const platosData = [
       "Langostinos",
       "cayena"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Zoodles langostinos.html"
   },
@@ -749,6 +803,7 @@ const platosData = [
       "Toppings: fresas, plátano, granola, semillas de lino"
     ],
     "url_receta": "Recipes/Asaid.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -762,6 +817,7 @@ const platosData = [
       "Canónigos",
       "Pepino"
     ],
+    "oculta_recetario": false,
     "en_excel": true
   },
   {
@@ -775,6 +831,7 @@ const platosData = [
       "Canónigos",
       "Cebolla"
     ],
+    "oculta_recetario": false,
     "en_excel": true
   },
   {
@@ -788,6 +845,7 @@ const platosData = [
       "Zanahorias",
       "Semillas variadas"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/E. Pimientos tomate feta almendras bonito.html"
   },
@@ -805,6 +863,7 @@ const platosData = [
       "1 cdta sal"
     ],
     "url_receta": "Recipes/E. Bonito lechuga tomate feta zanahoria semillas.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -815,6 +874,7 @@ const platosData = [
       "Mozzarella",
       "Albahaca fresca"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/E. Caprese.html"
   },
@@ -828,6 +888,7 @@ const platosData = [
       "huevo",
       "Pimentón"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/E. Cuscús judías champiñones yema.html"
   },
@@ -840,6 +901,7 @@ const platosData = [
       "Huevo cocido",
       "Aceite y vinagre"
     ],
+    "oculta_recetario": false,
     "en_excel": true
   },
   {
@@ -854,6 +916,7 @@ const platosData = [
       "Huevo",
       "Anchoas"
     ],
+    "oculta_recetario": false,
     "en_excel": true
   },
   {
@@ -865,6 +928,7 @@ const platosData = [
       "Aguacate",
       "Mozzarella"
     ],
+    "oculta_recetario": false,
     "en_excel": true
   },
   {
@@ -876,6 +940,7 @@ const platosData = [
       "Bonito",
       "Aceitunas negras"
     ],
+    "oculta_recetario": false,
     "en_excel": true
   },
   {
@@ -888,6 +953,7 @@ const platosData = [
       "Almendras",
       "Bonito"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/E. Pimientos tomate feta almendras bonito.html"
   },
@@ -901,6 +967,7 @@ const platosData = [
       "cherrys",
       "Bonito"
     ],
+    "oculta_recetario": false,
     "en_excel": true
   },
   {
@@ -913,6 +980,7 @@ const platosData = [
       "Tomate",
       "Canónigos"
     ],
+    "oculta_recetario": false,
     "en_excel": true
   },
   {
@@ -923,6 +991,7 @@ const platosData = [
       "Brécol",
       "Calabacín"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/E. Quinoa brécol calabacín.html"
   },
@@ -933,6 +1002,7 @@ const platosData = [
       "Tomates maduros",
       "Rulo de cabra"
     ],
+    "oculta_recetario": false,
     "en_excel": true
   },
   {
@@ -946,6 +1016,7 @@ const platosData = [
       "Canónigos",
       "Nueces"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/E. Salmón aguacate feta tomate canónigos nueces.html"
   },
@@ -960,6 +1031,7 @@ const platosData = [
       "Canónigos",
       "Pepino"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/E. Salmón aguacate feta tomate canónigos nueces.html"
   },
@@ -976,6 +1048,7 @@ const platosData = [
       "5 g aceite de oliva virgen extra (AOVE)"
     ],
     "url_receta": "Recipes/Ensalada de atún.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -991,6 +1064,7 @@ const platosData = [
       "5 g aceite de oliva virgen extra (AOVE)"
     ],
     "url_receta": "Recipes/Ensalada de atún y mango.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -1005,6 +1079,7 @@ const platosData = [
       "5 g aceite de oliva virgen extra (AOVE)"
     ],
     "url_receta": "Recipes/Ensalada de pasta.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -1018,6 +1093,7 @@ const platosData = [
       "1 cucharada pequeña (cp) de aceite de oliva virgen extra (AOVE)"
     ],
     "url_receta": "Recipes/Ensalada de patata.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -1032,6 +1108,7 @@ const platosData = [
       "5 g aceite de oliva virgen extra (AOVE)"
     ],
     "url_receta": "Recipes/Ensalada de pimientos rojos asados.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -1047,6 +1124,7 @@ const platosData = [
       "5 g aceite de oliva virgen extra (AOVE)"
     ],
     "url_receta": "Recipes/Ensalada de queso de cabra.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -1062,6 +1140,7 @@ const platosData = [
       "5 g aceite de oliva virgen extra (AOVE)"
     ],
     "url_receta": "Recipes/Ensalada de salmón marinado.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -1074,6 +1153,7 @@ const platosData = [
       "1 cdta sal"
     ],
     "url_receta": "Recipes/Ensalada de tomate y rulo de cabra.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -1087,6 +1167,7 @@ const platosData = [
       "aceite y vinagre"
     ],
     "url_receta": "Recipes/Ensalada fabes.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -1106,6 +1187,7 @@ const platosData = [
       "30g vinagre"
     ],
     "url_receta": "Recipes/Ensalada Judias ANCHOAS (Carmen).html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -1118,6 +1200,7 @@ const platosData = [
       "Mayonesa",
       "bonito"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Ensaladilla rusa.html"
   },
@@ -1134,6 +1217,7 @@ const platosData = [
       "Pepinillos",
       "Mahonesa"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Tacos de lechuga y ensaladilla de atún.html"
   },
@@ -1147,6 +1231,7 @@ const platosData = [
       "Albahaca",
       "Pistachos"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Tomate relleno de burrata.html"
   },
@@ -1181,6 +1266,7 @@ const platosData = [
       "Sal al gusto"
     ],
     "url_receta": "Recipes/Tomates rellenos de ventresca con muhammara.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -1199,6 +1285,7 @@ const platosData = [
       "Pimiento rojo",
       "Hierbas provenzales"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Empanada pollo.html"
   },
@@ -1215,6 +1302,7 @@ const platosData = [
       "Limón",
       "Menta picada"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Falafel con salsa de yogur.html"
   },
@@ -1234,6 +1322,7 @@ const platosData = [
       "Aceite de sésamo",
       "Semillas de sésamo"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Fideos chinos.html"
   },
@@ -1254,6 +1343,7 @@ const platosData = [
       "Algas",
       "Cebolla crunchys"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Poke de salmón.html"
   },
@@ -1274,6 +1364,7 @@ const platosData = [
       "Anacardos",
       "Nata"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Pollo butter chicken.html"
   },
@@ -1288,6 +1379,7 @@ const platosData = [
       "Aceite de sésamo",
       "Maicena"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Pollo coreano.html"
   },
@@ -1297,1660 +1389,9 @@ const platosData = [
     "ingredientes": [
       "Fajitas"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Wraps.html"
-  },
-  {
-    "plato": "Aceite de ajos, soja y limón",
-    "categoria": "MACU",
-    "ingredientes": [
-      "3 ajos",
-      "150 ml de aceite de oliva",
-      "60 ml soja",
-      "Zumo de media limón y ralladura",
-      "Pimienta blanca"
-    ],
-    "url_receta": "Recipes/Aceite de ajos, soja y limón.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Ajada",
-    "categoria": "MACU",
-    "ingredientes": [
-      "2 o 4 dientes de ajo sin pelar (con un golpe)",
-      "150 gr de aceite",
-      "1 cucharilla de pimentón dulce"
-    ],
-    "url_receta": "Recipes/Ajada.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Albóndigas con sepia",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Carne picada de ternera",
-      "Foie",
-      "Pan bimbo",
-      "Leche",
-      "Sal y pimienta",
-      "Harina",
-      "Ajo",
-      "Pimiento choricero",
-      "Puerro",
-      "Tomate",
-      "Champiñones",
-      "Azafrán",
-      "Vino tinto",
-      "Agua",
-      "Mayonesa de limón",
-      "Sepia",
-      "Perifollo"
-    ],
-    "url_receta": "Recipes/Albóndigas con sepia.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Alioli verde",
-    "categoria": "MACU",
-    "ingredientes": [
-      "1 huevo",
-      "1 taza de aceite",
-      "8 dientes de ajo",
-      "4 cucharadas de perejil picado",
-      "Sal"
-    ],
-    "url_receta": "Recipes/Alioli verde.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Alitas de pollo confitadas y fritas con lima",
-    "categoria": "MACU",
-    "ingredientes": [
-      "16 alitas de pollo",
-      "1l de aceite de oliva",
-      "5 ajos",
-      "2 hojas de laurel",
-      "20g pimienta en grano",
-      "2 limas"
-    ],
-    "url_receta": "Recipes/Alitas de pollo confitadas y fritas con lima.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Almejas a la marinera",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Almejas",
-      "Vino blanco o caldo",
-      "Aceite",
-      "Ajo",
-      "Perejil",
-      "Cebolla",
-      "Pimentón dulce",
-      "Pan rallado"
-    ],
-    "url_receta": "Recipes/Almejas a la marinera 2..html",
-    "en_excel": false
-  },
-  {
-    "plato": "Bacalao al horno",
-    "categoria": "MACU",
-    "ingredientes": [
-      "2 trozos de bacalao congelado (Mercadona)",
-      "1 pimiento rojo",
-      "1 cebolla",
-      "1/2 puerro",
-      "2 ajos",
-      "1 vasito de guisantes",
-      "3 cucharadas de tomate frito"
-    ],
-    "url_receta": "Recipes/Bacalao al horno.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Batata asada",
-    "categoria": "MACU",
-    "ingredientes": [
-      "1 batata"
-    ],
-    "url_receta": "Recipes/Batata asada.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Batido de fresas",
-    "categoria": "MACU",
-    "ingredientes": [
-      "500 gr de fresas",
-      "3 yogures naturales",
-      "70 gr de philadelphia",
-      "7 chorros de sacarina",
-      "1 vaso de yogur lleno de leche (opcional)"
-    ],
-    "url_receta": "Recipes/Batido de fresas.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Bizcocho de yogur",
-    "categoria": "MACU",
-    "ingredientes": [
-      "3 huevos",
-      "1 yogur natural",
-      "1 envase de yogur de azúcar",
-      "2 envases de yogur de harina",
-      "1/2 envase de aceite de oliva",
-      "Ralladura de limón",
-      "1 sobre de levadura",
-      "Cacao (opcional)",
-      "Mantequilla"
-    ],
-    "url_receta": "Recipes/Bizcocho de yogur.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Boloñesa",
-    "categoria": "MACU",
-    "ingredientes": [
-      "800gr de carne picada mezcla",
-      "1 puerro pequeño",
-      "1 cebolla pequeña",
-      "1 pimiento rojo pequeño",
-      "1 pimiento verde pequeño",
-      "2 dientes de ajo",
-      "1 cucharada de orégano",
-      "Media cucharada de albahaca",
-      "1 cucharada de perejil",
-      "Pimienta",
-      "Aceite",
-      "1 bote de tomate triturado",
-      "1 brik de tomate frito"
-    ],
-    "url_receta": "Recipes/Boloñesa.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Calamares en su tinta",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Unas barquetas de calamar limpio",
-      "Tinta de calamar congelada (4 sobres)",
-      "1 bolsa de pimientos verde y rojo troceados congelados (Mercadona)",
-      "1 bolsa de cebolla troceada congelada",
-      "2 dientes de ajo",
-      "Salsa de tomate o tomate concentrado",
-      "1 onza de chocolate o una cucharilla de cacao desgrasado",
-      "Sal y pimienta"
-    ],
-    "url_receta": "Recipes/Calamares en su tinta.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Callos",
-    "categoria": "MACU",
-    "ingredientes": [
-      "1 pata de vaca bien limpia y troceada",
-      "1 uña de cerdo troceada",
-      "3 chorizos",
-      "1 trozo de vientre",
-      "1 trozo de tocino blanco",
-      "1.5 kg de garbanzos",
-      "3 limones",
-      "Cebolla",
-      "Ajos",
-      "Pimienta negra",
-      "2.5 cucharadas de comino",
-      "Especias para callos",
-      "1 cucharilla de pimentón",
-      "Azafrán (opcional 2 sobres)"
-    ],
-    "url_receta": "Recipes/Callos.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Carne a la minuta",
-    "categoria": "MACU",
-    "ingredientes": [
-      "1 kg de carne de ternera (Babilla o Culata) en una pieza de 2 cm de grosor",
-      "2 huevos batidos",
-      "Pan rallado con ajo y perejil",
-      "1/2 taza de caldo de pollo (o 1/2 pastilla de Avecrem disuelta en agua caliente)",
-      "Pimienta",
-      "Aceite para freír"
-    ],
-    "url_receta": "Recipes/Carne a la minuta.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Carne estofada con mostaza y cerveza negra",
-    "categoria": "MACU",
-    "ingredientes": [
-      "800 gr de carne para asar (culata, redondo, lomo o pollo)",
-      "1 cebolla grande",
-      "2 dientes de ajo",
-      "Pan de molde (Bimbo)",
-      "Mostaza",
-      "Aceite",
-      "Pimienta",
-      "Cerveza negra",
-      "Zanahoria",
-      "Champiñones"
-    ],
-    "url_receta": "Recipes/Carne estofada con mostaza y cerveza negra.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Carne gisada o pollo guisado",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Media cebolla",
-      "2 dientes de ajo",
-      "Medio pimiento rojo y medio verde",
-      "2 zanahorias",
-      "1 taza de guisantes tiernos congelados",
-      "Pimentón dulce",
-      "Una pastilla de Avecrem pollo 100% natural o un agua de sopa",
-      "Perejil y 1 hoja de laurel (opcional)",
-      "Aceite, sal, pimienta",
-      "Patatas cortadas en dados",
-      "Ternera para guisar limpia de grasas y en trozos",
-      "Un par de cucharadas de tomate frito o de salsa de tomate"
-    ],
-    "url_receta": "Recipes/Carne gisada o pollo guisado.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Causa de salmonete a la bilbaina con patata canaria",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Causa:",
-      "400gr de patata marina de canarias",
-      "50gr de ají amarillo (pasta)",
-      "40ml de zumo de lima",
-      "Ralladura de lima",
-      "Sal y pimienta blanca",
-      "Salsa bilbaína:",
-      "2 ajos",
-      "1 chile o guindilla",
-      "60gr perejil",
-      "Vino blanco",
-      "30ml vinagre jerez",
-      "80ml aceite de oliva",
-      "10gr de cúrcuma en polvo",
-      "2 rodajas de jengibre",
-      "Principal:",
-      "Salmonete fresco (para laminar)"
-    ],
-    "url_receta": "Recipes/Causa de salmonete a la bilbaina con patata canaria.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Ceviche de langostinos y fruta de la pasión",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Langostinos pelados y cortados en dados (antes tienen que estar congelados)",
-      "Zumo de 2 limas",
-      "Zumo de 1 naranja",
-      "1/2 fruta de la pasión",
-      "Tiras de cebolla roja",
-      "Pasta de ají amarillo",
-      "Cebollino",
-      "Pellizco de azúcar"
-    ],
-    "url_receta": "Recipes/Ceviche de langostinos y fruta de la pasión.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Cocido",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Lacón",
-      "Preparado de gallina, ternera y cerdo",
-      "Cachucha ahumada",
-      "Oreja",
-      "Grelos",
-      "Garbanzos",
-      "Chorizo",
-      "Chorizo de cebolla",
-      "Morcilla",
-      "Patatas"
-    ],
-    "url_receta": "Recipes/Cocido.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Cocochas de merluza a la romana con asadillo manchego y sopa de parmesano",
-    "categoria": "MACU",
-    "ingredientes": [
-      "8 cocochas",
-      "4 huevos",
-      "100g harina",
-      "4 ajos",
-      "4 tomates",
-      "Aceite",
-      "Sal"
-    ],
-    "url_receta": "Recipes/Cocochas de merluza a la romana con asadillo manchego y sopa de parmesano.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Copa de café y vainilla",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Para la mousse de café:",
-      "4 yemas",
-      "100 cc de leche caliente o nata de cocinar",
-      "200 cc de café expresso",
-      "100 gr de azúcar",
-      "10 gr de hojas de gelatina",
-      "Helado de vainilla",
-      "2 cucharadas de philadelphia",
-      "400 gr de nata para montar",
-      "4 cucharadas de azúcar",
-      "cacao puro o canela en polvo"
-    ],
-    "url_receta": "Recipes/Copa de café y vainilla.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Coulant de chocolate",
-    "categoria": "MACU",
-    "ingredientes": [
-      "1 tableta de chocolate para postres Nestle (250 gr)",
-      "200 gr de mantequilla",
-      "130 gr de harina tamizada",
-      "130 gr de azúcar",
-      "100 gr de nata para montar",
-      "Nutella y una cucharilla de azúcar",
-      "5 yemas y 5 claras",
-      "Cacao",
-      "14 flaneras",
-      "1 Cubitera de huecos redondos"
-    ],
-    "url_receta": "Recipes/Coulant de chocolate.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Croquetas",
-    "categoria": "MACU",
-    "ingredientes": [
-      "200gr de jamón cocido",
-      "1 huevo cocido",
-      "60gr aceite",
-      "20g cebolla",
-      "400gr leche",
-      "110gr harina",
-      "Nuez moscada y pimienta negra",
-      "Mantequilla"
-    ],
-    "url_receta": "Recipes/Croquetas.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Dorada con jamón",
-    "categoria": "MACU",
-    "ingredientes": [
-      "2 patatas grandes",
-      "1 cebolla",
-      "Dorada abierta y sin espinas",
-      "Lonchas de jamón",
-      "Picada de almendras, ajo y perejil",
-      "Aceite",
-      "Perejil"
-    ],
-    "url_receta": "Recipes/Dorada con jamón.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Empanada de hojaldre de jamón y queso",
-    "categoria": "MACU",
-    "ingredientes": [
-      "2 láminas de hojaldre",
-      "Jamón cocido",
-      "Queso",
-      "1 huevo batido"
-    ],
-    "en_excel": true,
-    "url_receta": "Recipes/Empanada de hojaldre de jamón y queso.html"
-  },
-  {
-    "plato": "Ensalada de garbanzos y gulas",
-    "categoria": "MACU",
-    "ingredientes": [
-      "2 huevos cocidos y rallados",
-      "Aceitunas picadas",
-      "Tomate en trocitos",
-      "Espárragos pequeños",
-      "Zanahoria cruda rallada",
-      "Maíz dulce",
-      "Lechuga cortadita con tijera",
-      "Garbanzos de bote muy muy muy lavados debajo del grifo, mejor en un colador",
-      "Gulas hechas con su ajito y aceite o bien bonito en lata",
-      "Pimiento asado (según receta) o bien comprado en conserva."
-    ],
-    "url_receta": "Recipes/Ensalada de garbanzos y gulas.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Ensalada de langostinos con salsa rosa",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Langostinos (crudos congelados, tamaño pequeño)",
-      "Hojas de laurel",
-      "Sal",
-      "Lechuga",
-      "Tomatitos Cherry",
-      "Piña",
-      "Salsa Rosa"
-    ],
-    "url_receta": "Recipes/Ensalada de langostinos con salsa rosa.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Ensalada de pasta con papaya y vinagreta",
-    "categoria": "MACU",
-    "ingredientes": [
-      "1 papaya",
-      "1 puerro",
-      "1 tomate",
-      "400gr de cangrejos de rio",
-      "300gr pasta",
-      "Vinagreta de cítricos y jengibre",
-      "Sal y pimienta"
-    ],
-    "url_receta": "Recipes/Ensalada de pasta con papaya y vinagreta.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Ensalada de pasta y pollo",
-    "categoria": "MACU",
-    "ingredientes": [
-      "2 tomates",
-      "300 gr de pasta",
-      "Pechuga de pollo en dados",
-      "Queso rallado",
-      "Frutos secos",
-      "1 aguacate",
-      "Aceite",
-      "Limón",
-      "Sal y pimienta",
-      "Orégano y albahaca",
-      "Calabacín o pepino",
-      "Cebollino",
-      "Ajo"
-    ],
-    "url_receta": "Recipes/Ensalada de pasta y pollo.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Ensalada de salmón",
-    "categoria": "MACU",
-    "ingredientes": [
-      "2 barquetas de salmón",
-      "Pasta",
-      "Guisantes",
-      "Zanahoria",
-      "Queso philadelphia",
-      "Eneldo",
-      "Maiz",
-      "Huevo cocido",
-      "Pimiento asado"
-    ],
-    "url_receta": "Recipes/Ensalada de salmón.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Ensaladilla",
-    "categoria": "MACU",
-    "ingredientes": [
-      "1 taza de guisantes cocidos",
-      "2 tazas de patatas cocidas en trocitos",
-      "1/2 taza de zanahoria cocida en trocitos",
-      "3 huevos cocidos (rallados o picados)",
-      "1 bote de espárragos pequeños cortados en trocitos",
-      "1 bolsa de aceitunas sin hueso",
-      "Pimiento asado en tiras",
-      "1 huevo (para la mayonesa)",
-      "1 chorro de jugo de limón",
-      "Sal",
-      "Aceite de girasol o de oliva suave"
-    ],
-    "url_receta": "Recipes/Ensaladilla.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Escabeche",
-    "categoria": "MACU",
-    "ingredientes": [
-      "50gr zanahoria",
-      "2 ajos",
-      "150gr de jengibre",
-      "3 hojas de laurel",
-      "20g pimienta en grano",
-      "150ml vino blanco",
-      "150ml vinagre de jerez",
-      "300ml aceite oliva",
-      "200gr ventresca de atún"
-    ],
-    "url_receta": "Recipes/Escabeche.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Espaguetis con gulas y gambas",
-    "categoria": "MACU",
-    "ingredientes": [
-      "1 caja de gulas (marca Día)",
-      "20 langostinos pequeños crudos congelados (marca Día)",
-      "3 dientes de ajo",
-      "Aceite de oliva virgen extra",
-      "Perejil",
-      "Albahaca",
-      "Espaguetis (preferiblemente integrales)"
-    ],
-    "url_receta": "Recipes/Espaguetis con gulas y gambas.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Espárragos a la plancha",
-    "categoria": "MACU",
-    "ingredientes": [
-      "1 manojo de espárragos frescos",
-      "Aceite de oliva",
-      "Sal"
-    ],
-    "url_receta": "Recipes/Espárragos a la plancha.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Fabada",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Lacón",
-      "Pata de cerdo",
-      "Chorizo",
-      "Morcilla",
-      "Panceta",
-      "Cebolla",
-      "Zanahoria",
-      "Pimiento verde",
-      "Pimiento rojo",
-      "Perejil",
-      "Laurel",
-      "Pimentón dulce",
-      "Aceite",
-      "Ajo"
-    ],
-    "url_receta": "Recipes/Fabada.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Filloas",
-    "categoria": "MACU",
-    "ingredientes": [
-      "4 huevos",
-      "250gr harina",
-      "Media cucharilla de sal",
-      "150gr leche",
-      "350gr agua",
-      "Tocino blanco"
-    ],
-    "url_receta": "Recipes/Filloas.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Flan de queso",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Caramelo royal líquido",
-      "5 huevos",
-      "400gr queso philadelphia",
-      "370gr leche condensada",
-      "Leche entera (la medida del bote de la leche condensada La lechera de 370gr)"
-    ],
-    "url_receta": "Recipes/Flan de queso.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Gazpacho de fresas con salmón ahumado y sus huevas",
-    "categoria": "MACU",
-    "ingredientes": [
-      "500g de fresas",
-      "2kg de tomates",
-      "2 ajos",
-      "1 pimiento rojo",
-      "Media cebolla",
-      "1 pepino",
-      "2 panecillos de leche",
-      "150ml de vinagre de jerez",
-      "150ml de aceite de oliva",
-      "Sal",
-      "Comino",
-      "Salmón ahumado",
-      "Huevas de salmón"
-    ],
-    "url_receta": "Recipes/Gazpacho de fresas con salmón ahumado y sus huevas.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Gnocchis con salsa de tomate picante, berberechos y gambas",
-    "categoria": "MACU",
-    "ingredientes": [
-      "400gr gnocchis",
-      "1 ajo",
-      "1 chalota",
-      "300gr tomate maduro",
-      "1 chile",
-      "Pimentón",
-      "Vino riesling",
-      "20 berberechos",
-      "Gambas",
-      "Orégano",
-      "Aceite, sal y pimienta"
-    ],
-    "url_receta": "Recipes/Gnocchis con salsa de tomate picante, berberechos y gambas.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Helado de turrón",
-    "categoria": "MACU",
-    "ingredientes": [
-      "2 tabletas de turrón blando picado en la picadora",
-      "6 huevos",
-      "6 cucharadas de azúcar",
-      "400 gr de nata para montar"
-    ],
-    "url_receta": "Recipes/Helado de turrón.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Hojaldre de pollo, jamon y champiñones",
-    "categoria": "MACU",
-    "ingredientes": [
-      "2 láminas de hojaldre",
-      "100gr de jamón serrano",
-      "1 barqueta de champiñones",
-      "4 dientes de ajo",
-      "1 cebolla",
-      "Medio puerro",
-      "4 filetes de pavo",
-      "1 cucharada de philadelphia"
-    ],
-    "url_receta": "Recipes/Hojaldre de pollo, jamon y champiñones.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Judías",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Judías congeladas (mejor redondas)",
-      "2 Zanahorias",
-      "1 patata en rodajas",
-      "Tomate cortado en rodajas",
-      "2 huevos cocidos",
-      "1 lata de bonito (opcional)"
-    ],
-    "url_receta": "Recipes/Judías.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Judías con chorizo y patata",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Judías",
-      "Patatas",
-      "Chorizo",
-      "Salsa de tomate",
-      "Agua",
-      "Huevo"
-    ],
-    "url_receta": "Recipes/Judías con chorizo y patata.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Macu Crema fría al pesto",
-    "categoria": "MACU",
-    "ingredientes": [
-      "50 g parmesano",
-      "40 g hojas de albahaca",
-      "1 diente ajo",
-      "30 g piñones",
-      "100 g aceite de oliva virgen extra",
-      "Sal",
-      "1 bote leche evaporada",
-      "1 l agua aprox."
-    ],
-    "url_receta": "Recipes/Macu Crema fría al pesto.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Macu Crujientes de verduras con queso Brie",
-    "categoria": "MACU",
-    "ingredientes": [
-      "1 paquete de pasta filo (o pasta brick)",
-      "Margarina o aceite para pincelar",
-      "100 g calabacín sin pelar",
-      "100 g cebolla",
-      "100 g repollo",
-      "200 g pimiento",
-      "200 g queso Brie",
-      "Sal y pimienta",
-      "Vinagreta: 30 g vinagre balsámico, 100 g aceite de oliva virgen extra, sal",
-      "Cebollino para atar paquetes (opcional)"
-    ],
-    "url_receta": "Recipes/Macu Crujientes de verduras con queso Brie.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Macu Guiso \"Mar y Tierra\"",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Fumet: 250 g gambas o langostinos, 30 g aceite, 400 g agua",
-      "Sofrito: 50 g aceite, 100 g pimiento rojo, 100 g pimiento verde, 100 g cebolla, 2 dientes de ajo, 200 g tomate triturado",
-      "600 g garbanzos cocidos y escurridos",
-      "200 g calabaza (opcional)",
-      "2 pastillas caldo pescado",
-      "Hebras de azafrán"
-    ],
-    "url_receta": "Recipes/Macu Guiso Mar y Tierra.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Macu Pechugas de pollo en salsa de coco con curry",
-    "categoria": "MACU",
-    "ingredientes": [
-      "1 kg pechugas de pollo en tacos",
-      "30 g margarina",
-      "50 g aceite oliva virgen extra",
-      "150 g cebolla",
-      "2 dientes de ajo",
-      "200 g tomate triturado",
-      "250 g manzana Golden en láminas",
-      "1 lata leche de coco (400 g)",
-      "2 cdas curry en polvo",
-      "1–2 cdas azúcar (opcional)",
-      "Sal y pimienta",
-      "2 pastillas caldo pollo",
-      "Cayena (opcional)",
-      "Para acompañar: arroz blanco"
-    ],
-    "url_receta": "Recipes/Macu Pechugas de pollo en salsa de coco con curry.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Macu Pepinos rellenos de queso fresco y verduras",
-    "categoria": "MACU",
-    "ingredientes": [
-      "6 pepinos pequeños",
-      "300 g queso fresco tipo Quark",
-      "200 g nata líquida",
-      "4 cebolletas (o 100 g cebolla)",
-      "1 diente de ajo",
-      "80 g pimiento rojo",
-      "80 g pimiento verde",
-      "Un manojo de estragón o finas hierbas",
-      "2 cdas mostaza",
-      "Sal y pimienta"
-    ],
-    "url_receta": "Recipes/Macu Pepinos rellenos de queso fresco y verduras.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Macu Pimientos de piquillo rellenos de gulas con salsa de tinta",
-    "categoria": "MACU",
-    "ingredientes": [
-      "2 latas de pimientos del piquillo",
-      "400 g gulas",
-      "50 g aceite de oliva virgen extra",
-      "2 dientes de ajo laminados",
-      "4 cayenas",
-      "Salsa:",
-      "50 g aceite de oliva virgen extra",
-      "200 g cebolla",
-      "100 g pimiento verde",
-      "2 dientes de ajo",
-      "1 bolsita tinta de calamar",
-      "1 pastilla caldo pescado (o sal)",
-      "100 g vino blanco",
-      "Pimienta"
-    ],
-    "url_receta": "Recipes/Macu Pimientos de piquillo rellenos de gulas con salsa de tinta.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Macu Rollo tricolor",
-    "categoria": "MACU",
-    "ingredientes": [
-      "100 g hojas grandes de espinacas (sin tallos)",
-      "200 g queso crema light",
-      "200 g queso de cabra",
-      "6 pimientos del piquillo",
-      "Pimienta",
-      "Salsa templada:",
-      "20 g margarina vegetal",
-      "30 g aceite de oliva virgen extra",
-      "30 g salsa de soja",
-      "½ cdta mostaza",
-      "Gotas de tabasco"
-    ],
-    "url_receta": "Recipes/Macu Rollo tricolor.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Macu Tartar de bonito",
-    "categoria": "MACU",
-    "ingredientes": [
-      "500 g bonito limpio (sin piel ni espinas, ni parte oscura)",
-      "60 g zumo de limón",
-      "40 g salsa de soja",
-      "60 g pepinillos en vinagre",
-      "60 g aceitunas verdes sin hueso",
-      "2 cdas alcaparras",
-      "100 g tomates",
-      "1 aguacate",
-      "Cebollino, sal y pimienta"
-    ],
-    "url_receta": "Recipes/Macu Tartar de bonito.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Masa empanada",
-    "categoria": "MACU",
-    "ingredientes": [
-      "500gr harina",
-      "1 huevo",
-      "Agua",
-      "Leche",
-      "Aceite",
-      "Levadura",
-      "Media cucharilla de sal"
-    ],
-    "url_receta": "Recipes/Masa empanada.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Masa pizza",
-    "categoria": "MACU",
-    "ingredientes": [
-      "200gr agua",
-      "50gr aceite",
-      "1 cucharilla de sal",
-      "1 nuez de levadura prensada",
-      "400gr de harina"
-    ],
-    "url_receta": "Recipes/Masa pizza.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Masa pizza sin robot",
-    "categoria": "MACU",
-    "ingredientes": [
-      "500g harina 00",
-      "350cl agua",
-      "10g levadura",
-      "20g sal",
-      "Aceite oliva",
-      "250g tomate (mezclado con sal, aceite y orégano)"
-    ],
-    "url_receta": "Recipes/Masa pizza sin robot.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Mayonesa y salsa rosa",
-    "categoria": "MACU",
-    "ingredientes": [
-      "1 huevo",
-      "1 chorro de jugo de limón",
-      "Sal",
-      "Aceite (mejor de girasol o de oliva suave)"
-    ],
-    "url_receta": "Recipes/Mayonesa y salsa rosa.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Mejillones al vapor",
-    "categoria": "MACU",
-    "ingredientes": [
-      "2 kilos de mejillones",
-      "Unas hojas de laurel"
-    ],
-    "url_receta": "Recipes/Mejillones al vapor.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Muslos de pollo a la sidra",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Azafrán",
-      "6 muslos de pollo",
-      "1 vaso de sidra",
-      "Cebolla",
-      "1/2 manzana",
-      "Caldo de ave",
-      "3 patatas",
-      "Aceite, sal y pimienta"
-    ],
-    "url_receta": "Recipes/Muslos de pollo a la sidra.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Natillas de leche de coco con chocolate blanco, fruta de la pasión y polvo de galletas",
-    "categoria": "MACU",
-    "ingredientes": [
-      "1/2 l de leche de coco",
-      "5 yemas de huevo",
-      "110 gr azúcar",
-      "1 vaina de vainilla",
-      "20 gr maicena",
-      "50 gr jengibre",
-      "1 paquete de galletas",
-      "100 gr chocolate blanco",
-      "60 ml zumo de fruta de la pasión",
-      "6 frutas de la pasión"
-    ],
-    "url_receta": "Recipes/Natillas de leche de coco con chocolate blanco, fruta de la pasión y polvo de galletas.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Orejas",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Esencia de anís",
-      "1 huevo",
-      "50 gr de mantequilla",
-      "2 cucharadas de azúcar",
-      "Canela en polvo",
-      "Sal",
-      "460 gr de harina",
-      "Aceite de girasol para freír"
-    ],
-    "url_receta": "Recipes/Orejas.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Paella",
-    "categoria": "MACU",
-    "ingredientes": [
-      "3 dientes de ajo",
-      "1 cebolla",
-      "1 pimiento rojo",
-      "1 pimiento verde",
-      "3 pechugas de pollo",
-      "4 longanizas frescas",
-      "Caldo de pollo",
-      "Perejil y albahaca",
-      "1 bote de tomate frito",
-      "Pimiento asado"
-    ],
-    "url_receta": "Recipes/Paella.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Paella de fideos con mejillones en escabeche al curry con puré de limón",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Fideos",
-      "Mejillones en lata",
-      "Limones (una cesta)",
-      "Sofrito de tomate",
-      "Pulpa de pimiento choricero",
-      "Azafrán",
-      "Curry",
-      "Caldo de pescado",
-      "Arroz inflado",
-      "Aceite"
-    ],
-    "url_receta": "Recipes/Paella de fideos con mejillones en escabeche al curry con puré de limón.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Papas arrugás con mojo verde",
-    "categoria": "MACU",
-    "ingredientes": [
-      "200gr de patatas canarias pequeñas",
-      "100gr de sal",
-      "Agua",
-      "Zumo de limón",
-      "50gr perejil",
-      "50gr cilantro",
-      "4 ajos sin germen central",
-      "100 ml aceite oliva",
-      "50ml vinagre de jerez",
-      "80gr mostaza verde",
-      "Comino",
-      "Sal y pimienta negra"
-    ],
-    "url_receta": "Recipes/Papas arrugás con mojo verde.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Pasta carbonara",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Pasta",
-      "Ajo",
-      "Chalotas",
-      "Chile (rocoto) o guindilla seca",
-      "Huevos",
-      "Queso Idiazabal",
-      "Papada ibérica/Bacon",
-      "Limón",
-      "Brioche",
-      "Sal y pimienta"
-    ],
-    "url_receta": "Recipes/Pasta carbonara.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Pastel de patata y bacon",
-    "categoria": "MACU",
-    "ingredientes": [
-      "500gr de patatas",
-      "200gr de bacon",
-      "50gr de mantequilla",
-      "200ml de nata",
-      "Sal y pimienta"
-    ],
-    "url_receta": "Recipes/Pastel de patata y bacon.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Patatas rellenas",
-    "categoria": "MACU",
-    "ingredientes": [
-      "6 patatas alargadas",
-      "6 salchichas frescas",
-      "30 gr miga de pan",
-      "1 cebolla picada",
-      "1 huevo cocido rallado",
-      "1 cucharada de nata o leche",
-      "Pimienta y perejil"
-    ],
-    "url_receta": "Recipes/Patatas rellenas.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Pechugas de pavo con bacon al horno",
-    "categoria": "MACU",
-    "ingredientes": [
-      "2 pechugas de pavo pequeñas",
-      "Semillas de sésamo (ajonjolí)",
-      "Semillas de mostaza o pimienta",
-      "250 gr de bacon en lonchas",
-      "Aceite"
-    ],
-    "url_receta": "Recipes/Pechugas de pavo con bacon al horno 2..html",
-    "en_excel": false
-  },
-  {
-    "plato": "Pechugas de pavo con bacon al horno",
-    "categoria": "MACU",
-    "ingredientes": [
-      "2 pechugas de pavo pequeñas",
-      "Semillas de sésamo (ajonjolí)",
-      "Semillas de mostaza o pimienta",
-      "250 gr de bacon en lonchas",
-      "Aceite"
-    ],
-    "url_receta": "Recipes/Pechugas de pavo con bacon al horno.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Pernil",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Pernil",
-      "2 cebollas",
-      "5 ajos",
-      "1/2 taza de vinagre",
-      "Zumo de una naranja",
-      "2 cucharadas de salsa perrins",
-      "Orégano",
-      "Tomillo",
-      "1 hoja de laurel",
-      "Caldo",
-      "Vino dulce",
-      "Mantequilla"
-    ],
-    "url_receta": "Recipes/Pernil.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Perrito caliente",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Salchicha curry wurst o Frankfurt",
-      "Pan brioche",
-      "Salsa sriracha",
-      "Cebolla frita",
-      "Albahaca fresca",
-      "Macarrones",
-      "Nata",
-      "Queso parmesano",
-      "Mantequilla",
-      "Vino blanco",
-      "Sal",
-      "Pimienta"
-    ],
-    "url_receta": "Recipes/Perrito caliente.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Pescado a la sal",
-    "categoria": "MACU",
-    "ingredientes": [
-      "2 Lubinas de piscifactoría (limpias para la sal)",
-      "1 paquete de sal gruesa especial para hornear"
-    ],
-    "url_receta": "Recipes/Pescado a la sal.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Pescado al horno",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Pescado (merluza, lubina, pescadilla o bacalao)",
-      "Cebolla",
-      "Pimiento rojo",
-      "Ajo",
-      "Patatas",
-      "Pan rallado con ajo y perejil",
-      "Aceite",
-      "Agua"
-    ],
-    "url_receta": "Recipes/Pescado al horno.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Pescado cocido",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Merluza u otro pescado cortado en rodajas gordas",
-      "Agua",
-      "1 trozo de pimiento rojo",
-      "1 trozo de cebolla",
-      "1 trozo de zanahoria",
-      "1 hoja de laurel",
-      "Perejil",
-      "1 taza de guisantes tiernos congelados",
-      "3 patatas cortadas en rodajas gruesas",
-      "Mayonesa o ajada",
-      "Espárragos de bote para acompañar"
-    ],
-    "url_receta": "Recipes/Pescado cocido.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Picada de almendras, ajo y perejil",
-    "categoria": "MACU",
-    "ingredientes": [
-      "4 ajos",
-      "2 cucharadas de almendras picadas",
-      "2 cucharadas de perejil",
-      "12 cucharadas de aceite",
-      "Sal y pimienta"
-    ],
-    "url_receta": "Recipes/Picada de almendras, ajo y perejil.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Pimiento asado",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Pimiento",
-      "Sal",
-      "Aceite"
-    ],
-    "url_receta": "Recipes/Pimiento asado.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Pimiento asado (1)",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Pimiento rojo",
-      "Aceite",
-      "Papel de aluminio"
-    ],
-    "url_receta": "Recipes/Pimiento asado (1).html",
-    "en_excel": false
-  },
-  {
-    "plato": "Pollo a la albahaca",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Pechugas de pollo",
-      "4 ajos",
-      "1 vasito de vino blanco",
-      "1 manojo de albahaca",
-      "2 ramas de perejil",
-      "200 gr de champiñones",
-      "Harina, sal y aceite"
-    ],
-    "url_receta": "Recipes/Pollo a la albahaca.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Pollo a la cervezacon champiñones",
-    "categoria": "MACU",
-    "ingredientes": [
-      "1 pollo de alrededor de 1 kilo troceado",
-      "100 ml. De aceite",
-      "1 cebolla muy picadita",
-      "2 dientes de ajo picados",
-      "Una lata de cerveza negra (también puede ser rubia)",
-      "Una bandeja de champiñones troceados",
-      "1 hoja de laurel",
-      "Sal, pimienta y orégano u otra hierba"
-    ],
-    "url_receta": "Recipes/Pollo a la cervezacon champiñones.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Pollo al horno",
-    "categoria": "MACU",
-    "ingredientes": [
-      "1 pollo entero no muy grande",
-      "1/2 pastilla de Avecrem",
-      "Aceite de oliva",
-      "1/2 cucharada de orégano",
-      "1/2 cucharada de hierbas provenzales",
-      "1/2 cucharada de albahaca",
-      "Pimienta molida",
-      "1/2 cucharilla de pimentón",
-      "Agua",
-      "Verduras variadas (opcional)"
-    ],
-    "url_receta": "Recipes/Pollo al horno.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Rape Fernando",
-    "categoria": "MACU",
-    "ingredientes": [
-      "2 o 3 colas de rape congelado",
-      "1 brik de tomate frito con aceite de oliva virgen extra o salsa de tomate",
-      "1 brik de fritada Hacendado",
-      "300 gr de almejas congeladas",
-      "12 langostinos",
-      "1 vasito de guisantes",
-      "1 hojita de laurel",
-      "Harina para rebozar",
-      "1 cucharilla de pimentón dulce",
-      "Aceite",
-      "Sal",
-      "Un vasito de agua de cocer los guisantes"
-    ],
-    "url_receta": "Recipes/Rape Fernando.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Risotto crujiente-meloso de setas",
-    "categoria": "MACU",
-    "ingredientes": [
-      "250gr de arroz camaroli",
-      "100gr de arroz salvaje",
-      "2 ajos",
-      "3 chalotas",
-      "Mantequilla",
-      "150gr de setas",
-      "Sal y pimienta",
-      "100 ml de vino blanco",
-      "Caldo de las propias setas u otro",
-      "150 gr queso parmesano"
-    ],
-    "url_receta": "Recipes/Risotto crujiente-meloso de setas.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Rosbif",
-    "categoria": "MACU",
-    "ingredientes": [
-      "1 trozo de redondo de ternera (1600 gr)",
-      "1/2 cebolla",
-      "1 copa de coñac",
-      "1 cucharada de salsa perrins",
-      "1/2 cucharada de soja",
-      "Pimienta",
-      "Aceite de oliva virgen extra",
-      "Caldo de pollo (gallina blanca 100% natural)"
-    ],
-    "url_receta": "Recipes/Rosbif.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Salsa de aguacate",
-    "categoria": "MACU",
-    "ingredientes": [
-      "2 cucharadas grandes o 2 sobres de mayonesa (de sobre o de bote)",
-      "1 aguacate maduro (blando)",
-      "Unas gotas de tabasco",
-      "Zumo de limón",
-      "1 cucharadita de orégano",
-      "Pimienta"
-    ],
-    "url_receta": "Recipes/Salsa de aguacate.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Salsa de castañas",
-    "categoria": "MACU",
-    "ingredientes": [
-      "1/2 cubilete de aceite virgen",
-      "250 gr de leche",
-      "125 gr nata líquida",
-      "125 gr caldo de pollo",
-      "300 gr castañas",
-      "50 gr de mantequilla",
-      "1/2 puerro",
-      "Sal y pimienta"
-    ],
-    "url_receta": "Recipes/Salsa de castañas.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Sandwich de langostinos gabardina",
-    "categoria": "MACU",
-    "ingredientes": [
-      "224gr de harina de trigo",
-      "12g de levadura royal",
-      "330ml de cerveza rubia",
-      "Chorrito de lima",
-      "Sal",
-      "Langostinos",
-      "Mayonesa de ajo",
-      "Salsa de tomate",
-      "Tabasco",
-      "Pimienta",
-      "Ralladura de lima",
-      "Tomate",
-      "Cebolla roja",
-      "Huevos",
-      "Pan brioche"
-    ],
-    "url_receta": "Recipes/Sandwich de langostinos gabardina.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Socarrat de pintada",
-    "categoria": "MACU",
-    "ingredientes": [
-      "2 contramuslos de pintada",
-      "4 ajos",
-      "1 pimiento rojo",
-      "1 cebolla",
-      "1 tomate",
-      "1 puerro",
-      "120gr almendra frita",
-      "Perejil",
-      "Vino blanco",
-      "Azafrán",
-      "Aceite oliva",
-      "600gr Arroz",
-      "1l de caldo de pintada"
-    ],
-    "url_receta": "Recipes/Socarrat de pintada.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Sopa",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Huesos de pollo (esqueleto), ternera (huesos de pata o de pecho) y cerdo (espinazo o de jamón)",
-      "1 chorizo pinchado con el tenedor o hechos unos cortes con el cuchillo",
-      "1 Puerro y 1 zanahoria (Lo más antiguo que tengas en la nevera)",
-      "1 litro y medio de agua",
-      "1 pastilla de Avecrem pollo 100% natural"
-    ],
-    "url_receta": "Recipes/Sopa.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Sopa de parmesano",
-    "categoria": "MACU",
-    "ingredientes": [
-      "200 gr de queso parmesano",
-      "80 ml de leche"
-    ],
-    "url_receta": "Recipes/Sopa de parmesano.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Tarta de almendra",
-    "categoria": "MACU",
-    "ingredientes": [
-      "3 claras",
-      "3 yemas",
-      "100 gr azúcar",
-      "125 gr almendra molida o en granillo fino",
-      "1 cucharada rasa de harina",
-      "1 cucharilla de levadura Royal",
-      "Unas gotas de esencia de limón o ralladura de limón",
-      "Azúcar Glass para adornar",
-      "Un molde engrasado y espolvoreado con harina"
-    ],
-    "url_receta": "Recipes/Tarta de almendra.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Tarta de galletas",
-    "categoria": "MACU",
-    "ingredientes": [
-      "6 huevos",
-      "1 paquete de galletas cuadradas",
-      "250 gr de mantequilla",
-      "1 tableta de chocolate postres Nestle",
-      "Leche"
-    ],
-    "url_receta": "Recipes/Tarta de galletas.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Tarta de queso al horno",
-    "categoria": "MACU",
-    "ingredientes": [
-      "600g de nata",
-      "3 cucharadas de azúcar",
-      "1 pizca de sal",
-      "6 huevos",
-      "50g de queso azul",
-      "300g de queso crema",
-      "Polvo de galletas con mantequilla (Opción base 1)",
-      "50g de harina (Opción base 2)",
-      "50g de harina de almendras (Opción base 2)",
-      "50g de mantequilla (Opción base 2)",
-      "50g de azúcar (Opción base 2)",
-      "2g de sal (Opción base 2)"
-    ],
-    "url_receta": "Recipes/Tarta de queso al horno.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Tarta de queso sin horno",
-    "categoria": "MACU",
-    "ingredientes": [
-      "120 gr de azúcar",
-      "350 ml de nata montada",
-      "300 gr de Philadelphia",
-      "9,5 gr (medio sobre o un poco más) de gelatina de limón",
-      "2 yogures de limón (175gr)",
-      "225 c.c. de agua",
-      "1 bote de mermelada de fresa",
-      "50 gr de margarina",
-      "1 paquete de galletas tipo María (unas 40 unidades)"
-    ],
-    "url_receta": "Recipes/Tarta de queso sin horno.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Tartar japo-castizo",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Salmón",
-      "Huevos fritos",
-      "Patatas fritas",
-      "Soja",
-      "Aceite de sésamo",
-      "Aceite de oliva",
-      "Salsa mexicana de chiplotes",
-      "Cebolleta",
-      "Ralladura de lima",
-      "Tomate",
-      "Croissant"
-    ],
-    "url_receta": "Recipes/Tartar japo-castizo.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Tempura para varitas",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Harina de tempura",
-      "Agua muy fría (o con hielo)",
-      "Lomitos de merluza congelados",
-      "Aceite para freír"
-    ],
-    "url_receta": "Recipes/Tempura para varitas.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Tiramisú",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Bizcocho",
-      "120 gr de azúcar glass",
-      "250 gr mascarpone",
-      "200 gr de philadelphia",
-      "Café",
-      "Licor café",
-      "Cacao puro"
-    ],
-    "url_receta": "Recipes/Tiramisú.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Tiramisú de turrón",
-    "categoria": "MACU",
-    "ingredientes": [
-      "1 bizcocho sin azúcar de Mercadona",
-      "200 gr de nata montada",
-      "200 gr de turrón blando",
-      "200 gr mascarpone",
-      "Cacao puro",
-      "Café",
-      "Licor café",
-      "2 cucharadas rasas de tagatosa o 4 cucharadas de azúcar blanco"
-    ],
-    "url_receta": "Recipes/Tiramisú de turrón.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Tomate relleno",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Tomates",
-      "Ventresca atún",
-      "1 lata de anchoas",
-      "1 cucharada de alcaparras",
-      "Mayonesa"
-    ],
-    "url_receta": "Recipes/Tomate relleno.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Torrijas",
-    "categoria": "MACU",
-    "ingredientes": [
-      "Leche de coco",
-      "150g Azúcar",
-      "Lemon Grass",
-      "Jengibre",
-      "Lima",
-      "Nata",
-      "Fresas liofilizadas",
-      "Pan brioche",
-      "4 Yemas de huevo",
-      "Galletas de chocolate",
-      "Mantequilla clarificada",
-      "Azúcar para caramelizar"
-    ],
-    "url_receta": "Recipes/Torrijas.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Tortilla de camarones",
-    "categoria": "MACU",
-    "ingredientes": [
-      "200gr harina de trigo",
-      "85,5 gr de harina de garbanzos (1/3)",
-      "1/2 cebolla",
-      "2 cucharadas de perejil",
-      "2 cucharadas de sal",
-      "Camarones",
-      "75cl de agua",
-      "Chorro de agua con gas"
-    ],
-    "url_receta": "Recipes/Tortilla de camarones.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Vieiras",
-    "categoria": "MACU",
-    "ingredientes": [
-      "8-10 Vieiras",
-      "Vino blanco",
-      "Aceite",
-      "3 dientes de ajo",
-      "Perejil",
-      "1 cebolla grande",
-      "1 cucharadita de pimentón dulce",
-      "Pan rallado con ajo y perejil"
-    ],
-    "url_receta": "Recipes/Vieiras.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Vinagreta de cítricos y jengibre",
-    "categoria": "MACU",
-    "ingredientes": [
-      "50ml zumo de lima",
-      "100ml aceite de oliva",
-      "1 diente de ajo rallado",
-      "Jengibre rallado",
-      "Ralladura de lima"
-    ],
-    "url_receta": "Recipes/Vinagreta de cítricos y jengibre.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Yogurt de leche de oveja con frambuesas al Pedro Jimenez y aceite de oliva",
-    "categoria": "MACU",
-    "ingredientes": [
-      "4 yogures de leche de oveja",
-      "150ml de vino Pedro Jiménez",
-      "200gr de frambuesas",
-      "50ml aceite de oliva",
-      "200ml leche entera",
-      "4 hojas de hierbabuena"
-    ],
-    "url_receta": "Recipes/Yogurt de leche de oveja con frambuesas al Pedro Jimenez y aceite de oliva.html",
-    "en_excel": false
-  },
-  {
-    "plato": "Zaragallada empanada",
-    "categoria": "MACU",
-    "ingredientes": [
-      "300gr carne picada de ternera",
-      "200gr filete cerdo picado",
-      "350 gr cebolla (Cebolla y media)",
-      "150gr pimiento rojo",
-      "2 dientes ajo",
-      "Sal",
-      "80 gr aceite",
-      "Perejil",
-      "Trocito de chorizo picado",
-      "Pimentón dulce",
-      "1 cubito de Avecrem pollo gallina blanca 100% natural"
-    ],
-    "url_receta": "Recipes/Zaragallada empanada.html",
-    "en_excel": false
   },
   {
     "plato": "Pan de trigo sarraceno",
@@ -2964,6 +1405,7 @@ const platosData = [
       "(Opcional) harina de trigo sarraceno extra para espolvorear"
     ],
     "url_receta": "Recipes/Pan de trigo sarraceno.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -2977,6 +1419,7 @@ const platosData = [
       "1 cdta sal (tamaño postre)"
     ],
     "url_receta": "Recipes/Pan Desayuno (arroz y espelta).html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -2993,6 +1436,7 @@ const platosData = [
       "Semillas para decorar (opcional)"
     ],
     "url_receta": "Recipes/Pan keto de almendras y coco.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3007,6 +1451,7 @@ const platosData = [
       "Tomate triturado",
       "Pasta"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Boloñesa con pasta.html"
   },
@@ -3021,6 +1466,7 @@ const platosData = [
       "Bechamel",
       "Queso rallado"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Canelones de carne y espinacas.html"
   },
@@ -3035,6 +1481,7 @@ const platosData = [
       "Bechamel",
       "Queso rallado"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Lasaña o Musaka (carne, champiñón, espinaca, bechamel).html"
   },
@@ -3047,6 +1494,7 @@ const platosData = [
       "Langostinos pelados",
       "Brécol"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Pasta fresca con pesto, langostinos y brécol.html"
   },
@@ -3060,6 +1508,7 @@ const platosData = [
       "Vino blanco",
       "Fumet"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Chocos con arroz.html"
   },
@@ -3070,6 +1519,7 @@ const platosData = [
       "bacalao, jurelos, dorada, rodaballo, sargo, palometa, menda, coruxo, corvina",
       "Pimiento"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Pescado Horno (bacalao, jurelos, dorada, rodaballo, sargo, palometa, menda, coruxo,…).html"
   },
@@ -3081,6 +1531,7 @@ const platosData = [
       "Pimentón dulce",
       "Pimentón picante"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Pulpo.html"
   },
@@ -3090,6 +1541,7 @@ const platosData = [
     "ingredientes": [
       "Rapantes"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Rapantes.html"
   },
@@ -3107,6 +1559,7 @@ const platosData = [
       "Fumet",
       "Perejil fresco"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Rape marinera langostinos.html"
   },
@@ -3118,6 +1571,7 @@ const platosData = [
       "Perejil",
       "Limón"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Rodaballo plancha.html"
   },
@@ -3128,6 +1582,7 @@ const platosData = [
       "Lomos de salmón",
       "Boniato"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Salmón AirFryer.html"
   },
@@ -3148,6 +1603,7 @@ const platosData = [
       "1 cucharadita de sal"
     ],
     "url_receta": "Recipes/Almejas a la marinera.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3162,6 +1618,7 @@ const platosData = [
       "30 g aceite de oliva"
     ],
     "url_receta": "Recipes/Pulpo á feira (versión rápida).html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3177,6 +1634,7 @@ const platosData = [
       "Salsa: mayonesa simple, mayonesa con tomate y coñac, o vinagreta"
     ],
     "url_receta": "Recipes/Rape Alangostado.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3195,6 +1653,7 @@ const platosData = [
       "Pan rallado (aprox. 100 g)"
     ],
     "url_receta": "Recipes/Vieiras al horno.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3215,6 +1674,7 @@ const platosData = [
       "1 cda Sal, pimienta, pimentón, comino"
     ],
     "url_receta": "Recipes/Quinoa con pollo, halloumi y verduras al horno ¿.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3233,6 +1693,7 @@ const platosData = [
       "Pistachos enteros para decorar"
     ],
     "url_receta": "Recipes/Barritas de pistacho sin horno.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3245,6 +1706,7 @@ const platosData = [
       "Chocolate 85%",
       "Polvo de hornear"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Bizcocho con pepitas de chocolate.html"
   },
@@ -3263,6 +1725,7 @@ const platosData = [
       "1 pellizco de sal"
     ],
     "url_receta": "Recipes/Bizcocho de naranja.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3279,6 +1742,7 @@ const platosData = [
       "(Opcional) nueces para decorar"
     ],
     "url_receta": "Recipes/Bizcocho de plátano y chocolate.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3298,6 +1762,7 @@ const platosData = [
       "(opcional: sustituir por 16 g de levadura en polvo)"
     ],
     "url_receta": "Recipes/Bizcocho marmolado de boniato y plátano.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3312,6 +1777,7 @@ const platosData = [
       "Canela Ceylán"
     ],
     "url_receta": "Recipes/Donuts de mandarina sin harinas.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3326,6 +1792,7 @@ const platosData = [
       "100 g pepitas de chocolate"
     ],
     "url_receta": "Recipes/Galletas de avena y chocolate.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3341,6 +1808,7 @@ const platosData = [
       "Un poco de aceite de coco (para derretir el chocolate)"
     ],
     "url_receta": "Recipes/Galletas saludables de chocolate (MyebyCosta).html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3353,6 +1821,7 @@ const platosData = [
       "Chocolate negro (para la cobertura)"
     ],
     "url_receta": "Recipes/Helado de pistacho.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3364,6 +1833,7 @@ const platosData = [
       "1 cda cacao en polvo"
     ],
     "url_receta": "Recipes/Helado saludable de chocolate (3 ingredientes).html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3379,6 +1849,7 @@ const platosData = [
       "50 g mantequilla"
     ],
     "url_receta": "Recipes/Muffins cetogénicos de arándanos.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3394,6 +1865,7 @@ const platosData = [
       "50 ml leche (opcional)"
     ],
     "url_receta": "Recipes/Pan de nueces (bizcocho).html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3409,6 +1881,7 @@ const platosData = [
       "50 ml leche (si la masa está muy densa)"
     ],
     "url_receta": "Recipes/Pan de nueces (bizcocho) 2..html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3423,6 +1896,7 @@ const platosData = [
       "250 ml leche"
     ],
     "url_receta": "Recipes/Quesada.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3442,6 +1916,7 @@ const platosData = [
       "125 g levadura fresca de panadería"
     ],
     "url_receta": "Recipes/Rosca de Carmen.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3454,6 +1929,7 @@ const platosData = [
       "Cacao puro o harina de algarroba (para decorar)"
     ],
     "url_receta": "Recipes/Tarta de chocolate (Blancanutri).html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3469,6 +1945,7 @@ const platosData = [
       "4 cda Nesquik"
     ],
     "url_receta": "Recipes/Tarta de Nesquik.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3482,6 +1959,7 @@ const platosData = [
       "280 ml nata (mín 35% MG)"
     ],
     "url_receta": "Recipes/Tarta de queso de la Viña.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3495,6 +1973,7 @@ const platosData = [
       "18 g de harina de trigo (tamizada)"
     ],
     "url_receta": "Recipes/Tarta de queso La Viña (TM31, 600 g queso).html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3514,6 +1993,7 @@ const platosData = [
       "50 g agua"
     ],
     "url_receta": "Recipes/Tarta de queso Thermomix.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3532,6 +2012,7 @@ const platosData = [
       "1 sobre levadura"
     ],
     "url_receta": "Recipes/Tarta de zanahoria.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3543,6 +2024,7 @@ const platosData = [
       "2 huevos"
     ],
     "url_receta": "Recipes/Tortitas de manzana y avena (3 ingredientes).html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3558,6 +2040,7 @@ const platosData = [
       "1 cdta levadura"
     ],
     "url_receta": "Recipes/Tortitas esponjosas.html",
+    "oculta_recetario": false,
     "en_excel": false
   },
   {
@@ -3572,6 +2055,1761 @@ const platosData = [
       "Aceite de oliva virgen extra"
     ],
     "url_receta": "Recipes/Verduras horno atún queso rallado ¿.html",
+    "oculta_recetario": false,
+    "en_excel": false
+  },
+  {
+    "plato": "Aceite de ajos, soja y limón",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "3 ajos",
+      "150 ml de aceite de oliva",
+      "60 ml soja",
+      "Zumo de media limón y ralladura",
+      "Pimienta blanca"
+    ],
+    "url_receta": "Recipes/Aceite de ajos, soja y limón.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Ajada",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "2 o 4 dientes de ajo sin pelar (con un golpe)",
+      "150 gr de aceite",
+      "1 cucharilla de pimentón dulce"
+    ],
+    "url_receta": "Recipes/Ajada.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Albóndigas con sepia",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Carne picada de ternera",
+      "Foie",
+      "Pan bimbo",
+      "Leche",
+      "Sal y pimienta",
+      "Harina",
+      "Ajo",
+      "Pimiento choricero",
+      "Puerro",
+      "Tomate",
+      "Champiñones",
+      "Azafrán",
+      "Vino tinto",
+      "Agua",
+      "Mayonesa de limón",
+      "Sepia",
+      "Perifollo"
+    ],
+    "url_receta": "Recipes/Albóndigas con sepia.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Alioli verde",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "1 huevo",
+      "1 taza de aceite",
+      "8 dientes de ajo",
+      "4 cucharadas de perejil picado",
+      "Sal"
+    ],
+    "url_receta": "Recipes/Alioli verde.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Alitas de pollo confitadas y fritas con lima",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "16 alitas de pollo",
+      "1l de aceite de oliva",
+      "5 ajos",
+      "2 hojas de laurel",
+      "20g pimienta en grano",
+      "2 limas"
+    ],
+    "url_receta": "Recipes/Alitas de pollo confitadas y fritas con lima.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Almejas a la marinera",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Almejas",
+      "Vino blanco o caldo",
+      "Aceite",
+      "Ajo",
+      "Perejil",
+      "Cebolla",
+      "Pimentón dulce",
+      "Pan rallado"
+    ],
+    "url_receta": "Recipes/Almejas a la marinera 2..html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Bacalao al horno",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "2 trozos de bacalao congelado (Mercadona)",
+      "1 pimiento rojo",
+      "1 cebolla",
+      "1/2 puerro",
+      "2 ajos",
+      "1 vasito de guisantes",
+      "3 cucharadas de tomate frito"
+    ],
+    "url_receta": "Recipes/Bacalao al horno.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Batata asada",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "1 batata"
+    ],
+    "url_receta": "Recipes/Batata asada.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Batido de fresas",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "500 gr de fresas",
+      "3 yogures naturales",
+      "70 gr de philadelphia",
+      "7 chorros de sacarina",
+      "1 vaso de yogur lleno de leche (opcional)"
+    ],
+    "url_receta": "Recipes/Batido de fresas.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Bizcocho de yogur",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "3 huevos",
+      "1 yogur natural",
+      "1 envase de yogur de azúcar",
+      "2 envases de yogur de harina",
+      "1/2 envase de aceite de oliva",
+      "Ralladura de limón",
+      "1 sobre de levadura",
+      "Cacao (opcional)",
+      "Mantequilla"
+    ],
+    "url_receta": "Recipes/Bizcocho de yogur.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Boloñesa",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "800gr de carne picada mezcla",
+      "1 puerro pequeño",
+      "1 cebolla pequeña",
+      "1 pimiento rojo pequeño",
+      "1 pimiento verde pequeño",
+      "2 dientes de ajo",
+      "1 cucharada de orégano",
+      "Media cucharada de albahaca",
+      "1 cucharada de perejil",
+      "Pimienta",
+      "Aceite",
+      "1 bote de tomate triturado",
+      "1 brik de tomate frito"
+    ],
+    "url_receta": "Recipes/Boloñesa.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Calamares en su tinta",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Unas barquetas de calamar limpio",
+      "Tinta de calamar congelada (4 sobres)",
+      "1 bolsa de pimientos verde y rojo troceados congelados (Mercadona)",
+      "1 bolsa de cebolla troceada congelada",
+      "2 dientes de ajo",
+      "Salsa de tomate o tomate concentrado",
+      "1 onza de chocolate o una cucharilla de cacao desgrasado",
+      "Sal y pimienta"
+    ],
+    "url_receta": "Recipes/Calamares en su tinta.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Callos",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "1 pata de vaca bien limpia y troceada",
+      "1 uña de cerdo troceada",
+      "3 chorizos",
+      "1 trozo de vientre",
+      "1 trozo de tocino blanco",
+      "1.5 kg de garbanzos",
+      "3 limones",
+      "Cebolla",
+      "Ajos",
+      "Pimienta negra",
+      "2.5 cucharadas de comino",
+      "Especias para callos",
+      "1 cucharilla de pimentón",
+      "Azafrán (opcional 2 sobres)"
+    ],
+    "url_receta": "Recipes/Callos.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Carne a la minuta",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "1 kg de carne de ternera (Babilla o Culata) en una pieza de 2 cm de grosor",
+      "2 huevos batidos",
+      "Pan rallado con ajo y perejil",
+      "1/2 taza de caldo de pollo (o 1/2 pastilla de Avecrem disuelta en agua caliente)",
+      "Pimienta",
+      "Aceite para freír"
+    ],
+    "url_receta": "Recipes/Carne a la minuta.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Carne estofada con mostaza y cerveza negra",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "800 gr de carne para asar (culata, redondo, lomo o pollo)",
+      "1 cebolla grande",
+      "2 dientes de ajo",
+      "Pan de molde (Bimbo)",
+      "Mostaza",
+      "Aceite",
+      "Pimienta",
+      "Cerveza negra",
+      "Zanahoria",
+      "Champiñones"
+    ],
+    "url_receta": "Recipes/Carne estofada con mostaza y cerveza negra.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Carne gisada o pollo guisado",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Media cebolla",
+      "2 dientes de ajo",
+      "Medio pimiento rojo y medio verde",
+      "2 zanahorias",
+      "1 taza de guisantes tiernos congelados",
+      "Pimentón dulce",
+      "Una pastilla de Avecrem pollo 100% natural o un agua de sopa",
+      "Perejil y 1 hoja de laurel (opcional)",
+      "Aceite, sal, pimienta",
+      "Patatas cortadas en dados",
+      "Ternera para guisar limpia de grasas y en trozos",
+      "Un par de cucharadas de tomate frito o de salsa de tomate"
+    ],
+    "url_receta": "Recipes/Carne gisada o pollo guisado.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Causa de salmonete a la bilbaina con patata canaria",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Causa:",
+      "400gr de patata marina de canarias",
+      "50gr de ají amarillo (pasta)",
+      "40ml de zumo de lima",
+      "Ralladura de lima",
+      "Sal y pimienta blanca",
+      "Salsa bilbaína:",
+      "2 ajos",
+      "1 chile o guindilla",
+      "60gr perejil",
+      "Vino blanco",
+      "30ml vinagre jerez",
+      "80ml aceite de oliva",
+      "10gr de cúrcuma en polvo",
+      "2 rodajas de jengibre",
+      "Principal:",
+      "Salmonete fresco (para laminar)"
+    ],
+    "url_receta": "Recipes/Causa de salmonete a la bilbaina con patata canaria.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Ceviche de langostinos y fruta de la pasión",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Langostinos pelados y cortados en dados (antes tienen que estar congelados)",
+      "Zumo de 2 limas",
+      "Zumo de 1 naranja",
+      "1/2 fruta de la pasión",
+      "Tiras de cebolla roja",
+      "Pasta de ají amarillo",
+      "Cebollino",
+      "Pellizco de azúcar"
+    ],
+    "url_receta": "Recipes/Ceviche de langostinos y fruta de la pasión.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Cocido",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Lacón",
+      "Preparado de gallina, ternera y cerdo",
+      "Cachucha ahumada",
+      "Oreja",
+      "Grelos",
+      "Garbanzos",
+      "Chorizo",
+      "Chorizo de cebolla",
+      "Morcilla",
+      "Patatas"
+    ],
+    "url_receta": "Recipes/Cocido.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Cocochas de merluza a la romana con asadillo manchego y sopa de parmesano",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "8 cocochas",
+      "4 huevos",
+      "100g harina",
+      "4 ajos",
+      "4 tomates",
+      "Aceite",
+      "Sal"
+    ],
+    "url_receta": "Recipes/Cocochas de merluza a la romana con asadillo manchego y sopa de parmesano.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Copa de café y vainilla",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Para la mousse de café:",
+      "4 yemas",
+      "100 cc de leche caliente o nata de cocinar",
+      "200 cc de café expresso",
+      "100 gr de azúcar",
+      "10 gr de hojas de gelatina",
+      "Helado de vainilla",
+      "2 cucharadas de philadelphia",
+      "400 gr de nata para montar",
+      "4 cucharadas de azúcar",
+      "cacao puro o canela en polvo"
+    ],
+    "url_receta": "Recipes/Copa de café y vainilla.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Coulant de chocolate",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "1 tableta de chocolate para postres Nestle (250 gr)",
+      "200 gr de mantequilla",
+      "130 gr de harina tamizada",
+      "130 gr de azúcar",
+      "100 gr de nata para montar",
+      "Nutella y una cucharilla de azúcar",
+      "5 yemas y 5 claras",
+      "Cacao",
+      "14 flaneras",
+      "1 Cubitera de huecos redondos"
+    ],
+    "url_receta": "Recipes/Coulant de chocolate.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Croquetas",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "200gr de jamón cocido",
+      "1 huevo cocido",
+      "60gr aceite",
+      "20g cebolla",
+      "400gr leche",
+      "110gr harina",
+      "Nuez moscada y pimienta negra",
+      "Mantequilla"
+    ],
+    "url_receta": "Recipes/Croquetas.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Dorada con jamón",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "2 patatas grandes",
+      "1 cebolla",
+      "Dorada abierta y sin espinas",
+      "Lonchas de jamón",
+      "Picada de almendras, ajo y perejil",
+      "Aceite",
+      "Perejil"
+    ],
+    "url_receta": "Recipes/Dorada con jamón.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Empanada de hojaldre de jamón y queso",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "2 láminas de hojaldre",
+      "Jamón cocido",
+      "Queso",
+      "1 huevo batido"
+    ],
+    "oculta_recetario": true,
+    "en_excel": true,
+    "url_receta": "Recipes/Empanada de hojaldre de jamón y queso.html"
+  },
+  {
+    "plato": "Ensalada de garbanzos y gulas",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "2 huevos cocidos y rallados",
+      "Aceitunas picadas",
+      "Tomate en trocitos",
+      "Espárragos pequeños",
+      "Zanahoria cruda rallada",
+      "Maíz dulce",
+      "Lechuga cortadita con tijera",
+      "Garbanzos de bote muy muy muy lavados debajo del grifo, mejor en un colador",
+      "Gulas hechas con su ajito y aceite o bien bonito en lata",
+      "Pimiento asado (según receta) o bien comprado en conserva."
+    ],
+    "url_receta": "Recipes/Ensalada de garbanzos y gulas.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Ensalada de langostinos con salsa rosa",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Langostinos (crudos congelados, tamaño pequeño)",
+      "Hojas de laurel",
+      "Sal",
+      "Lechuga",
+      "Tomatitos Cherry",
+      "Piña",
+      "Salsa Rosa"
+    ],
+    "url_receta": "Recipes/Ensalada de langostinos con salsa rosa.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Ensalada de pasta con papaya y vinagreta",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "1 papaya",
+      "1 puerro",
+      "1 tomate",
+      "400gr de cangrejos de rio",
+      "300gr pasta",
+      "Vinagreta de cítricos y jengibre",
+      "Sal y pimienta"
+    ],
+    "url_receta": "Recipes/Ensalada de pasta con papaya y vinagreta.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Ensalada de pasta y pollo",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "2 tomates",
+      "300 gr de pasta",
+      "Pechuga de pollo en dados",
+      "Queso rallado",
+      "Frutos secos",
+      "1 aguacate",
+      "Aceite",
+      "Limón",
+      "Sal y pimienta",
+      "Orégano y albahaca",
+      "Calabacín o pepino",
+      "Cebollino",
+      "Ajo"
+    ],
+    "url_receta": "Recipes/Ensalada de pasta y pollo.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Ensalada de salmón",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "2 barquetas de salmón",
+      "Pasta",
+      "Guisantes",
+      "Zanahoria",
+      "Queso philadelphia",
+      "Eneldo",
+      "Maiz",
+      "Huevo cocido",
+      "Pimiento asado"
+    ],
+    "url_receta": "Recipes/Ensalada de salmón.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Ensaladilla",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "1 taza de guisantes cocidos",
+      "2 tazas de patatas cocidas en trocitos",
+      "1/2 taza de zanahoria cocida en trocitos",
+      "3 huevos cocidos (rallados o picados)",
+      "1 bote de espárragos pequeños cortados en trocitos",
+      "1 bolsa de aceitunas sin hueso",
+      "Pimiento asado en tiras",
+      "1 huevo (para la mayonesa)",
+      "1 chorro de jugo de limón",
+      "Sal",
+      "Aceite de girasol o de oliva suave"
+    ],
+    "url_receta": "Recipes/Ensaladilla.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Escabeche",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "50gr zanahoria",
+      "2 ajos",
+      "150gr de jengibre",
+      "3 hojas de laurel",
+      "20g pimienta en grano",
+      "150ml vino blanco",
+      "150ml vinagre de jerez",
+      "300ml aceite oliva",
+      "200gr ventresca de atún"
+    ],
+    "url_receta": "Recipes/Escabeche.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Espaguetis con gulas y gambas",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "1 caja de gulas (marca Día)",
+      "20 langostinos pequeños crudos congelados (marca Día)",
+      "3 dientes de ajo",
+      "Aceite de oliva virgen extra",
+      "Perejil",
+      "Albahaca",
+      "Espaguetis (preferiblemente integrales)"
+    ],
+    "url_receta": "Recipes/Espaguetis con gulas y gambas.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Espárragos a la plancha",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "1 manojo de espárragos frescos",
+      "Aceite de oliva",
+      "Sal"
+    ],
+    "url_receta": "Recipes/Espárragos a la plancha.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Fabada",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Lacón",
+      "Pata de cerdo",
+      "Chorizo",
+      "Morcilla",
+      "Panceta",
+      "Cebolla",
+      "Zanahoria",
+      "Pimiento verde",
+      "Pimiento rojo",
+      "Perejil",
+      "Laurel",
+      "Pimentón dulce",
+      "Aceite",
+      "Ajo"
+    ],
+    "url_receta": "Recipes/Fabada.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Filloas",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "4 huevos",
+      "250gr harina",
+      "Media cucharilla de sal",
+      "150gr leche",
+      "350gr agua",
+      "Tocino blanco"
+    ],
+    "url_receta": "Recipes/Filloas.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Flan de queso",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Caramelo royal líquido",
+      "5 huevos",
+      "400gr queso philadelphia",
+      "370gr leche condensada",
+      "Leche entera (la medida del bote de la leche condensada La lechera de 370gr)"
+    ],
+    "url_receta": "Recipes/Flan de queso.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Gazpacho de fresas con salmón ahumado y sus huevas",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "500g de fresas",
+      "2kg de tomates",
+      "2 ajos",
+      "1 pimiento rojo",
+      "Media cebolla",
+      "1 pepino",
+      "2 panecillos de leche",
+      "150ml de vinagre de jerez",
+      "150ml de aceite de oliva",
+      "Sal",
+      "Comino",
+      "Salmón ahumado",
+      "Huevas de salmón"
+    ],
+    "url_receta": "Recipes/Gazpacho de fresas con salmón ahumado y sus huevas.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Gnocchis con salsa de tomate picante, berberechos y gambas",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "400gr gnocchis",
+      "1 ajo",
+      "1 chalota",
+      "300gr tomate maduro",
+      "1 chile",
+      "Pimentón",
+      "Vino riesling",
+      "20 berberechos",
+      "Gambas",
+      "Orégano",
+      "Aceite, sal y pimienta"
+    ],
+    "url_receta": "Recipes/Gnocchis con salsa de tomate picante, berberechos y gambas.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Helado de turrón",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "2 tabletas de turrón blando picado en la picadora",
+      "6 huevos",
+      "6 cucharadas de azúcar",
+      "400 gr de nata para montar"
+    ],
+    "url_receta": "Recipes/Helado de turrón.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Hojaldre de pollo, jamon y champiñones",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "2 láminas de hojaldre",
+      "100gr de jamón serrano",
+      "1 barqueta de champiñones",
+      "4 dientes de ajo",
+      "1 cebolla",
+      "Medio puerro",
+      "4 filetes de pavo",
+      "1 cucharada de philadelphia"
+    ],
+    "url_receta": "Recipes/Hojaldre de pollo, jamon y champiñones.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Judías",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Judías congeladas (mejor redondas)",
+      "2 Zanahorias",
+      "1 patata en rodajas",
+      "Tomate cortado en rodajas",
+      "2 huevos cocidos",
+      "1 lata de bonito (opcional)"
+    ],
+    "url_receta": "Recipes/Judías.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Judías con chorizo y patata",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Judías",
+      "Patatas",
+      "Chorizo",
+      "Salsa de tomate",
+      "Agua",
+      "Huevo"
+    ],
+    "url_receta": "Recipes/Judías con chorizo y patata.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Macu Crema fría al pesto",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "50 g parmesano",
+      "40 g hojas de albahaca",
+      "1 diente ajo",
+      "30 g piñones",
+      "100 g aceite de oliva virgen extra",
+      "Sal",
+      "1 bote leche evaporada",
+      "1 l agua aprox."
+    ],
+    "url_receta": "Recipes/Macu Crema fría al pesto.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Macu Crujientes de verduras con queso Brie",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "1 paquete de pasta filo (o pasta brick)",
+      "Margarina o aceite para pincelar",
+      "100 g calabacín sin pelar",
+      "100 g cebolla",
+      "100 g repollo",
+      "200 g pimiento",
+      "200 g queso Brie",
+      "Sal y pimienta",
+      "Vinagreta: 30 g vinagre balsámico, 100 g aceite de oliva virgen extra, sal",
+      "Cebollino para atar paquetes (opcional)"
+    ],
+    "url_receta": "Recipes/Macu Crujientes de verduras con queso Brie.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Macu Guiso \"Mar y Tierra\"",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Fumet: 250 g gambas o langostinos, 30 g aceite, 400 g agua",
+      "Sofrito: 50 g aceite, 100 g pimiento rojo, 100 g pimiento verde, 100 g cebolla, 2 dientes de ajo, 200 g tomate triturado",
+      "600 g garbanzos cocidos y escurridos",
+      "200 g calabaza (opcional)",
+      "2 pastillas caldo pescado",
+      "Hebras de azafrán"
+    ],
+    "url_receta": "Recipes/Macu Guiso Mar y Tierra.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Macu Pechugas de pollo en salsa de coco con curry",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "1 kg pechugas de pollo en tacos",
+      "30 g margarina",
+      "50 g aceite oliva virgen extra",
+      "150 g cebolla",
+      "2 dientes de ajo",
+      "200 g tomate triturado",
+      "250 g manzana Golden en láminas",
+      "1 lata leche de coco (400 g)",
+      "2 cdas curry en polvo",
+      "1–2 cdas azúcar (opcional)",
+      "Sal y pimienta",
+      "2 pastillas caldo pollo",
+      "Cayena (opcional)",
+      "Para acompañar: arroz blanco"
+    ],
+    "url_receta": "Recipes/Macu Pechugas de pollo en salsa de coco con curry.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Macu Pepinos rellenos de queso fresco y verduras",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "6 pepinos pequeños",
+      "300 g queso fresco tipo Quark",
+      "200 g nata líquida",
+      "4 cebolletas (o 100 g cebolla)",
+      "1 diente de ajo",
+      "80 g pimiento rojo",
+      "80 g pimiento verde",
+      "Un manojo de estragón o finas hierbas",
+      "2 cdas mostaza",
+      "Sal y pimienta"
+    ],
+    "url_receta": "Recipes/Macu Pepinos rellenos de queso fresco y verduras.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Macu Pimientos de piquillo rellenos de gulas con salsa de tinta",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "2 latas de pimientos del piquillo",
+      "400 g gulas",
+      "50 g aceite de oliva virgen extra",
+      "2 dientes de ajo laminados",
+      "4 cayenas",
+      "Salsa:",
+      "50 g aceite de oliva virgen extra",
+      "200 g cebolla",
+      "100 g pimiento verde",
+      "2 dientes de ajo",
+      "1 bolsita tinta de calamar",
+      "1 pastilla caldo pescado (o sal)",
+      "100 g vino blanco",
+      "Pimienta"
+    ],
+    "url_receta": "Recipes/Macu Pimientos de piquillo rellenos de gulas con salsa de tinta.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Macu Rollo tricolor",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "100 g hojas grandes de espinacas (sin tallos)",
+      "200 g queso crema light",
+      "200 g queso de cabra",
+      "6 pimientos del piquillo",
+      "Pimienta",
+      "Salsa templada:",
+      "20 g margarina vegetal",
+      "30 g aceite de oliva virgen extra",
+      "30 g salsa de soja",
+      "½ cdta mostaza",
+      "Gotas de tabasco"
+    ],
+    "url_receta": "Recipes/Macu Rollo tricolor.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Macu Tartar de bonito",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "500 g bonito limpio (sin piel ni espinas, ni parte oscura)",
+      "60 g zumo de limón",
+      "40 g salsa de soja",
+      "60 g pepinillos en vinagre",
+      "60 g aceitunas verdes sin hueso",
+      "2 cdas alcaparras",
+      "100 g tomates",
+      "1 aguacate",
+      "Cebollino, sal y pimienta"
+    ],
+    "url_receta": "Recipes/Macu Tartar de bonito.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Masa empanada",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "500gr harina",
+      "1 huevo",
+      "Agua",
+      "Leche",
+      "Aceite",
+      "Levadura",
+      "Media cucharilla de sal"
+    ],
+    "url_receta": "Recipes/Masa empanada.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Masa pizza",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "200gr agua",
+      "50gr aceite",
+      "1 cucharilla de sal",
+      "1 nuez de levadura prensada",
+      "400gr de harina"
+    ],
+    "url_receta": "Recipes/Masa pizza.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Masa pizza sin robot",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "500g harina 00",
+      "350cl agua",
+      "10g levadura",
+      "20g sal",
+      "Aceite oliva",
+      "250g tomate (mezclado con sal, aceite y orégano)"
+    ],
+    "url_receta": "Recipes/Masa pizza sin robot.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Mayonesa y salsa rosa",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "1 huevo",
+      "1 chorro de jugo de limón",
+      "Sal",
+      "Aceite (mejor de girasol o de oliva suave)"
+    ],
+    "url_receta": "Recipes/Mayonesa y salsa rosa.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Mejillones al vapor",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "2 kilos de mejillones",
+      "Unas hojas de laurel"
+    ],
+    "url_receta": "Recipes/Mejillones al vapor.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Muslos de pollo a la sidra",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Azafrán",
+      "6 muslos de pollo",
+      "1 vaso de sidra",
+      "Cebolla",
+      "1/2 manzana",
+      "Caldo de ave",
+      "3 patatas",
+      "Aceite, sal y pimienta"
+    ],
+    "url_receta": "Recipes/Muslos de pollo a la sidra.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Natillas de leche de coco con chocolate blanco, fruta de la pasión y polvo de galletas",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "1/2 l de leche de coco",
+      "5 yemas de huevo",
+      "110 gr azúcar",
+      "1 vaina de vainilla",
+      "20 gr maicena",
+      "50 gr jengibre",
+      "1 paquete de galletas",
+      "100 gr chocolate blanco",
+      "60 ml zumo de fruta de la pasión",
+      "6 frutas de la pasión"
+    ],
+    "url_receta": "Recipes/Natillas de leche de coco con chocolate blanco, fruta de la pasión y polvo de galletas.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Orejas",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Esencia de anís",
+      "1 huevo",
+      "50 gr de mantequilla",
+      "2 cucharadas de azúcar",
+      "Canela en polvo",
+      "Sal",
+      "460 gr de harina",
+      "Aceite de girasol para freír"
+    ],
+    "url_receta": "Recipes/Orejas.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Paella",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "3 dientes de ajo",
+      "1 cebolla",
+      "1 pimiento rojo",
+      "1 pimiento verde",
+      "3 pechugas de pollo",
+      "4 longanizas frescas",
+      "Caldo de pollo",
+      "Perejil y albahaca",
+      "1 bote de tomate frito",
+      "Pimiento asado"
+    ],
+    "url_receta": "Recipes/Paella.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Paella de fideos con mejillones en escabeche al curry con puré de limón",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Fideos",
+      "Mejillones en lata",
+      "Limones (una cesta)",
+      "Sofrito de tomate",
+      "Pulpa de pimiento choricero",
+      "Azafrán",
+      "Curry",
+      "Caldo de pescado",
+      "Arroz inflado",
+      "Aceite"
+    ],
+    "url_receta": "Recipes/Paella de fideos con mejillones en escabeche al curry con puré de limón.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Papas arrugás con mojo verde",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "200gr de patatas canarias pequeñas",
+      "100gr de sal",
+      "Agua",
+      "Zumo de limón",
+      "50gr perejil",
+      "50gr cilantro",
+      "4 ajos sin germen central",
+      "100 ml aceite oliva",
+      "50ml vinagre de jerez",
+      "80gr mostaza verde",
+      "Comino",
+      "Sal y pimienta negra"
+    ],
+    "url_receta": "Recipes/Papas arrugás con mojo verde.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Pasta carbonara",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Pasta",
+      "Ajo",
+      "Chalotas",
+      "Chile (rocoto) o guindilla seca",
+      "Huevos",
+      "Queso Idiazabal",
+      "Papada ibérica/Bacon",
+      "Limón",
+      "Brioche",
+      "Sal y pimienta"
+    ],
+    "url_receta": "Recipes/Pasta carbonara.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Pastel de patata y bacon",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "500gr de patatas",
+      "200gr de bacon",
+      "50gr de mantequilla",
+      "200ml de nata",
+      "Sal y pimienta"
+    ],
+    "url_receta": "Recipes/Pastel de patata y bacon.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Patatas rellenas",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "6 patatas alargadas",
+      "6 salchichas frescas",
+      "30 gr miga de pan",
+      "1 cebolla picada",
+      "1 huevo cocido rallado",
+      "1 cucharada de nata o leche",
+      "Pimienta y perejil"
+    ],
+    "url_receta": "Recipes/Patatas rellenas.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Pechugas de pavo con bacon al horno",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "2 pechugas de pavo pequeñas",
+      "Semillas de sésamo (ajonjolí)",
+      "Semillas de mostaza o pimienta",
+      "250 gr de bacon en lonchas",
+      "Aceite"
+    ],
+    "url_receta": "Recipes/Pechugas de pavo con bacon al horno 2..html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Pechugas de pavo con bacon al horno",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "2 pechugas de pavo pequeñas",
+      "Semillas de sésamo (ajonjolí)",
+      "Semillas de mostaza o pimienta",
+      "250 gr de bacon en lonchas",
+      "Aceite"
+    ],
+    "url_receta": "Recipes/Pechugas de pavo con bacon al horno.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Pernil",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Pernil",
+      "2 cebollas",
+      "5 ajos",
+      "1/2 taza de vinagre",
+      "Zumo de una naranja",
+      "2 cucharadas de salsa perrins",
+      "Orégano",
+      "Tomillo",
+      "1 hoja de laurel",
+      "Caldo",
+      "Vino dulce",
+      "Mantequilla"
+    ],
+    "url_receta": "Recipes/Pernil.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Perrito caliente",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Salchicha curry wurst o Frankfurt",
+      "Pan brioche",
+      "Salsa sriracha",
+      "Cebolla frita",
+      "Albahaca fresca",
+      "Macarrones",
+      "Nata",
+      "Queso parmesano",
+      "Mantequilla",
+      "Vino blanco",
+      "Sal",
+      "Pimienta"
+    ],
+    "url_receta": "Recipes/Perrito caliente.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Pescado a la sal",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "2 Lubinas de piscifactoría (limpias para la sal)",
+      "1 paquete de sal gruesa especial para hornear"
+    ],
+    "url_receta": "Recipes/Pescado a la sal.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Pescado al horno",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Pescado (merluza, lubina, pescadilla o bacalao)",
+      "Cebolla",
+      "Pimiento rojo",
+      "Ajo",
+      "Patatas",
+      "Pan rallado con ajo y perejil",
+      "Aceite",
+      "Agua"
+    ],
+    "url_receta": "Recipes/Pescado al horno.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Pescado cocido",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Merluza u otro pescado cortado en rodajas gordas",
+      "Agua",
+      "1 trozo de pimiento rojo",
+      "1 trozo de cebolla",
+      "1 trozo de zanahoria",
+      "1 hoja de laurel",
+      "Perejil",
+      "1 taza de guisantes tiernos congelados",
+      "3 patatas cortadas en rodajas gruesas",
+      "Mayonesa o ajada",
+      "Espárragos de bote para acompañar"
+    ],
+    "url_receta": "Recipes/Pescado cocido.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Picada de almendras, ajo y perejil",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "4 ajos",
+      "2 cucharadas de almendras picadas",
+      "2 cucharadas de perejil",
+      "12 cucharadas de aceite",
+      "Sal y pimienta"
+    ],
+    "url_receta": "Recipes/Picada de almendras, ajo y perejil.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Pimiento asado",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Pimiento",
+      "Sal",
+      "Aceite"
+    ],
+    "url_receta": "Recipes/Pimiento asado.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Pimiento asado (1)",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Pimiento rojo",
+      "Aceite",
+      "Papel de aluminio"
+    ],
+    "url_receta": "Recipes/Pimiento asado (1).html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Pollo a la albahaca",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Pechugas de pollo",
+      "4 ajos",
+      "1 vasito de vino blanco",
+      "1 manojo de albahaca",
+      "2 ramas de perejil",
+      "200 gr de champiñones",
+      "Harina, sal y aceite"
+    ],
+    "url_receta": "Recipes/Pollo a la albahaca.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Pollo a la cervezacon champiñones",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "1 pollo de alrededor de 1 kilo troceado",
+      "100 ml. De aceite",
+      "1 cebolla muy picadita",
+      "2 dientes de ajo picados",
+      "Una lata de cerveza negra (también puede ser rubia)",
+      "Una bandeja de champiñones troceados",
+      "1 hoja de laurel",
+      "Sal, pimienta y orégano u otra hierba"
+    ],
+    "url_receta": "Recipes/Pollo a la cervezacon champiñones.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Pollo al horno",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "1 pollo entero no muy grande",
+      "1/2 pastilla de Avecrem",
+      "Aceite de oliva",
+      "1/2 cucharada de orégano",
+      "1/2 cucharada de hierbas provenzales",
+      "1/2 cucharada de albahaca",
+      "Pimienta molida",
+      "1/2 cucharilla de pimentón",
+      "Agua",
+      "Verduras variadas (opcional)"
+    ],
+    "url_receta": "Recipes/Pollo al horno.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Rape Fernando",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "2 o 3 colas de rape congelado",
+      "1 brik de tomate frito con aceite de oliva virgen extra o salsa de tomate",
+      "1 brik de fritada Hacendado",
+      "300 gr de almejas congeladas",
+      "12 langostinos",
+      "1 vasito de guisantes",
+      "1 hojita de laurel",
+      "Harina para rebozar",
+      "1 cucharilla de pimentón dulce",
+      "Aceite",
+      "Sal",
+      "Un vasito de agua de cocer los guisantes"
+    ],
+    "url_receta": "Recipes/Rape Fernando.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Risotto crujiente-meloso de setas",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "250gr de arroz camaroli",
+      "100gr de arroz salvaje",
+      "2 ajos",
+      "3 chalotas",
+      "Mantequilla",
+      "150gr de setas",
+      "Sal y pimienta",
+      "100 ml de vino blanco",
+      "Caldo de las propias setas u otro",
+      "150 gr queso parmesano"
+    ],
+    "url_receta": "Recipes/Risotto crujiente-meloso de setas.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Rosbif",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "1 trozo de redondo de ternera (1600 gr)",
+      "1/2 cebolla",
+      "1 copa de coñac",
+      "1 cucharada de salsa perrins",
+      "1/2 cucharada de soja",
+      "Pimienta",
+      "Aceite de oliva virgen extra",
+      "Caldo de pollo (gallina blanca 100% natural)"
+    ],
+    "url_receta": "Recipes/Rosbif.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Salsa de aguacate",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "2 cucharadas grandes o 2 sobres de mayonesa (de sobre o de bote)",
+      "1 aguacate maduro (blando)",
+      "Unas gotas de tabasco",
+      "Zumo de limón",
+      "1 cucharadita de orégano",
+      "Pimienta"
+    ],
+    "url_receta": "Recipes/Salsa de aguacate.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Salsa de castañas",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "1/2 cubilete de aceite virgen",
+      "250 gr de leche",
+      "125 gr nata líquida",
+      "125 gr caldo de pollo",
+      "300 gr castañas",
+      "50 gr de mantequilla",
+      "1/2 puerro",
+      "Sal y pimienta"
+    ],
+    "url_receta": "Recipes/Salsa de castañas.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Sandwich de langostinos gabardina",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "224gr de harina de trigo",
+      "12g de levadura royal",
+      "330ml de cerveza rubia",
+      "Chorrito de lima",
+      "Sal",
+      "Langostinos",
+      "Mayonesa de ajo",
+      "Salsa de tomate",
+      "Tabasco",
+      "Pimienta",
+      "Ralladura de lima",
+      "Tomate",
+      "Cebolla roja",
+      "Huevos",
+      "Pan brioche"
+    ],
+    "url_receta": "Recipes/Sandwich de langostinos gabardina.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Socarrat de pintada",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "2 contramuslos de pintada",
+      "4 ajos",
+      "1 pimiento rojo",
+      "1 cebolla",
+      "1 tomate",
+      "1 puerro",
+      "120gr almendra frita",
+      "Perejil",
+      "Vino blanco",
+      "Azafrán",
+      "Aceite oliva",
+      "600gr Arroz",
+      "1l de caldo de pintada"
+    ],
+    "url_receta": "Recipes/Socarrat de pintada.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Sopa",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Huesos de pollo (esqueleto), ternera (huesos de pata o de pecho) y cerdo (espinazo o de jamón)",
+      "1 chorizo pinchado con el tenedor o hechos unos cortes con el cuchillo",
+      "1 Puerro y 1 zanahoria (Lo más antiguo que tengas en la nevera)",
+      "1 litro y medio de agua",
+      "1 pastilla de Avecrem pollo 100% natural"
+    ],
+    "url_receta": "Recipes/Sopa.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Sopa de parmesano",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "200 gr de queso parmesano",
+      "80 ml de leche"
+    ],
+    "url_receta": "Recipes/Sopa de parmesano.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Tarta de almendra",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "3 claras",
+      "3 yemas",
+      "100 gr azúcar",
+      "125 gr almendra molida o en granillo fino",
+      "1 cucharada rasa de harina",
+      "1 cucharilla de levadura Royal",
+      "Unas gotas de esencia de limón o ralladura de limón",
+      "Azúcar Glass para adornar",
+      "Un molde engrasado y espolvoreado con harina"
+    ],
+    "url_receta": "Recipes/Tarta de almendra.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Tarta de galletas",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "6 huevos",
+      "1 paquete de galletas cuadradas",
+      "250 gr de mantequilla",
+      "1 tableta de chocolate postres Nestle",
+      "Leche"
+    ],
+    "url_receta": "Recipes/Tarta de galletas.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Tarta de queso al horno",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "600g de nata",
+      "3 cucharadas de azúcar",
+      "1 pizca de sal",
+      "6 huevos",
+      "50g de queso azul",
+      "300g de queso crema",
+      "Polvo de galletas con mantequilla (Opción base 1)",
+      "50g de harina (Opción base 2)",
+      "50g de harina de almendras (Opción base 2)",
+      "50g de mantequilla (Opción base 2)",
+      "50g de azúcar (Opción base 2)",
+      "2g de sal (Opción base 2)"
+    ],
+    "url_receta": "Recipes/Tarta de queso al horno.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Tarta de queso sin horno",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "120 gr de azúcar",
+      "350 ml de nata montada",
+      "300 gr de Philadelphia",
+      "9,5 gr (medio sobre o un poco más) de gelatina de limón",
+      "2 yogures de limón (175gr)",
+      "225 c.c. de agua",
+      "1 bote de mermelada de fresa",
+      "50 gr de margarina",
+      "1 paquete de galletas tipo María (unas 40 unidades)"
+    ],
+    "url_receta": "Recipes/Tarta de queso sin horno.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Tartar japo-castizo",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Salmón",
+      "Huevos fritos",
+      "Patatas fritas",
+      "Soja",
+      "Aceite de sésamo",
+      "Aceite de oliva",
+      "Salsa mexicana de chiplotes",
+      "Cebolleta",
+      "Ralladura de lima",
+      "Tomate",
+      "Croissant"
+    ],
+    "url_receta": "Recipes/Tartar japo-castizo.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Tempura para varitas",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Harina de tempura",
+      "Agua muy fría (o con hielo)",
+      "Lomitos de merluza congelados",
+      "Aceite para freír"
+    ],
+    "url_receta": "Recipes/Tempura para varitas.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Tiramisú",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Bizcocho",
+      "120 gr de azúcar glass",
+      "250 gr mascarpone",
+      "200 gr de philadelphia",
+      "Café",
+      "Licor café",
+      "Cacao puro"
+    ],
+    "url_receta": "Recipes/Tiramisú.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Tiramisú de turrón",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "1 bizcocho sin azúcar de Mercadona",
+      "200 gr de nata montada",
+      "200 gr de turrón blando",
+      "200 gr mascarpone",
+      "Cacao puro",
+      "Café",
+      "Licor café",
+      "2 cucharadas rasas de tagatosa o 4 cucharadas de azúcar blanco"
+    ],
+    "url_receta": "Recipes/Tiramisú de turrón.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Tomate relleno",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Tomates",
+      "Ventresca atún",
+      "1 lata de anchoas",
+      "1 cucharada de alcaparras",
+      "Mayonesa"
+    ],
+    "url_receta": "Recipes/Tomate relleno.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Torrijas",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Leche de coco",
+      "150g Azúcar",
+      "Lemon Grass",
+      "Jengibre",
+      "Lima",
+      "Nata",
+      "Fresas liofilizadas",
+      "Pan brioche",
+      "4 Yemas de huevo",
+      "Galletas de chocolate",
+      "Mantequilla clarificada",
+      "Azúcar para caramelizar"
+    ],
+    "url_receta": "Recipes/Torrijas.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Tortilla de camarones",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "200gr harina de trigo",
+      "85,5 gr de harina de garbanzos (1/3)",
+      "1/2 cebolla",
+      "2 cucharadas de perejil",
+      "2 cucharadas de sal",
+      "Camarones",
+      "75cl de agua",
+      "Chorro de agua con gas"
+    ],
+    "url_receta": "Recipes/Tortilla de camarones.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Vieiras",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "8-10 Vieiras",
+      "Vino blanco",
+      "Aceite",
+      "3 dientes de ajo",
+      "Perejil",
+      "1 cebolla grande",
+      "1 cucharadita de pimentón dulce",
+      "Pan rallado con ajo y perejil"
+    ],
+    "url_receta": "Recipes/Vieiras.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Vinagreta de cítricos y jengibre",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "50ml zumo de lima",
+      "100ml aceite de oliva",
+      "1 diente de ajo rallado",
+      "Jengibre rallado",
+      "Ralladura de lima"
+    ],
+    "url_receta": "Recipes/Vinagreta de cítricos y jengibre.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Yogurt de leche de oveja con frambuesas al Pedro Jimenez y aceite de oliva",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "4 yogures de leche de oveja",
+      "150ml de vino Pedro Jiménez",
+      "200gr de frambuesas",
+      "50ml aceite de oliva",
+      "200ml leche entera",
+      "4 hojas de hierbabuena"
+    ],
+    "url_receta": "Recipes/Yogurt de leche de oveja con frambuesas al Pedro Jimenez y aceite de oliva.html",
+    "oculta_recetario": true,
+    "en_excel": false
+  },
+  {
+    "plato": "Zaragallada empanada",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "300gr carne picada de ternera",
+      "200gr filete cerdo picado",
+      "350 gr cebolla (Cebolla y media)",
+      "150gr pimiento rojo",
+      "2 dientes ajo",
+      "Sal",
+      "80 gr aceite",
+      "Perejil",
+      "Trocito de chorizo picado",
+      "Pimentón dulce",
+      "1 cubito de Avecrem pollo gallina blanca 100% natural"
+    ],
+    "url_receta": "Recipes/Zaragallada empanada.html",
+    "oculta_recetario": true,
     "en_excel": false
   },
   {
@@ -3585,6 +3823,7 @@ const platosData = [
       "Caldo de verduras",
       "Nata"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Crema Champiñones.html"
   },
@@ -3598,6 +3837,7 @@ const platosData = [
       "Zanahorias",
       "Nuez moscada"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Crema Verduras.html"
   },
@@ -3609,6 +3849,7 @@ const platosData = [
       "Pimiento verde",
       "Pepino"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Gazpacho.html"
   },
@@ -3622,6 +3863,7 @@ const platosData = [
       "Masa brisa",
       "Queso rallado"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Pastel de puerro y huevo.html"
   },
@@ -3636,6 +3878,7 @@ const platosData = [
       "Perejil fresco",
       "Pan para freír"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Sopa de Coles con Sobrasada.html"
   },
@@ -3652,6 +3895,7 @@ const platosData = [
       "Avecrem",
       "Pan del día anterior"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Sopa de espárragos y langostinos.html"
   },
@@ -3671,6 +3915,7 @@ const platosData = [
       "Gambas",
       "Perejil"
     ],
+    "oculta_recetario": false,
     "en_excel": true,
     "url_receta": "Recipes/Sopa de pescado (TM31).html"
   }
@@ -3678,7 +3923,9 @@ const platosData = [
 const recetasData = [
   {
     "nombre": "Aceite de ajos, soja y limón",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "3 ajos",
       "150 ml de aceite de oliva",
@@ -3691,6 +3938,8 @@ const recetasData = [
   {
     "nombre": "Acelgas",
     "categoria": "Básicos y acompañamientos",
+    "categoria_original": "Básicos y acompañamientos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "400 g acelgas troceadas",
       "2 dientes de ajo",
@@ -3701,7 +3950,9 @@ const recetasData = [
   },
   {
     "nombre": "Ajada",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "2 o 4 dientes de ajo sin pelar (con un golpe)",
       "150 gr de aceite",
@@ -3711,7 +3962,9 @@ const recetasData = [
   },
   {
     "nombre": "Albóndigas",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Para las albóndigas:",
       "500g de carne picada de ternera",
@@ -3739,6 +3992,8 @@ const recetasData = [
   {
     "nombre": "Albóndigas Carmen",
     "categoria": "Carnes",
+    "categoria_original": "Carnes, FINDESEMANA",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "600 g carne picada (mezcla ternera/cerdo)",
       "1 huevo",
@@ -3757,7 +4012,9 @@ const recetasData = [
   },
   {
     "nombre": "Albóndigas con sepia",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Carne picada de ternera",
       "Foie",
@@ -3782,6 +4039,8 @@ const recetasData = [
   {
     "nombre": "Alcachofas",
     "categoria": "Básicos y acompañamientos",
+    "categoria_original": "Básicos y acompañamientos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "### Ingredientes",
       "* 8 alcachofas limpias (en cuartos)",
@@ -3796,7 +4055,9 @@ const recetasData = [
   },
   {
     "nombre": "Alioli verde",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "1 huevo",
       "1 taza de aceite",
@@ -3808,7 +4069,9 @@ const recetasData = [
   },
   {
     "nombre": "Alitas de pollo confitadas y fritas con lima",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "16 alitas de pollo",
       "1l de aceite de oliva",
@@ -3822,6 +4085,8 @@ const recetasData = [
   {
     "nombre": "Almejas a la marinera",
     "categoria": "Pescados y mariscos",
+    "categoria_original": "Pescados y mariscos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "100 g de cebolla",
       "1–2 dientes de ajo",
@@ -3839,7 +4104,9 @@ const recetasData = [
   },
   {
     "nombre": "Almejas a la marinera",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Almejas",
       "Vino blanco o caldo",
@@ -3855,6 +4122,8 @@ const recetasData = [
   {
     "nombre": "Asaid",
     "categoria": "Desayunos",
+    "categoria_original": "Desayunos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 paquete de açaí",
       "1 plátano congelado",
@@ -3866,7 +4135,9 @@ const recetasData = [
   },
   {
     "nombre": "Bacalao al horno",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "2 trozos de bacalao congelado (Mercadona)",
       "1 pimiento rojo",
@@ -3881,6 +4152,8 @@ const recetasData = [
   {
     "nombre": "Barritas de pistacho sin horno",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "250 g copos de avena",
       "2 cucharadas sirope de agave",
@@ -3897,7 +4170,9 @@ const recetasData = [
   },
   {
     "nombre": "Batata asada",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "1 batata"
     ],
@@ -3905,7 +4180,9 @@ const recetasData = [
   },
   {
     "nombre": "Batido de fresas",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "500 gr de fresas",
       "3 yogures naturales",
@@ -3918,6 +4195,8 @@ const recetasData = [
   {
     "nombre": "Berenjenas rellenas",
     "categoria": "CENAS",
+    "categoria_original": "CENAS",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "2 berenjenas grandes",
       "300 g carne picada o verduras",
@@ -3933,6 +4212,8 @@ const recetasData = [
   {
     "nombre": "Bizcocho con pepitas de chocolate",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "2 plátanos (o 2 manzanas asadas)",
       "2 huevos",
@@ -3946,6 +4227,8 @@ const recetasData = [
   {
     "nombre": "Bizcocho de naranja",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "250 g de azúcar",
       "1 naranja de zumo sin pelar (cortada en cuartos)",
@@ -3962,6 +4245,8 @@ const recetasData = [
   {
     "nombre": "Bizcocho de plátano y chocolate",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "4 plátanos (1 para decorar)",
       "2 huevos",
@@ -3976,7 +4261,9 @@ const recetasData = [
   },
   {
     "nombre": "Bizcocho de yogur",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "3 huevos",
       "1 yogur natural",
@@ -3993,6 +4280,8 @@ const recetasData = [
   {
     "nombre": "Bizcocho marmolado de boniato y plátano",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "220 g boniato (ya cocido)",
       "1 plátano grande o 2 pequeños",
@@ -4010,7 +4299,9 @@ const recetasData = [
   },
   {
     "nombre": "Boloñesa",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "800gr de carne picada mezcla",
       "1 puerro pequeño",
@@ -4031,6 +4322,8 @@ const recetasData = [
   {
     "nombre": "Boloñesa con pasta",
     "categoria": "Pasta y arroces",
+    "categoria_original": "Pasta y arroces",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "400 g carne picada",
       "1 rama de apio",
@@ -4047,6 +4340,8 @@ const recetasData = [
   {
     "nombre": "Brécol al vapor",
     "categoria": "Básicos y acompañamientos",
+    "categoria_original": "Básicos y acompañamientos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "400 g brécol en ramilletes",
       "1 cdta sal",
@@ -4057,6 +4352,8 @@ const recetasData = [
   {
     "nombre": "Calabacín en espaguetis",
     "categoria": "Básicos y acompañamientos",
+    "categoria_original": "Básicos y acompañamientos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "2 calabacines espiralizados",
       "20 g aceite de oliva",
@@ -4066,7 +4363,9 @@ const recetasData = [
   },
   {
     "nombre": "Calamares en su tinta",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Unas barquetas de calamar limpio",
       "Tinta de calamar congelada (4 sobres)",
@@ -4081,7 +4380,9 @@ const recetasData = [
   },
   {
     "nombre": "Callos",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "1 pata de vaca bien limpia y troceada",
       "1 uña de cerdo troceada",
@@ -4103,6 +4404,8 @@ const recetasData = [
   {
     "nombre": "Canastillas de Patata con Salmón de Noruega",
     "categoria": "Aperitivos",
+    "categoria_original": "Aperitivos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "Patatas baby (4 por persona aprox.)",
       "Salmón ahumado de Noruega",
@@ -4118,6 +4421,8 @@ const recetasData = [
   {
     "nombre": "Canelones de carne y espinacas",
     "categoria": "Pasta y arroces",
+    "categoria_original": "Pasta y arroces",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "12 placas de canelón",
       "300 g carne picada",
@@ -4132,7 +4437,9 @@ const recetasData = [
   },
   {
     "nombre": "Carne a la minuta",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "1 kg de carne de ternera (Babilla o Culata) en una pieza de 2 cm de grosor",
       "2 huevos batidos",
@@ -4145,7 +4452,9 @@ const recetasData = [
   },
   {
     "nombre": "Carne estofada con mostaza y cerveza negra",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "800 gr de carne para asar (culata, redondo, lomo o pollo)",
       "1 cebolla grande",
@@ -4162,7 +4471,9 @@ const recetasData = [
   },
   {
     "nombre": "Carne gisada o pollo guisado",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Media cebolla",
       "2 dientes de ajo",
@@ -4182,6 +4493,8 @@ const recetasData = [
   {
     "nombre": "Carrilleras ternera vino tinto",
     "categoria": "Carnes",
+    "categoria_original": "Carnes",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "Para las carrilleras:",
       "1 kg carrilleras de ternera",
@@ -4208,7 +4521,9 @@ const recetasData = [
   },
   {
     "nombre": "Causa de salmonete a la bilbaina con patata canaria",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Causa:",
       "400gr de patata marina de canarias",
@@ -4232,7 +4547,9 @@ const recetasData = [
   },
   {
     "nombre": "Ceviche de langostinos y fruta de la pasión",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Langostinos pelados y cortados en dados (antes tienen que estar congelados)",
       "Zumo de 2 limas",
@@ -4248,6 +4565,8 @@ const recetasData = [
   {
     "nombre": "Chocos con arroz",
     "categoria": "Pescados y mariscos",
+    "categoria_original": "Pescados y mariscos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "500 g chocos limpios",
       "250 g arroz",
@@ -4262,6 +4581,8 @@ const recetasData = [
   {
     "nombre": "Churrasco al horno ¿?",
     "categoria": "Carnes",
+    "categoria_original": "Carnes",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1,2 kg churrasco de ternera o cerdo",
       "Sal",
@@ -4272,6 +4593,8 @@ const recetasData = [
   {
     "nombre": "Cochinillo asado estilo segoviano",
     "categoria": "Carnes",
+    "categoria_original": "Carnes",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 cochinillo entero (4 a 5 kg) en canal",
       "sal gorda",
@@ -4283,7 +4606,9 @@ const recetasData = [
   },
   {
     "nombre": "Cocido",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Lacón",
       "Preparado de gallina, ternera y cerdo",
@@ -4301,6 +4626,8 @@ const recetasData = [
   {
     "nombre": "Cocido Carmem",
     "categoria": "Carnes",
+    "categoria_original": "Carnes",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 kg de carne de ternera",
       "2 tiras de costilla salada",
@@ -4317,7 +4644,9 @@ const recetasData = [
   },
   {
     "nombre": "Cocochas de merluza a la romana con asadillo manchego y sopa de parmesano",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "8 cocochas",
       "4 huevos",
@@ -4332,6 +4661,8 @@ const recetasData = [
   {
     "nombre": "Coliflor al vapor",
     "categoria": "Básicos y acompañamientos",
+    "categoria_original": "Básicos y acompañamientos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "400 g coliflor en ramilletes",
       "1 cdta sal",
@@ -4341,7 +4672,9 @@ const recetasData = [
   },
   {
     "nombre": "Copa de café y vainilla",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Para la mousse de café:",
       "4 yemas",
@@ -4360,6 +4693,8 @@ const recetasData = [
   {
     "nombre": "Costillas de cerdo papillote ¿?",
     "categoria": "Carnes",
+    "categoria_original": "Carnes",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 kg costillas de cerdo",
       "Sal",
@@ -4371,7 +4706,9 @@ const recetasData = [
   },
   {
     "nombre": "Coulant de chocolate",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "1 tableta de chocolate para postres Nestle (250 gr)",
       "200 gr de mantequilla",
@@ -4389,6 +4726,8 @@ const recetasData = [
   {
     "nombre": "Crema Champiñones",
     "categoria": "Sopas y cremas",
+    "categoria_original": "Sopas y cremas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "500 g de champiñones (Portobello) limpios y en cuartos",
       "1 puerro (solo la parte blanca) en rodajas",
@@ -4405,6 +4744,8 @@ const recetasData = [
   {
     "nombre": "Crema Verduras",
     "categoria": "Sopas y cremas",
+    "categoria_original": "Sopas y cremas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 puerro",
       "1 calabacín",
@@ -4419,7 +4760,9 @@ const recetasData = [
   },
   {
     "nombre": "Croquetas",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "200gr de jamón cocido",
       "1 huevo cocido",
@@ -4435,6 +4778,8 @@ const recetasData = [
   {
     "nombre": "Cuscús con champiñones y judías verdes",
     "categoria": "CENAS",
+    "categoria_original": "CENAS",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "100 g cuscús",
       "100 ml agua o caldo caliente",
@@ -4453,6 +4798,8 @@ const recetasData = [
   {
     "nombre": "Donuts de mandarina sin harinas",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "2 huevos",
       "65 g de almendra molida (u otro fruto seco o semilla)",
@@ -4465,7 +4812,9 @@ const recetasData = [
   },
   {
     "nombre": "Dorada con jamón",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "2 patatas grandes",
       "1 cebolla",
@@ -4480,6 +4829,8 @@ const recetasData = [
   {
     "nombre": "E. Bonito lechuga tomate feta zanahoria semillas",
     "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 lechuga",
       "2 tomates",
@@ -4495,6 +4846,8 @@ const recetasData = [
   {
     "nombre": "E. Caprese",
     "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "3 tomates maduros",
       "200 g mozzarella fresca",
@@ -4507,6 +4860,8 @@ const recetasData = [
   {
     "nombre": "E. Cuscús judías champiñones yema",
     "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "200 g cuscús preparado",
       "200 g judías verdes cocidas",
@@ -4521,6 +4876,8 @@ const recetasData = [
   {
     "nombre": "E. Pimientos tomate feta almendras bonito",
     "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "2 pimientos asados o frescos",
       "2 tomates",
@@ -4535,6 +4892,8 @@ const recetasData = [
   {
     "nombre": "E. Quinoa brécol calabacín",
     "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "200 g quinoa cocida",
       "200 g brécol al vapor",
@@ -4547,6 +4906,8 @@ const recetasData = [
   {
     "nombre": "E. Salmón aguacate feta tomate canónigos nueces",
     "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "200 g salmón marinado o ahumado",
       "1 aguacate",
@@ -4561,7 +4922,9 @@ const recetasData = [
   },
   {
     "nombre": "Empanada de hojaldre de jamón y queso",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "2 láminas de hojaldre",
       "Jamón cocido",
@@ -4573,6 +4936,8 @@ const recetasData = [
   {
     "nombre": "Empanada Hojaldre Esto Salmón",
     "categoria": "Aperitivos",
+    "categoria_original": "Aperitivos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "Dos hojaldres cuadrados",
       "Pesto 90gr",
@@ -4584,6 +4949,8 @@ const recetasData = [
   {
     "nombre": "Empanada pollo",
     "categoria": "Platos especiales, internacionales",
+    "categoria_original": "Platos especiales / internacionales",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "2 planchas de masa brisa o quebrada",
       "300 g pechuga de pollo",
@@ -4607,6 +4974,8 @@ const recetasData = [
   {
     "nombre": "Empanadillas",
     "categoria": "CENAS",
+    "categoria_original": "CENAS",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "harina",
       "levadura",
@@ -4620,6 +4989,8 @@ const recetasData = [
   {
     "nombre": "Ensalada de atún",
     "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 lata de atún al natural (60 g)",
       "1/2 aguacate",
@@ -4634,6 +5005,8 @@ const recetasData = [
   {
     "nombre": "Ensalada de atún y mango",
     "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 lata de atún al natural",
       "1/2 unidad de mango",
@@ -4647,7 +5020,9 @@ const recetasData = [
   },
   {
     "nombre": "Ensalada de garbanzos y gulas",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "2 huevos cocidos y rallados",
       "Aceitunas picadas",
@@ -4664,7 +5039,9 @@ const recetasData = [
   },
   {
     "nombre": "Ensalada de langostinos con salsa rosa",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Langostinos (crudos congelados, tamaño pequeño)",
       "Hojas de laurel",
@@ -4679,6 +5056,8 @@ const recetasData = [
   {
     "nombre": "Ensalada de pasta",
     "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "50 g pasta integral",
       "1 lata de atún al natural",
@@ -4691,7 +5070,9 @@ const recetasData = [
   },
   {
     "nombre": "Ensalada de pasta con papaya y vinagreta",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "1 papaya",
       "1 puerro",
@@ -4705,7 +5086,9 @@ const recetasData = [
   },
   {
     "nombre": "Ensalada de pasta y pollo",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "2 tomates",
       "300 gr de pasta",
@@ -4726,6 +5109,8 @@ const recetasData = [
   {
     "nombre": "Ensalada de patata",
     "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "200 g patata",
       "1 huevo cocido",
@@ -4738,6 +5123,8 @@ const recetasData = [
   {
     "nombre": "Ensalada de pimientos rojos asados",
     "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "Pimientos rojos asados en tiras",
       "20 g almendras o nueces",
@@ -4751,6 +5138,8 @@ const recetasData = [
   {
     "nombre": "Ensalada de queso de cabra",
     "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "60 g salmón ahumado",
       "40 g queso de cabra",
@@ -4764,7 +5153,9 @@ const recetasData = [
   },
   {
     "nombre": "Ensalada de salmón",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "2 barquetas de salmón",
       "Pasta",
@@ -4781,6 +5172,8 @@ const recetasData = [
   {
     "nombre": "Ensalada de salmón marinado",
     "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "60 g salmón marinado",
       "1/2 aguacate",
@@ -4795,6 +5188,8 @@ const recetasData = [
   {
     "nombre": "Ensalada de tomate y rulo de cabra",
     "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "4 tomates maduros",
       "150 g rulo de cabra",
@@ -4806,6 +5201,8 @@ const recetasData = [
   {
     "nombre": "Ensalada fabes",
     "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "fabes de bote cocidas, escurridas lavadas",
       "cebolla y pimiento muy picado",
@@ -4818,6 +5215,8 @@ const recetasData = [
   {
     "nombre": "Ensalada Judias ANCHOAS (Carmen)",
     "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "3 patatas medianas cocidas",
       "200 g judías verdes cocidas",
@@ -4835,7 +5234,9 @@ const recetasData = [
   },
   {
     "nombre": "Ensaladilla",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "1 taza de guisantes cocidos",
       "2 tazas de patatas cocidas en trocitos",
@@ -4854,6 +5255,8 @@ const recetasData = [
   {
     "nombre": "Ensaladilla rusa",
     "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "3 patatas cocidas",
       "2 zanahorias cocidas",
@@ -4867,6 +5270,8 @@ const recetasData = [
   {
     "nombre": "ENSALADILLA_PULPO",
     "categoria": "Aperitivos",
+    "categoria_original": "Aperitivos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 pata de pulpo ya cocida",
       "3 patatas medianas",
@@ -4885,7 +5290,9 @@ const recetasData = [
   },
   {
     "nombre": "Escabeche",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "50gr zanahoria",
       "2 ajos",
@@ -4901,7 +5308,9 @@ const recetasData = [
   },
   {
     "nombre": "Espaguetis con gulas y gambas",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "1 caja de gulas (marca Día)",
       "20 langostinos pequeños crudos congelados (marca Día)",
@@ -4916,6 +5325,8 @@ const recetasData = [
   {
     "nombre": "Espinacas a la crema",
     "categoria": "CENAS",
+    "categoria_original": "CENAS",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "500 g espinacas congeladas (previamente descongeladas)",
       "1–2 dientes de ajo",
@@ -4934,6 +5345,8 @@ const recetasData = [
   {
     "nombre": "Espinacas y garbanzos con salsa de tomate y huevos",
     "categoria": "Básicos y acompañamientos",
+    "categoria_original": "Básicos y acompañamientos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "400 g espinacas frescas o congeladas",
       "400 g garbanzos cocidos",
@@ -4946,7 +5359,9 @@ const recetasData = [
   },
   {
     "nombre": "Espárragos a la plancha",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "1 manojo de espárragos frescos",
       "Aceite de oliva",
@@ -4956,7 +5371,9 @@ const recetasData = [
   },
   {
     "nombre": "Fabada",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Lacón",
       "Pata de cerdo",
@@ -4978,6 +5395,8 @@ const recetasData = [
   {
     "nombre": "Falafel con salsa de yogur",
     "categoria": "Platos especiales, internacionales",
+    "categoria_original": "Platos especiales / internacionales",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "300 g de garbanzos secos",
       "1 cucharadita de comino",
@@ -4999,6 +5418,8 @@ const recetasData = [
   {
     "nombre": "Fideos chinos",
     "categoria": "Platos especiales, internacionales",
+    "categoria_original": "Platos especiales / internacionales",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "200 g fideos chinos",
       "200 g pechuga de pollo",
@@ -5020,6 +5441,8 @@ const recetasData = [
   {
     "nombre": "Filetes de ternera, pollo, solomillo o castaña",
     "categoria": "Carnes",
+    "categoria_original": "Carnes",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "Filetes de carne a elegir",
       "Sal",
@@ -5029,7 +5452,9 @@ const recetasData = [
   },
   {
     "nombre": "Filloas",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "4 huevos",
       "250gr harina",
@@ -5042,7 +5467,9 @@ const recetasData = [
   },
   {
     "nombre": "Flan de queso",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Caramelo royal líquido",
       "5 huevos",
@@ -5055,6 +5482,8 @@ const recetasData = [
   {
     "nombre": "Flautín de calabacín ¿?",
     "categoria": "CENAS",
+    "categoria_original": "CENAS",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "Para la base:",
       "350–400 g calabacín",
@@ -5070,6 +5499,8 @@ const recetasData = [
   {
     "nombre": "Galletas de avena y chocolate",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "200 g copos de avena",
       "80 g leche de avena",
@@ -5083,6 +5514,8 @@ const recetasData = [
   {
     "nombre": "Galletas saludables de chocolate (MyebyCosta)",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "100 g de harina de avena",
       "100 g de almendra molida",
@@ -5097,6 +5530,8 @@ const recetasData = [
   {
     "nombre": "Gazpacho",
     "categoria": "Sopas y cremas",
+    "categoria_original": "Sopas y cremas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 kg tomates maduros",
       "1 diente de ajo",
@@ -5111,7 +5546,9 @@ const recetasData = [
   },
   {
     "nombre": "Gazpacho de fresas con salmón ahumado y sus huevas",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "500g de fresas",
       "2kg de tomates",
@@ -5131,7 +5568,9 @@ const recetasData = [
   },
   {
     "nombre": "Gnocchis con salsa de tomate picante, berberechos y gambas",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "400gr gnocchis",
       "1 ajo",
@@ -5150,6 +5589,8 @@ const recetasData = [
   {
     "nombre": "Grelos salteados",
     "categoria": "Básicos y acompañamientos",
+    "categoria_original": "Básicos y acompañamientos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "400 g grelos",
       "2 dientes de ajo",
@@ -5161,6 +5602,8 @@ const recetasData = [
   {
     "nombre": "Guacamole (TMX)",
     "categoria": "Aperitivos",
+    "categoria_original": "Aperitivos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "60 g cebolleta",
       "100 g tomate rojo",
@@ -5176,6 +5619,8 @@ const recetasData = [
   {
     "nombre": "Helado de pistacho",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "200 g crema de pistacho",
       "200 ml leche de almendra",
@@ -5186,7 +5631,9 @@ const recetasData = [
   },
   {
     "nombre": "Helado de turrón",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "2 tabletas de turrón blando picado en la picadora",
       "6 huevos",
@@ -5198,6 +5645,8 @@ const recetasData = [
   {
     "nombre": "Helado saludable de chocolate (3 ingredientes)",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "250 g queso batido",
       "2 plátanos grandes congelados",
@@ -5207,7 +5656,9 @@ const recetasData = [
   },
   {
     "nombre": "Hojaldre de pollo, jamon y champiñones",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "2 láminas de hojaldre",
       "100gr de jamón serrano",
@@ -5223,6 +5674,8 @@ const recetasData = [
   {
     "nombre": "Huevos Rellenos (Lucía)",
     "categoria": "Aperitivos",
+    "categoria_original": "Aperitivos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "8-10 Huevos",
       "1 Bote cristal de atún",
@@ -5234,6 +5687,8 @@ const recetasData = [
   {
     "nombre": "Jarrete con arroz",
     "categoria": "Carnes",
+    "categoria_original": "Carnes",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 jarrete de ternera",
       "1 cebolla",
@@ -5248,7 +5703,9 @@ const recetasData = [
   },
   {
     "nombre": "Judías",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Judías congeladas (mejor redondas)",
       "2 Zanahorias",
@@ -5261,7 +5718,9 @@ const recetasData = [
   },
   {
     "nombre": "Judías con chorizo y patata",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Judías",
       "Patatas",
@@ -5275,6 +5734,8 @@ const recetasData = [
   {
     "nombre": "Judías verdes",
     "categoria": "Básicos y acompañamientos",
+    "categoria_original": "Básicos y acompañamientos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "400 g judías verdes",
       "1 cdta sal",
@@ -5285,6 +5746,8 @@ const recetasData = [
   {
     "nombre": "Lasaña o Musaka (carne, champiñón, espinaca, bechamel)",
     "categoria": "Pasta y arroces",
+    "categoria_original": "FINDESEMANA, Pasta y arroces",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "12 placas de lasaña precocida o láminas de berenjena (para musaka)",
       "400 g carne picada",
@@ -5300,6 +5763,8 @@ const recetasData = [
   {
     "nombre": "Lazos de Hojaldre con Pavo y Queso Brie",
     "categoria": "Aperitivos",
+    "categoria_original": "Aperitivos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 lámina de hojaldre (preferiblemente con mantequilla)",
       "Queso Brie (cortado en trozos o láminas)",
@@ -5311,7 +5776,9 @@ const recetasData = [
   },
   {
     "nombre": "Lentejas",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "1 puñado de lentejas por persona más uno de propina",
       "½ pimiento rojo",
@@ -5328,6 +5795,8 @@ const recetasData = [
   {
     "nombre": "Lentejas",
     "categoria": "Básicos y acompañamientos",
+    "categoria_original": "Básicos y acompañamientos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "300 g lentejas",
       "1 calabacín",
@@ -5345,6 +5814,8 @@ const recetasData = [
   {
     "nombre": "Llana asada con salsa de su jugo",
     "categoria": "Carnes",
+    "categoria_original": "Carnes",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1,5 kg llana de ternera",
       "3 dientes de ajo",
@@ -5361,7 +5832,9 @@ const recetasData = [
   },
   {
     "nombre": "Macu Crema fría al pesto",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "50 g parmesano",
       "40 g hojas de albahaca",
@@ -5376,7 +5849,9 @@ const recetasData = [
   },
   {
     "nombre": "Macu Crujientes de verduras con queso Brie",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "1 paquete de pasta filo (o pasta brick)",
       "Margarina o aceite para pincelar",
@@ -5393,7 +5868,9 @@ const recetasData = [
   },
   {
     "nombre": "Macu Guiso \"Mar y Tierra\"",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Fumet: 250 g gambas o langostinos, 30 g aceite, 400 g agua",
       "Sofrito: 50 g aceite, 100 g pimiento rojo, 100 g pimiento verde, 100 g cebolla, 2 dientes de ajo, 200 g tomate triturado",
@@ -5406,7 +5883,9 @@ const recetasData = [
   },
   {
     "nombre": "Macu Pechugas de pollo en salsa de coco con curry",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "1 kg pechugas de pollo en tacos",
       "30 g margarina",
@@ -5427,7 +5906,9 @@ const recetasData = [
   },
   {
     "nombre": "Macu Pepinos rellenos de queso fresco y verduras",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "6 pepinos pequeños",
       "300 g queso fresco tipo Quark",
@@ -5444,7 +5925,9 @@ const recetasData = [
   },
   {
     "nombre": "Macu Pimientos de piquillo rellenos de gulas con salsa de tinta",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "2 latas de pimientos del piquillo",
       "400 g gulas",
@@ -5465,7 +5948,9 @@ const recetasData = [
   },
   {
     "nombre": "Macu Rollo tricolor",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "100 g hojas grandes de espinacas (sin tallos)",
       "200 g queso crema light",
@@ -5483,7 +5968,9 @@ const recetasData = [
   },
   {
     "nombre": "Macu Tartar de bonito",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "500 g bonito limpio (sin piel ni espinas, ni parte oscura)",
       "60 g zumo de limón",
@@ -5499,7 +5986,9 @@ const recetasData = [
   },
   {
     "nombre": "Masa empanada",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "500gr harina",
       "1 huevo",
@@ -5513,7 +6002,9 @@ const recetasData = [
   },
   {
     "nombre": "Masa pizza",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "200gr agua",
       "50gr aceite",
@@ -5525,7 +6016,9 @@ const recetasData = [
   },
   {
     "nombre": "Masa pizza sin robot",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "500g harina 00",
       "350cl agua",
@@ -5538,7 +6031,9 @@ const recetasData = [
   },
   {
     "nombre": "Mayonesa y salsa rosa",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "1 huevo",
       "1 chorro de jugo de limón",
@@ -5549,7 +6044,9 @@ const recetasData = [
   },
   {
     "nombre": "Mejillones al vapor",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "2 kilos de mejillones",
       "Unas hojas de laurel"
@@ -5559,6 +6056,8 @@ const recetasData = [
   {
     "nombre": "Muffins cetogénicos de arándanos",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "120 g harina de almendras",
       "2 huevos",
@@ -5572,7 +6071,9 @@ const recetasData = [
   },
   {
     "nombre": "Muslos de pollo a la sidra",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Azafrán",
       "6 muslos de pollo",
@@ -5588,6 +6089,8 @@ const recetasData = [
   {
     "nombre": "Muslos de pollo en AirFryer",
     "categoria": "Carnes",
+    "categoria_original": "Carnes",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "Muslos de pollo",
       "Sal",
@@ -5598,7 +6101,9 @@ const recetasData = [
   },
   {
     "nombre": "Natillas de leche de coco con chocolate blanco, fruta de la pasión y polvo de galletas",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "1/2 l de leche de coco",
       "5 yemas de huevo",
@@ -5615,7 +6120,9 @@ const recetasData = [
   },
   {
     "nombre": "Orejas",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Esencia de anís",
       "1 huevo",
@@ -5630,7 +6137,9 @@ const recetasData = [
   },
   {
     "nombre": "Paella",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "3 dientes de ajo",
       "1 cebolla",
@@ -5647,7 +6156,9 @@ const recetasData = [
   },
   {
     "nombre": "Paella de fideos con mejillones en escabeche al curry con puré de limón",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Fideos",
       "Mejillones en lata",
@@ -5665,6 +6176,8 @@ const recetasData = [
   {
     "nombre": "Pan de nueces (bizcocho)",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "500 g nueces troceadas",
       "150 g azúcar",
@@ -5679,6 +6192,8 @@ const recetasData = [
   {
     "nombre": "Pan de nueces (bizcocho)",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "400 g nueces troceadas",
       "150 g azúcar",
@@ -5693,6 +6208,8 @@ const recetasData = [
   {
     "nombre": "Pan de trigo sarraceno",
     "categoria": "Panes",
+    "categoria_original": "Panes",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "500 g trigo sarraceno en grano (no harina)",
       "20 g psyllium en polvo (o chía molida)",
@@ -5706,6 +6223,8 @@ const recetasData = [
   {
     "nombre": "Pan Desayuno (arroz y espelta)",
     "categoria": "Panes",
+    "categoria_original": "Panes",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 harina de arroz",
       "1 harina de espelta",
@@ -5718,6 +6237,8 @@ const recetasData = [
   {
     "nombre": "Pan keto de almendras y coco",
     "categoria": "Panes",
+    "categoria_original": "Panes",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "100 g harina de almendras",
       "15 g harina de coco",
@@ -5732,7 +6253,9 @@ const recetasData = [
   },
   {
     "nombre": "Papas arrugás con mojo verde",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "200gr de patatas canarias pequeñas",
       "100gr de sal",
@@ -5751,7 +6274,9 @@ const recetasData = [
   },
   {
     "nombre": "Pasta carbonara",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Pasta",
       "Ajo",
@@ -5769,6 +6294,8 @@ const recetasData = [
   {
     "nombre": "Pasta fresca con pesto, langostinos y brécol",
     "categoria": "Pasta y arroces",
+    "categoria_original": "Pasta y arroces",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "300 g pasta fresca",
       "100 g pesto",
@@ -5782,6 +6309,8 @@ const recetasData = [
   {
     "nombre": "Pastel de carne con puré de patata",
     "categoria": "Carnes",
+    "categoria_original": "Carnes",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "500 g de carne picada",
       "1 cebolla",
@@ -5802,7 +6331,9 @@ const recetasData = [
   },
   {
     "nombre": "Pastel de patata y bacon",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "500gr de patatas",
       "200gr de bacon",
@@ -5815,6 +6346,8 @@ const recetasData = [
   {
     "nombre": "Pastel de puerro y huevo",
     "categoria": "Sopas y cremas",
+    "categoria_original": "Sopas y cremas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "3 puerros",
       "3 huevos",
@@ -5829,6 +6362,8 @@ const recetasData = [
   {
     "nombre": "Patatas asadas Marcos",
     "categoria": "Básicos y acompañamientos",
+    "categoria_original": "Básicos y acompañamientos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 kg patatas en gajos o chascadas",
       "30 g aceite de oliva",
@@ -5844,7 +6379,9 @@ const recetasData = [
   },
   {
     "nombre": "Patatas rellenas",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "6 patatas alargadas",
       "6 salchichas frescas",
@@ -5859,6 +6396,8 @@ const recetasData = [
   {
     "nombre": "Pavo relleno",
     "categoria": "Carnes",
+    "categoria_original": "Carnes",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 pechuga de pavo abierta en libro",
       "4 lonchas jamón york",
@@ -5878,7 +6417,9 @@ const recetasData = [
   },
   {
     "nombre": "Pechugas de pavo con bacon al horno",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "2 pechugas de pavo pequeñas",
       "Semillas de sésamo (ajonjolí)",
@@ -5890,7 +6431,9 @@ const recetasData = [
   },
   {
     "nombre": "Pechugas de pavo con bacon al horno",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "2 pechugas de pavo pequeñas",
       "Semillas de sésamo (ajonjolí)",
@@ -5903,6 +6446,8 @@ const recetasData = [
   {
     "nombre": "Pechugas de Pollo",
     "categoria": "Carnes",
+    "categoria_original": "Carnes, FINDESEMANA",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "Filetes P.",
       "Ajos 4-6 dientes en laminas",
@@ -5917,7 +6462,9 @@ const recetasData = [
   },
   {
     "nombre": "Pernil",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Pernil",
       "2 cebollas",
@@ -5936,7 +6483,9 @@ const recetasData = [
   },
   {
     "nombre": "Perrito caliente",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Salchicha curry wurst o Frankfurt",
       "Pan brioche",
@@ -5955,7 +6504,9 @@ const recetasData = [
   },
   {
     "nombre": "Pescado a la sal",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "2 Lubinas de piscifactoría (limpias para la sal)",
       "1 paquete de sal gruesa especial para hornear"
@@ -5964,7 +6515,9 @@ const recetasData = [
   },
   {
     "nombre": "Pescado al horno",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Pescado (merluza, lubina, pescadilla o bacalao)",
       "Cebolla",
@@ -5979,7 +6532,9 @@ const recetasData = [
   },
   {
     "nombre": "Pescado cocido",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Merluza u otro pescado cortado en rodajas gordas",
       "Agua",
@@ -5998,6 +6553,8 @@ const recetasData = [
   {
     "nombre": "Pescado Horno (bacalao, jurelos, dorada, rodaballo, sargo, palometa, menda, coruxo,…)",
     "categoria": "Pescados y mariscos",
+    "categoria_original": "Pescados y mariscos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 pescado entero o en lomos",
       "2 patatas en rodajas",
@@ -6011,6 +6568,8 @@ const recetasData = [
   {
     "nombre": "Piadina Rellena Estilo Vikika (Air Fryer)",
     "categoria": "CENAS",
+    "categoria_original": "CENAS",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 piadina (masa fina tipo wrap italiano)",
       "4 huevos grandes",
@@ -6026,6 +6585,8 @@ const recetasData = [
   {
     "nombre": "Piadina Vikika",
     "categoria": "CENAS",
+    "categoria_original": "CENAS",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 piadina (masa fina tipo wrap italiano)",
       "4 huevos grandes",
@@ -6040,7 +6601,9 @@ const recetasData = [
   },
   {
     "nombre": "Picada de almendras, ajo y perejil",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "4 ajos",
       "2 cucharadas de almendras picadas",
@@ -6052,7 +6615,9 @@ const recetasData = [
   },
   {
     "nombre": "Pimiento asado",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Pimiento",
       "Sal",
@@ -6062,7 +6627,9 @@ const recetasData = [
   },
   {
     "nombre": "Pimiento asado (1)",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Pimiento rojo",
       "Aceite",
@@ -6073,6 +6640,8 @@ const recetasData = [
   {
     "nombre": "Pisto",
     "categoria": "CENAS",
+    "categoria_original": "CENAS",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 puerro",
       "1 pimiento rojo",
@@ -6087,6 +6656,8 @@ const recetasData = [
   {
     "nombre": "Poke de salmón",
     "categoria": "Platos especiales, internacionales",
+    "categoria_original": "Platos especiales / internacionales",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "400 g salmón fresco en dados",
       "30 ml salsa de soja",
@@ -6106,7 +6677,9 @@ const recetasData = [
   },
   {
     "nombre": "Pollo a la albahaca",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Pechugas de pollo",
       "4 ajos",
@@ -6120,7 +6693,9 @@ const recetasData = [
   },
   {
     "nombre": "Pollo a la cervezacon champiñones",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "1 pollo de alrededor de 1 kilo troceado",
       "100 ml. De aceite",
@@ -6135,7 +6710,9 @@ const recetasData = [
   },
   {
     "nombre": "Pollo al horno",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "1 pollo entero no muy grande",
       "1/2 pastilla de Avecrem",
@@ -6153,6 +6730,8 @@ const recetasData = [
   {
     "nombre": "Pollo butter chicken",
     "categoria": "Platos especiales, internacionales",
+    "categoria_original": "Platos especiales / internacionales",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "600 g pollo en trozos (3 pechugas)",
       "6 cdas ghee (o 40 g mantequilla)",
@@ -6177,6 +6756,8 @@ const recetasData = [
   {
     "nombre": "Pollo con quinoa, pim. calabacín ¿?",
     "categoria": "Carnes",
+    "categoria_original": "Carnes",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "400 g pechuga de pollo",
       "200 g quinoa cocida",
@@ -6190,6 +6771,8 @@ const recetasData = [
   {
     "nombre": "Pollo coreano",
     "categoria": "Platos especiales, internacionales",
+    "categoria_original": "Platos especiales / internacionales",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "800 g pollo troceado",
       "50 ml salsa de soja",
@@ -6204,7 +6787,9 @@ const recetasData = [
   },
   {
     "nombre": "Pulpo",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "1 pulpo de 1 kilo y medio o un poquito menos",
       "1 cebolla mediana",
@@ -6221,6 +6806,8 @@ const recetasData = [
   {
     "nombre": "Pulpo á feira (versión rápida)",
     "categoria": "Pescados y mariscos",
+    "categoria_original": "Pescados y mariscos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 pata de pulpo cocida envasada",
       "4 patatas medianas",
@@ -6234,6 +6821,8 @@ const recetasData = [
   {
     "nombre": "Puré Patata TM31",
     "categoria": "Básicos y acompañamientos",
+    "categoria_original": "Básicos y acompañamientos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1000 g de patatas para cocer, peladas y en trozos pequeños",
       "400 g de leche SIN LACTOSA",
@@ -6247,6 +6836,8 @@ const recetasData = [
   {
     "nombre": "Quesada",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "300 g azúcar",
       "200 g harina",
@@ -6260,6 +6851,8 @@ const recetasData = [
   {
     "nombre": "Quinoa con pollo, halloumi y verduras al horno ¿?",
     "categoria": "Platos especiales, internacionales",
+    "categoria_original": "Platos especiales / internacionales",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "180 g Quinoa",
       "350 g Pechuga de pollo (sazonada)",
@@ -6279,6 +6872,8 @@ const recetasData = [
   {
     "nombre": "Rapantes",
     "categoria": "Pescados y mariscos",
+    "categoria_original": "Pescados y mariscos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "Rapantes",
       "Sal",
@@ -6289,6 +6884,8 @@ const recetasData = [
   {
     "nombre": "Rape Alangostado",
     "categoria": "Pescados y mariscos",
+    "categoria_original": "Pescados y mariscos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 1/4 kg rape crudo (parte ancha, en lomos)",
       "100 g pimentón",
@@ -6302,7 +6899,9 @@ const recetasData = [
   },
   {
     "nombre": "Rape Fernando",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "2 o 3 colas de rape congelado",
       "1 brik de tomate frito con aceite de oliva virgen extra o salsa de tomate",
@@ -6322,6 +6921,8 @@ const recetasData = [
   {
     "nombre": "Rape marinera langostinos",
     "categoria": "Pescados y mariscos",
+    "categoria_original": "Pescados y mariscos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "600 g rape en trozos",
       "200 g langostinos",
@@ -6341,7 +6942,9 @@ const recetasData = [
   },
   {
     "nombre": "Risotto crujiente-meloso de setas",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "250gr de arroz camaroli",
       "100gr de arroz salvaje",
@@ -6359,6 +6962,8 @@ const recetasData = [
   {
     "nombre": "Rodaballo plancha",
     "categoria": "Pescados y mariscos",
+    "categoria_original": "Pescados y mariscos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 Rodaballo (aprox. 2.5kg)",
       "Ajo",
@@ -6372,6 +6977,8 @@ const recetasData = [
   {
     "nombre": "Rollo de Hojaldre con Espinacas, Feta y Cottage",
     "categoria": "Aperitivos",
+    "categoria_original": "Aperitivos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 lámina de masa de hojaldre rectangular",
       "200 g de espinacas baby frescas",
@@ -6385,7 +6992,9 @@ const recetasData = [
   },
   {
     "nombre": "Rosbif",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "1 trozo de redondo de ternera (1600 gr)",
       "1/2 cebolla",
@@ -6401,6 +7010,8 @@ const recetasData = [
   {
     "nombre": "Rosca de Carmen",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "Ingredientes por kilo de harina:",
       "1 kg harina",
@@ -6419,6 +7030,8 @@ const recetasData = [
   {
     "nombre": "Salmón AirFryer",
     "categoria": "Pescados y mariscos",
+    "categoria_original": "Pescados y mariscos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "4 lomos de salmón",
       "2 boniatos medianos",
@@ -6430,6 +7043,8 @@ const recetasData = [
   {
     "nombre": "Salsa boloñesa",
     "categoria": "Carnes",
+    "categoria_original": "Carnes",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "30 g de apio en trozos",
       "70 g de zanahoria en trozos",
@@ -6449,7 +7064,9 @@ const recetasData = [
   },
   {
     "nombre": "Salsa de aguacate",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "2 cucharadas grandes o 2 sobres de mayonesa (de sobre o de bote)",
       "1 aguacate maduro (blando)",
@@ -6462,7 +7079,9 @@ const recetasData = [
   },
   {
     "nombre": "Salsa de castañas",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "1/2 cubilete de aceite virgen",
       "250 gr de leche",
@@ -6477,7 +7096,9 @@ const recetasData = [
   },
   {
     "nombre": "Sandwich de langostinos gabardina",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "224gr de harina de trigo",
       "12g de levadura royal",
@@ -6500,6 +7121,8 @@ const recetasData = [
   {
     "nombre": "Secreto de cerdo al horno ¿?",
     "categoria": "Carnes",
+    "categoria_original": "Carnes",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "600 g (2 filetes) de secreto de cerdo (u otra parte del cerdo)",
       "1 diente de ajo",
@@ -6517,7 +7140,9 @@ const recetasData = [
   },
   {
     "nombre": "Socarrat de pintada",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "2 contramuslos de pintada",
       "4 ajos",
@@ -6537,7 +7162,9 @@ const recetasData = [
   },
   {
     "nombre": "Sopa",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Huesos de pollo (esqueleto), ternera (huesos de pata o de pecho) y cerdo (espinazo o de jamón)",
       "1 chorizo pinchado con el tenedor o hechos unos cortes con el cuchillo",
@@ -6550,6 +7177,8 @@ const recetasData = [
   {
     "nombre": "Sopa de Coles con Sobrasada",
     "categoria": "Sopas y cremas",
+    "categoria_original": "Sopas y cremas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "400 gr de coles de Bruselas",
       "2 dientes de ajo",
@@ -6567,6 +7196,8 @@ const recetasData = [
   {
     "nombre": "Sopa de espárragos y langostinos",
     "categoria": "Sopas y cremas",
+    "categoria_original": "Sopas y cremas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "14 langostinos",
       "100 g de pimiento verde",
@@ -6587,7 +7218,9 @@ const recetasData = [
   },
   {
     "nombre": "Sopa de parmesano",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "200 gr de queso parmesano",
       "80 ml de leche"
@@ -6597,6 +7230,8 @@ const recetasData = [
   {
     "nombre": "Sopa de pescado (TM31)",
     "categoria": "Sopas y cremas",
+    "categoria_original": "Sopas y cremas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1,2 l agua",
       "Huesos de rape",
@@ -6618,6 +7253,8 @@ const recetasData = [
   {
     "nombre": "Tacos de lechuga y ensaladilla de atún",
     "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "Cogollos de lechuga",
       "Atún",
@@ -6632,7 +7269,9 @@ const recetasData = [
   },
   {
     "nombre": "Tarta de almendra",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "3 claras",
       "3 yemas",
@@ -6649,6 +7288,8 @@ const recetasData = [
   {
     "nombre": "Tarta de chocolate (Blancanutri)",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "3 huevos",
       "60 g mantequilla o ghee (o aceite de coco)",
@@ -6659,7 +7300,9 @@ const recetasData = [
   },
   {
     "nombre": "Tarta de galletas",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "6 huevos",
       "1 paquete de galletas cuadradas",
@@ -6672,6 +7315,8 @@ const recetasData = [
   {
     "nombre": "Tarta de Nesquik",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "80 g azúcar",
       "2 huevos",
@@ -6685,7 +7330,9 @@ const recetasData = [
   },
   {
     "nombre": "Tarta de queso al horno",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "600g de nata",
       "3 cucharadas de azúcar",
@@ -6705,6 +7352,8 @@ const recetasData = [
   {
     "nombre": "Tarta de queso de la Viña",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "570 g queso crema",
       "230 g azúcar",
@@ -6717,6 +7366,8 @@ const recetasData = [
   {
     "nombre": "Tarta de queso La Viña (TM31, 600 g queso)",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "600 g de queso crema tipo Philadelphia (temperatura ambiente)",
       "300 ml de nata líquida para montar (mín. 35% MG)",
@@ -6728,7 +7379,9 @@ const recetasData = [
   },
   {
     "nombre": "Tarta de queso sin horno",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "120 gr de azúcar",
       "350 ml de nata montada",
@@ -6745,6 +7398,8 @@ const recetasData = [
   {
     "nombre": "Tarta de queso Thermomix",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "200 g galletas",
       "80 g mantequilla derretida",
@@ -6763,6 +7418,8 @@ const recetasData = [
   {
     "nombre": "Tarta de zanahoria",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "300 g zanahoria rallada",
       "250 g harina",
@@ -6780,6 +7437,8 @@ const recetasData = [
   {
     "nombre": "Tartar de remolacha con ajo blanco y pepinillos",
     "categoria": "Aperitivos",
+    "categoria_original": "Aperitivos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "2 remolachas medianas, asadas y peladas, cortadas en brunoise fino",
       "2 pepinillos encurtidos pequeños, picados finos",
@@ -6802,7 +7461,9 @@ const recetasData = [
   },
   {
     "nombre": "Tartar japo-castizo",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Salmón",
       "Huevos fritos",
@@ -6820,7 +7481,9 @@ const recetasData = [
   },
   {
     "nombre": "Tempura para varitas",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Harina de tempura",
       "Agua muy fría (o con hielo)",
@@ -6831,7 +7494,9 @@ const recetasData = [
   },
   {
     "nombre": "Tiramisú",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Bizcocho",
       "120 gr de azúcar glass",
@@ -6845,7 +7510,9 @@ const recetasData = [
   },
   {
     "nombre": "Tiramisú de turrón",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "1 bizcocho sin azúcar de Mercadona",
       "200 gr de nata montada",
@@ -6860,7 +7527,9 @@ const recetasData = [
   },
   {
     "nombre": "Tomate relleno",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Tomates",
       "Ventresca atún",
@@ -6873,6 +7542,8 @@ const recetasData = [
   {
     "nombre": "Tomate relleno de burrata",
     "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 tomate rosa grande y maduro",
       "1 burrata (125 g aprox.)",
@@ -6888,6 +7559,8 @@ const recetasData = [
   {
     "nombre": "Tomates rellenos de ventresca con muhammara",
     "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "Para los tomates rellenos:",
       "4 tomates medianos",
@@ -6919,7 +7592,9 @@ const recetasData = [
   },
   {
     "nombre": "Torrijas",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "Leche de coco",
       "150g Azúcar",
@@ -6938,7 +7613,9 @@ const recetasData = [
   },
   {
     "nombre": "Tortilla de camarones",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "200gr harina de trigo",
       "85,5 gr de harina de garbanzos (1/3)",
@@ -6954,6 +7631,8 @@ const recetasData = [
   {
     "nombre": "Tortitas de manzana y avena (3 ingredientes)",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "2 manzanas",
       "4 cdas copos de avena",
@@ -6964,6 +7643,8 @@ const recetasData = [
   {
     "nombre": "Tortitas esponjosas",
     "categoria": "Postres",
+    "categoria_original": "Postres",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "150 ml leche",
       "2 huevos",
@@ -6978,6 +7659,8 @@ const recetasData = [
   {
     "nombre": "Vasitos de Crema de Coliflor y Pulpo",
     "categoria": "Aperitivos",
+    "categoria_original": "Aperitivos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 coliflor mediana (cortada en ramilletes)",
       "2 patas de pulpo ya cocidas",
@@ -6994,6 +7677,8 @@ const recetasData = [
   {
     "nombre": "Verduras horno",
     "categoria": "Básicos y acompañamientos",
+    "categoria_original": "Básicos y acompañamientos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 boniato",
       "1 calabacín",
@@ -7007,6 +7692,8 @@ const recetasData = [
   {
     "nombre": "Verduras horno atún queso rallado ¿?",
     "categoria": "PROBAR",
+    "categoria_original": "PROBAR",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "Verduras variadas (calabacín, pimientos, champiñones, espárragos, etc.)",
       "1-2 latas de atún al natural",
@@ -7019,7 +7706,9 @@ const recetasData = [
   },
   {
     "nombre": "Vieiras",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "8-10 Vieiras",
       "Vino blanco",
@@ -7035,6 +7724,8 @@ const recetasData = [
   {
     "nombre": "Vieiras al horno",
     "categoria": "Pescados y mariscos",
+    "categoria_original": "Pescados y mariscos",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "Vieiras (cantidad al gusto, limpias)",
       "2 cdas aceite de oliva",
@@ -7051,7 +7742,9 @@ const recetasData = [
   },
   {
     "nombre": "Vinagreta de cítricos y jengibre",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "50ml zumo de lima",
       "100ml aceite de oliva",
@@ -7064,6 +7757,8 @@ const recetasData = [
   {
     "nombre": "Wrap Cottage",
     "categoria": "CENAS",
+    "categoria_original": "CENAS",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "250 g queso cottage",
       "1 huevo",
@@ -7075,6 +7770,8 @@ const recetasData = [
   {
     "nombre": "Wrap de aguacate al horno",
     "categoria": "CENAS",
+    "categoria_original": "CENAS",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "1 aguacate",
       "2 huevos",
@@ -7092,6 +7789,8 @@ const recetasData = [
   {
     "nombre": "Wraps",
     "categoria": "Platos especiales, internacionales",
+    "categoria_original": "Platos especiales / internacionales",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "4 tortillas de trigo",
       "Relleno al gusto (pollo, verduras, atún…)"
@@ -7100,7 +7799,9 @@ const recetasData = [
   },
   {
     "nombre": "Yogurt de leche de oveja con frambuesas al Pedro Jimenez y aceite de oliva",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "4 yogures de leche de oveja",
       "150ml de vino Pedro Jiménez",
@@ -7113,7 +7814,9 @@ const recetasData = [
   },
   {
     "nombre": "Zaragallada empanada",
-    "categoria": "MACU",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
     "ingredientes_html": [
       "300gr carne picada de ternera",
       "200gr filete cerdo picado",
@@ -7132,6 +7835,8 @@ const recetasData = [
   {
     "nombre": "Zoodles langostinos",
     "categoria": "CENAS",
+    "categoria_original": "CENAS",
+    "oculta_recetario": false,
     "ingredientes_html": [
       "2 calabacines grandes",
       "200 g langostinos pelados",
