@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <style type="text/css">
+            /* Shared styles */
+            body {
+                font-family: Helvetica, sans-serif;
+                font-size: 16px;
+                color: #34302e;
+                margin: 0,25in;
+            }
+            @page {
+                size: letter portrait;
+                margin: 0,25in;
+            }
+            .name {
+                font-size: 18px;
+                font-family: Helvetica, sans-serif;
+                font-weight: normal;
+                margin: 0 0 10px 0;
+            }
+            .categories {
+                color: #605D5D;
+                font-size: 14px;
+                font-family: Helvetica, sans-serif;
+                font-style: italic;
+            }
+            .rating {
+                color: #d10505;
+                font-size: 14px;
+            }
+            .metadata {
+                font-size: 14px;
+            }
+            .infobox p {
+                margin: 0;
+                line-height: 150%;
+            }
+            .subhead {
+                color: #d10505;
+                font-weight: bold;
+                font-size: 14px;
+                text-transform: uppercase;
+                margin: 10px 0;
+            }
+            
+            .ingredients p {
+                margin: 4px 0;
+            }
+            /* To prevent nutrition/directions from getting too close
+               to ingredients */
+            .ingredients {
+                padding-bottom: 10px;
+            }
+            .clear {
+                clear:both;
+            }
+            a {
+                color: #4990E2;
+                text-decoration: none;
+            }
+            /* Full page specific styles */
+            .text {
+                line-height: 130%;
+            }
+            .photobox {
+                float: left;
+                margin-right: 14px;
+                            }
+            .photo {
+                max-width: 140px;
+                max-height: 140px;
+                width: auto;
+                height: auto;
+            }
+            .inline-image {
+                max-width: 25%;
+                max-height: 25%;
+                width: auto;
+                height: auto;
+            }
+            .photoswipe {
+                border: 1px #dddddd solid;
+                cursor: pointer;
+            }
+            .pswp__caption__center {
+                text-align: center !important;
+            }
+            .recipe {
+                page-break-after: always;
+                            }
+            .recipe:first-child {
+                border-top: 0 none;
+                margin-top: 0;
+                padding-top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Recipe -->
+<div class="recipe" itemscope itemtype="http://schema.org/Recipe" >
+    
+    <div class="infobox">
+
+        <!-- Image -->
+
+        <!-- Name -->
+        <h1 itemprop="name" class="name">Tostada salm&#243;n_aguacate</h1>
+        
+        <!-- Info -->
+        
+        <!-- Rating, categories -->
+        <p itemprop="aggregateRating" class="rating" value="0"></p>
+            <p itemprop="recipeCategory" class="categories">Desayunos</p>
+        
+        <p class="metadata">
+        
+            <!-- Cook time, prep time, servings, difficulty -->
+            <b>Porciones: </b><span itemprop="">1</span>
+
+            <!-- Source -->
+
+        </p>
+        
+        <div class="clear"></div>
+
+    </div>
+    
+    <div class="left-column">
+
+        <!-- Ingredients -->
+        <div class="ingredientsbox">
+            <h3 class="subhead">Ingredientes</h3>
+            <div class="ingredients text">
+                <p class="line" itemprop="recipeIngredient">- 1 rebanada de pan rústico</p><p class="line" itemprop="recipeIngredient">- Philadelphia</p><p class="line" itemprop="recipeIngredient">- 1 aguacate</p><p class="line" itemprop="recipeIngredient">- Salmón ahumado</p><p class="line" itemprop="recipeIngredient">- Limón</p><p class="line" itemprop="recipeIngredient">- Pimienta negra</p><p class="line" itemprop="recipeIngredient">- Aceite de oliva</p><p class="line" itemprop="recipeIngredient">- Eneldo o cebollino (opcional)</p><p class="line" itemprop="recipeIngredient">- Alcaparras (opcional)</p><p class="line" itemprop="recipeIngredient">- Sal</p><p></p>
+            </div>
+        </div>
+        
+        <!-- Nutrition (in two-column mode it goes below the ingredients) -->
+
+    </div>
+    
+    <div class="right-column">
+    
+    <!-- Description -->
+
+    <!-- Directions -->
+    <div class="directionsbox">
+        <h3 class="subhead">Instrucciones</h3>
+        <div itemprop="recipeInstructions" class="directions text">
+            <p class="line">1. Tostar el pan rústico hasta que quede firme y crujiente. Opcional: añadir un hilo fino de aceite de oliva.<br/>2. Untar una capa fina de Philadelphia sobre la tostada.<br/>3. Añadir encima un poco de pimienta y un toque muy ligero de limón.<br/>4. Machacar el aguacate con sal y limón hasta obtener una textura cremosa, pero conservando algo de trozo.<br/>5. Extender una capa generosa de aguacate sobre el queso crema.<br/>6. Colocar el salmón en pliegues, no completamente plano.<br/>7. Rematar con pimienta negra, un chorrito de aceite de oliva y, opcionalmente, eneldo o cebollino, alcaparras o unas gotas de limón.<br/>8. Respetar el orden correcto de montaje: pan, queso, aguacate, salmón y toppings.<br/></p>
+        </div>
+    </div>
+
+    <!-- Notes -->
+    
+    <div class="notesbox">
+        <h3 class="subhead">Notas</h3>
+        <div itemprop="comment" class="notes text">
+            <p>Truco de restaurante: añadir el limón al final para un sabor más fresco y no aplastar el conjunto para conservar volumen. Buscar equilibrio entre la parte grasa (aguacate, queso, salmón) y el punto ácido del limón. Tiempo total aproximado: 3–5 minutos. Resultado: nivel brunch profesional sin complicación.<br/></p>
+        </div>
+    </div>
+    
+
+    <!-- Nutrition (in regular mode it goes below the notes) -->
+        <!-- Used in two different places depending on the recipe layout -->
+
+    
+    </div>
+    
+    <div class="clear"></div>
+
+</div>
+
+
+
+    </body>
+</html>

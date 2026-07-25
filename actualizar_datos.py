@@ -11,6 +11,7 @@ PLATOS_EDITABLE_PATH = BASE / 'base_platos_editable.xlsx'
 LEGACY_EXCEL_PATH = BASE / 'platos_ingredientes.xlsx'
 RECIPES_DIR = BASE / 'Recipes'
 DATA_JS = BASE / 'js' / 'data.js'
+PLANCOMIDAS_SEED_DIR = BASE.parent / 'PlanComidas' / 'app' / 'src' / 'main' / 'assets' / 'data_seed'
 
 def fix_viewport_in_html(file_path):
     try:
@@ -86,6 +87,57 @@ def normalize_text(value):
         text = text.replace(old, new)
     text = re.sub(r'\s+', ' ', text).strip()
     return text
+
+
+def load_plancomidas_v84_catalog():
+    recipes_path = PLANCOMIDAS_SEED_DIR / 'v5_recipes.json'
+    dishes_path = PLANCOMIDAS_SEED_DIR / 'v5_dishes.json'
+    if not recipes_path.exists() or not dishes_path.exists():
+        return None
+
+    recipes = json.loads(recipes_path.read_text(encoding='utf-8'))
+    dishes = json.loads(dishes_path.read_text(encoding='utf-8'))
+    recipes_by_name = {normalize_text(r.get('name')): r for r in recipes if r.get('name')}
+    dishes_by_name = {normalize_text(d.get('name')): d for d in dishes if d.get('name')}
+    visible_names = []
+
+    for item in dishes:
+        key = normalize_text(item.get('name'))
+        if key and key not in visible_names and not is_hidden_recipe_category(item.get('category')):
+            visible_names.append(key)
+
+    for item in recipes:
+        key = normalize_text(item.get('name'))
+        if key and key not in visible_names and not is_hidden_recipe_category(item.get('category')):
+            visible_names.append(key)
+
+    return {
+        'recipes_by_name': recipes_by_name,
+        'dishes_by_name': dishes_by_name,
+        'visible_names': visible_names,
+        'visible_name_set': set(visible_names),
+    }
+
+
+def source_file_basename(source_file):
+    if not source_file:
+        return ''
+    return Path(str(source_file).replace('\\', '/')).name
+
+
+def find_recipe_url_for_canonical(canonical_recipe, recetas):
+    if not canonical_recipe:
+        return None
+
+    source_name = source_file_basename(canonical_recipe.get('sourceFile'))
+    if source_name:
+        exact = next((r for r in recetas if Path(r['url']).name == source_name), None)
+        if exact:
+            return exact['url']
+
+    name_norm = normalize_text(canonical_recipe.get('name'))
+    exact_name = next((r for r in recetas if normalize_text(r['nombre']) == name_norm), None)
+    return exact_name['url'] if exact_name else None
 
 
 def token_set(value):
@@ -204,6 +256,46 @@ def main():
             'oculta_recetario': receta.get('oculta_recetario', False),
             'en_excel': False
         })
+
+    canonical = load_plancomidas_v84_catalog()
+    if canonical:
+        print("Sincronizando catálogo visible con PlanComidas v8.4...")
+        current_by_name = {normalize_text(p['plato']): p for p in platos if p.get('plato')}
+        canonical_platos = []
+
+        for key in canonical['visible_names']:
+            dish = canonical['dishes_by_name'].get(key)
+            recipe = canonical['recipes_by_name'].get(key)
+            current = current_by_name.get(key, {})
+            canonical_source = dish or recipe or {}
+            nombre = canonical_source.get('name') or current.get('plato')
+            categoria = normalize_category(canonical_source.get('category') or current.get('categoria') or 'Sin categoría')
+            shopping = canonical_source.get('shoppingIngredients') or current.get('ingredientes') or []
+            url_receta = find_recipe_url_for_canonical(recipe, recetas) or current.get('url_receta')
+
+            canonical_platos.append({
+                'plato': nombre,
+                'categoria': categoria,
+                'ingredientes': shopping,
+                'url_receta': url_receta or '',
+                'oculta_recetario': False,
+                'en_excel': bool(dish),
+                'canon_v84': True
+            })
+
+        hidden_extras = []
+        for key, item in current_by_name.items():
+            if key in canonical['visible_name_set']:
+                continue
+            hidden_item = dict(item)
+            hidden_item['oculta_recetario'] = True
+            hidden_item['canon_v84'] = False
+            hidden_extras.append(hidden_item)
+
+        platos = canonical_platos + hidden_extras
+        print(f"Catálogo v8.4 visible: {len(canonical_platos)} elementos.")
+        if hidden_extras:
+            print(f"Ocultados por no pertenecer al catálogo visible v8.4: {len(hidden_extras)} elementos.")
 
     platos.sort(key=lambda x: (x.get('categoria', 'Sin categoría').lower(), x.get('plato', '').lower()))
             

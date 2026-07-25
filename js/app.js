@@ -329,8 +329,8 @@ const app = {
     getVisibleDishRows(options = {}) {
         const byName = new Map();
         this.getAllPlatos().forEach(p => {
+            if (!options.includeHidden && this.isHiddenRecipe(p)) return;
             if (options.onlyExcel && !p.en_excel) return;
-            if (!options.onlyExcel && this.isHiddenRecipe(p) && !p.en_excel) return;
             const key = this.normalizeMatchText(p.plato);
             const existing = byName.get(key);
             if (!existing || (p.en_excel && !existing.en_excel) || (p.url_receta && !existing.url_receta)) {
