@@ -1136,7 +1136,7 @@ const app = {
         }
 
         if (currentDish) {
-            this.showSlotActions(dia, tipo, slot, currentDish);
+            this.openDishChooser(dia, tipo, slot);
             return;
         }
 
@@ -1171,7 +1171,7 @@ const app = {
         const recipePath = this.findRecipeUrlForDish(dish);
         const dishArg = encodeURIComponent(dish);
         results.innerHTML = `
-            ${recipePath ? `<button class="choice" type="button" onclick="app.openRecipeForDish(decodeURIComponent('${dishArg}'))"><strong>Ver receta</strong><span>${this.escapeHtml(dish)}</span></button>` : ''}
+            ${recipePath ? `<button class="choice" type="button" onclick="app.closeSlotModal(); app.openRecipeForDish(decodeURIComponent('${dishArg}'))"><strong>Ver receta</strong><span>${this.escapeHtml(dish)}</span></button>` : ''}
             <button class="choice" type="button" onclick="app.drawDishResults('')"><strong>Cambiar plato</strong><span>Elegir otro plato del recetario</span></button>
             <button class="choice" type="button" onclick="app.setSlotPlato('${dia}','${tipo}','${slot}','')"><strong>Vaciar campo</strong><span>Quitar este plato del plan</span></button>
         `;
