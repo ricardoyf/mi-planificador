@@ -229,7 +229,7 @@ const platosData = [
     "ingredientes": [
       "Brécol"
     ],
-    "url_receta": "Recipes/Brécol al vapor.html",
+    "url_receta": "Recipes/Brécol.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
@@ -251,7 +251,7 @@ const platosData = [
     "ingredientes": [
       "Coliflor"
     ],
-    "url_receta": "Recipes/Coliflor al vapor.html",
+    "url_receta": "Recipes/Coliflor.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
@@ -265,7 +265,7 @@ const platosData = [
       "Salsa de tomate",
       "Huevo"
     ],
-    "url_receta": "Recipes/Espinacas y garbanzos con salsa de tomate y huevos.html",
+    "url_receta": "Recipes/Espinacas garbanzos.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
@@ -276,7 +276,7 @@ const platosData = [
     "ingredientes": [
       "Grelos"
     ],
-    "url_receta": "Recipes/Grelos salteados.html",
+    "url_receta": "Recipes/Grelos.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
@@ -316,7 +316,7 @@ const platosData = [
       "Romero",
       "Pimentón"
     ],
-    "url_receta": "",
+    "url_receta": "Recipes/Patatas asadas ostras.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
@@ -348,6 +348,62 @@ const platosData = [
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
+  },
+  {
+    "plato": "Brécol al vapor",
+    "categoria": "Básicos y acompañamientos",
+    "ingredientes": [
+      "400 g brécol en ramilletes",
+      "1 cdta sal",
+      "20 g aceite de oliva"
+    ],
+    "url_receta": "Recipes/Brécol al vapor.html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
+  },
+  {
+    "plato": "Coliflor al vapor",
+    "categoria": "Básicos y acompañamientos",
+    "ingredientes": [
+      "400 g coliflor en ramilletes",
+      "1 cdta sal",
+      "20 g aceite de oliva"
+    ],
+    "url_receta": "Recipes/Coliflor al vapor.html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
+  },
+  {
+    "plato": "Espinacas y garbanzos con salsa de tomate y huevos",
+    "categoria": "Básicos y acompañamientos",
+    "ingredientes": [
+      "400 g espinacas frescas o congeladas",
+      "400 g garbanzos cocidos",
+      "300 g salsa de tomate",
+      "4 huevos",
+      "30 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url_receta": "Recipes/Espinacas y garbanzos con salsa de tomate y huevos.html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
+  },
+  {
+    "plato": "Grelos salteados",
+    "categoria": "Básicos y acompañamientos",
+    "ingredientes": [
+      "400 g grelos",
+      "2 dientes de ajo",
+      "20 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url_receta": "Recipes/Grelos salteados.html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
   },
   {
     "plato": "Patatas asadas Marcos",
@@ -507,10 +563,23 @@ const platosData = [
     "ingredientes": [
       "ternera, pollo, pavo, solomillo o castaña"
     ],
-    "url_receta": "Recipes/Filetes de ternera, pollo, solomillo o castaña.html",
+    "url_receta": "Recipes/Filetes.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
+  },
+  {
+    "plato": "Filetes de ternera, pollo, solomillo o castaña",
+    "categoria": "Carnes",
+    "ingredientes": [
+      "Filetes de carne a elegir",
+      "Sal",
+      "Aceite de oliva"
+    ],
+    "url_receta": "Recipes/Filetes de ternera, pollo, solomillo o castaña.html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
   },
   {
     "plato": "Hamburguesas",
@@ -521,7 +590,7 @@ const platosData = [
       "Tomate",
       "Queso"
     ],
-    "url_receta": "",
+    "url_receta": "Recipes/Hamburguesas.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
@@ -535,10 +604,28 @@ const platosData = [
       "Tomates",
       "Arroz"
     ],
-    "url_receta": "Recipes/Jarrete con arroz.html",
+    "url_receta": "Recipes/Jarrete arroz.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
+  },
+  {
+    "plato": "Jarrete con arroz",
+    "categoria": "Carnes",
+    "ingredientes": [
+      "1 jarrete de ternera",
+      "1 cebolla",
+      "1 pimiento rojo",
+      "2 tomates maduros",
+      "2 dientes de ajo",
+      "250 g arroz",
+      "30 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url_receta": "Recipes/Jarrete con arroz.html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
   },
   {
     "plato": "Llana",
@@ -550,10 +637,30 @@ const platosData = [
       "Caldo de carne o agua",
       "Perejil fresco"
     ],
-    "url_receta": "Recipes/Llana asada con salsa de su jugo.html",
+    "url_receta": "Recipes/Llana.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
+  },
+  {
+    "plato": "Llana asada con salsa de su jugo",
+    "categoria": "Carnes",
+    "ingredientes": [
+      "1,5 kg llana de ternera",
+      "3 dientes de ajo",
+      "1 cebolla grande",
+      "1 pimiento rojo",
+      "200 ml vino blanco",
+      "200 ml caldo de carne o agua",
+      "30 g aceite de oliva",
+      "1 cdta sal",
+      "1 pizca pimienta",
+      "Perejil fresco"
+    ],
+    "url_receta": "Recipes/Llana asada con salsa de su jugo.html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
   },
   {
     "plato": "Muslos AirFryer",
@@ -561,10 +668,24 @@ const platosData = [
     "ingredientes": [
       "Muslos"
     ],
-    "url_receta": "Recipes/Muslos de pollo en AirFryer.html",
+    "url_receta": "Recipes/Muslos AirFryer.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
+  },
+  {
+    "plato": "Muslos de pollo en AirFryer",
+    "categoria": "Carnes",
+    "ingredientes": [
+      "Muslos de pollo",
+      "Sal",
+      "Aceite de oliva",
+      "Especias al gusto"
+    ],
+    "url_receta": "Recipes/Muslos de pollo en AirFryer.html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
   },
   {
     "plato": "Pastel de carne con puré de patata",
@@ -703,10 +824,31 @@ const platosData = [
       "Huevo",
       "Levadura"
     ],
-    "url_receta": "Recipes/Cuscús con champiñones y judías verdes.html",
+    "url_receta": "Recipes/Cuscús champiñones judías.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
+  },
+  {
+    "plato": "Cuscús con champiñones y judías verdes",
+    "categoria": "CENAS",
+    "ingredientes": [
+      "100 g cuscús",
+      "100 ml agua o caldo caliente",
+      "200 g judías verdes",
+      "100 g champiñones",
+      "2 dientes de ajo",
+      "1 cdta pimentón",
+      "1 cdta salsa de soja",
+      "1 yema de huevo (opcional)",
+      "1 cda levadura nutricional",
+      "20 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url_receta": "Recipes/Cuscús con champiñones y judías verdes.html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
   },
   {
     "plato": "Empanadillas",
@@ -749,7 +891,7 @@ const platosData = [
       "Yogur griego",
       "Fajitas integrales"
     ],
-    "url_receta": "",
+    "url_receta": "Recipes/Fajitas.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
@@ -882,10 +1024,30 @@ const platosData = [
       "Pavo",
       "Queso de cabra"
     ],
-    "url_receta": "Recipes/Wrap de aguacate al horno.html",
+    "url_receta": "Recipes/Wrap de aguacate.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
+  },
+  {
+    "plato": "Wrap de aguacate al horno",
+    "categoria": "CENAS",
+    "ingredientes": [
+      "1 aguacate",
+      "2 huevos",
+      "1 pizca de sal",
+      "Unas gotas de zumo de limón",
+      "Semillas de sésamo (para decorar)",
+      "Queso cottage batido",
+      "Rúcula",
+      "Tomate",
+      "Pavo",
+      "Queso de cabra en lonchas"
+    ],
+    "url_receta": "Recipes/Wrap de aguacate al horno.html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
   },
   {
     "plato": "Zoodles langostinos",
@@ -946,7 +1108,7 @@ const platosData = [
       "Canónigos",
       "Pepino"
     ],
-    "url_receta": "",
+    "url_receta": "Recipes/E. atún.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
@@ -962,7 +1124,7 @@ const platosData = [
       "Canónigos",
       "Cebolla"
     ],
-    "url_receta": "",
+    "url_receta": "Recipes/E. atún mango.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
@@ -978,7 +1140,7 @@ const platosData = [
       "Zanahorias",
       "Semillas variadas"
     ],
-    "url_receta": "Recipes/E. Pimientos tomate feta almendras bonito.html",
+    "url_receta": "Recipes/E. Bonito feta.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
@@ -1024,10 +1186,27 @@ const platosData = [
       "huevo",
       "Pimentón"
     ],
-    "url_receta": "Recipes/E. Cuscús judías champiñones yema.html",
+    "url_receta": "Recipes/E. Cuscús judías.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
+  },
+  {
+    "plato": "E. Cuscús judías champiñones yema",
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "200 g cuscús preparado",
+      "200 g judías verdes cocidas",
+      "100 g champiñones salteados",
+      "2 yemas de huevo (opcional)",
+      "30 g aceite de oliva",
+      "1 cdta sal",
+      "1 cdta pimentón o un chorrito de soja"
+    ],
+    "url_receta": "Recipes/E. Cuscús judías champiñones yema.html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
   },
   {
     "plato": "E. fabes",
@@ -1038,7 +1217,7 @@ const platosData = [
       "Huevo cocido",
       "Aceite y vinagre"
     ],
-    "url_receta": "",
+    "url_receta": "Recipes/E. fabes.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
@@ -1055,7 +1234,7 @@ const platosData = [
       "Huevo",
       "Anchoas"
     ],
-    "url_receta": "",
+    "url_receta": "Recipes/E. Judías ANCHOAS.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
@@ -1069,7 +1248,7 @@ const platosData = [
       "Aguacate",
       "Mozzarella"
     ],
-    "url_receta": "",
+    "url_receta": "Recipes/E. pasta.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
@@ -1083,7 +1262,7 @@ const platosData = [
       "Bonito",
       "Aceitunas negras"
     ],
-    "url_receta": "",
+    "url_receta": "Recipes/E. patata.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
@@ -1098,7 +1277,7 @@ const platosData = [
       "Almendras",
       "Bonito"
     ],
-    "url_receta": "Recipes/E. Pimientos tomate feta almendras bonito.html",
+    "url_receta": "Recipes/E. Pimientos.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
@@ -1113,10 +1292,27 @@ const platosData = [
       "cherrys",
       "Bonito"
     ],
-    "url_receta": "",
+    "url_receta": "Recipes/E. pimientos rojos.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
+  },
+  {
+    "plato": "E. Pimientos tomate feta almendras bonito",
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "2 pimientos asados o frescos",
+      "2 tomates",
+      "100 g queso feta",
+      "40 g almendras troceadas",
+      "150 g bonito en conserva",
+      "30 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url_receta": "Recipes/E. Pimientos tomate feta almendras bonito.html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
   },
   {
     "plato": "E. queso cabra",
@@ -1128,7 +1324,7 @@ const platosData = [
       "Tomate",
       "Canónigos"
     ],
-    "url_receta": "",
+    "url_receta": "Recipes/E. queso cabra.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
@@ -1153,7 +1349,7 @@ const platosData = [
       "Tomates maduros",
       "Rulo de cabra"
     ],
-    "url_receta": "",
+    "url_receta": "Recipes/E. rulo.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
@@ -1169,10 +1365,28 @@ const platosData = [
       "Canónigos",
       "Pepino"
     ],
-    "url_receta": "Recipes/E. Salmón aguacate feta tomate canónigos nueces.html",
+    "url_receta": "Recipes/E. Salmón.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
+  },
+  {
+    "plato": "E. Salmón aguacate feta tomate canónigos nueces",
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "200 g salmón marinado o ahumado",
+      "1 aguacate",
+      "100 g queso feta",
+      "2 tomates",
+      "100 g canónigos",
+      "30 g nueces",
+      "30 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url_receta": "Recipes/E. Salmón aguacate feta tomate canónigos nueces.html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
   },
   {
     "plato": "Ensalada de atún",
@@ -1355,6 +1569,24 @@ const platosData = [
     "canon_v84": true
   },
   {
+    "plato": "Tacos de lechuga y ensaladilla de atún",
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "Cogollos de lechuga",
+      "Atún",
+      "Albahaca fresca",
+      "Mostaza",
+      "Cebolleta",
+      "Manzana",
+      "Pepinillos",
+      "Mahonesa (ver nota para versión light)"
+    ],
+    "url_receta": "Recipes/Tacos de lechuga y ensaladilla de atún.html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
+  },
+  {
     "plato": "Tacos lechuga ensaladilla atún",
     "categoria": "Ensaladas",
     "ingredientes": [
@@ -1367,7 +1599,7 @@ const platosData = [
       "Pepinillos",
       "Mahonesa"
     ],
-    "url_receta": "Recipes/Tacos de lechuga y ensaladilla de atún.html",
+    "url_receta": "Recipes/Tacos lechuga ensaladilla atún.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
@@ -1382,10 +1614,28 @@ const platosData = [
       "Albahaca",
       "Pistachos"
     ],
-    "url_receta": "Recipes/Tomate relleno de burrata.html",
+    "url_receta": "Recipes/Tomate relleno burrata.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
+  },
+  {
+    "plato": "Tomate relleno de burrata",
+    "categoria": "Ensaladas",
+    "ingredientes": [
+      "1 tomate rosa grande y maduro",
+      "1 burrata (125 g aprox.)",
+      "30 ml aceite de oliva virgen extra",
+      "1 buen manojo de cebollino",
+      "Hojas de albahaca fresca (al gusto)",
+      "20 g pistachos pelados",
+      "Sal gorda",
+      "Pimienta negra"
+    ],
+    "url_receta": "Recipes/Tomate relleno de burrata.html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
   },
   {
     "plato": "Tomates rellenos de ventresca con muhammara",
@@ -1456,7 +1706,7 @@ const platosData = [
       "Limón",
       "Menta picada"
     ],
-    "url_receta": "Recipes/Falafel con salsa de yogur.html",
+    "url_receta": "Recipes/Falafel salsa de yogur.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
@@ -1625,6 +1875,25 @@ const platosData = [
     "canon_v84": true
   },
   {
+    "plato": "Boloñesa con pasta",
+    "categoria": "Pasta y arroces",
+    "ingredientes": [
+      "400 g carne picada",
+      "1 rama de apio",
+      "1 zanahoria",
+      "1 puerro",
+      "100 ml vino tinto",
+      "500 g tomate triturado",
+      "300 g pasta",
+      "30 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url_receta": "Recipes/Boloñesa con pasta.html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
+  },
+  {
     "plato": "Boloñesa pasta",
     "categoria": "Pasta y arroces",
     "ingredientes": [
@@ -1636,10 +1905,28 @@ const platosData = [
       "Tomate triturado",
       "Pasta"
     ],
-    "url_receta": "Recipes/Boloñesa con pasta.html",
+    "url_receta": "Recipes/Boloñesa pasta.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
+  },
+  {
+    "plato": "Canelones de carne y espinacas",
+    "categoria": "Pasta y arroces",
+    "ingredientes": [
+      "12 placas de canelón",
+      "300 g carne picada",
+      "100 g champiñones",
+      "200 g espinacas",
+      "400 g bechamel",
+      "100 g queso rallado",
+      "30 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url_receta": "Recipes/Canelones de carne y espinacas.html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
   },
   {
     "plato": "Canelones espinacas",
@@ -1652,7 +1939,7 @@ const platosData = [
       "Bechamel",
       "Queso rallado"
     ],
-    "url_receta": "Recipes/Canelones de carne y espinacas.html",
+    "url_receta": "Recipes/Canelones espinacas.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
@@ -1668,10 +1955,28 @@ const platosData = [
       "Bechamel",
       "Queso rallado"
     ],
-    "url_receta": "Recipes/Lasaña o Musaka (carne, champiñón, espinaca, bechamel).html",
+    "url_receta": "Recipes/Lasaña.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
+  },
+  {
+    "plato": "Lasaña o Musaka (carne, champiñón, espinaca, bechamel)",
+    "categoria": "Pasta y arroces",
+    "ingredientes": [
+      "12 placas de lasaña precocida o láminas de berenjena (para musaka)",
+      "400 g carne picada",
+      "150 g champiñones",
+      "200 g espinacas",
+      "400 g bechamel",
+      "150 g queso rallado",
+      "30 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url_receta": "Recipes/Lasaña o Musaka (carne, champiñón, espinaca, bechamel).html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
   },
   {
     "plato": "Pasta fresca",
@@ -1682,10 +1987,26 @@ const platosData = [
       "Langostinos pelados",
       "Brécol"
     ],
-    "url_receta": "Recipes/Pasta fresca con pesto, langostinos y brécol.html",
+    "url_receta": "Recipes/Pasta fresca.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
+  },
+  {
+    "plato": "Pasta fresca con pesto, langostinos y brécol",
+    "categoria": "Pasta y arroces",
+    "ingredientes": [
+      "300 g pasta fresca",
+      "100 g pesto",
+      "200 g langostinos pelados",
+      "200 g brécol",
+      "20 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url_receta": "Recipes/Pasta fresca con pesto, langostinos y brécol.html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
   },
   {
     "plato": "Almejas a la marinera",
@@ -1715,7 +2036,7 @@ const platosData = [
       "Vino blanco",
       "Fumet"
     ],
-    "url_receta": "Recipes/Chocos con arroz.html",
+    "url_receta": "Recipes/Chocos arroz.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
@@ -1727,7 +2048,7 @@ const platosData = [
       "bacalao, jurelos, dorada, rodaballo, sargo, palometa, menda, coruxo, corvina",
       "Pimiento"
     ],
-    "url_receta": "Recipes/Pescado Horno (bacalao, jurelos, dorada, rodaballo, sargo, palometa, menda, coruxo,…).html",
+    "url_receta": "Recipes/Pescado Horno.html",
     "oculta_recetario": false,
     "en_excel": true,
     "canon_v84": true
@@ -1838,6 +2159,39 @@ const platosData = [
     "canon_v84": true
   },
   {
+    "plato": "Chocos con arroz",
+    "categoria": "Pescados y mariscos",
+    "ingredientes": [
+      "500 g chocos limpios",
+      "250 g arroz",
+      "1 pimiento verde",
+      "100 ml vino blanco",
+      "30 g aceite de oliva",
+      "1 cdta sal",
+      "600 ml agua o caldo de pescado"
+    ],
+    "url_receta": "Recipes/Chocos con arroz.html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
+  },
+  {
+    "plato": "Pescado Horno (bacalao, jurelos, dorada, rodaballo, sargo, palometa, menda, coruxo,…)",
+    "categoria": "Pescados y mariscos",
+    "ingredientes": [
+      "1 pescado entero o en lomos",
+      "2 patatas en rodajas",
+      "1 cebolla en tiras",
+      "1 pimiento en tiras",
+      "30 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url_receta": "Recipes/Pescado Horno (bacalao, jurelos, dorada, rodaballo, sargo, palometa, menda, coruxo,…).html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
+  },
+  {
     "plato": "Pulpo á feira (versión rápida)",
     "categoria": "Pescados y mariscos",
     "ingredientes": [
@@ -1849,6 +2203,30 @@ const platosData = [
       "30 g aceite de oliva"
     ],
     "url_receta": "Recipes/Pulpo á feira (versión rápida).html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
+  },
+  {
+    "plato": "Falafel con salsa de yogur",
+    "categoria": "Platos especiales, internacionales",
+    "ingredientes": [
+      "300 g de garbanzos secos",
+      "1 cucharadita de comino",
+      "2 dientes de ajo",
+      "1/2 cebolla",
+      "Cilantro fresco al gusto",
+      "Perejil fresco al gusto",
+      "1 cucharadita de levadura Royal",
+      "Zumo de 1 limón",
+      "Sal y pimienta al gusto",
+      "Aceite abundante para freír",
+      "1 yogur natural",
+      "1 ajo rallado (para la salsa)",
+      "Unas hojas de menta picada",
+      "2 cucharadas de aceite de oliva"
+    ],
+    "url_receta": "Recipes/Falafel con salsa de yogur.html",
     "oculta_recetario": true,
     "en_excel": false,
     "canon_v84": false
@@ -2276,6 +2654,36 @@ const platosData = [
       "Perifollo"
     ],
     "url_receta": "Recipes/Albóndigas con sepia.html",
+    "oculta_recetario": true,
+    "en_excel": false,
+    "canon_v84": false
+  },
+  {
+    "plato": "Albóndigas Macu",
+    "categoria": "Sin categoría",
+    "ingredientes": [
+      "Para las albóndigas:",
+      "500g de carne picada de ternera",
+      "250g de carne picada de cerdo",
+      "1 cucharada de orégano",
+      "1 cucharada de perejil",
+      "1 cucharada de ajo en polvo",
+      "1 cucharada y media de cebolla en polvo",
+      "Sal y pimienta",
+      "Harina (para rebozar)",
+      "1 huevo",
+      "2 rebanadas de pan de molde sin corteza mojadas en leche",
+      "Para la salsa:",
+      "1 diente de ajo",
+      "1 cebolla",
+      "1 trozo de pimiento rojo",
+      "1 trozo de pimiento verde",
+      "50g de aceite",
+      "4 cucharadas de tomate frito",
+      "100g de sidra",
+      "100g de agua"
+    ],
+    "url_receta": "Recipes/Albóndigas Macu.html",
     "oculta_recetario": true,
     "en_excel": false,
     "canon_v84": false
@@ -4266,6 +4674,35 @@ const recetasData = [
     "url": "Recipes/Albóndigas con sepia.html"
   },
   {
+    "nombre": "Albóndigas Macu",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
+    "ingredientes_html": [
+      "Para las albóndigas:",
+      "500g de carne picada de ternera",
+      "250g de carne picada de cerdo",
+      "1 cucharada de orégano",
+      "1 cucharada de perejil",
+      "1 cucharada de ajo en polvo",
+      "1 cucharada y media de cebolla en polvo",
+      "Sal y pimienta",
+      "Harina (para rebozar)",
+      "1 huevo",
+      "2 rebanadas de pan de molde sin corteza mojadas en leche",
+      "Para la salsa:",
+      "1 diente de ajo",
+      "1 cebolla",
+      "1 trozo de pimiento rojo",
+      "1 trozo de pimiento verde",
+      "50g de aceite",
+      "4 cucharadas de tomate frito",
+      "100g de sidra",
+      "100g de agua"
+    ],
+    "url": "Recipes/Albóndigas Macu.html"
+  },
+  {
     "nombre": "Alcachofas",
     "categoria": "Básicos y acompañamientos",
     "categoria_original": "Básicos y acompañamientos",
@@ -4567,6 +5004,36 @@ const recetasData = [
     "url": "Recipes/Boloñesa con pasta.html"
   },
   {
+    "nombre": "Boloñesa pasta",
+    "categoria": "Pasta y arroces",
+    "categoria_original": "Pasta y arroces",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "400 g carne picada",
+      "1 rama de apio",
+      "1 zanahoria",
+      "1 puerro",
+      "100 ml vino tinto",
+      "500 g tomate triturado",
+      "300 g pasta",
+      "30 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url": "Recipes/Boloñesa pasta.html"
+  },
+  {
+    "nombre": "Brécol",
+    "categoria": "Básicos",
+    "categoria_original": "Básicos",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "400 g brécol en ramilletes",
+      "1 cdta sal",
+      "20 g aceite de oliva"
+    ],
+    "url": "Recipes/Brécol.html"
+  },
+  {
     "nombre": "Brécol al vapor",
     "categoria": "Básicos y acompañamientos",
     "categoria_original": "Básicos y acompañamientos",
@@ -4663,6 +5130,23 @@ const recetasData = [
       "1 cdta sal"
     ],
     "url": "Recipes/Canelones de carne y espinacas.html"
+  },
+  {
+    "nombre": "Canelones espinacas",
+    "categoria": "Pasta y arroces",
+    "categoria_original": "Pasta y arroces",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "12 placas de canelón",
+      "300 g carne picada",
+      "100 g champiñones",
+      "200 g espinacas",
+      "400 g bechamel",
+      "100 g queso rallado",
+      "30 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url": "Recipes/Canelones espinacas.html"
   },
   {
     "nombre": "Carne a la minuta",
@@ -4792,6 +5276,22 @@ const recetasData = [
     "url": "Recipes/Ceviche de langostinos y fruta de la pasión.html"
   },
   {
+    "nombre": "Chocos arroz",
+    "categoria": "Pescados",
+    "categoria_original": "Pescados",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "500 g chocos limpios",
+      "250 g arroz",
+      "1 pimiento verde",
+      "100 ml vino blanco",
+      "30 g aceite de oliva",
+      "1 cdta sal",
+      "600 ml agua o caldo de pescado"
+    ],
+    "url": "Recipes/Chocos arroz.html"
+  },
+  {
     "nombre": "Chocos con arroz",
     "categoria": "Pescados y mariscos",
     "categoria_original": "Pescados y mariscos",
@@ -4886,6 +5386,18 @@ const recetasData = [
       "Sal"
     ],
     "url": "Recipes/Cocochas de merluza a la romana con asadillo manchego y sopa de parmesano.html"
+  },
+  {
+    "nombre": "Coliflor",
+    "categoria": "Básicos",
+    "categoria_original": "Básicos",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "400 g coliflor en ramilletes",
+      "1 cdta sal",
+      "20 g aceite de oliva"
+    ],
+    "url": "Recipes/Coliflor.html"
   },
   {
     "nombre": "Coliflor al vapor",
@@ -5005,6 +5517,26 @@ const recetasData = [
     "url": "Recipes/Croquetas.html"
   },
   {
+    "nombre": "Cuscús champiñones judías",
+    "categoria": "CENAS",
+    "categoria_original": "CENAS",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "100 g cuscús",
+      "100 ml agua o caldo caliente",
+      "200 g judías verdes",
+      "100 g champiñones",
+      "2 dientes de ajo",
+      "1 cdta pimentón",
+      "1 cdta salsa de soja",
+      "1 yema de huevo (opcional)",
+      "1 cda levadura nutricional",
+      "20 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url": "Recipes/Cuscús champiñones judías.html"
+  },
+  {
     "nombre": "Cuscús con champiñones y judías verdes",
     "categoria": "CENAS",
     "categoria_original": "CENAS",
@@ -5056,6 +5588,55 @@ const recetasData = [
     "url": "Recipes/Dorada con jamón.html"
   },
   {
+    "nombre": "E. atún",
+    "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "1 lata de atún al natural (60 g)",
+      "1/2 aguacate",
+      "60 g mozzarella light",
+      "Tomate (cantidad al gusto)",
+      "Canónigos (cantidad al gusto)",
+      "Pepino (cantidad al gusto)",
+      "5 g aceite de oliva virgen extra (AOVE)"
+    ],
+    "url": "Recipes/E. atún.html"
+  },
+  {
+    "nombre": "E. atún mango",
+    "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "1 lata de atún al natural",
+      "1/2 unidad de mango",
+      "60 g queso feta",
+      "Tomate (cantidad al gusto)",
+      "Canónigos (cantidad al gusto)",
+      "Cebolla (cantidad al gusto)",
+      "5 g aceite de oliva virgen extra (AOVE)"
+    ],
+    "url": "Recipes/E. atún mango.html"
+  },
+  {
+    "nombre": "E. Bonito feta",
+    "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "1 lechuga",
+      "2 tomates",
+      "150 g bonito en conserva",
+      "100 g queso feta",
+      "1 zanahoria rallada",
+      "2 cdas semillas variadas",
+      "30 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url": "Recipes/E. Bonito feta.html"
+  },
+  {
     "nombre": "E. Bonito lechuga tomate feta zanahoria semillas",
     "categoria": "Ensaladas",
     "categoria_original": "Ensaladas",
@@ -5087,6 +5668,22 @@ const recetasData = [
     "url": "Recipes/E. Caprese.html"
   },
   {
+    "nombre": "E. Cuscús judías",
+    "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "200 g cuscús preparado",
+      "200 g judías verdes cocidas",
+      "100 g champiñones salteados",
+      "2 yemas de huevo (opcional)",
+      "30 g aceite de oliva",
+      "1 cdta sal",
+      "1 cdta pimentón o un chorrito de soja"
+    ],
+    "url": "Recipes/E. Cuscús judías.html"
+  },
+  {
     "nombre": "E. Cuscús judías champiñones yema",
     "categoria": "Ensaladas",
     "categoria_original": "Ensaladas",
@@ -5101,6 +5698,100 @@ const recetasData = [
       "1 cdta pimentón o un chorrito de soja"
     ],
     "url": "Recipes/E. Cuscús judías champiñones yema.html"
+  },
+  {
+    "nombre": "E. fabes",
+    "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "fabes de bote cocidas, escurridas lavadas",
+      "cebolla y pimiento muy picado",
+      "atun",
+      "huevo cocido",
+      "aceite y vinagre"
+    ],
+    "url": "Recipes/E. fabes.html"
+  },
+  {
+    "nombre": "E. Judías ANCHOAS",
+    "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "3 patatas medianas cocidas",
+      "200 g judías verdes cocidas",
+      "1 lechuga",
+      "2 tomates",
+      "1 cebolla",
+      "100 g aceitunas verdes o negras",
+      "2 huevos cocidos",
+      "90g anchoa en aceite",
+      "50g mayonesa",
+      "50g aceite de oliva",
+      "30g vinagre"
+    ],
+    "url": "Recipes/E. Judías ANCHOAS.html"
+  },
+  {
+    "nombre": "E. pasta",
+    "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "50 g pasta integral",
+      "1 lata de atún al natural",
+      "60 g aguacate",
+      "60 g mozzarella",
+      "Verduras al gusto",
+      "5 g aceite de oliva virgen extra (AOVE)"
+    ],
+    "url": "Recipes/E. pasta.html"
+  },
+  {
+    "nombre": "E. patata",
+    "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "200 g patata",
+      "1 huevo cocido",
+      "50 g ventresca en conserva",
+      "10 aceitunas negras",
+      "1 cucharada pequeña (cp) de aceite de oliva virgen extra (AOVE)"
+    ],
+    "url": "Recipes/E. patata.html"
+  },
+  {
+    "nombre": "E. Pimientos",
+    "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "2 pimientos asados o frescos",
+      "2 tomates",
+      "100 g queso feta",
+      "40 g almendras troceadas",
+      "150 g bonito en conserva",
+      "30 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url": "Recipes/E. Pimientos.html"
+  },
+  {
+    "nombre": "E. pimientos rojos",
+    "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "Pimientos rojos asados en tiras",
+      "20 g almendras o nueces",
+      "60 g queso fresco",
+      "Tomates cherry (cantidad al gusto)",
+      "1 lata de atún al natural (60 g)",
+      "5 g aceite de oliva virgen extra (AOVE)"
+    ],
+    "url": "Recipes/E. pimientos rojos.html"
   },
   {
     "nombre": "E. Pimientos tomate feta almendras bonito",
@@ -5119,6 +5810,22 @@ const recetasData = [
     "url": "Recipes/E. Pimientos tomate feta almendras bonito.html"
   },
   {
+    "nombre": "E. queso cabra",
+    "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "60 g salmón ahumado",
+      "40 g queso de cabra",
+      "5 nueces",
+      "Tomate (cantidad al gusto)",
+      "Canónigos (cantidad al gusto)",
+      "Cebolla (cantidad al gusto)",
+      "5 g aceite de oliva virgen extra (AOVE)"
+    ],
+    "url": "Recipes/E. queso cabra.html"
+  },
+  {
     "nombre": "E. Quinoa brécol calabacín",
     "categoria": "Ensaladas",
     "categoria_original": "Ensaladas",
@@ -5131,6 +5838,36 @@ const recetasData = [
       "1 cdta sal"
     ],
     "url": "Recipes/E. Quinoa brécol calabacín.html"
+  },
+  {
+    "nombre": "E. rulo",
+    "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "4 tomates maduros",
+      "150 g rulo de cabra",
+      "30 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url": "Recipes/E. rulo.html"
+  },
+  {
+    "nombre": "E. Salmón",
+    "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "200 g salmón marinado o ahumado",
+      "1 aguacate",
+      "100 g queso feta",
+      "2 tomates",
+      "100 g canónigos",
+      "30 g nueces",
+      "30 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url": "Recipes/E. Salmón.html"
   },
   {
     "nombre": "E. Salmón aguacate feta tomate canónigos nueces",
@@ -5598,6 +6335,21 @@ const recetasData = [
     "url": "Recipes/Espinacas a la crema.html"
   },
   {
+    "nombre": "Espinacas garbanzos",
+    "categoria": "Básicos",
+    "categoria_original": "Básicos",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "400 g espinacas frescas o congeladas",
+      "400 g garbanzos cocidos",
+      "300 g salsa de tomate",
+      "4 huevos",
+      "30 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url": "Recipes/Espinacas garbanzos.html"
+  },
+  {
     "nombre": "Espinacas y garbanzos con salsa de tomate y huevos",
     "categoria": "Básicos y acompañamientos",
     "categoria_original": "Básicos y acompañamientos",
@@ -5648,6 +6400,14 @@ const recetasData = [
     "url": "Recipes/Fabada.html"
   },
   {
+    "nombre": "Fajitas",
+    "categoria": "CENAS",
+    "categoria_original": "CENAS",
+    "oculta_recetario": false,
+    "ingredientes_html": [],
+    "url": "Recipes/Fajitas.html"
+  },
+  {
     "nombre": "Falafel con salsa de yogur",
     "categoria": "Platos especiales, internacionales",
     "categoria_original": "Platos especiales / internacionales",
@@ -5671,6 +6431,29 @@ const recetasData = [
     "url": "Recipes/Falafel con salsa de yogur.html"
   },
   {
+    "nombre": "Falafel salsa de yogur",
+    "categoria": "Internacionales",
+    "categoria_original": "Internacionales",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "300 g de garbanzos secos",
+      "1 cucharadita de comino",
+      "2 dientes de ajo",
+      "1/2 cebolla",
+      "Cilantro fresco al gusto",
+      "Perejil fresco al gusto",
+      "1 cucharadita de levadura Royal",
+      "Zumo de 1 limón",
+      "Sal y pimienta al gusto",
+      "Aceite abundante para freír",
+      "1 yogur natural",
+      "1 ajo rallado (para la salsa)",
+      "Unas hojas de menta picada",
+      "2 cucharadas de aceite de oliva"
+    ],
+    "url": "Recipes/Falafel salsa de yogur.html"
+  },
+  {
     "nombre": "Fideos chinos",
     "categoria": "Platos especiales, internacionales",
     "categoria_original": "Platos especiales / internacionales",
@@ -5692,6 +6475,18 @@ const recetasData = [
       "20 g aceite de oliva"
     ],
     "url": "Recipes/Fideos chinos.html"
+  },
+  {
+    "nombre": "Filetes",
+    "categoria": "Carnes",
+    "categoria_original": "Carnes",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "Filetes de ternera, pollo, solomillo o castaña",
+      "Sal",
+      "Aceite de oliva"
+    ],
+    "url": "Recipes/Filetes.html"
   },
   {
     "nombre": "Filetes de ternera, pollo, solomillo o castaña",
@@ -5842,6 +6637,19 @@ const recetasData = [
     "url": "Recipes/Gnocchis con salsa de tomate picante, berberechos y gambas.html"
   },
   {
+    "nombre": "Grelos",
+    "categoria": "Básicos",
+    "categoria_original": "Básicos",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "400 g grelos",
+      "2 dientes de ajo",
+      "20 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url": "Recipes/Grelos.html"
+  },
+  {
     "nombre": "Grelos salteados",
     "categoria": "Básicos y acompañamientos",
     "categoria_original": "Básicos y acompañamientos",
@@ -5870,6 +6678,14 @@ const recetasData = [
       "1 cucharadita sal"
     ],
     "url": "Recipes/Guacamole (TMX).html"
+  },
+  {
+    "nombre": "Hamburguesas",
+    "categoria": "Carnes",
+    "categoria_original": "Carnes",
+    "oculta_recetario": false,
+    "ingredientes_html": [],
+    "url": "Recipes/Hamburguesas.html"
   },
   {
     "nombre": "Helado de pistacho",
@@ -5940,6 +6756,23 @@ const recetasData = [
     "url": "Recipes/Huevos Rellenos (Lucía).html"
   },
   {
+    "nombre": "Jarrete arroz",
+    "categoria": "Carnes",
+    "categoria_original": "Carnes",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "1 jarrete de ternera",
+      "1 cebolla",
+      "1 pimiento rojo",
+      "2 tomates maduros",
+      "2 dientes de ajo",
+      "250 g arroz",
+      "30 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url": "Recipes/Jarrete arroz.html"
+  },
+  {
     "nombre": "Jarrete con arroz",
     "categoria": "Carnes",
     "categoria_original": "Carnes",
@@ -5997,6 +6830,23 @@ const recetasData = [
       "20 g aceite de oliva"
     ],
     "url": "Recipes/Judías verdes.html"
+  },
+  {
+    "nombre": "Lasaña",
+    "categoria": "Pasta y arroces",
+    "categoria_original": "FINDESEMANA, Pasta y arroces",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "12 placas de lasaña precocida o láminas de berenjena (para musaka)",
+      "400 g carne picada",
+      "150 g champiñones",
+      "200 g espinacas",
+      "400 g bechamel",
+      "150 g queso rallado",
+      "30 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url": "Recipes/Lasaña.html"
   },
   {
     "nombre": "Lasaña o Musaka (carne, champiñón, espinaca, bechamel)",
@@ -6065,6 +6915,25 @@ const recetasData = [
       "800 ml agua"
     ],
     "url": "Recipes/Lentejas.html"
+  },
+  {
+    "nombre": "Llana",
+    "categoria": "Carnes",
+    "categoria_original": "Carnes",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "1,5 kg llana de ternera",
+      "3 dientes de ajo",
+      "1 cebolla grande",
+      "1 pimiento rojo",
+      "200 ml vino blanco",
+      "200 ml caldo de carne o agua",
+      "30 g aceite de oliva",
+      "1 cdta sal",
+      "1 pizca pimienta",
+      "Perejil fresco"
+    ],
+    "url": "Recipes/Llana.html"
   },
   {
     "nombre": "Llana asada con salsa de su jugo",
@@ -6325,6 +7194,19 @@ const recetasData = [
     "url": "Recipes/Muffins cetogénicos de arándanos.html"
   },
   {
+    "nombre": "Muslos AirFryer",
+    "categoria": "Carnes",
+    "categoria_original": "Carnes",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "Muslos de pollo",
+      "Sal",
+      "Aceite de oliva",
+      "Especias al gusto"
+    ],
+    "url": "Recipes/Muslos AirFryer.html"
+  },
+  {
     "nombre": "Muslos de pollo a la sidra",
     "categoria": "Sin categoría",
     "categoria_original": "MACU",
@@ -6547,6 +7429,21 @@ const recetasData = [
     "url": "Recipes/Pasta carbonara.html"
   },
   {
+    "nombre": "Pasta fresca",
+    "categoria": "Pasta y arroces",
+    "categoria_original": "Pasta y arroces",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "300 g pasta fresca",
+      "100 g pesto",
+      "200 g langostinos pelados",
+      "200 g brécol",
+      "20 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url": "Recipes/Pasta fresca.html"
+  },
+  {
     "nombre": "Pasta fresca con pesto, langostinos y brécol",
     "categoria": "Pasta y arroces",
     "categoria_original": "Pasta y arroces",
@@ -6631,6 +7528,24 @@ const recetasData = [
       "150 ml agua"
     ],
     "url": "Recipes/Patatas asadas Marcos.html"
+  },
+  {
+    "nombre": "Patatas asadas ostras",
+    "categoria": "Básicos",
+    "categoria_original": "Básicos",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "1 kg patatas en gajos o chascadas",
+      "30 g aceite de oliva",
+      "1 cdta sal",
+      "1 pizca pimienta",
+      "1 cda salsa de ostras",
+      "2 dientes de ajo aplastados",
+      "1 ramita de romero",
+      "1 pizca pimentón (opcional)",
+      "150 ml agua"
+    ],
+    "url": "Recipes/Patatas asadas ostras.html"
   },
   {
     "nombre": "Patatas rellenas",
@@ -6804,6 +7719,21 @@ const recetasData = [
       "Espárragos de bote para acompañar"
     ],
     "url": "Recipes/Pescado cocido.html"
+  },
+  {
+    "nombre": "Pescado Horno",
+    "categoria": "Pescados",
+    "categoria_original": "Pescados",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "bacalao, jurelos, dorada, rodaballo, sargo, palometa, menda, coruxo",
+      "2 patatas en rodajas",
+      "1 cebolla en tiras",
+      "1 pimiento en tiras",
+      "30 g aceite de oliva",
+      "1 cdta sal"
+    ],
+    "url": "Recipes/Pescado Horno.html"
   },
   {
     "nombre": "Pescado Horno (bacalao, jurelos, dorada, rodaballo, sargo, palometa, menda, coruxo,…)",
@@ -7057,6 +7987,24 @@ const recetasData = [
       "Un poquitín de agua de cocer el pulpo"
     ],
     "url": "Recipes/Pulpo.html"
+  },
+  {
+    "nombre": "Pulpo",
+    "categoria": "Sin categoría",
+    "categoria_original": "MACU",
+    "oculta_recetario": true,
+    "ingredientes_html": [
+      "1 pulpo de 1 kilo y medio o un poquito menos",
+      "1 cebolla mediana",
+      "1 hoja de laurel",
+      "Patatas cortadas en rodajas",
+      "Agua",
+      "Aceite",
+      "Pimentón dulce y picante",
+      "Sal gorda",
+      "Un poquitín de agua de cocer el pulpo"
+    ],
+    "url": "Recipes/Pulpo 2..html"
   },
   {
     "nombre": "Pulpo á feira (versión rápida)",
@@ -7531,6 +8479,23 @@ const recetasData = [
     "url": "Recipes/Tacos de lechuga y ensaladilla de atún.html"
   },
   {
+    "nombre": "Tacos lechuga ensaladilla atún",
+    "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "Cogollos de lechuga",
+      "Atún",
+      "Albahaca fresca",
+      "Mostaza",
+      "Cebolleta",
+      "Manzana",
+      "Pepinillos",
+      "Mahonesa (ver nota para versión light)"
+    ],
+    "url": "Recipes/Tacos lechuga ensaladilla atún.html"
+  },
+  {
     "nombre": "Tarta de almendra",
     "categoria": "Sin categoría",
     "categoria_original": "MACU",
@@ -7803,6 +8768,23 @@ const recetasData = [
     "url": "Recipes/Tomate relleno.html"
   },
   {
+    "nombre": "Tomate relleno burrata",
+    "categoria": "Ensaladas",
+    "categoria_original": "Ensaladas",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "1 tomate rosa grande y maduro",
+      "1 burrata (125 g aprox.)",
+      "30 ml aceite de oliva virgen extra",
+      "1 buen manojo de cebollino",
+      "Hojas de albahaca fresca (al gusto)",
+      "20 g pistachos pelados",
+      "Sal gorda",
+      "Pimienta negra"
+    ],
+    "url": "Recipes/Tomate relleno burrata.html"
+  },
+  {
     "nombre": "Tomate relleno de burrata",
     "categoria": "Ensaladas",
     "categoria_original": "Ensaladas",
@@ -8048,6 +9030,25 @@ const recetasData = [
       "Perejil picado"
     ],
     "url": "Recipes/Wrap Cottage.html"
+  },
+  {
+    "nombre": "Wrap de aguacate",
+    "categoria": "CENAS",
+    "categoria_original": "CENAS",
+    "oculta_recetario": false,
+    "ingredientes_html": [
+      "1 aguacate",
+      "2 huevos",
+      "1 pizca de sal",
+      "Unas gotas de zumo de limón",
+      "Semillas de sésamo (para decorar)",
+      "Queso cottage batido",
+      "Rúcula",
+      "Tomate",
+      "Pavo",
+      "Queso de cabra en lonchas"
+    ],
+    "url": "Recipes/Wrap de aguacate.html"
   },
   {
     "nombre": "Wrap de aguacate al horno",
