@@ -164,6 +164,34 @@ const app = {
         return `${this.storagePrefix}${key}`;
     },
 
+    readPlanForWeek(key = this.currentWeekKey) {
+        try {
+            const data = localStorage.getItem(this.getStorageKeyForWeek(key));
+            if (data) {
+                const parsed = JSON.parse(data);
+                if (!parsed['lunes'] || !parsed['lunes']['comida']) throw new Error('Estructura corrupta');
+                return parsed;
+            }
+            const legacyBase = localStorage.getItem('plan_base');
+            if (legacyBase && key === this.weekOptions[0]?.key) {
+                const parsed = JSON.parse(legacyBase);
+                if (!parsed['lunes'] || !parsed['lunes']['comida']) throw new Error('Estructura corrupta');
+                return parsed;
+            }
+            return this.getSeedPlanForWeek(key) || this.getEmptyPlan();
+        } catch (e) {
+            console.error('Plan semanal corrupto, reseteando', key, e);
+            return this.getEmptyPlan();
+        }
+    },
+
+    savePlanForWeek(key, plan) {
+        localStorage.setItem(this.getStorageKeyForWeek(key), JSON.stringify(plan));
+        if (key === this.currentWeekKey) {
+            localStorage.setItem('plan_base', JSON.stringify(plan));
+        }
+    },
+
     getSeedPlanForWeek(key = this.currentWeekKey) {
         const option = this.getWeekOption(key);
         if (!option || !option.historyWeekId) return null;
@@ -277,25 +305,7 @@ const app = {
     },
 
     loadCurrentWeekPlan() {
-        try {
-            const data = localStorage.getItem(this.getStorageKeyForWeek());
-            if (data) {
-                this.plan = JSON.parse(data);
-                if (!this.plan['lunes'] || !this.plan['lunes']['comida']) throw new Error('Estructura corrupta');
-            } else {
-                const legacyBase = localStorage.getItem('plan_base');
-                if (legacyBase && this.currentWeekKey === this.weekOptions[0].key) {
-                    this.plan = JSON.parse(legacyBase);
-                    if (!this.plan['lunes'] || !this.plan['lunes']['comida']) throw new Error('Estructura corrupta');
-                    this.autosaveCurrentWeek();
-                } else {
-                    this.plan = this.getSeedPlanForWeek() || this.getEmptyPlan();
-                }
-            }
-        } catch (e) {
-            console.error('Plan semanal corrupto, reseteando', e);
-            this.plan = this.getEmptyPlan();
-        }
+        this.plan = this.readPlanForWeek(this.currentWeekKey);
         this.loadCompraStateForCurrentWeek();
         this.persistCurrentWeekKey();
         this.renderWeekSelector();
@@ -304,8 +314,7 @@ const app = {
     },
 
     autosaveCurrentWeek() {
-        localStorage.setItem(this.getStorageKeyForWeek(), JSON.stringify(this.plan));
-        localStorage.setItem('plan_base', JSON.stringify(this.plan));
+        this.savePlanForWeek(this.currentWeekKey, this.plan);
         this.persistCurrentWeekKey();
     },
 
@@ -329,9 +338,12 @@ const app = {
 
     getCompraOverrides() {
         try {
-            return JSON.parse(localStorage.getItem(this.getCompraOverridesKeyForWeek()) || '{}');
+            const parsed = JSON.parse(localStorage.getItem(this.getCompraOverridesKeyForWeek()) || '{}');
+            if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return {};
+            if (!Array.isArray(parsed._manual)) parsed._manual = [];
+            return parsed;
         } catch (_e) {
-            return {};
+            return { _manual: [] };
         }
     },
 
@@ -1014,25 +1026,25 @@ const app = {
         const view = document.getElementById('view-compacta');
         if (!view) return;
         const current = this.getWeekOption();
+        const visibleWeeks = this.getVisibleCompactaWeeks();
         const weekOptions = this.weekOptions.map(w => `<option value="${this.escapeHtml(w.key)}" ${w.key === this.getWeekFileBase() ? 'selected' : ''}>${this.escapeHtml(w.label)}</option>`).join('');
-        const dayCards = DIAS.map((dia, idx) => {
-            const comida = this.renderCompactaMeal(dia, 'comida', 'Comida');
-            const cena = this.renderCompactaMeal(dia, 'cena', 'Cena');
-            return `<article class="day">
-                <div class="day-head">${this.escapeHtml(this.getCompactaDayLabel(dia, idx))}</div>
-                ${comida}
-                ${cena}
-            </article>`;
-        }).join('');
+        const weekCards = visibleWeeks
+            .map(option => this.renderCompactaWeekSection(option))
+            .join('');
         view.innerHTML = `
             <div class="week-nav">
                 <button class="btn secondary" type="button" onclick="app.moveWeek(-1)">‹</button>
                 <select id="week-select">${weekOptions}</select>
                 <button class="btn secondary" type="button" onclick="app.moveWeek(1)">›</button>
             </div>
-            <div class="week-grid">${dayCards}</div>
+            <div class="week-stack">${weekCards}</div>
             <section class="panel">
-                <div class="panel-title">Lista de la compra de la semana</div>
+                <div class="panel-title">Lista de la compra de la semana enfocada</div>
+                <div class="muted compacta-shopping-week">${this.escapeHtml(current.label)}</div>
+                <div class="bar">
+                    <input id="manual-item" placeholder="Añadir producto libre">
+                    <button class="btn green" type="button" onclick="app.addManualCompraItem()">Añadir</button>
+                </div>
                 <div id="compacta-compra-container"></div>
             </section>
         `;
@@ -1049,22 +1061,68 @@ const app = {
         const weekSummary = document.getElementById('week-summary');
         if (weekSummary) weekSummary.textContent = current.label;
         this.renderCompra('compacta-compra-container');
+        this.scrollCurrentCompactaWeekIntoView();
     },
 
-    getCompactaDayLabel(dia, idx) {
+    getVisibleCompactaWeeks() {
+        const current = this.getWeekOption();
+        if (!current) return [];
+        return [-1, 0, 1].map(delta => this.ensureWeekOptionForMonday(this.addDays(current.monday, delta * 7)));
+    },
+
+    renderCompactaWeekSection(option) {
+        const plan = option.key === this.currentWeekKey ? this.plan : this.readPlanForWeek(option.key);
+        const dayCards = DIAS.map((dia, idx) => {
+            const comida = this.renderCompactaMeal(dia, 'comida', 'Comida', plan, option.key);
+            const cena = this.renderCompactaMeal(dia, 'cena', 'Cena', plan, option.key);
+            return `<article class="day">
+                <div class="day-head">${this.escapeHtml(this.getCompactaDayLabel(dia, idx, option.key))}</div>
+                ${comida}
+                ${cena}
+            </article>`;
+        }).join('');
+        const focused = option.key === this.currentWeekKey;
+        return `<section id="compacta-week-${this.escapeHtml(option.key)}" class="week-section ${focused ? 'focus' : ''}">
+            <button class="week-head" type="button" onclick="app.focusCompactaWeek('${this.escapeHtml(option.key)}')">
+                <span class="week-name">${this.escapeHtml(option.label)}</span>
+                <span class="week-tag">${focused ? 'Actual' : 'Editar'}</span>
+            </button>
+            <div class="week-grid">${dayCards}</div>
+        </section>`;
+    },
+
+    focusCompactaWeek(weekKey) {
+        if (weekKey === this.currentWeekKey) return;
+        this.autosaveCurrentWeek();
+        this.currentWeekKey = weekKey;
+        this.plan = this.readPlanForWeek(weekKey);
+        this.loadCompraStateForCurrentWeek();
+        this.persistCurrentWeekKey();
+        this.renderWeekSelector();
+        this.renderPlanificador();
+        this.renderCompacta();
+    },
+
+    scrollCurrentCompactaWeekIntoView() {
+        setTimeout(() => {
+            document.getElementById(`compacta-week-${this.currentWeekKey}`)?.scrollIntoView({ block: 'start' });
+        }, 80);
+    },
+
+    getCompactaDayLabel(dia, idx, key = this.currentWeekKey) {
         const initial = idx === 2 ? 'X' : DIAS_LABEL[idx][0];
-        return `${initial} ${this.getDayDateLabel(dia)}`;
+        return `${initial} ${this.getDayDateLabel(dia, key)}`;
     },
 
-    renderCompactaMeal(dia, tipo, label) {
-        const primero = this.renderCompactaSlot(dia, tipo, 'primero', 'Primer plato');
-        const segundo = this.renderCompactaSlot(dia, tipo, 'segundo', 'Segundo plato');
+    renderCompactaMeal(dia, tipo, label, plan = this.plan, weekKey = this.currentWeekKey) {
+        const primero = this.renderCompactaSlot(dia, tipo, 'primero', 'Primer plato', plan, weekKey);
+        const segundo = this.renderCompactaSlot(dia, tipo, 'segundo', 'Segundo plato', plan, weekKey);
         return `<div class="meal"><div class="meal-label">${label}</div>${primero}${segundo}</div>`;
     },
 
-    renderCompactaSlot(dia, tipo, slot, label) {
-        const text = this.plan[dia]?.[tipo]?.[slot] || '';
-        return `<button class="slot ${text ? '' : 'empty'}" type="button" onclick="app.assignSlot('${dia}','${tipo}','${slot}')">
+    renderCompactaSlot(dia, tipo, slot, label, plan = this.plan, weekKey = this.currentWeekKey) {
+        const text = plan[dia]?.[tipo]?.[slot] || '';
+        return `<button class="slot ${text ? '' : 'empty'}" type="button" onclick="app.assignSlotForWeek('${this.escapeHtml(weekKey)}','${dia}','${tipo}','${slot}')">
             <small>${this.escapeHtml(label)}</small>${this.escapeHtml(text || 'Tocar para elegir')}
         </button>`;
     },
@@ -1091,6 +1149,21 @@ const app = {
 
     getCompraItems() {
         let items = {};
+        const overrides = this.getCompraOverrides();
+        const addItem = (rawText, source = '', originalText = rawText) => {
+            const canonical = this.canonicalCompraText(rawText);
+            if (!canonical) return;
+            const override = overrides[canonical] || {};
+            if (override.deleted) return;
+            const finalText = this.canonicalCompraText(override.text || canonical);
+            if (!finalText) return;
+            if (!items[finalText]) {
+                items[finalText] = { count: 0, sources: new Set(), originals: new Set() };
+            }
+            items[finalText].count += 1;
+            items[finalText].originals.add(originalText || canonical);
+            if (source) items[finalText].sources.add(source);
+        };
         DIAS.forEach(dia => {
             TIPOS.forEach(tipo => {
                 SLOTS.forEach(slot => {
@@ -1102,26 +1175,17 @@ const app = {
                             allPlatos.find(p => p.en_excel && this.normalizeMatchText(p.plato) === pnameNorm);
                         if (matchedData && matchedData.ingredientes) {
                             matchedData.ingredientes.forEach(ing => {
-                                const canonical = this.canonicalCompraText(ing);
-                                if (!canonical) return;
-                                const overrides = this.getCompraOverrides();
-                                const override = overrides[canonical] || {};
-                                if (override.deleted) return;
-                                const finalText = this.canonicalCompraText(override.text || canonical);
-                                if (!finalText) return;
-                                if (!items[finalText]) {
-                                    items[finalText] = { count: 0, sources: new Set() };
-                                }
-                                items[finalText].count += 1;
-                                items[finalText].sources.add(pname);
+                                addItem(ing, pname);
                             });
                         }
                     }
                 });
             });
         });
+        (overrides._manual || []).forEach(manual => addItem(manual.text, manual.source || 'Manual', manual.id));
         Object.keys(items).forEach(key => {
             items[key].sources = Array.from(items[key].sources);
+            items[key].originals = Array.from(items[key].originals);
         });
         return items;
     },
@@ -1184,7 +1248,7 @@ const app = {
         document.getElementById('selected-plato-fab')?.classList.remove('hidden');
 
         if (this.pendingSlot) {
-            const { dia, tipo, slot } = this.pendingSlot;
+            const { weekKey, dia, tipo, slot } = this.pendingSlot;
             if (!this.plan[dia]) this.plan[dia] = {};
             if (!this.plan[dia][tipo]) this.plan[dia][tipo] = {};
             this.plan[dia][tipo][slot] = name;
@@ -1205,7 +1269,13 @@ const app = {
         document.getElementById('selected-plato-fab')?.classList.add('hidden');
     },
 
-    setSlotPlato(dia, tipo, slot, name) {
+    setSlotPlato(dia, tipo, slot, name, weekKey = this.currentWeekKey) {
+        if (weekKey !== this.currentWeekKey) {
+            this.autosaveCurrentWeek();
+            this.currentWeekKey = weekKey;
+            this.plan = this.readPlanForWeek(weekKey);
+            this.loadCompraStateForCurrentWeek();
+        }
         if (!this.plan[dia]) this.plan[dia] = {};
         if (!this.plan[dia][tipo]) this.plan[dia][tipo] = {};
         this.plan[dia][tipo][slot] = name;
@@ -1217,6 +1287,19 @@ const app = {
         this.renderCompacta();
         this.closeSlotModal();
         this.switchTab('view-compacta');
+    },
+
+    assignSlotForWeek(weekKey, dia, tipo, slot) {
+        if (weekKey !== this.currentWeekKey) {
+            this.autosaveCurrentWeek();
+            this.currentWeekKey = weekKey;
+            this.plan = this.readPlanForWeek(weekKey);
+            this.loadCompraStateForCurrentWeek();
+            this.persistCurrentWeekKey();
+            this.renderWeekSelector();
+            this.renderPlanificador();
+        }
+        this.assignSlot(dia, tipo, slot);
     },
 
     assignSlot(dia, tipo, slot) {
@@ -1235,7 +1318,7 @@ const app = {
     },
 
     openDishChooser(dia, tipo, slot) {
-        this.pendingSlot = { dia, tipo, slot };
+        this.pendingSlot = { weekKey: this.currentWeekKey, dia, tipo, slot };
         const currentDish = this.plan[dia]?.[tipo]?.[slot] || '';
         const title = document.getElementById('slot-title');
         const modal = document.getElementById('slot-modal');
@@ -1264,7 +1347,7 @@ const app = {
         results.innerHTML = `
             ${recipePath ? `<button class="choice" type="button" onclick="app.closeSlotModal(); app.openRecipeForDish(decodeURIComponent('${dishArg}'))"><strong>Ver receta</strong><span>${this.escapeHtml(dish)}</span></button>` : ''}
             <button class="choice" type="button" onclick="app.drawDishResults('')"><strong>Cambiar plato</strong><span>Elegir otro plato del recetario</span></button>
-            <button class="choice" type="button" onclick="app.setSlotPlato('${dia}','${tipo}','${slot}','')"><strong>Vaciar campo</strong><span>Quitar este plato del plan</span></button>
+            <button class="choice" type="button" onclick="app.setSlotPlato('${dia}','${tipo}','${slot}','','${this.escapeHtml(this.currentWeekKey)}')"><strong>Vaciar campo</strong><span>Quitar este plato del plan</span></button>
         `;
     },
 
@@ -1291,8 +1374,8 @@ const app = {
 
     chooseDish(name) {
         if (!this.pendingSlot) return;
-        const { dia, tipo, slot } = this.pendingSlot;
-        this.setSlotPlato(dia, tipo, slot, name);
+        const { weekKey, dia, tipo, slot } = this.pendingSlot;
+        this.setSlotPlato(dia, tipo, slot, name, weekKey || this.currentWeekKey);
     },
 
     renderCompra(containerId = 'compra-container') {
@@ -1304,12 +1387,17 @@ const app = {
         
         const keys = Object.keys(compraItems).sort();
         if (keys.length === 0) {
-            container.innerHTML = '<div style="color:#555; text-align:center; padding:20px;">Aún no hay ingredientes cargados o seleccionados en tu planificador.</div>';
+            container.innerHTML = '<div class="muted empty-shopping">Sin compra calculada. Asigna platos con ListaCompra o añade productos libres.</div>';
             return;
         }
         
         const ul = document.createElement('ul');
         ul.className = 'shopping-list';
+
+        const dept = document.createElement('li');
+        dept.className = 'shopping-dept';
+        dept.textContent = 'Compra';
+        ul.appendChild(dept);
         
         keys.forEach(ing => {
             const id = this.getCompraItemId(ing);
@@ -1394,7 +1482,15 @@ const app = {
         const next = document.getElementById('shopping-edit-input')?.value.trim();
         if (!next) return;
         const overrides = this.getCompraOverrides();
-        overrides[this.shoppingAction] = { text: next };
+        const item = this.getCompraItems()[this.shoppingAction];
+        const originals = item && Array.isArray(item.originals) ? item.originals : [this.shoppingAction];
+        originals.forEach(original => {
+            if (String(original).startsWith('manual_')) {
+                overrides._manual = (overrides._manual || []).map(entry => entry.id === original ? { ...entry, text: next } : entry);
+            } else {
+                overrides[original] = { text: next };
+            }
+        });
         this.setCompraOverrides(overrides);
         this.closeShoppingModal();
         this.renderCompacta();
@@ -1403,11 +1499,35 @@ const app = {
     deleteShoppingSelected() {
         if (!this.shoppingAction) return;
         const overrides = this.getCompraOverrides();
-        overrides[this.shoppingAction] = { deleted: true };
+        const item = this.getCompraItems()[this.shoppingAction];
+        const originals = item && Array.isArray(item.originals) ? item.originals : [this.shoppingAction];
+        originals.forEach(original => {
+            if (String(original).startsWith('manual_')) {
+                overrides._manual = (overrides._manual || []).filter(entry => entry.id !== original);
+            } else {
+                overrides[original] = { deleted: true };
+            }
+        });
         this.setCompraOverrides(overrides);
         delete this.compraChecked[this.getCompraItemId(this.shoppingAction)];
         this.autosaveCompraState();
         this.closeShoppingModal();
+        this.renderCompacta();
+    },
+
+    addManualCompraItem() {
+        const input = document.getElementById('manual-item');
+        const text = input?.value.trim();
+        if (!text) return;
+        const overrides = this.getCompraOverrides();
+        overrides._manual = overrides._manual || [];
+        overrides._manual.push({
+            id: `manual_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
+            text,
+            source: 'Manual'
+        });
+        this.setCompraOverrides(overrides);
+        input.value = '';
         this.renderCompacta();
     },
 
