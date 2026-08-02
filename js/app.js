@@ -69,6 +69,10 @@ const app = {
         return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
     },
 
+    getTodayDateKey() {
+        return this.formatDateInputValue(new Date());
+    },
+
     rebuildWeekOptionsAround(centerMondayInput) {
         const centerMonday = this.getMondayForDate(centerMondayInput);
         const generated = Array.from({ length: 53 }, (_, offset) => {
@@ -1075,7 +1079,8 @@ const app = {
         const dayCards = DIAS.map((dia, idx) => {
             const comida = this.renderCompactaMeal(dia, 'comida', 'Comida', plan, option.key);
             const cena = this.renderCompactaMeal(dia, 'cena', 'Cena', plan, option.key);
-            return `<article class="day">
+            const dateKey = this.formatDateInputValue(this.addDays(option.monday, idx));
+            return `<article class="day" id="compacta-day-${this.escapeHtml(dateKey)}">
                 <div class="day-head">${this.escapeHtml(this.getCompactaDayLabel(dia, idx, option.key))}</div>
                 ${comida}
                 ${cena}
@@ -1105,7 +1110,8 @@ const app = {
 
     scrollCurrentCompactaWeekIntoView() {
         setTimeout(() => {
-            document.getElementById(`compacta-week-${this.currentWeekKey}`)?.scrollIntoView({ block: 'start' });
+            const today = document.getElementById(`compacta-day-${this.getTodayDateKey()}`);
+            (today || document.getElementById(`compacta-week-${this.currentWeekKey}`))?.scrollIntoView({ block: 'start' });
         }, 80);
     },
 
