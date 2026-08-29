@@ -5910,7 +5910,7 @@ const recetasData = [
       "Queso",
       "1 huevo batido"
     ],
-    "url": "Recipes/Empanada de hojaldre de jamón y queso.html"
+    "url": "Recipes/Empanada de hojaldre de jamón y queso - MACU.html"
   },
   {
     "nombre": "Empanada Hojaldre Esto Salmón",
