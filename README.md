@@ -1,7 +1,7 @@
 <!-- app-release:start -->
-[**Descargar versión standalone v9 (ZIP)**](https://github.com/ricardoyf/mi-planificador/releases/download/v9/mi-planificador-standalone-v9.zip) · [HTML directo](https://github.com/ricardoyf/mi-planificador/releases/download/v9/mi-planificador-standalone-v9.html) · [SHA-256](https://github.com/ricardoyf/mi-planificador/releases/download/v9/mi-planificador-standalone-v9.zip.sha256)
+[**Descargar versión standalone v9 (ZIP)**](https://github.com/ricardoyf/mi-planificador/raw/refs/tags/v9/release-artifacts/v9/mi-planificador-standalone-v9.zip) · [HTML directo](https://github.com/ricardoyf/mi-planificador/raw/refs/tags/v9/release-artifacts/v9/mi-planificador-standalone-v9.html) · [SHA-256](https://github.com/ricardoyf/mi-planificador/raw/refs/tags/v9/release-artifacts/v9/mi-planificador-standalone-v9.zip.sha256)
 
-> Repositorio privado: el artefacto standalone incorpora historial personal de planificación y requiere acceso autorizado. No es un APK; se abre como HTML local.
+> Repositorio privado: el artefacto incorpora historial personal de planificación y requiere acceso autorizado. No es un APK; se abre como HTML local.
 
 ZIP: `ceae2f88f3b55d0edfd3d216617b6cb4e8c85784bdd01716a66b099bd4066eea`
 
