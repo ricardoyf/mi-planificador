@@ -1,3 +1,13 @@
+<!-- app-release:start -->
+[**Descargar versión standalone v9 (ZIP)**](https://github.com/ricardoyf/mi-planificador/releases/download/v9/mi-planificador-standalone-v9.zip) · [HTML directo](https://github.com/ricardoyf/mi-planificador/releases/download/v9/mi-planificador-standalone-v9.html) · [SHA-256](https://github.com/ricardoyf/mi-planificador/releases/download/v9/mi-planificador-standalone-v9.zip.sha256)
+
+> Repositorio privado: el artefacto standalone incorpora historial personal de planificación y requiere acceso autorizado. No es un APK; se abre como HTML local.
+
+ZIP: `ceae2f88f3b55d0edfd3d216617b6cb4e8c85784bdd01716a66b099bd4066eea`
+
+HTML: `3eca8d65979726c0987384999165db7c93b8ab4a6a300ea89c72f548bf380679`
+<!-- app-release:end -->
+
 # Planificador de Comidas (Web App)
 
 Esta carpeta contiene tu nueva aplicación web interactiva para planificar las comidas. Al ser 100% estática (HTML, CSS, JS), es ideal para subirla a GitHub Pages y usarla como una "App" desde tu móvil.
